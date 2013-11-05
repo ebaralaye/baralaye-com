@@ -1,0 +1,131 @@
+/* @override http://localhost/bxslider_v3_plugin/css/styles.css */
+
+/*
+ * To change the color scheme of slider change each 
+ * background property for each of the five styles below
+ */
+
+/*next button*/
+.bx-next {
+	right:10px;
+}
+
+/*previous button*/
+.bx-prev {
+	left:10px;
+}
+
+.bx-next, .bx-prev {
+	position:absolute;
+	top:40%;
+	z-index:999;
+	text-align: center;
+	font-size: 17px;
+	color: #fff;
+	width: 34px;
+	height: 34px;
+	line-height: 34px;
+	border-radius: 17px;
+	background:transparent;
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#50000000,endColorstr=#50000000); 
+	background: rgba(0,0,0,.5);
+}
+
+.bx-slider ul li a {
+	position:relative;
+	display:block;
+	height:200px;
+}
+
+/*pager links*/
+.bx-pager a {
+	color: #fff;
+	display: inline-block;
+	height: 18px;
+	width: 18px;
+	line-height: 18px;
+	border-radius: 9px;
+	background:transparent;
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#50000000,endColorstr=#50000000); 
+	background: rgba(0,0,0,.5);
+	margin-left: 8px;
+	font-size: 10px;
+	text-align: center;
+}
+
+/*auto start button*/
+.bx-auto .start {
+	background: url(gray_auto.png) no-repeat 0 2px;
+	padding-left: 13px;
+}
+
+/*auto stop button*/
+.bx-auto .stop {
+	background: url(gray_auto.png) no-repeat 0 -14px;
+	padding-left: 13px;
+}
+
+/*
+ * End color scheme styles
+ */
+
+
+/*next/prev button hover state*/
+.bx-next:hover,
+.bx-prev:hover {
+	background: #4F569F;
+	text-decoration: none;
+}
+
+/*pager links hover and active states*/
+.bx-pager .pager-active,
+.bx-pager a:hover {
+	background: #4F569F;
+	text-decoration: none;
+}
+
+/*pager wrapper*/
+.bx-pager {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	z-index: 1000;
+}
+
+/*captions*/
+.bx-captions {
+	background:transparent;
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#50000000,endColorstr=#50000000);
+	background:rgba(0,0,0,0.5);
+	padding:14px 30px 10px 30px;
+	position:absolute;
+	bottom:0;
+	left:0;
+	font-size:140%;
+	letter-spacing:2px;
+	color:#fff;
+	width:auto;
+	text-align:center;
+	display:block;
+	z-index:1000;
+}
+
+.bx-captions:hover {
+	background: #4F569F;
+	cursor:pointer;
+}
+
+/*auto controls*/
+.bx-auto {
+	text-align: center;
+	padding-top: 15px;
+}
+
+.bx-auto a {
+	color: #666;
+	font-size: 12px;
+}
+
+.bx-child {
+	position: relative;
+}

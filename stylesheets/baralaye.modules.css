@@ -1,0 +1,109 @@
+/**
+ * Baralaye.com Module Styles
+ * @author web@baralaye.com
+ */
+
+/** Anoouncements & Blog ---- */
+
+.page-body.post .post {
+    margin: 4px 0 34px 0;
+}
+
+.page-body.post .post-body {
+}
+
+.page-body.post .post .social-btns {
+    padding-bottom: 20px;
+    display: block !important;
+}
+
+.page-body.post .post.detail {
+    margin: 0 0 34px 0;
+}
+
+.page-body.post .col.a {
+    width: 75%;
+    padding-right: 5%;
+}
+
+.page-body.post .col.b {
+    width: 20%;
+}
+
+.page-body.post .col.b li,
+.page-body.post .col.b p {
+    font-size: 110%;
+    letter-spacing: 0;
+}
+
+.page-body.post .col.b h3 {
+    letter-spacing: 0;
+}
+
+.page-body.post .col.b li a{
+    font-size: 10px;
+    line-height: 15px;
+}
+
+.page-body.post .col.b .post {
+    margin-bottom: 15px;
+}
+
+.page-body.post img {
+    display: block;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px #DFDFDF;
+}
+
+.post-body img.f-l {
+    padding: 0 20px 20px 0;
+}
+
+.post-body img.f-r {
+    padding: 0 0 20px 20px;
+}
+
+.post-body img {
+    display: none;
+}
+
+.post-body .image-box div {
+    float: left;
+    padding: 0 20px 20px 0;
+}
+
+.post-details {
+    margin: 0 0 5px;
+    font-size: 11px;
+    font-style: italic;
+}
+
+.post-title {
+    font-weight:normal;
+}
+
+.comment-box {
+    padding: 10px 0 0 0;
+}
+
+.comment-list {
+    padding: 0 0 10px 0;
+}
+
+.comment-container {
+    background: #f3f3f3;
+    margin-bottom: 10px;
+}
+
+.comment-container h4 {
+    font-size: 100%;
+    font-weight: normal !important;
+    padding: 3px 8px 1px 8px;
+    background: #DFDFDF;
+}
+
+.comment-container p {
+    padding: 8px;
+    font-size: 100%;
+    margin-bottom: 0;
+}

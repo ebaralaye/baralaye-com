@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /web/
+Disallow: /web
+Disallow: /resume/
+Disallow: /resume
+Disallow: /artisan/
+Disallow: /artisan

@@ -1,0 +1,115 @@
+/**
+ * Baralaye.com Plugin Styles
+ * @author web@baralaye.com
+ */
+
+/** Feedburner ----*/
+
+.feed-wrap {
+    font-size: 110%;
+    margin-bottom: 20px;
+    width: 700px;
+    position: relative;
+}
+
+.feedburnerFeedBlock {
+    padding-top: 25px;
+    height: 250px;
+    overflow: auto;
+}
+
+.feedburnerFeedBlock .feedTitle {
+    position:absolute;
+    top: 0;
+    left: 0;
+}
+
+.feedburnerFeedBlock .feedTitle,
+.feedburnerFeedBlock .feedTitle a {
+    font-weight: bold;
+    color: #663333;
+}
+
+.feedburnerFeedBlock li {
+    line-height: 170%;
+    margin: 0 0 10px 15px;
+    list-style-type: disc;
+    list-style-position: outside;
+}
+
+/** Fancybox ----*/
+
+.ltbx.images a {
+    display: none;
+}
+
+.ltbx.images a.main {
+    display: table-cell;
+}
+
+/** Innerfade ----*/
+
+.productSmall .image a.innerfade {
+    display: block !important;
+    opacity: 0;
+    top: 0 !important;
+    left: 0 !important;
+}
+
+.productSmall .image a.innerfade img {
+    display: block;
+}
+
+/** Galleria ----*/
+
+.galleria,
+.galleria .tabs,
+.galleria .set {
+    position: relative;
+    height: 500px;
+    width: 675px;
+}
+
+.galleria .set {
+    position: absolute;
+}
+
+.galleria .tabs {
+    height: 20px;
+    text-align: center;
+}
+
+.galleria .tabs a {
+    padding: 6px 15px 4px;
+    margin: 0;
+    white-space: nowrap;
+    letter-spacing: 1px;
+    font-size: 120%;
+}
+
+.galleria .tabs a:hover {
+    text-decoration: none;
+}
+
+/** Tumblr ----*/
+
+.tumblr_posts {
+    width: 860px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.tumblr_posts li {
+    display: inline-block;
+    padding: 15px;
+    width: 400px;
+    float: left;
+}
+
+/** Twitter ----*/
+
+#twitter_div li {
+    font-size: 100%;
+    line-height: 160%;
+    margin-bottom: 10px;
+}

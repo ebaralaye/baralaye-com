@@ -1,0 +1,548 @@
+/**
+ * Baralaye.com Page Styles
+ * @author web@baralaye.com
+ */
+
+/** Page Body ----*/
+
+.page-body {
+    padding: 0;
+}
+
+.page-body .col {
+    float: left;
+    padding-right: 5%;
+}
+
+.page-body .col.side {
+    width: 23%;
+}
+
+.page-body .col.body {
+    width: 72%;
+}
+
+.page-body .row {
+    margin-bottom: 20px;
+    width: 100% !important;
+}
+
+.page-body .page-main {
+    margin: 0 auto 0 auto;
+}
+
+.page-body .last {
+    padding-right: 0 !important;
+    margin-bottom: 0 !important;
+    margin-right: 0 !important;
+    clear: right;
+}
+
+.page-body .header {
+    width: 520px;
+    margin-bottom:20px;
+}
+
+.page-body .header h1 {
+    display:inline;
+}
+
+.page-body .header h2 {
+    display:inline;
+    font-weight:normal;
+}
+
+.page-body .header p {
+    font-size: 11px;
+    line-height: 20px;
+    margin: 0;
+}
+
+.page-body .h-title {
+    margin-bottom: 14px;
+    border-bottom: 2px solid #dfdfdf;
+    letter-spacing: 2px;
+}
+
+.page-body .h-title.z-m {
+    margin-bottom:0;
+}
+
+.page-body .h-title a {
+    display:block;
+    display:inline-block;
+    text-decoration:none;
+}
+
+.page-body a.h-title.active,
+.page-body a.h-title:hover,
+.page-body .h-title a:hover {
+    border-bottom: 2px solid #4F569F;
+    margin-bottom:-2px;
+}
+
+.page-body .h-title.sub {
+    margin-bottom: 7px;
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.page-body .h-title.sub a:hover {
+    border-bottom: 1px solid #4F569F;
+    margin-bottom:-1px;
+}
+
+.page-body a.btn-sub,
+.page-body .btn-sub a {
+    display: inline-block;
+    color: #fff;
+    font-size: 11px;
+    letter-spacing: 3px;
+    padding: 4px 8px 2px 8px;
+    background: #ccc;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.page-body a.btn-sub:hover,
+.page-body .btn-sub a:hover {
+    background:#4F569F;
+}
+
+/** Home ----*/
+
+.page-body.home .intro {
+    margin:0;
+}
+
+.page-body.home .innerfade {
+    opacity: .0;
+    filter: alpha(opacity=0); 
+}
+
+.page-body.home .page-main {
+    width: 675px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.page-body.home .section {
+    float: left;
+}
+
+.page-body.home .banner  {
+    position:relative;
+}
+
+.page-body.home .section .row .body {
+    height:200px;
+}
+
+.page-body.home .section.a .row.a .body {
+    margin-top:26px;
+}
+
+.page-body.home .section .row ul.links a {
+    font-size:110%;
+    letter-spacing:2px;
+}
+
+.page-body.home .section .row ul.links li {
+    margin-bottom:16px;
+}
+
+.page-body.home #twitter_div li {
+    margin-bottom:5px;
+    line-height:160%;
+}
+
+.page-body.home .section.a .row.b .body {
+    height:200px;
+}
+
+.page-body.home .section.a .row.c .col.a {
+    width: 50%;
+}
+
+.page-body.home .section.a .row.c .col.b {
+    width: 45%;
+}
+
+.page-body.home .section.b {
+    width: 20%;
+    padding-left: 5%;
+}
+
+.page-body.home .thumb {
+    display:block;
+    height:200px !important;
+    overflow:hidden;
+}
+
+.page-body.home .section.b .row span.desc {
+    display: block;
+    line-height: 160%;
+    letter-spacing: 1px;
+    font-size: 110%;
+    margin:0;
+    position: absolute;
+    bottom:0;
+    left:0;
+    width:160px;
+    background:transparent;
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#50000000,endColorstr=#50000000);
+    background:rgba(0,0,0,0.5);
+    z-index: 5;
+    color:#fff;
+    padding:7px 10px;
+}
+
+.page-body.home .section.b .row span.desc:hover {
+    background: #4F569F;
+}
+
+.page-body.home .section.b .row p a {
+    color: #fff;
+    font-weight:bold;
+}
+
+.page-body.home .section.b .row.a {
+    width: 100%;;
+}
+
+.page-body.home .post {
+    margin:0 0 10px 0;
+}
+
+.page-body.home .post .h-title {
+    font-size:120%;
+    letter-spacing:1px;
+}
+
+.page-body.home .post .h-title,
+.page-body.home .post .h-title a:hover {
+    border:0;
+    margin:0;
+}
+
+.page-body.home .post .h-title a:hover {
+    text-decoration:underline;
+}
+
+.page-body.home .blog-post .links {
+    display: none;
+}
+
+/** Web ----*/
+
+.page-body.web li em {
+    font-size:10px;
+}
+
+.page-body ul.featured {
+    width: 100%;
+}
+
+.page-body ul.featured p {
+    font-size:100%;
+}
+
+/** Statement/Biography ----*/
+
+.page-body.statement p,
+.page-body.biography p {
+    text-indent: 30px;
+}
+
+.page-body.statement .head-shot,
+.page-body.biography .head-shot{
+    display: block;
+    margin:-25px auto 25px auto;
+}
+
+/** In Progress ----*/
+
+.page-body.in-progress .body {
+    height:450px;
+}
+
+/** Resume/CV ----*/
+
+.page-body.resume h2,
+.page-body.resume h3 {
+    text-transform: uppercase;
+    margin: 0 0 25px 0;
+    border-bottom: 1px solid #ccc;
+    font-weight: bold;
+}
+
+.page-body.resume h2 {
+    position: relative;
+    letter-spacing: 3px;
+    font-size: 13px;
+}
+
+.page-body.resume h2 .title {
+    position: absolute;
+    left: 325px;
+    letter-spacing: 2px;
+}
+
+.page-body.resume h3 {
+    letter-spacing: 2px;
+    padding-right: 750px;
+    line-height: 14px;
+}
+
+.page-body.resume h2 .download {
+    float:right;
+    font-weight: normal;
+    text-transform: capitalize;
+}
+
+.page-body.resume h2 a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+.page-body.resume h3 a:hover,
+.page-body.resume h2 .download a:hover,
+.page-body.resume h2 a.download:hover {
+    border-bottom: 1px solid #4F569F;
+    text-decoration: none;
+}
+
+.page-body.resume .section h4 {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    text-decoration: underline;
+}
+
+.page-body.resume p {
+    margin-bottom: 20px;
+}
+
+.page-body.resume .section {
+    position: relative;
+    margin: 0 0 20px 325px !important;
+}
+
+.page-body.resume .section  ul.list {
+    margin-left: 0;
+}
+
+.page-body.resume ul.list {
+    margin: 0 0 20px 0;
+    padding: 0;
+}
+
+.page-body.resume ul.list li {
+    position: relative;
+    margin: 0 0 15px 0;
+    padding: 0;
+}
+
+.page-body.resume ul.list li:last-child {
+    margin-bottom: 0;
+}
+
+.page-body.resume  ul.list.square,
+.page-body.resume  ul.list.disc {
+    margin-left: 15px;
+}
+
+.page-body.resume  ul.list.square li,
+.page-body.resume  ul.list.disc li {
+    margin-bottom: 5px;
+}
+
+.page-body.resume ul.list.info,
+.page-body.resume ul.list .date,
+.page-body.resume ul.list .name,
+.page-body.resume ul.list .position {
+    font-weight: bold;
+}
+
+.page-body.resume ul.list.info li {
+    margin-bottom: 3px;
+}
+
+.page-body.resume ul.list .type,
+.page-body.resume ul.list .phone,
+.page-body.resume ul.list .address,
+.page-body.resume ul.list .reference {
+    font-size: 10px;
+    font-style: italic;
+}
+
+.page-body.resume ul.list .date {
+    position: absolute;
+    right: 610px;
+    font-size: 10px;
+    white-space: nowrap;
+}
+
+.page-body.resume #references,
+.page-body.resume ul.references,
+.page-body.resume ul.list .reference,
+.page-body.resume ul.list .phone,
+.page-body.resume ul.list .street,
+.page-body.resume ul.list .zip{
+    display: none;
+}
+.page-body.resume ul.list.references .reference {
+    display: block;
+}
+.page-body.resume .productSmall.portfolio {
+    margin-bottom: 25px;
+}
+
+/** Links ----*/
+
+.page-body.links ul.nav {
+    margin-bottom: 30px;
+    position: fixed;
+    width: 160px;
+    padding: 5px;
+}
+
+.page-body.links ul.nav li.row {
+    width: 150px !important;
+    padding: 5px;
+    position: relative;
+    z-index: 6;
+    margin-bottom: 0;
+}
+
+.page-body.links ul.nav h2 {
+    padding-bottom: 5px;
+    font-size: 120%;
+}
+
+.page-body.links ul.nav h2 a {
+    letter-spacing: 2px;
+    display: block;
+    padding: 0 5px;
+    background: #f3f3f3;
+}
+
+.page-body.links ul.nav ul {
+    padding-bottom:0;
+}
+
+.page-body.links #suggest-a-link {
+    display: none;
+}
+
+.page-body.links .section {
+    padding: 0 0 15px 200px;
+}
+
+.page-body.links .page-main p {
+    margin-left: 20px;
+}
+
+.page-body.links .page-main ul {
+    padding-bottom: 15px;
+}
+
+.page-body.links .page-main h1 {
+    position: relative;
+    letter-spacing: 10px;
+}
+
+.page-body.links .page-main strong {
+    font-size: 200%;
+    position: absolute;
+    left: 2px;
+}
+
+.page-body.links .page-main .title-desc {
+    position: relative;
+    font-size: 110%;
+    letter-spacing: 1px;
+    margin: 0;
+    padding-left: 20px;
+}
+
+.page-body.links .page-main h1 a.back {
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    letter-spacing: 1px;
+    font-weight: normal;
+    text-decoration: underline;
+    font-size: 11px;
+    margin: 0;
+}
+
+.page-body.links .page-main h3 {
+    letter-spacing: 2px;
+    background: #f3f3f3;
+    padding: 2px 5px;
+    margin-bottom: 5px;
+}
+
+.page-body.links .page-main h4 {
+    padding: 0 5px;
+    border: 1px dashed #f9f9f9;
+    border-width: 0 0 1px 1px;
+    margin-bottom: 5px;
+}
+
+/** About ----*/
+
+.page-body.about .productSmall img {
+    width:150px;
+    height:150px;
+}
+
+/** Samples ----*/
+
+.page-body.samples .page-main{
+    width:720px;
+}
+
+.page-body.samples .productSmall {
+    float:left;
+    width:360px;
+    padding-bottom: 30px;
+}
+
+.page-body.samples .productSmall h3 {
+    text-align:center;
+    margin:0 15px;
+}
+
+.page-body.samples .productSmall .productItem {
+    padding-top:6px;
+}
+
+/** Connect ----*/
+
+.page-body .social-media {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.page-body .social-media a {
+    width: 70px;
+    height: 70px;
+    margin: 0 15px;
+    display: inline-block;
+    font-size: 12px;
+    background-color: #f4f4f4;
+    border-radius: 35px;
+    -moz-border-radius: 35px;
+    -webkit-border-radius: 35px;
+    line-height: 70px;
+    text-decoration: none;
+    border: 1px solid #f4f4f4;
+    box-shadow: 1px 1px 5px #dfdfdf;
+}
+
+.page-body .social-media a:hover {
+    border-color: #4F569F;
+}

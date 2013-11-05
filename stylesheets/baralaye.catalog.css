@@ -1,0 +1,225 @@
+/**
+ * Baralaye.com Catalog Styles
+ * @author web@baralaye.com
+ */
+
+/** Catalog Template ----*/
+
+.page-body.catalog {
+    padding-top: 20px;
+}
+
+.page-body.catalog .body {
+    clear: both;
+    margin-top: 20px;
+}
+
+.page-body.catalog ul.catalogueList {
+    margin:0 auto;
+    text-align: center;
+}
+
+.page-body.catalog ul.catalogueList li {
+    display: inline;
+    margin: 0 30px;
+}
+
+.page-body.catalog ul.catalogueList li .name {
+    display: inline;
+}
+
+.cart-summary,
+.catalogueItemNotFound {
+    display: none !important;
+}
+
+/** Catalog Gallery View ----*/
+
+.photogalleryTable {
+    margin: 20px auto;
+}
+
+.photogalleryItem,
+.productSmall > li,
+.productSmall .productItem {
+    padding: 15px 15px 15px 15px;
+    float: left;
+    position: relative;
+    width: 150px;
+}
+
+td.photogalleryItem {
+    float:none;
+}
+
+.productSmall .name {
+    margin-bottom: 6px;
+    height: 20px;
+    width: 150px;
+    text-align:center;
+}
+
+.productSmall .name a {
+    text-decoration: none;
+    display: block;
+}
+
+.productSmall .name,
+.productSmall .name a {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -webkit-text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.productSmall .images,
+.productSmall .image,
+.productSmall .images a,
+.productSmall .image a {
+    height: 150px;
+    width: 150px;
+}
+
+.photogalleryItem a,
+.productSmall .images a,
+.productSmall .image a {
+    display:table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.photogalleryItem a img,
+.productSmall .images a img,
+.productSmall .image a img {
+    max-width: 150px;
+    max-height: 150px;
+    box-shadow: 0 0 10px #dfdfdf;
+}
+
+.photogalleryItem a:hover img,
+.productSmall .images a:hover img,
+.productSmall .image a:hover img {
+    box-shadow: 0 0 10px #999999;
+}
+
+.productSmall .image-info {
+    display: none;
+    position: absolute;
+    width: 140px;
+    padding: 5px;
+    z-index: 100;
+    background: rgba(255,255,255,.85);
+    left: 15px;
+    top: 15px;
+}
+
+.productSmall .image-info .desc {
+    display: none;
+    margin-bottom: 0;
+}
+
+.productSmall .image-info .title {
+    text-align: center;
+    margin-bottom: 0;
+    font-size: 11px;
+}
+
+/** Catalog Detail Veiw ----*/
+
+.shop-product-large .details {
+    width: 265px;
+    float: left;
+    padding-right: 35px;
+}
+
+.shop-product-large .details ul.social-btns {
+    /*display: none;*/
+}
+
+.shop-product-large .details .specs {
+    padding-bottom: 10px;
+}
+
+.shop-product-large .details li {
+    font-size: 10px;
+    letter-spacing: 1px;
+    line-height: 16px;
+}
+
+.shop-product-large .details .description {
+    padding-bottom: 15px;
+}
+
+.shop-product-large .details p {
+    font-size: 10px;
+    line-height: 16px;
+}
+
+.shop-product-large .details .description .quote,
+.shop-product-large .details .description .quote p {
+    font-style: italic;
+}
+
+.shop-product-large .details .description .quote .att {
+    float: right;
+}
+
+.shop-product-large .specs .price,
+.shop-product-large .specs .edition,
+.shop-product-large .specs .favorites,
+.shop-product-large .specs .type,
+.shop-product-large .specs .weight,
+.shop-product-large .specs .stock {
+    display: none;
+}
+
+.shop-product-large .details .specs li {
+    padding-top: 1px;
+}
+
+.shop-product-large .details .specs.sub {
+    padding-top: 30px;
+}
+
+.shop-product-large .images {
+    float: left;
+    position:relative;
+}
+
+.shop-product-large .poplets {
+    padding-top: 5px;
+    border-top: 2px solid #eee;
+    margin: 10px auto 0;
+    text-align: center;
+}
+
+.shop-product-large .poplets li {
+    height: 100px;
+    line-height: 100px;
+    display: inline;
+    white-space: normal;
+}
+
+.shop-product-large .poplets img,
+.shop-product-large .images .main #wrap {
+    box-shadow: 0 0 10px #dfdfdf;
+}
+
+.shop-product-large .poplets img:hover,
+.shop-product-large .images .main #wrap:hover {
+    box-shadow: 0 0 10px #999999;
+}
+
+.shop-product-large .poplets img {
+    vertical-align: middle !important;
+    margin: 6px;
+}
+
+.shop-product-large .poplets table {
+    margin: 0 auto;
+}
+
+.shop-product-large #zoom-var {
+    display:none;
+}
