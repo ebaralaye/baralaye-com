@@ -123,7 +123,7 @@
 }
 
 .page-body.home .page-main {
-    width: 675px;
+    max-width: 675px;
     margin: 0 auto;
     padding-top: 20px;
 }

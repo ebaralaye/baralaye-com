@@ -10,16 +10,6 @@
         <meta name="p:domain_verify" content="de0be4f5a7cf46b1fb6578af011e6998" />
         <meta name="robots" content="index,follow" />
 
-        <!-- CSS: Custom Styles -->
-        <link type="text/css" rel="stylesheet" media="all" href="/stylesheets/baralaye.reset.css" />
-        <link type="text/css" rel="stylesheet" media="all" href="/stylesheets/baralaye.helper.css" />
-        <link type="text/css" rel="stylesheet" media="all" href="/stylesheets/baralaye.forms.css" />
-        <link type="text/css" rel="stylesheet" media="all" href="/stylesheets/baralaye.template.css" />
-        <link type="text/css" rel="stylesheet" media="all" href="/stylesheets/baralaye.pages.css" />
-        <link type="text/css" rel="stylesheet" media="all" href="/stylesheets/baralaye.catalog.css" />
-        <link type="text/css" rel="stylesheet" media="all" href="/stylesheets/baralaye.plugins.css" />
-        <link type="text/css" rel="stylesheet" media="all" href="/stylesheets/baralaye.modules.css" />
-
         <!-- CSS: Plugins > Fancybox -->
         <link type="text/css" rel="stylesheet" media="all" href="/plugins/fancybox/css/jquery.fancybox.css" />
         <link type="text/css" rel="stylesheet" media="all" href="/plugins/fancybox/css/jquery.fancybox-thumbs.css" />
@@ -30,6 +20,18 @@
         <link type="text/css" rel="stylesheet" media="all" href="/plugins/bx-slider/css/jquery.bx-slider.css" />
         <!-- CSS: Plugins > Classic Accordian -->
         <link type="text/css" rel="stylesheet" media="all" href="/plugins/classic-accordion/css/jquery.classic-accordion.css" />
+        <!-- CSS: Plugins > Bootstrap -->
+        <link type="text/css" rel="stylesheet" media="all" href="/plugins/bootstrap/css/bootstrap.min.css" />
+
+        <!-- CSS: Custom Styles -->
+        <link type="text/css" rel="stylesheet" media="all" href="/stylesheets/baralaye.reset.css" />
+        <link type="text/css" rel="stylesheet" media="all" href="/stylesheets/baralaye.helper.css" />
+        <link type="text/css" rel="stylesheet" media="all" href="/stylesheets/baralaye.forms.css" />
+        <link type="text/css" rel="stylesheet" media="all" href="/stylesheets/baralaye.template.css" />
+        <link type="text/css" rel="stylesheet" media="all" href="/stylesheets/baralaye.pages.css" />
+        <link type="text/css" rel="stylesheet" media="all" href="/stylesheets/baralaye.catalog.css" />
+        <link type="text/css" rel="stylesheet" media="all" href="/stylesheets/baralaye.plugins.css" />
+        <link type="text/css" rel="stylesheet" media="all" href="/stylesheets/baralaye.modules.css" />
 
         <!-- JS: Plugins > Underscore -->
         <script type="text/javascript" src="/plugins/underscore-min.js"></script>
@@ -51,6 +53,8 @@
         <script type="text/javascript" src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAyhw8QDDthUf_-P5XBMKY2RRaLhBCYEQ2HxwDcACoBDSJCmxiJxT8pCzmBKczuPZyjKWzlTFd-Idi6A"></script>
         <!-- JS: Plugins > Google Map Shim -->
         <script type="text/javascript" src="/plugins/jquery.gmap.js"></script>
+        <!-- JS: Plugins > Bootstrap -->
+        <script type="text/javascript" src="/plugins/bootstrap/js/bootstrap.min.js"></script>
 
         <!-- JS: Custom Scripts -->
         <script type="text/javascript" src="/scripts/baralaye.namespace.js"></script>
