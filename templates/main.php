@@ -32,12 +32,12 @@
         <link type="text/css" rel="stylesheet" media="all" href="/plugins/classic-accordion/css/jquery.classic-accordion.css" />
 
         <!-- JS: Plugins > Underscore -->
-        <script type="text/javascript" src="/plugins/underscore-min.js"></script>
+        <script type="text/javascript" src="/plugins/underscore/underscore-min.js"></script>
         <!-- JS: Plugins > Backbone -->
-        <script type="text/javascript" src="/plugins/backbone-min.js"></script>
+        <script type="text/javascript" src="/plugins/backbone/backbone-min.js"></script>
         <!-- JS: Plugins > jQuery -->
         <script type="text/javascript" src="/plugins/jquery/jquery-1.8.2.min.js"></script>
-        <script type="text/javascript" src="/plugins/jquery.easing-1.3.pack.js"></script>
+        <script type="text/javascript" src="/plugins/jquery/jquery.easing-1.3.pack.js"></script>
         <!-- JS: Plugins > Fancybox -->
         <script type="text/javascript" src="/plugins/fancybox/js/jquery.fancybox.js"></script>
         <script type="text/javascript" src="/plugins/fancybox/js/jquery.fancybox-thumbs.js"></script>
@@ -49,8 +49,6 @@
         <script type="text/javascript" src="/plugins/classic-accordion/js/jquery.classic-accordion.min.js"></script>
         <!-- JS: Plugins > Google Map API -->
         <script type="text/javascript" src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAyhw8QDDthUf_-P5XBMKY2RRaLhBCYEQ2HxwDcACoBDSJCmxiJxT8pCzmBKczuPZyjKWzlTFd-Idi6A"></script>
-        <!-- JS: Plugins > Google Map Shim -->
-        <script type="text/javascript" src="/plugins/jquery.gmap.js"></script>
 
         <!-- JS: Custom Scripts -->
         <script type="text/javascript" src="/scripts/baralaye.namespace.js"></script>
@@ -95,10 +93,6 @@
             </div>
             <div id="tmp-bg-logo" class="tmp-bg-logo"></div>
             <div id="tmp-bg-img" class="tmp-bg-img"></div>
-            <div class="d-n">
-                <div id="tmp-google-map" class="tmp-google-map"></div>
-            </div>
         </div>
-        {module_contentholder,13460}
     </body>
 </html>

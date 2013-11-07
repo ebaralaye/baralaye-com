@@ -1,6 +1,6 @@
 /**
  * Baralaye.com Base namespace
- * @author: web@baralaye.com
+ * @author tech@baralaye.com
  */
 
 var locDoc = null,

@@ -1,6 +1,6 @@
 /**
  * Baralaye.com Plugin functionality
- * @author: web@baralaye.com
+ * @author tech@baralaye.com
  */
 
 (function($){
@@ -56,16 +56,13 @@
                 'scrolling':'no'
             });
             $('a.gMap').fancybox({
-                'width':400,
-                'height':400,
-                'autoDimensions':false,
-                'transitionIn':'elastic',
-                'transitionOut':'elastic',
-                'speedIn':600,
-                'speedOut':200,
-                'overlayShow':true
+                openEffect  : 'none',
+                closeEffect : 'none',
+                helpers : {
+                    media : {}
+                }
             });
-            $("a.ltbx.video").click(function(){
+            $('a.ltbx.video').click(function(){
                 $.fancybox({
                     'padding'         : 0,
                     'autoScale'       : false,
@@ -82,24 +79,6 @@
                     }
                 });
                 return false;
-            });
-        }
-
-        /**
-         * Settings and Fancybox modal for Google Map Overlay
-         * @private
-         */
-        function googleMapOverlay(e) {
-            e.preventDefault();
-            var addr = $(this).text();
-            var tag = $(this).attr('title');
-            console.log(addr + ' ' + tag);
-            $("#gMap").gMap({
-                markers: [{
-                    address: addr,
-                    html: tag
-                }],
-                zoom: 15
             });
         }
 
@@ -122,10 +101,11 @@
             }
         }
 
-        /* Portal Accordion Slides
+        /**
+         * Portal Accordion Slides
+         * @private
          */
         function setAccordianSLides() {
-
             var slide_number;
             function slideNumber(slides){
                 slide_number = Math.floor(Math.random() * slides);
@@ -182,7 +162,9 @@
 
         }
 
-        /* Flickr Photoset function
+        /**
+         * Flickr Photoset function
+         * @private
          */
         function flickrPhotoSet() {
 
@@ -220,14 +202,6 @@
 
         }
 
-        /* Sets event handlers
-         */
-        function setEventHandlers() {
-
-            $('.gMap').on('click', googleMapOverlay);
-
-        }
-
         return {
 
             init: function() {
@@ -239,7 +213,6 @@
                     setAccordianSLides();
                 }
                 flickrPhotoSet();
-                setEventHandlers();
 
             }
 

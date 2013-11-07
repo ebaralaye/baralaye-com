@@ -1,6 +1,6 @@
 /**
  * Baralaye.com Page functionality
- * @author: web@baralaye.com
+ * @author tech@baralaye.com
  */
 
 (function($){
