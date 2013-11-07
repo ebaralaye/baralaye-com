@@ -1,7 +1,6 @@
-/*
- * @description: Catalog functionality
- * @website: Baralaye.com
- * @author: web@baralaye.com
+/**
+ * Catalog functionality
+ * @author tech@baralaye.com
  */
 
 (function($){

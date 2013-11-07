@@ -1,6 +1,6 @@
 /**
  * Baralaye.com Template functionality
- * @author: web@baralaye.com
+ * @author tech@baralaye.com
  */
 
 (function($){
@@ -19,11 +19,12 @@
                     locRef2 = locRef.split('/')[2] || null,
                     locRef3 = locRef.split('/')[3] || null,
                     locRefH = locRef.split('#')[1] || null;
-                if (locRef === locDoc || (locRef2 === locDoc2 && locRef2 !== null && locRefH === null)) {
-                     $this.attr('class', 'active');
-                     $this.parents('li').attr('class', 'selected master');
-                }
-                else if (locRef1 === locDoc1 && locRefH === null){
+                if (locRef === locDoc 
+                    || (locRef1 === locDoc1 && locRef2 === null) 
+                    || (locRef2 === locDoc2 && locRef3 === null) 
+                    || (locRef3 === locDoc3 && locRef3 !== null) 
+                    || (locRef1 === "news" && locDoc1 === "announcements")) {
+                    $this.attr('class', 'active');
                     $this.parents('li').attr('class', 'selected master');
                 }
             });

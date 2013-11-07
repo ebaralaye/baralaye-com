@@ -1,6 +1,6 @@
 /**
  * Baralaye.com Inits
- * @author: web@baralaye.com
+ * @author tech@baralaye.com
  */
 
 var Site = window.Site || {};
