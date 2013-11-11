@@ -1,0 +1,43 @@
+<br />
+<br />
+<div class="galleria">
+<div class="tabs">
+<a class="h-title" href="#">Artists</a><a class="h-title" href="#">Work</a><a class="h-title" href="#">Studios</a><a class="h-title" href="#">Social</a><a class="h-title" href="#">Sceinc</a><a class="h-title" href="#">Misc</a>
+</div>
+<div class="sets"></div>
+</div>
+<script>
+//// Load the classic theme
+Galleria.loadTheme('/plugins/galleria/themes/classic/galleria.classic.js'); 
+$('.galleria .tabs a').each(function(){
+    $('.galleria .sets').append('<div class="set"></div>');
+});
+$('.galleria .tabs a').click(function(){
+$('.galleria .tabs a').removeClass('active');
+$(this).addClass('active');
+var set = $('.galleria .sets div.set').eq($(this).index());
+    $('.galleria .sets div.set').fadeTo('slow', 0);
+    if(set.html()==""){
+        switch ($(this).index()){
+        case 0:
+            set.galleria({flickr:'set:72157627711078427',flickrOptions:{sort:'date-posted-asc',max:999}}); break;
+        case 1:
+            set.galleria({flickr:'set:72157627711123981',flickrOptions:{sort:'date-posted-asc',max:999}}); break;
+        case 2:
+            set.galleria({flickr:'set:72157627711329647',flickrOptions:{sort:'date-posted-asc',max:999}}); break;
+        case 3:
+            set.galleria({flickr:'set:72157627835547632',flickrOptions:{sort:'date-posted-asc',max:999}}); break;
+        case 4:
+            set.galleria({flickr:'set:72157627835488534',flickrOptions:{sort:'date-posted-asc',max:999}}); break;
+        case 5:
+            set.galleria({flickr:'set:72157627711379441',flickrOptions:{sort:'date-posted-asc',max:999}}); break;
+        }
+    }
+    set.fadeTo('slow', 1);
+return false;
+});
+$('.galleria .tabs a').eq(0).trigger('click');
+</script>
+<br />
+<br />
+

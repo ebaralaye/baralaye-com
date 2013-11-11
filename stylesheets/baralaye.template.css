@@ -66,9 +66,9 @@ p {
 /** Horizontal Rule ----*/
 
 .hr, hr {
-    border-bottom: 1px solid #ccc;
-    padding-top: 8px;
-    margin-bottom: 14px;
+    border-bottom: 2px solid #dfdfdf;
+    /*padding-top: 8px;*/
+    margin: 0 15px;
     clear: both;
 }
 
@@ -221,33 +221,27 @@ ul.social-btns .btn-s a:hover {
 }
 
 .tmp-top {
-    height: 52px;
-    position: relative;
-    z-index: 10;
-    border-bottom: 2px solid #dfdfdf;
     margin-bottom: 40px;
 }
 
-.tmp-top .tmp-logo {
-    display: block;
+.tmp-top .tmp-logo > a {
+    position: relative;
+    bottom: -2px;
     display: inline-block;
-    position: absolute;
-    left: 0;
-    bottom: 0;
+    height: 42px;
+    padding: 20px 0 5px 0;
     font-size: 15px;
-    line-height: 21px;
     font-weight: 300;
     letter-spacing: 3px;
     text-decoration: none;
 }
 
-.tmp-top .tmp-logo:hover {
+.tmp-top .tmp-logo > a:hover {
     border-bottom: 2px solid #4F569F;
-    bottom:-2px;
 }
 
 .tmp-sub {
-    padding-bottom: 50px;
+    margin-bottom: 50px;
     z-index: 1;
 }
 
@@ -277,10 +271,10 @@ ul.social-btns .btn-s a:hover {
 
 /** Top Nav ----*/
 
-.tmp-top > .tmp-nav {
-    position: absolute;
-    right: 0;
+.tmp-top > .tmp-nav > div {
+    position: relative;
     bottom: -2px;
+    float: right;
 }
 
 .tmp-top > .tmp-nav > div > ul li {
@@ -294,7 +288,7 @@ ul.social-btns .btn-s a:hover {
 .tmp-top > .tmp-nav > div > ul > li a {
     display: block;
     float: left;
-    height: 15px;
+    height: 42px;
     letter-spacing: 1px;
     white-space: nowrap;
     text-decoration: none;
@@ -389,7 +383,7 @@ ul.social-btns .btn-s a:hover {
 .tmp-bottom > .tmp-nav > div > ul > li a {
     display: block;
     padding-bottom: 4px;
-    height: 13px;
+    height: 19px;
     line-height: 13px;
     letter-spacing: 1px;
 }

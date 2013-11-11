@@ -7,6 +7,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta name="keywords" content=" sculpture, art, ceramics, vases, abstract, fine-artist, sculptor, artist" />
         <meta name="description" content="Ebitenyefa Baralaye is a fine artist &amp; designer addressing themes of identity through abstraction." />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="p:domain_verify" content="de0be4f5a7cf46b1fb6578af011e6998" />
         <meta name="robots" content="index,follow" />
 
@@ -75,12 +76,15 @@
     </head>
     <body>
         <div id="tmp-window" class="tmp-window">
-            <div id="tmp-wrap" class="tmp-wrap">
-                <div id="tmp-top" class="tmp-top">
-                    <div class="tmp-nav">
+            <div id="tmp-wrap" class="tmp-wrap container">
+                <div id="tmp-top" class="tmp-top row">
+                    <div class="tmp-logo col-sm-6">
+                        <a href="/">Ebitenyefa Baralaye</a>
+                    </div>
+                    <div class="tmp-nav col-sm-6">
                         <?php echo $mainMenu; ?>
                     </div>
-                    <a id="tmp-logo" class="tmp-logo" href="/">Ebitenyefa Baralaye</a>
+                    <hr />
                 </div>
                 <div id="tmp-sub" class="tmp-sub">
                     <?php echo $content; ?>

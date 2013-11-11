@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Galleria Flickr Plugin</title>
+        <link type="text/css" rel="stylesheet" media="screen" href="/stylesheets/reset.css" />
+        <link type="text/css" rel="stylesheet" media="screen" href="/stylesheets/EB_ModuleStylesheets.css" />
+        <link type="text/css" rel="stylesheet" media="screen" href="/stylesheets/EB_main.css" />
+        <link type="text/css" rel="stylesheet" media="screen" href="/styleSheets/jquery.fancybox-1.3.1.css" />
+        <link type="text/css" rel="stylesheet" media="screen" href="/styleSheets/cloud-zoom.css" />
+        <link type="text/css" rel="stylesheet" media="screen" href="/styleSheets/classic-accordion.css" />
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
+        <script type="text/javascript" src="/plugins/galleria/galleria-1.2.5.js"></script>
+        <script type="text/javascript" src="/plugins/galleria/plugins/flickr/galleria.flickr.js"></script>
+        <script type="text/javascript" src="/scripts/jquery.easing-1.3.pack.js"></script>
+        <script type="text/javascript" src="/scripts/jquery.fancybox-1.3.1.js"></script>
+        <script type="text/javascript" src="/scripts/jquery.innerfade.js"></script>
+        <script type="text/javascript" src="/scripts/jquery.classicAccordion.min.js"></script>
+        <!--<script type="text/javascript" src="http://use.typekit.com/pro5kts.js"></script>-->
+        <!--<script type="text/javascript">try{Typekit.load();}catch(e){}</script>-->
+        <script type="text/javascript" src="http://maps.google.com/maps?file=api&v=2&key=ABQIAAAAyhw8QDDthUf_-P5XBMKY2RRaLhBCYEQ2HxwDcACoBDSJCmxiJxT8pCzmBKczuPZyjKWzlTFd-Idi6A"></script>
+        <script type="text/javascript" src="/scripts/EB_main.js"></script>
+        <script type="text/javascript" src="/scripts/cloud-zoom.1.0.2.min.js"></script>
+        <script type="text/javascript">document.title="Ebitenyefa Baralaye | {module_pagename}";</script>
+    </head>
+    <body>
+        <div class="content">
+        <h1>Galleria Flickr Plugin Demo</h1>
+        <p>Demonstrating a basic gallery example with a Flickr search.</p>
+        <!-- Adding gallery images. This is just a container for the dynamic flickr images -->
+        <div id="galleria"></div>
+        <p class="cred">Made by <a href="http://galleria.aino.se">Galleria</a>.</p>
+        </div>
+        <script>
+
+    // Load the classic theme
+    Galleria.loadTheme('/plugins/galleria/themes/classic/galleria.classic.js');
+    
+    // Initialize Galleria
+    $('#galleria').galleria({
+        flickr: 'search:cityscape',
+        flickrOptions: {
+            sort: 'interestingness-desc'
+        }
+    });
+
+    </script>
+    </body>
+</html>

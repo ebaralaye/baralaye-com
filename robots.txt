@@ -1,6 +1,6 @@
 User-agent: *
-Disallow: /web/
-Disallow: /web
+Disallow: /tech/
+Disallow: /tech
 Disallow: /resume/
 Disallow: /resume
 Disallow: /artisan/

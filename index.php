@@ -13,10 +13,7 @@ $content = "";
 if ($path == '/') {
     $content = render('pages/home.php');
 }
-else if ($path == '/about') {
-    $content = render('pages/about.php');
-}
-else {
+else if(substr($path, 0,4) == '/art') {
     $products = array();
     $products_ref = fopen("database/products.csv", "r");
     $properties = fgetcsv($products_ref);
@@ -39,10 +36,12 @@ else {
     if (count($products) > 0) {
         $content = render("templates/catalog/list.php", array('products' => $products));
     }
-    else if($content == ""){
-        $content = render('pages/error/404.php');
-    }
-
+}
+else if(file_exists("pages{$path}.php")){
+    $content = render("pages{$path}.php");
+}
+else {
+    $content = render('pages/error/404.php');
 }
 
 $mainMenu = render('templates/menus/main.php');
