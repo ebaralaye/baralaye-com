@@ -25,14 +25,7 @@
         <link type="text/css" rel="stylesheet" media="all" href="/plugins/bootstrap/css/bootstrap.min.css" />
 
         <!-- CSS: Custom Styles -->
-        <link type="text/css" rel="stylesheet" media="all" href="/stylesheets/baralaye.reset.css" />
-        <link type="text/css" rel="stylesheet" media="all" href="/stylesheets/baralaye.helper.css" />
-        <link type="text/css" rel="stylesheet" media="all" href="/stylesheets/baralaye.forms.css" />
-        <link type="text/css" rel="stylesheet" media="all" href="/stylesheets/baralaye.template.css" />
-        <link type="text/css" rel="stylesheet" media="all" href="/stylesheets/baralaye.pages.css" />
-        <link type="text/css" rel="stylesheet" media="all" href="/stylesheets/baralaye.catalog.css" />
-        <link type="text/css" rel="stylesheet" media="all" href="/stylesheets/baralaye.plugins.css" />
-        <link type="text/css" rel="stylesheet" media="all" href="/stylesheets/baralaye.modules.css" />
+        <link type="text/css" rel="stylesheet" media="all" href="/libs/css/main.css" />
 
         <!-- JS: Plugins > Underscore -->
         <script type="text/javascript" src="/plugins/underscore/underscore-min.js"></script>
@@ -56,12 +49,12 @@
         <script type="text/javascript" src="/plugins/bootstrap/js/bootstrap.min.js"></script>
 
         <!-- JS: Custom Scripts -->
-        <script type="text/javascript" src="/scripts/baralaye.namespace.js"></script>
-        <script type="text/javascript" src="/scripts/baralaye.plugins.js"></script>
-        <script type="text/javascript" src="/scripts/baralaye.template.js"></script>
-        <script type="text/javascript" src="/scripts/baralaye.catalog.js"></script>
-        <script type="text/javascript" src="/scripts/baralaye.pages.js"></script>
-        <script type="text/javascript" src="/scripts/baralaye.site.js"></script>
+        <script type="text/javascript" src="/libs/js/baralaye.namespace.js"></script>
+        <script type="text/javascript" src="/libs/js/baralaye.plugins.js"></script>
+        <script type="text/javascript" src="/libs/js/baralaye.template.js"></script>
+        <script type="text/javascript" src="/libs/js/baralaye.catalog.js"></script>
+        <script type="text/javascript" src="/libs/js/baralaye.pages.js"></script>
+        <script type="text/javascript" src="/libs/js/baralaye.site.js"></script>
 
         <!-- JS: Plugins > Cloud Zoom -->
         <script type="text/javascript" src="/plugins/cloud-zoom/js/jquery.cloud-zoom.1.0.2.min.js"></script>
