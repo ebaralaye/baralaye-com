@@ -21,8 +21,6 @@
         <link type="text/css" rel="stylesheet" media="all" href="/plugins/bx-slider/css/jquery.bx-slider.css" />
         <!-- CSS: Plugins > Classic Accordian -->
         <link type="text/css" rel="stylesheet" media="all" href="/plugins/classic-accordion/css/jquery.classic-accordion.css" />
-        <!-- CSS: Plugins > Bootstrap -->
-        <link type="text/css" rel="stylesheet" media="all" href="/plugins/bootstrap/css/bootstrap.min.css" />
 
         <!-- CSS: Custom Styles -->
         <link type="text/css" rel="stylesheet" media="all" href="/libs/css/main.css" />
@@ -65,7 +63,6 @@
 
         <!-- JS: Pinterest (for pin button) -->
         <script type="text/javascript" src="//assets.pinterest.com/js/pinit.js"></script>
-
     </head>
     <body>
         <div id="tmp-window" class="tmp-window">
