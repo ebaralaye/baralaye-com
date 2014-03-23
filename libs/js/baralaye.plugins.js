@@ -83,25 +83,6 @@
         }
 
         /**
-         * Sets Cloud Zoom plugin for Portfolio Detail view
-         * @private
-         */
-        function setCloudZoom() {
-            if ($('#zoom-var').text() === 'zoom-1'){
-                var main_rel ="position: 'inside'";
-                var imgFirst_name = $('.shop-product-large .images .main img:first').attr('src').split('/')[5]; 
-                $('.shop-product-large .images .main img:first').wrap("<a href='/images/art/portfolio/big/"+imgFirst_name+"' class='cloud-zoom' id='zoom1' />");
-                $('.shop-product-large .images .main a:first').attr('rel',main_rel);
-                $('.poplets a').each(function(){
-                    var img_name = this.href.split('/')[7];
-                    var url_rel = "useZoom: 'zoom1', smallImage: '/images/art/portfolio/large/"+img_name+"'";
-                    var big_src = "/images/art/portfolio/big/"+img_name; 
-                    $(this).removeAttr('onclick').attr('rel',url_rel).attr('class','cloud-zoom-gallery').attr('href',big_src);
-                });
-            }
-        }
-
-        /**
          * Portal Accordion Slides
          * @private
          */
@@ -208,7 +189,6 @@
 
                 setBXSlider();
                 setFancyBox();
-                setCloudZoom();
                 if (locDoc1 === '') {
                     setAccordianSLides();
                 }
