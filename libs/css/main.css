@@ -205,7 +205,7 @@ table {
   img {
     max-width: 100% !important;
   }
-  @page {
+  @page  {
     margin: 2cm .5cm;
   }
   p,
@@ -1576,6 +1576,7 @@ input[type="checkbox"] {
   margin: 4px 0 0;
   margin-top: 1px \9;
   /* IE8-9 */
+
   line-height: normal;
 }
 input[type="file"] {
@@ -6856,6 +6857,7 @@ small {
 hr {
   border-bottom: 2px solid #dfdfdf;
   /*padding-top: 8px;*/
+
   margin: 0 15px;
   clear: both;
 }
@@ -7604,53 +7606,29 @@ ul.social-btns .btn-s a:hover {
   clear: both;
   margin-top: 20px;
 }
-.page-body.catalog ul.catalogueList {
-  margin: 0 auto;
-  text-align: center;
-}
-.page-body.catalog ul.catalogueList li {
-  display: inline;
-  margin: 0 30px;
-}
-.page-body.catalog ul.catalogueList li .name {
-  display: inline;
-}
-/** Catalog Gallery View ----*/
-.photogalleryTable {
-  margin: 20px auto;
-}
-td.photogalleryItem {
-  float: none;
-}
-.productSmall {
+/** Product List ----*/
+.product-list {
   text-align: center;
   font-size: 0;
 }
-.productSmall .name {
+.product-list .name {
   margin-bottom: 6px;
   height: 20px;
   text-align: center;
 }
-.productSmall .name a {
+.product-list .name a {
   text-decoration: none;
   display: block;
 }
-.productSmall .name,
-.productSmall .name a {
+.product-list .name,
+.product-list .name a {
   overflow: hidden;
   text-overflow: ellipsis;
   -o-text-overflow: ellipsis;
   -webkit-text-overflow: ellipsis;
   white-space: nowrap;
 }
-.productSmall .images,
-.productSmall .images a,
-.productSmall .image,
-.productSmall .image a {
-  height: 150px;
-  width: 150px;
-}
-.productSmall .image-info {
+.product-list .image-info {
   display: none;
   position: absolute;
   width: 140px;
@@ -7660,132 +7638,125 @@ td.photogalleryItem {
   left: 15px;
   top: 15px;
 }
-.productSmall .image-info .desc {
+.product-list .image-info .desc {
   display: none;
   margin-bottom: 0;
 }
-.productSmall .image-info .title {
+.product-list .image-info .title {
   text-align: center;
   margin-bottom: 0;
   font-size: 11px;
 }
-.photogalleryItem,
-.productSmall > li,
-.productSmall .productItem {
+.product-list > li,
+.product-list .item {
   display: inline-block;
   position: relative;
   width: 180px;
   margin: 15px 0;
-  /*
-    @media (max-width: 360px) {
-        width: 50%;
-    }
-*/
 }
-.photogalleryItem,
-.productSmall .images,
-.productSmall .image {
+.product-list .images,
+.product-list .image {
   width: 150px;
   height: 150px;
   margin: 0 auto;
 }
-.photogalleryItem a,
-.productSmall .images a,
-.productSmall .image a {
+.product-list .images a,
+.product-list .image a {
+  height: 150px;
+  width: 150px;
   display: table-cell;
   text-align: center;
   vertical-align: middle;
 }
-.photogalleryItem a img,
-.productSmall .images a img,
-.productSmall .image a img {
+.product-list .images a img,
+.product-list .image a img {
   max-width: 150px;
   max-height: 150px;
   box-shadow: 0 0 10px #dfdfdf;
 }
-.photogalleryItem a:hover img,
-.productSmall .images a:hover img,
-.productSmall .image a:hover img {
+.product-list .images a:hover img,
+.product-list .image a:hover img {
   box-shadow: 0 0 10px #999999;
 }
-/** Catalog Detail Veiw ----*/
-.shop-product-large {
+/** Product Detail ----*/
+.product-detail {
   overflow: auto;
   padding-top: 20px;
 }
-.shop-product-large .details {
+.product-detail .details {
   width: 265px;
   float: left;
   padding-right: 35px;
 }
-.shop-product-large .details li {
+.product-detail .details li {
   font-size: 10px;
   letter-spacing: 1px;
   line-height: 16px;
 }
-.shop-product-large .details li p {
+.product-detail .details li p {
   font-size: 10px;
   line-height: 16px;
 }
-.shop-product-large .details .specs {
+.product-detail .details .specs {
   padding-bottom: 10px;
 }
-.shop-product-large .details .specs .edition,
-.shop-product-large .details .specs .type,
-.shop-product-large .details .specs .weight,
-.shop-product-large .details .specs .stock {
+.product-detail .details .specs .edition,
+.product-detail .details .specs .weight {
   display: none;
 }
-.shop-product-large .details .specs .code span {
+.product-detail .details .specs .code span {
   text-transform: uppercase;
 }
-.shop-product-large .details .specs li {
+.product-detail .details .specs li {
   padding-top: 1px;
 }
-.shop-product-large .details .specs.sub {
+.product-detail .details .specs.sub {
   padding-top: 30px;
 }
-.shop-product-large .details .description {
+.product-detail .details .description {
   padding-bottom: 15px;
 }
-.shop-product-large .details .description .quote {
+.product-detail .details .description .quote {
   font-style: italic;
 }
-.shop-product-large .details .description .quote p {
+.product-detail .details .description .quote p {
   font-style: italic;
 }
-.shop-product-large .details .description .quote .att {
+.product-detail .details .description .quote .att {
   float: right;
 }
-.shop-product-large .images {
+.product-detail .images {
+  width: 600px;
   float: left;
   position: relative;
-}
-.shop-product-large .images .main #wrap {
-  box-shadow: 0 0 10px #dfdfdf;
-}
-.shop-product-large .images .main #wrap:hover {
-  box-shadow: 0 0 10px #999999;
-}
-.shop-product-large .images .poplets {
-  padding-top: 6px;
-  border-top: 2px solid #eee;
-  margin: 12px auto 0;
   text-align: center;
 }
-.shop-product-large .images .poplets li {
+.product-detail .images .main {
+  display: inline-block;
+}
+.product-detail .images .main #wrap {
+  box-shadow: 0 0 10px #dfdfdf;
+}
+.product-detail .images .main #wrap:hover {
+  box-shadow: 0 0 10px #999999;
+}
+.product-detail .images .poplets {
+  margin-top: 12px;
+  display: inline-block;
+  text-align: center;
+}
+.product-detail .images .poplets li {
   height: 100px;
   display: inline-block;
-  white-space: normal;
   margin: 6px;
 }
-.shop-product-large .images .poplets img {
+.product-detail .images .poplets img {
   box-shadow: 0 0 10px #dfdfdf;
   vertical-align: middle !important;
   max-width: 100px;
   max-height: 100px;
 }
-.shop-product-large .images .poplets img:hover {
+.product-detail .images .poplets img:hover {
   box-shadow: 0 0 10px #999999;
   cursor: pointer;
 }
@@ -7965,4 +7936,3 @@ td.photogalleryItem {
   font-size: 100%;
   margin-bottom: 0;
 }
-/*# sourceMappingURL=main.css.map */

@@ -1,15 +1,15 @@
-<div class="shop-product-large">
+<div class="product-detail">
     <div class="details">
         <h1 class="name"><?php echo $name; ?></h1>
         <ul>
             <li class="specs">
                 <ul>
                     <li class="medium">Medium: <?php echo $medium; ?></li>
-                    <li class="dimensions">Dimensions (inches): <?php echo $dimensions; ?></li>
+                    <li class="dimensions">Dimensions (inches): <?php echo $dim_width," x ", $dim_height," x ",$dim_depth; ?></li>
                     <li class="weight">Weight: <span><?php echo $weight; ?></span> lbs</li>
                     <li class="year">Year: <?php echo $year; ?></li>
                     <li class="edition">Edition: <span><?php echo $edition; ?></span></li>
-                    <li class="price">Price: <?php echo $sale_price; ?></a></li>
+                    <li class="price">Price: $<?php echo $price; ?></a></li>
                     <li class="code">Code: <span><?php echo $code; ?></span></li>
                 </ul>
             </li>
@@ -35,6 +35,7 @@
         <div class="main">
             <a href="/images/art/portfolio/big/<?php echo $image; ?>.jpg" class="cloud-zoom" id="zoom1" rel="position: 'inside'"><img src="/images/art/portfolio/large/<?php echo $image; ?>.jpg" alt="<?php echo $name; ?>" /></a>
         </div>
+        <div class="c-z"></div>
         <ul class="poplets">
             <?php $poplets = explode(',', $image_poplets); ?>
             <?php foreach($poplets as $poplet): ?>
