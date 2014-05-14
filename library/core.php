@@ -57,11 +57,14 @@ function action_catalog($path){
     while (($row = fgetcsv($products_ref)) !== FALSE){
         $row = array_slice($row, 0, 15);
         $product = array_combine($properties, $row);
+        // Detail View //
         if ($path == $product["url"]) {
             return render("templates/catalog/detail.php", $product);
             break;
         }
+        // Check if the path is the first part of the product url, a catalog path
         else if(strpos($product["url"], $path) === 0) {
+            // Add product to products array for catalog view
             $products[] = $product;
         }
     }
@@ -95,9 +98,9 @@ function action_news($path){
         if($path){
             // SQL statement for url slug (detail view)
             $sql = 'SELECT * FROM posts WHERE status = 1 AND url = ?';
-            $sth = $dbh->prepare($sql);
-            $sth->execute(array($path));
-            $post = $sth->fetch();
+            $sth = $dbh -> prepare($sql);
+            $sth -> execute(array($path));
+            $post = $sth -> fetch();
 
             if ($post) {
                 return render("templates/news/detail.php", $post);
