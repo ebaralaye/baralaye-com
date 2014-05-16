@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * Database Conf
+ */
 function conf() {
     $conf = array(
         'database' => array (
@@ -11,6 +14,9 @@ function conf() {
     return $conf;
 }
 
+/**
+ * Render Method
+ */
 function render($template, $variables = array()) {
     extract($variables);
     ob_start();
@@ -20,6 +26,9 @@ function render($template, $variables = array()) {
     return $content;
 }
 
+/**
+ * Route Method
+ */
 function route($path) {
     if ($path == '/') {
         return "home";
@@ -38,19 +47,26 @@ function route($path) {
     }
 }
 
+/**
+ * Portal Action
+ */
 function action_home($path){
     return render('pages/home.php');
 }
 
+/**
+ * Page Action
+ */
 function action_page($path){
     return render("pages{$path}.php");
 }
 
+/**
+ * Catalog Action
+ */
 function action_catalog($path){
     $products = array();
-
     $products_ref = fopen("database/products.csv", "r");
-
     $properties = fgetcsv($products_ref);
     $properties = array_slice($properties, 0, 15);
 
@@ -68,30 +84,53 @@ function action_catalog($path){
             $products[] = $product;
         }
     }
-
     fclose($products_ref);
 
+    // Catalog View (more than one row of matching products)
     if (count($products) > 0) {
-        return render("templates/catalog/list.php", array('products' => $products));
+
+      // Open a database connection - pointer to my database
+      $conf = conf();
+      $conf = $conf['database'];
+
+      try {
+          $dbh = new PDO($conf['dsn'], $conf['user'], $conf['password']);
+          // SQL - Select all rows from catalogs table that have a url that matches $path
+          $sql = 'SELECT * FROM catalogs WHERE  url = ?';
+          $sth = $dbh -> prepare($sql);
+          $sth -> execute(array($path));
+          $catalog = $sth -> fetch();
+          return render("templates/catalog/list.php", array('products' => $products, 'catalog' => $catalog));
+      }
+      catch (PDOException $e) {
+      }
     }
     else {
        return action_404();
     }
 }
 
+/**
+ * 404 Action
+ */
 function action_404(){
     return render('pages/error/404.php');
 }
 
+/**
+ * News Action
+ */
 function action_news($path){
 
-    // Create a variable to hold list of post data
+    // Array to hold list of post data
     $posts = array();
+    // Truncated path after "/news/" uri string
     $path = substr($path, 6);
 
     // Open a database connection - pointer to my database
     $conf = conf();
     $conf = $conf['database'];
+
     try {
         $dbh = new PDO($conf['dsn'], $conf['user'], $conf['password']);
 
@@ -116,7 +155,6 @@ function action_news($path){
             }
             return render("templates/news/list.php", array('posts' => $posts));
         }
-
     }
     catch (PDOException $e) {
     }
