@@ -1,7 +1,7 @@
 <div class="page-body catalog">
     <div class="header">
       <h1><?php echo $catalog['title']; ?></h1>
-      <?php if ($catalog[description] != "") {echo "<p>".$catalog['description']."</p>";} ?>
+      <?php if ($catalog['description'] != "") {echo "<p>".$catalog['description']."</p>";} ?>
     </div>
     <div class="body">
         <ul class="product-list">
