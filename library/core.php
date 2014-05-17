@@ -7,8 +7,8 @@ function conf() {
     $conf = array(
         'database' => array (
             'dsn' => 'mysql:dbname=dev_baralaye;host=127.0.0.1',
-            'user' => 'root',
-            'password' => 'root',
+            'user' => 'baralaye_com',
+            'password' => '8FpJwPTC',
         )
     );
     return $conf;
