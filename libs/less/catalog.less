@@ -6,213 +6,190 @@
 /** Catalog Template ----*/
 
 .page-body.catalog {
-    padding-top: 20px;
-
-    .body {
-        clear: both;
-        margin-top: 20px;
-    }
-
 }
 
 /** Product List ----*/
 
 .product-list {
-    text-align: center;
-    font-size: 0;
+  text-align: center;
+  font-size: 0;
 
-    .name {
-        margin-bottom: 6px;
-        height: 20px;
-        text-align:center;
+  .name {
+    margin-bottom: 6px;
+    height: 20px;
+    text-align:center;
 
-        a {
-            text-decoration: none;
-            display: block;
-        }
+    a {
+      text-decoration: none;
+      display: block;
+    }
+  }
 
+  .name,
+  .name a {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -webkit-text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .image-info {
+    display: none;
+    position: absolute;
+    width: 140px;
+    padding: 5px;
+    z-index: 100;
+    background: rgba(255,255,255,.85);
+    left: 15px;
+    top: 15px;
+
+    .desc {
+      display: none;
+      margin-bottom: 0;
     }
 
-    .name,
-    .name a {
-        overflow: hidden;
-        text-overflow: ellipsis;
-        -o-text-overflow: ellipsis;
-        -webkit-text-overflow: ellipsis;
-        white-space: nowrap;
+    .title {
+      text-align: center;
+      margin-bottom: 0;
+      font-size: 11px;
     }
+  }
 
-    .image-info {
-        display: none;
-        position: absolute;
-        width: 140px;
-        padding: 5px;
-        z-index: 100;
-        background: rgba(255,255,255,.85);
-        left: 15px;
-        top: 15px;
+  > li,
+  .item {
+    display: inline-block;
+    position: relative;
+    width: 180px;
+    margin: 15px 0;
+  }
 
-        .desc {
-            display: none;
-            margin-bottom: 0;
-        }
+  .images,
+  .image {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
 
-        .title {
-            text-align: center;
-            margin-bottom: 0;
-            font-size: 11px;
-        }
+    a {
+      height: 150px;
+      width: 150px;
+      display:table-cell;
+      text-align: center;
+      vertical-align: middle;
 
+      img {
+        max-width: 150px;
+        max-height: 150px;
+        box-shadow: 0 0 10px #dfdfdf;
+      }
+
+      &:hover img {
+        box-shadow: 0 0 10px #999999;
+      }
     }
-
-    > li,
-    .item {
-        display: inline-block;
-        position: relative;
-        width: 180px;
-        margin: 15px 0;
-    }
-
-    .images,
-    .image {
-        width: 150px;
-        height: 150px;
-        margin: 0 auto;
-
-        a {
-            height: 150px;
-            width: 150px;
-            display:table-cell;
-            text-align: center;
-            vertical-align: middle;
-
-            img {
-                max-width: 150px;
-                max-height: 150px;
-                box-shadow: 0 0 10px #dfdfdf;
-            }
-
-            &:hover img {
-                box-shadow: 0 0 10px #999999;
-            }
-
-        }
-
-    }
-
+  }
 }
 
 /** Product Detail ----*/
 
 .product-detail {
-    overflow: auto;
-    padding-top: 20px;
+  overflow: auto;
+  padding-top: 20px;
 
-    .details {
-        width: 265px;
-        float: left;
-        padding-right: 35px;
+  .details {
+    width: 265px;
+    float: left;
+    padding-right: 35px;
 
-        li {
-            font-size: 10px;
-            letter-spacing: 1px;
-            line-height: 16px;
+    li {
+      font-size: 10px;
+      letter-spacing: 1px;
+      line-height: 16px;
 
-            p {
-                font-size: 10px;
-                line-height: 16px;
-            }
-
-        }
-
-        .specs {
-            padding-bottom: 10px;
-
-            .edition,
-            .weight {
-                display: none;
-            }
-
-            .code span {
-                text-transform: uppercase;
-            }
-
-            li {
-                padding-top: 1px;
-            }
-
-            &.sub {
-                padding-top: 30px;
-            }
-
-        }
-
-        .description {
-            padding-bottom: 15px;
-
-            .quote {
-                font-style: italic;
-
-                p {
-                    font-style: italic;
-                }
-
-                .att {
-                    float: right;
-                }
-
-            }
-
-        }
-
+      p {
+        font-size: 10px;
+        line-height: 16px;
+      }
     }
 
-    .images {
-        width: 600px;
-        float: left;
-        position:relative;
-        text-align: center;
+    .specs {
+      padding-bottom: 10px;
 
-        .main {
-            display: inline-block;
+      .edition,
+      .weight {
+        display: none;
+      }
 
-            #wrap {
-                box-shadow: 0 0 10px #dfdfdf;
+      .code span {
+        text-transform: uppercase;
+      }
 
-                &:hover {
-                    box-shadow: 0 0 10px #999999;
-                }
+      li {
+        padding-top: 1px;
+      }
 
-            }
-
-        }
-
-        .poplets {
-            margin-top: 12px;
-            display: inline-block;
-            text-align: center;
-
-            li {
-                height: 100px;
-                display: inline-block;
-                margin: 6px;
-            }
-
-            img {
-                box-shadow: 0 0 10px #dfdfdf;
-                vertical-align: middle !important;
-                max-width: 100px;
-                max-height: 100px;
-
-                &:hover {
-                    box-shadow: 0 0 10px #999999;
-                    cursor: pointer;
-                }
-
-            }
-
-        }
-
+      &.sub {
+        padding-top: 30px;
+      }
     }
 
+    .description {
+      padding-bottom: 15px;
+
+      .quote {
+        font-style: italic;
+
+        p {
+          font-style: italic;
+        }
+
+        .att {
+          float: right;
+        }
+      }
+    }
+  }
+
+  .images {
+    width: 600px;
+    float: left;
+    position:relative;
+    text-align: center;
+
+    .main {
+      display: inline-block;
+
+      #wrap {
+        box-shadow: 0 0 10px #dfdfdf;
+
+        &:hover {
+          box-shadow: 0 0 10px #999999;
+        }
+      }
+    }
+
+    .poplets {
+      margin-top: 12px;
+      display: inline-block;
+      text-align: center;
+
+      li {
+        height: 100px;
+        display: inline-block;
+        margin: 6px;
+      }
+
+      img {
+        box-shadow: 0 0 10px #dfdfdf;
+        vertical-align: middle !important;
+        max-width: 100px;
+        max-height: 100px;
+
+        &:hover {
+          box-shadow: 0 0 10px #999999;
+          cursor: pointer;
+        }
+      }
+    }
+  }
 }

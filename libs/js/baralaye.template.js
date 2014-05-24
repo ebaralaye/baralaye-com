@@ -35,7 +35,7 @@
          * @private
          */
         function topNavDropdowns() {
-            $('#tmp-top > .tmp-nav > div > ul > li').mouseenter(function(){
+            $('#tmp-top > .tmp-nav > ul.nav > li').mouseenter(function(){
                 var $this = $(this);
                 if($this.hasClass('master') !== true){
                     $this.siblings('li').removeClass('selected');
@@ -44,7 +44,7 @@
                     $this.mouseleave(function(){
                         $this = $(this);
                         $this.removeClass('selected');
-                        $('#tmp-top > .tmp-nav > div > ul > li.master').addClass("selected");
+                        $('#tmp-top > .tmp-nav > ul.nav > li.master').addClass("selected");
                     });
                 }
             });

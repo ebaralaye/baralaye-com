@@ -1,6 +1,6 @@
 <div class="page-body connect">
     <div class="header">
-        <h1>Connect</h1>
+        <h1>Social</h1>
     </div>
     <div class="social-media">
         <a href="http://facebook.com/baralaye" target="_blank">Facebook</a>
@@ -23,65 +23,6 @@
         <br />
         <a href="http://maps.google.com/maps?q=Ebitenyefa+Baralaye" class="gMap" title="The Elizabeth Foundation for the Arts">323 West 39th St, Studio 914, New York, NY 10018</a>
         </p>
-        <br />
-        <form class="contact" name="catwebformform47225" method="post" onsubmit="return checkWholeForm47225(this)" enctype="multipart/form-data" action="/FormProcessv2.aspx?WebFormID=10090&amp;OID={module_oid}&amp;OTYPE={module_otype}&amp;EID={module_eid}&amp;CID={module_cid}&amp;OPTIN=true">
-            <ul class="field-list s70">
-                <li class="s1of2">
-                <label for="FullName">Name</label>
-                <input name="FullName" class="cat_textbox" id="FullName" type="text" maxlength="1024" />
-                </li>
-                <li class="s1of2">
-                <label for="EmailAddress">Email</label>
-                <div class="sup">
-                    Join mailing list?
-                    <input name="CampaignList_44479" class="checkbox" type="checkbox" value="on" />
-                </div>
-                <input name="EmailAddress" class="cat_textbox" id="EmailAddress" type="text" maxlength="255" />
-                </li>
-                <li class="s1of1">
-                <label for="CAT_Custom_869">Comments</label>
-                <textarea name="CAT_Custom_869" class="cat_listbox" id="CAT_Custom_869" onkeydown="if(this.value.length&gt;=1024)this.value=this.value.substring(0,1023);" rows="4" cols="10"></textarea>
-                </li>
-                <li class="s1of2 captcha">
-                <label>Enter Word verification Below</label>
-                {module_captchav2,White,SlateGray}
-                </li>
-                <li class="s1of2">
-                <label>&nbsp;</label>
-                <input class="btn f-r" id="catwebformbutton" type="submit" value="Submit" />
-                </li>
-                <li class="c-z"></li>
-            </ul>
-            <script type="text/javascript" src="/CatalystScripts/ValidationFunctions.js"></script>
-            <script type="text/javascript">
-                //<![CDATA[
-            var submitcount47225 = 0;
-            function checkWholeForm47225(theForm) {
-                var why = "";
-                if(theForm.FirstName)
-                    why += isEmpty(theForm.FirstName.value, "First Name");
-                if(theForm.LastName)
-                    why += isEmpty(theForm.LastName.value, "Last Name");
-                if(theForm.EmailAddress)
-                    why += checkEmail(theForm.EmailAddress.value);
-                if(theForm.CaptchaV2)
-                    why += captchaIsInvalid(theForm, "Enter Word Verification in box below", "Please enter the correct Word Verification as seen in the image");
-                if(why != "") {
-                    alert(why);
-                    return false;
-                }
-                if(submitcount47225 == 0) {
-                    submitcount47225++;
-                    theForm.submit();
-                    return false;
-                } else {
-                    alert("Form submission is in progress.");
-                    return false;
-                }
-            }
-//]]>
-</script>
-    </form>
 </div>
 <div class="hr"></div>
 <div class="section mailing-list">
