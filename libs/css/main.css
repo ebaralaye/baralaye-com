@@ -6970,6 +6970,11 @@ ul.social-btns .btn-s a:hover {
   margin-bottom: 40px;
   /** Top nav ----*/
 }
+@media (max-width: 767px) {
+  .tmp-wrap .tmp-top.double-nav {
+    margin-bottom: 100px;
+  }
+}
 .tmp-wrap .tmp-top .tmp-logo {
   position: relative;
   min-height: 1px;
@@ -7010,6 +7015,7 @@ ul.social-btns .btn-s a:hover {
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
+  text-align: center;
 }
 @media (min-width: 768px) {
   .tmp-wrap .tmp-top > .tmp-nav {
@@ -7021,6 +7027,7 @@ ul.social-btns .btn-s a:hover {
   margin: 0 auto;
   position: relative;
   bottom: -2px;
+  height: 42px;
 }
 .tmp-wrap .tmp-top > .tmp-nav > ul.nav:before,
 .tmp-wrap .tmp-top > .tmp-nav > ul.nav:after {
@@ -7044,13 +7051,23 @@ ul.social-btns .btn-s a:hover {
   }
 }
 .tmp-wrap .tmp-top > .tmp-nav > ul.nav li {
-  position: relative;
+  position: static;
+}
+@media (min-width: 768px) {
+  .tmp-wrap .tmp-top > .tmp-nav > ul.nav li {
+    position: relative;
+  }
 }
 .tmp-wrap .tmp-top > .tmp-nav > ul.nav li.selected > ul {
   display: block;
 }
 .tmp-wrap .tmp-top > .tmp-nav > ul.nav > li {
-  float: left;
+  display: inline-block;
+}
+@media (min-width: 768px) {
+  .tmp-wrap .tmp-top > .tmp-nav > ul.nav > li {
+    float: left;
+  }
 }
 .tmp-wrap .tmp-top > .tmp-nav > ul.nav > li a {
   display: block;
@@ -7073,31 +7090,53 @@ ul.social-btns .btn-s a:hover {
   background: none;
   border-bottom-color: #4f569f;
 }
-.tmp-wrap .tmp-top > .tmp-nav > ul.nav > li > ul {
+.tmp-wrap .tmp-top > .tmp-nav > ul.nav > li ul {
+  right: 0;
+  width: 100%;
   display: none;
   position: absolute;
+  text-align: center;
+  height: 40px;
+}
+.tmp-wrap .tmp-top > .tmp-nav > ul.nav > li > ul {
   top: 42px;
-  right: 0;
-  width: 700px;
+  background-color: #f3f3f3;
+}
+@media (min-width: 768px) {
+  .tmp-wrap .tmp-top > .tmp-nav > ul.nav > li > ul {
+    width: 700px;
+    background: none;
+  }
 }
 .tmp-wrap .tmp-top > .tmp-nav > ul.nav > li > ul li {
-  float: right;
-  background-color: #f3f3f3;
+  display: inline-block;
+}
+@media (min-width: 768px) {
+  .tmp-wrap .tmp-top > .tmp-nav > ul.nav > li > ul li {
+    float: right;
+    background-color: #f3f3f3;
+  }
 }
 .tmp-wrap .tmp-top > .tmp-nav > ul.nav > li > ul li a {
   font-size: 11px;
   text-transform: uppercase;
   line-height: 15px;
   height: 40px;
-  background-color: #f3f3f3;
   padding: 12px;
   border-bottom-width: 1px;
 }
-.tmp-wrap .tmp-top > .tmp-nav > ul.nav > li > ul > li.selected > ul > li a {
-  border-bottom-color: #dfdfdf;
+@media (min-width: 768px) {
+  .tmp-wrap .tmp-top > .tmp-nav > ul.nav > li > ul li a {
+    background-color: #f3f3f3;
+  }
 }
 .tmp-wrap .tmp-top > .tmp-nav > ul.nav > li > ul > li.selected > a {
   border-bottom-color: #4f569f;
+}
+@media (min-width: 768px) {
+  .tmp-wrap .tmp-top > .tmp-nav > ul.nav > li > ul > li.selected > ul > li a {
+    border-bottom-color: #dfdfdf;
+  }
 }
 .tmp-wrap .tmp-top > .tmp-nav > ul.nav > li > ul > li > a {
   font-weight: 500;
@@ -7108,10 +7147,16 @@ ul.social-btns .btn-s a:hover {
   border-bottom-color: #4f569f;
 }
 .tmp-wrap .tmp-top > .tmp-nav > ul.nav > li > ul > li > ul {
-  display: none;
-  float: left;
-  position: static;
-  width: auto;
+  top: 40px;
+  background-color: #dfdfdf;
+}
+@media (min-width: 768px) {
+  .tmp-wrap .tmp-top > .tmp-nav > ul.nav > li > ul > li > ul {
+    float: left;
+    position: static;
+    width: auto;
+    background: none;
+  }
 }
 .tmp-wrap .tmp-top > .tmp-nav > ul.nav > li > ul > li > ul > li a.active,
 .tmp-wrap .tmp-top > .tmp-nav > ul.nav > li > ul > li > ul > li a:hover {

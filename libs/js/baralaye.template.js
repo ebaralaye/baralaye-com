@@ -26,6 +26,12 @@
                     || (locRef1 === "news" && locDoc1 === "announcements")) {
                     $this.attr('class', 'active');
                     $this.parents('li').attr('class', 'selected master');
+
+                    // Check if matched link is third level menu item or a second level item with submenu
+                    // Include class to bump tmp-top margin
+                    if ($this.parents('ul')[2] || ($this.parents('ul')[1] && $this.siblings('ul')[0])) {
+                      $('#tmp-top').addClass('double-nav');
+                    }
                 }
             });
         }

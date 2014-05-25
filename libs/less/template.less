@@ -213,6 +213,12 @@ ul.social-btns .btn-s a:hover {
   .tmp-top {
     margin-bottom: 40px;
 
+    @media (max-width: @screen-xs-max) {
+      &.double-nav {
+        margin-bottom: 100px;
+      }
+    }
+
     .tmp-logo {
       .make-sm-column(6);
 
@@ -244,11 +250,13 @@ ul.social-btns .btn-s a:hover {
 
     > .tmp-nav {
       .make-sm-column(6);
+      text-align: center;
 
       > ul.nav {
         margin: 0 auto;
         position: relative;
         bottom: -2px;
+        height: 42px;
         .clearfix;
 
         @media (min-width: @screen-sm-min) {
@@ -256,7 +264,11 @@ ul.social-btns .btn-s a:hover {
         }
 
         li {
-          position: relative;
+          position: static;
+
+          @media (min-width: @screen-sm-min) {
+            position: relative;
+          }
 
           &.selected > ul {
             display: block;
@@ -264,7 +276,11 @@ ul.social-btns .btn-s a:hover {
         }
 
         > li {
-          float: left;
+          display: inline-block;
+
+          @media (min-width: @screen-sm-min) {
+            float: left;
+          }
 
           a {
             display: block;
@@ -290,35 +306,57 @@ ul.social-btns .btn-s a:hover {
             }
           }
 
-          > ul {
+          ul {
+            right: 0;
+            width: 100%;
             display: none;
             position: absolute;
+            text-align: center;
+            height: 40px;
+          }
+
+          > ul {
             top: 42px;
-            right: 0;
-            width: 700px;
+            background-color: @grey-light;
+
+            @media (min-width: @screen-sm-min) {
+              width: 700px;
+              background: none;
+            }
 
             li {
-              float: right;
-              background-color: @grey-light;
+              display: inline-block;
+
+              @media (min-width: @screen-sm-min) {
+                float: right;
+                background-color: @grey-light;
+              }
 
               a {
                 font-size: 11px;
                 text-transform: uppercase;
                 line-height: 15px;
                 height: 40px;
-                background-color: @grey-light;
                 padding: 12px;
                 border-bottom-width: 1px;
+
+                @media (min-width: @screen-sm-min) {
+                  background-color: @grey-light;
+                }
               }
             }
 
             > li {
               &.selected {
-                > ul > li a {
-                  border-bottom-color: @grey-medium;
-                }
+
                 > a {
                   border-bottom-color: @blue-dark;
+                }
+
+                @media (min-width: @screen-sm-min) {
+                  > ul > li a {
+                    border-bottom-color: @grey-medium;
+                  }
                 }
               }
 
@@ -333,10 +371,15 @@ ul.social-btns .btn-s a:hover {
               }
 
               > ul {
-                display: none;
-                float: left;
-                position: static;
-                width: auto;
+                top: 40px;
+                background-color: @grey-medium;
+
+                @media (min-width: @screen-sm-min) {
+                  float: left;
+                  position: static;
+                  width: auto;
+                  background: none;
+                }
 
                 > li {
                   a.active,
