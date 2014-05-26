@@ -7711,6 +7711,14 @@ ul.social-btns .btn-s.purchase {
   -o-text-overflow: ellipsis;
   -webkit-text-overflow: ellipsis;
   white-space: nowrap;
+  width: 150px;
+  margin: 0 auto;
+}
+@media (max-width: 320px) {
+  .product-list .name,
+  .product-list .name a {
+    width: 130px;
+  }
 }
 .product-list .image-info {
   display: none;
@@ -7738,24 +7746,37 @@ ul.social-btns .btn-s.purchase {
   width: 180px;
   margin: 15px 0;
 }
+@media (max-width: 320px) {
+  .product-list > li,
+  .product-list .item {
+    width: 50%;
+  }
+}
 .product-list .images,
 .product-list .image {
   width: 150px;
   height: 150px;
   margin: 0 auto;
 }
+@media (max-width: 320px) {
+  .product-list .images,
+  .product-list .image {
+    width: 130px;
+    height: 130px;
+  }
+}
 .product-list .images a,
 .product-list .image a {
-  height: 150px;
-  width: 150px;
-  display: table-cell;
+  height: 100%;
+  width: 100%;
+  display: block;
   text-align: center;
   vertical-align: middle;
 }
 .product-list .images a img,
 .product-list .image a img {
-  max-width: 150px;
-  max-height: 150px;
+  max-width: 100%;
+  max-height: 100%;
   box-shadow: 0 0 10px #dfdfdf;
 }
 .product-list .images a:hover img,
