@@ -6874,18 +6874,15 @@ ul.list,
 ol.list {
   font-size: 120%;
   letter-spacing: 1px;
-}
-ol.list,
-ul.list {
   margin: 0 0 0 20px;
   padding: 0 0 3px 0;
 }
-ol.list.inside,
-ul.list.inside {
+ul.list.inside,
+ol.list.inside {
   margin: 0;
 }
-ol.list.inline,
-ul.list.inline {
+ul.list.inline,
+ol.list.inline {
   display: block !important;
   margin: 0 0 20px 0;
   padding: 0;

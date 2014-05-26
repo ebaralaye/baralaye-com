@@ -27,181 +27,175 @@
 /** Text ----*/
 
 body {
-    font-family: helvetica, verdana, arial;
-    color: @grey-dark;
+  font-family: helvetica, verdana, arial;
+  color: @grey-dark;
 }
 
 a {
-    color: @blue-dark;
+  color: @blue-dark;
 }
 
 a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 h1, h2, h3, h4 {
-    font-weight: normal;
-    text-transform: capitalize;
-    letter-spacing: 2px;
+  font-weight: normal;
+  text-transform: capitalize;
+  letter-spacing: 2px;
 }
 
 h1 {
-    font-size: 30px;
-    margin-bottom: 20px;
+  font-size: 30px;
+  margin-bottom: 20px;
 }
 
 h2 {
-    font-size: 16px;
-    margin-bottom: 20px;
+  font-size: 16px;
+  margin-bottom: 20px;
 }
 
 h3 {
-    font-size: 14px;
-    margin-bottom: 5px;
+  font-size: 14px;
+  margin-bottom: 5px;
 }
 
 h4 {
-    font-size: 12px;
-    margin-bottom: 3px;
+  font-size: 12px;
+  margin-bottom: 3px;
 }
 
 p {
-    font-size: 12px;
-    line-height: 22px;
-    margin-bottom: 10px;
-    letter-spacing: 1px;
+  font-size: 12px;
+  line-height: 22px;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
 }
 
 .em {
-    background-color: @grey-light;
-    border-radius: 6px;
-    padding: 2px 4px;
-    white-space: nowrap;
+  background-color: @grey-light;
+  border-radius: 6px;
+  padding: 2px 4px;
+  white-space: nowrap;
 }
 
 .small, small {
-    font-size: 10px;
+  font-size: 10px;
 }
 
 /** Horizontal Rule ----*/
 
 .hr, hr {
-    border-bottom: 2px solid @grey-medium;
-    margin: 0 15px;
-    clear: both;
+  border-bottom: 2px solid @grey-medium;
+  margin: 0 15px;
+  clear: both;
 }
 
 /** UL & OL ----*/
 
 ul.list,
 ol.list {
-    font-size: 120%;
-    letter-spacing: 1px;
-}
+  font-size: 120%;
+  letter-spacing: 1px;
+  margin: 0 0 0 20px;
+  padding: 0 0 3px 0;
 
-ol.list,
-ul.list {
-    margin: 0 0 0 20px;
-    padding: 0 0 3px 0;
-}
-
-ol.list.inside,
-ul.list.inside {
+  &.inside {
     margin: 0;
-}
+  }
 
-ol.list.inline,
-ul.list.inline {
+  &.inline {
     display: block !important;
     margin: 0 0 20px 0;
     padding: 0;
+  }
 }
 
 ol.list.inline li,
 ul.list.inline li {
-    display: inline-block;
-    margin: 5px;
-    padding: 0;
+  display: inline-block;
+  margin: 5px;
+  padding: 0;
 }
 
 ol.list li,
 ul.list li {
-    line-height: 150%;
-    padding: 3px 0 3px 0; 
+  line-height: 150%;
+  padding: 3px 0 3px 0; 
 }
 
 ol.list p,
 ul.list p {
-    font-size:12px;
-    margin-bottom:0;
+  font-size:12px;
+  margin-bottom:0;
 }
 
 ol.list ol,
 ol.list ul,
 ul.list ol,
 ul.list ul {
-    font-size: 100%;
-    padding: 0 0 0 10px; 
+  font-size: 100%;
+  padding: 0 0 0 10px; 
 }
 
 ol.list li li,
 ul.list li li {
-    padding: 6px 0 0 0; 
+  padding: 6px 0 0 0; 
 }
 
 ul.items li {
-    padding-bottom: 5px;
+  padding-bottom: 5px;
 }
 
 /** Social buttons ----*/
 
 ul.social-btns {
-    padding-bottom: 10px;
+  padding-bottom: 10px;
 }
 
 ul.social-btns li {
-    float:left;
-    padding: 5px 5px 0 0;
+  float:left;
+  padding: 5px 5px 0 0;
 }
 
 ul.social-btns li:last-child,
 ul.social-btns li.last {
-    padding-right: 0;
+  padding-right: 0;
 }
 
 ul.social-btns .btn-s a {
-    float:left;
-    display:block;
-    border: 1px solid @grey-medium;
-    background: @grey-light;
-    padding:4px 4px 4px 4px;
-    border-radius:3px;
-    height:10px;
-    line-height:12px;
-    vertical-align: middle;
-    font-size: 10px;
+  float:left;
+  display:block;
+  border: 1px solid @grey-medium;
+  background: @grey-light;
+  padding:4px 4px 4px 4px;
+  border-radius:3px;
+  height:10px;
+  line-height:12px;
+  vertical-align: middle;
+  font-size: 10px;
 }
 
 ul.social-btns .btn-s.comment,
 ul.social-btns .btn-s.purchase {
-    display: none;
+  display: none;
 }
 
 
 ul.social-btns .btn-s a:hover {
-    text-decoration:none;
-    border-color: @grey-dark;
+  text-decoration:none;
+  border-color: @grey-dark;
 }
 
 /** Main Blocks ----*/
 
 .tmp-window {
-    position: relative;
-    min-height: 100%;
+  position: relative;
+  min-height: 100%;
 }
 
 * html .tmp-window {
-    height: 100%;
+  height: 100%;
 }
 
 .tmp-wrap {
@@ -488,12 +482,12 @@ ul.social-btns .btn-s a:hover {
 /** Google Map popup default dimension --*/
 
 .tmp-google-map {
-    width: 400px;
-    height: 400px;
+  width: 400px;
+  height: 400px;
 }
 
 /** Google Translate widget -*/
 
 .tmp-google-translate {
-    margin-top: 10px;
+  margin-top: 10px;
 }
