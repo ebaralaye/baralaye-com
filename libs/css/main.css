@@ -7695,6 +7695,11 @@ ul.social-btns .btn-s.purchase {
   text-align: center;
   font-size: 0;
 }
+@media (max-width: 320px) {
+  .product-list {
+    margin: 0 10px;
+  }
+}
 .product-list .name {
   margin-bottom: 6px;
   height: 20px;
@@ -7767,11 +7772,18 @@ ul.social-btns .btn-s.purchase {
 }
 .product-list .images a,
 .product-list .image a {
-  height: 100%;
-  width: 100%;
-  display: block;
+  height: 150px;
+  width: 150px;
+  display: table-cell;
   text-align: center;
   vertical-align: middle;
+}
+@media (max-width: 320px) {
+  .product-list .images a,
+  .product-list .image a {
+    width: 130px;
+    height: 130px;
+  }
 }
 .product-list .images a img,
 .product-list .image a img {
