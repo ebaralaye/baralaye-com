@@ -149,41 +149,50 @@ ul.items li {
 /** Social buttons ----*/
 
 ul.social-btns {
+  .clearfix;
   padding-bottom: 10px;
-}
+  text-align: center;
 
-ul.social-btns li {
-  float:left;
-  padding: 5px 5px 0 0;
-}
+  li {
+    display: inline-block;
+    padding: 5px 5px 0 0;
+    height: 25px;
+    line-height: 5px !important;
 
-ul.social-btns li:last-child,
-ul.social-btns li.last {
-  padding-right: 0;
-}
+    @media (min-width: @screen-sm-min) {
+      float: left;
+    }
 
-ul.social-btns .btn-s a {
-  float:left;
-  display:block;
-  border: 1px solid @grey-medium;
-  background: @grey-light;
-  padding:4px 4px 4px 4px;
-  border-radius:3px;
-  height:10px;
-  line-height:12px;
-  vertical-align: middle;
-  font-size: 10px;
-}
+    &:last-child,
+    &.social-btns li.last {
+      padding-right: 0;
+    }
+  }
 
-ul.social-btns .btn-s.comment,
-ul.social-btns .btn-s.purchase {
-  display: none;
-}
+  .btn-s {
+    a {
+      float:left;
+      display:block;
+      border: 1px solid @grey-medium;
+      background: @grey-light;
+      padding:4px 4px 4px 4px;
+      border-radius:3px;
+      height:10px;
+      line-height:12px;
+      vertical-align: middle;
+      font-size: 10px;
 
+      &:hover {
+        text-decoration:none;
+        border-color: @grey-dark;
+      }
+    }
 
-ul.social-btns .btn-s a:hover {
-  text-decoration:none;
-  border-color: @grey-dark;
+    &.comment,
+    &.purchase {
+      display: none;
+    }
+  }
 }
 
 /** Main Blocks ----*/
