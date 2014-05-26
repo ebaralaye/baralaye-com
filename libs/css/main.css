@@ -6887,8 +6887,8 @@ ol.list.inline {
   margin: 0 0 20px 0;
   padding: 0;
 }
-ol.list.inline li,
-ul.list.inline li {
+ul.list.inline li,
+ol.list.inline li {
   display: inline-block;
   margin: 5px;
   padding: 0;
