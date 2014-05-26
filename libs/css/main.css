@@ -7076,13 +7076,18 @@ ul.social-btns .btn-s a:hover {
   white-space: nowrap;
   text-decoration: none;
   border-bottom-style: solid;
-  border-bottom-color: #dfdfdf;
+  border-bottom-color: transparent;
+}
+@media (min-width: 768px) {
+  .tmp-wrap .tmp-top > .tmp-nav > ul.nav > li a {
+    border-bottom-color: #dfdfdf;
+  }
 }
 .tmp-wrap .tmp-top > .tmp-nav > ul.nav > li > a {
   font-size: 15px;
   font-weight: 300;
   height: 42px;
-  padding: 20px 20px 5px 20px;
+  padding: 20px 15px 5px 20px;
   border-bottom-width: 2px;
 }
 .tmp-wrap .tmp-top > .tmp-nav > ul.nav > li > a:hover,
@@ -7097,13 +7102,15 @@ ul.social-btns .btn-s a:hover {
   position: absolute;
   text-align: center;
   height: 40px;
+  background-color: #f3f3f3;
 }
 .tmp-wrap .tmp-top > .tmp-nav > ul.nav > li > ul {
   top: 42px;
-  background-color: #f3f3f3;
+  border-bottom: 1px solid #dfdfdf;
 }
 @media (min-width: 768px) {
   .tmp-wrap .tmp-top > .tmp-nav > ul.nav > li > ul {
+    border: 0;
     width: 700px;
     background: none;
   }
@@ -7140,7 +7147,11 @@ ul.social-btns .btn-s a:hover {
 }
 .tmp-wrap .tmp-top > .tmp-nav > ul.nav > li > ul > li > a {
   font-weight: 500;
-  border-bottom-color: #f3f3f3;
+}
+@media (min-width: 768px) {
+  .tmp-wrap .tmp-top > .tmp-nav > ul.nav > li > ul > li > a {
+    border-bottom-color: #f3f3f3;
+  }
 }
 .tmp-wrap .tmp-top > .tmp-nav > ul.nav > li > ul > li > a:hover,
 .tmp-wrap .tmp-top > .tmp-nav > ul.nav > li > ul > li > a.active {
@@ -7148,7 +7159,6 @@ ul.social-btns .btn-s a:hover {
 }
 .tmp-wrap .tmp-top > .tmp-nav > ul.nav > li > ul > li > ul {
   top: 40px;
-  background-color: #dfdfdf;
 }
 @media (min-width: 768px) {
   .tmp-wrap .tmp-top > .tmp-nav > ul.nav > li > ul > li > ul {

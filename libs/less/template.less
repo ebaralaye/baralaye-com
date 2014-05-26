@@ -289,14 +289,18 @@ ul.social-btns .btn-s a:hover {
             white-space: nowrap;
             text-decoration: none;
             border-bottom-style: solid;
-            border-bottom-color: @grey-medium;
+            border-bottom-color: transparent;
+
+            @media (min-width: @screen-sm-min) {
+              border-bottom-color: @grey-medium;
+            }
           }
 
           > a {
             font-size: 15px;
             font-weight: 300;
             height: 42px;
-            padding: 20px 20px 5px 20px;
+            padding: 20px 15px 5px 20px;
             border-bottom-width: 2px;
 
             &:hover,
@@ -313,13 +317,15 @@ ul.social-btns .btn-s a:hover {
             position: absolute;
             text-align: center;
             height: 40px;
+            background-color: @grey-light;
           }
 
           > ul {
             top: 42px;
-            background-color: @grey-light;
+            border-bottom: 1px solid @grey-medium;
 
             @media (min-width: @screen-sm-min) {
+              border: 0;
               width: 700px;
               background: none;
             }
@@ -362,7 +368,9 @@ ul.social-btns .btn-s a:hover {
 
               > a {
                 font-weight: 500;
-                border-bottom-color: @grey-light;
+                @media (min-width: @screen-sm-min) {
+                  border-bottom-color: @grey-light;
+                }
 
                 &:hover,
                 &.active {
@@ -372,7 +380,6 @@ ul.social-btns .btn-s a:hover {
 
               > ul {
                 top: 40px;
-                background-color: @grey-medium;
 
                 @media (min-width: @screen-sm-min) {
                   float: left;

@@ -28,7 +28,7 @@
       <li><a href="/statement">Statement</a></li>
     </ul>
   </li>
-  <li><a href="/connect">Commuinty</a>
+  <li><a href="/connect">Community</a>
     <ul>
       <li><a href="/blog">Blog</a></li>
       <li><a href="/news">News</a></li>
