@@ -6,9 +6,11 @@
     </div>
     <ul class="poplets">
       <?php $poplets = explode(',', $image_poplets); ?>
-      <?php foreach($poplets as $poplet): ?>
-        <li><a href="/images/art/portfolio/big/<?php echo $poplet ?>.jpg" rel="useZoom: 'zoom1', smallImage: '/images/art/portfolio/large/<?php echo $poplet ?>.jpg'" class="cloud-zoom-gallery"><img src="/images/art/portfolio/small/<?php echo $poplet ?>.jpg" alt="<?php echo $poplet ?>" /></a></li>
-      <?php endforeach; ?>
+      <?php if (count($poplets) > 1): ?>
+        <?php foreach($poplets as $poplet): ?>
+          <li><a href="/images/art/portfolio/big/<?php echo $poplet ?>.jpg" rel="useZoom: 'zoom1', smallImage: '/images/art/portfolio/large/<?php echo $poplet ?>.jpg'" class="cloud-zoom-gallery"><img src="/images/art/portfolio/small/<?php echo $poplet ?>.jpg" alt="<?php echo $poplet ?>" /></a></li>
+        <?php endforeach; ?>
+      <?php endif; ?>
     </ul>
   </div>
   <div class="details">
