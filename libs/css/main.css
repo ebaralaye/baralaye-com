@@ -6832,11 +6832,11 @@ h4 {
 }
 h1 {
   font-size: 30px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 h2 {
   font-size: 16px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 h3 {
   font-size: 14px;
@@ -7267,12 +7267,18 @@ ul.social-btns .btn-s a:hover {
   margin-right: 0 !important;
   clear: right;
 }
+.page-body header,
 .page-body .header {
   text-align: center;
   width: 70%;
   margin: 0 auto;
   margin-bottom: 20px;
 }
+.page-body header img,
+.page-body .header img {
+  max-width: 100%;
+}
+.page-body header p,
 .page-body .header p {
   font-size: 11px;
   line-height: 20px;
@@ -7350,10 +7356,19 @@ ul.social-btns .btn-s a:hover {
   background-repeat: no-repeat;
   overflow: hidden;
 }
+.page-body.home .portfolio li a.sculpture {
+  background-image: url('/images/art/portfolio/large/s-mm-0005_a.jpg');
+}
+.page-body.home .portfolio li a.vessels {
+  background-image: url('/images/art/portfolio/large/v-sc-0004_a.jpg');
+}
+.page-body.home .portfolio li a.drawings {
+  background-image: url('/images/art/portfolio/large/dw-s-0009.jpg');
+}
 .page-body.home .portfolio li a span {
   color: #fff;
   display: inline-block;
-  font-size: 30px;
+  font-size: 25px;
   height: 40px;
   line-height: 38px;
   padding: 0 5px 0 20px;
@@ -7364,15 +7379,6 @@ ul.social-btns .btn-s a:hover {
 }
 .page-body.home .portfolio li a:hover span {
   background-color: rgba(79, 86, 159, 0.8);
-}
-.page-body.home .portfolio li.sculpture a {
-  background-image: url('/images/art/portfolio/large/s-mm-0005_a.jpg');
-}
-.page-body.home .portfolio li.vessels a {
-  background-image: url('/images/art/portfolio/large/v-sc-0004_a.jpg');
-}
-.page-body.home .portfolio li.drawings a {
-  background-image: url('/images/art/portfolio/large/dw-S-0009.jpg');
 }
 /** Web ----*/
 .page-body.web li em {

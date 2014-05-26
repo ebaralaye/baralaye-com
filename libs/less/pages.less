@@ -38,11 +38,16 @@
   clear: right;
 }
 
+.page-body header,
 .page-body .header {
   text-align: center;
   width: 70%;
   margin: 0 auto;
   margin-bottom: 20px;
+
+  img {
+    max-width: 100%;
+  }
 
   p {
     font-size: 11px;
@@ -112,45 +117,45 @@
   text-shadow: 0 0 3px #000;
 
   a {
-  text-align: left;
-  display: block;
-  height: 200px;
-  width: 200px;
-  line-height: 300px;
-  margin: 0 auto;
-  border-radius: 50%;
-  background-size: 200px;
-  background-repeat: no-repeat;
-  overflow: hidden;
+    text-align: left;
+    display: block;
+    height: 200px;
+    width: 200px;
+    line-height: 300px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background-size: 200px;
+    background-repeat: no-repeat;
+    overflow: hidden;
 
-  span {
-    color: #fff;
-    display: inline-block;
-    font-size: 30px;
-    height: 40px;
-    line-height: 38px;
-    padding: 0 5px 0 20px;
-    font-weight: 100;
-    letter-spacing: 4px;
-    border-radius: 0 20px 20px;
-    background: rgba(0,0,0,0.5);
-  }
+    &.sculpture {
+      background-image: url('/images/art/portfolio/large/s-mm-0005_a.jpg');
+    }
 
-  &:hover span {
-    background-color: rgba(79,86,159,0.8);
-  }
-  }
+    &.vessels {
+      background-image: url('/images/art/portfolio/large/v-sc-0004_a.jpg');
+    }
 
-  &.sculpture a {
-  background-image: url('/images/art/portfolio/large/s-mm-0005_a.jpg');
-  }
+    &.drawings {
+      background-image: url('/images/art/portfolio/large/dw-s-0009.jpg');
+    }
 
-  &.vessels a {
-  background-image: url('/images/art/portfolio/large/v-sc-0004_a.jpg');
-  }
+    span {
+      color: #fff;
+      display: inline-block;
+      font-size: 25px;
+      height: 40px;
+      line-height: 38px;
+      padding: 0 5px 0 20px;
+      font-weight: 100;
+      letter-spacing: 4px;
+      border-radius: 0 20px 20px;
+      background: rgba(0,0,0,0.5);
+    }
 
-  &.drawings a {
-  background-image: url('/images/art/portfolio/large/dw-S-0009.jpg');
+    &:hover span {
+      background-color: rgba(79,86,159,0.8);
+    }
   }
 }
 
