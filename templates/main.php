@@ -67,7 +67,7 @@
   <body>
     <div id="tmp-window" class="tmp-window">
       <div id="tmp-wrap" class="tmp-wrap">
-        <div id="tmp-top" class="tmp-top row">
+        <div id="tmp-top" class="tmp-top">
           <div class="tmp-logo">
             <a href="/">Ebitenyefa Baralaye</a>
           </div>
