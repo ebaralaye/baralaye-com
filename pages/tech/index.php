@@ -54,7 +54,7 @@
     <ul class="section references list outside">
     </ul>
     <h3 id="portfolio">Portfolio</h3>
-    <ul class="productSmall portfolio web">
+    <ul class="product-list portfolio web">
       <li>
         <h4 class="name"><a href="http://alliedminds.com" target="_blank">Allied Minds</a></h4>
         <div class="images ltbx">

@@ -5,6 +5,6 @@
 <a href="#gMap" class="ltbx gMap" title="323 West 39th St NY, NY 10018">323 West 39th St, Studio 914, New York, NY 10018</a>.<br /> 
 <a href="#contact" class="ltbx win">Contact me</a> to schedule a visit.</p>
 </div>
-<ul id="set_72157628626470369" class="productSmall photoset"></ul>
+<ul id="set_72157628626470369" class="product-list photoset"></ul>
 <!--{module_photogallery,17258,6,,12,120,120,true}-->
 </div>

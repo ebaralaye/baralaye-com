@@ -4,7 +4,7 @@
     <p>New and old works in their stages of production.</p>
   </div>
   <div class="page-main">
-    <ul class="productSmall">
+    <ul class="product-list">
       <li>
         <h4 class="name">Jacob</h4>
         <div class="images ltbx">

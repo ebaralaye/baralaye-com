@@ -7290,6 +7290,27 @@ ul.social-btns .btn-s.purchase {
  */
 /** Page Body ----*/
 .page-body {
+  /** Home ----*/
+  /** Web ----*/
+  /** Statement/Biography ----*/
+  /** In Progress ----*/
+  /** Resume/CV ----*/
+  /** links ----*/
+  /** About ----*/
+  /** Samples ----*/
+  /** Connect ----*/
+}
+.page-body.stacked {
+  text-align: center;
+}
+.page-body.stacked section {
+  padding-bottom: 20px;
+  border-bottom: 2px solid #dfdfdf;
+  margin-bottom: 20px;
+}
+.page-body.stacked section:last-child {
+  border: 0;
+  margin: 0;
   padding: 0;
 }
 .page-body .col {
@@ -7337,19 +7358,13 @@ ul.social-btns .btn-s.purchase {
   border-bottom: 2px solid #575757;
   letter-spacing: 2px;
 }
-.page-body .h-title.z-m {
-  margin-bottom: 0;
-}
 .page-body .h-title a {
   display: block;
   display: inline-block;
   text-decoration: none;
 }
-.page-body a.h-title.active,
-.page-body a.h-title:hover,
-.page-body .h-title a:hover {
-  border-bottom: 2px solid #4f569f;
-  margin-bottom: -2px;
+.page-body .h-title.z-m {
+  margin-bottom: 0;
 }
 .page-body .h-title.sub {
   margin-bottom: 7px;
@@ -7358,6 +7373,12 @@ ul.social-btns .btn-s.purchase {
 .page-body .h-title.sub a:hover {
   border-bottom: 1px solid #4f569f;
   margin-bottom: -1px;
+}
+.page-body .h-title.active,
+.page-body .h-title:hover,
+.page-body .h-title a:hover {
+  border-bottom: 2px solid #4f569f;
+  margin-bottom: -2px;
 }
 .page-body a.btn-sub,
 .page-body .btn-sub a {
@@ -7377,7 +7398,6 @@ ul.social-btns .btn-s.purchase {
 .page-body .btn-sub a:hover {
   background: #4f569f;
 }
-/** Home ----*/
 .page-body.home .portfolio li {
   position: relative;
   min-height: 1px;
@@ -7428,7 +7448,6 @@ ul.social-btns .btn-s.purchase {
 .page-body.home .portfolio li a:hover span {
   background-color: rgba(79, 86, 159, 0.8);
 }
-/** Web ----*/
 .page-body.web li em {
   font-size: 10px;
 }
@@ -7438,7 +7457,6 @@ ul.social-btns .btn-s.purchase {
 .page-body ul.featured p {
   font-size: 100%;
 }
-/** Statement/Biography ----*/
 .page-body.statement p,
 .page-body.biography p {
   text-indent: 30px;
@@ -7448,11 +7466,9 @@ ul.social-btns .btn-s.purchase {
   display: block;
   margin: 0 auto 25px auto;
 }
-/** In Progress ----*/
 .page-body.in-progress .body {
   height: 450px;
 }
-/** Resume/CV ----*/
 .page-body.resume h2,
 .page-body.resume h3 {
   text-transform: uppercase;
@@ -7561,10 +7577,9 @@ ul.social-btns .btn-s.purchase {
   font-style: italic;
   white-space: nowrap;
 }
-.page-body.resume .productSmall.portfolio {
+.page-body.resume .product-list.portfolio {
   margin-bottom: 25px;
 }
-/** links ----*/
 .page-body.links ul.nav {
   margin-bottom: 30px;
   position: fixed;
@@ -7641,36 +7656,32 @@ ul.social-btns .btn-s.purchase {
   border-width: 0 0 1px 1px;
   margin-bottom: 5px;
 }
-/** About ----*/
-.page-body.about .productSmall img {
+.page-body.about .product-list img {
   width: 150px;
   height: 150px;
 }
-/** Samples ----*/
 .page-body.samples .page-main {
   width: 720px;
 }
-.page-body.samples .productSmall {
+.page-body.samples .product-list {
   float: left;
   width: 360px;
   padding-bottom: 30px;
 }
-.page-body.samples .productSmall h3 {
+.page-body.samples .product-list h3 {
   text-align: center;
   margin: 0 15px;
 }
-.page-body.samples .productSmall .productItem {
+.page-body.samples .product-list .item {
   padding-top: 6px;
 }
-/** Connect ----*/
-.page-body .social-media {
+.page-body.connect {
   text-align: center;
-  margin-bottom: 20px;
 }
-.page-body .social-media a {
+.page-body.connect .social-media a {
   width: 70px;
   height: 70px;
-  margin: 0 15px;
+  margin: 10px 15px;
   display: inline-block;
   font-size: 12px;
   background-color: #f3f3f3;
@@ -7684,7 +7695,7 @@ ul.social-btns .btn-s.purchase {
   box-shadow: 1px 1px 5px #dfdfdf;
   box-sizing: border-box;
 }
-.page-body .social-media a:hover {
+.page-body.connect .social-media a:hover {
   border-color: #4f569f;
   text-decoration: none;
 }
@@ -8069,13 +8080,13 @@ td.product-detail .images > h1 {
   display: table-cell;
 }
 /** Innerfade ----*/
-.productSmall .image a.innerfade {
+.product-list .image a.innerfade {
   display: block !important;
   opacity: 0;
   top: 0 !important;
   left: 0 !important;
 }
-.productSmall .image a.innerfade img {
+.product-list .image a.innerfade img {
   display: block;
 }
 /** Galleria ----*/
@@ -8105,15 +8116,55 @@ td.product-detail .images > h1 {
 }
 /** Tumblr ----*/
 .tumblr_posts {
-  width: 860px;
+  margin-left: -15px;
+  margin-right: -15px;
   text-align: center;
   margin: 0 auto;
 }
+.tumblr_posts:before,
+.tumblr_posts:after {
+  content: " ";
+  display: table;
+}
+.tumblr_posts:after {
+  clear: both;
+}
+.tumblr_posts:before,
+.tumblr_posts:after {
+  content: " ";
+  display: table;
+}
+.tumblr_posts:after {
+  clear: both;
+}
 .tumblr_posts li {
-  display: inline-block;
-  padding: 15px;
-  width: 400px;
-  float: left;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 30px;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .tumblr_posts li {
+    float: left;
+    width: 50%;
+  }
+}
+.tumblr_posts li:last-child {
+  margin-bottom: 0px;
+}
+.tumblr_posts li img {
+  max-width: 100%;
+}
+.tumblr_posts li .tumblr_caption {
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -40%;
+  width: 80%;
+  padding: 10px 15px 0 15px;
+  background: rgba(0, 0, 0, 0.5);
 }
 /** Twitter ----*/
 #twitter_div li {

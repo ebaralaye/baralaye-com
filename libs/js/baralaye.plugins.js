@@ -149,8 +149,8 @@
          */
         function flickrPhotoSet() {
 
-            $('.productSmall.photoset').each(function(){
-                jQuery('<img />').attr('class', 'loader').attr('src', '/images/plugins/ajax-loader.gif').appendTo('.productSmall.photoset');
+            $('.product-list.photoset').each(function(){
+                jQuery('<img />').attr('class', 'loader').attr('src', '/images/plugins/ajax-loader.gif').appendTo('.product-list.photoset');
                 //assign your api key equal to a variable
                 var photoSetCont = $(this);
                 var apiKey = '2dc0ff4d2daaa11adcdef83d127b8558';
@@ -174,7 +174,7 @@
                            //append the 'imgCont' variable to the document
                            $(imgCont).appendTo( photoSetCont );
                            //Activate Lightbox
-                           $('.productSmall.photoset a').fancybox();
+                           $('.product-list.photoset a').fancybox();
                        });
                    });
                });

@@ -3,7 +3,7 @@
     <h1>About</h1>
     <p>Behind the work...</p>
   </div>
-  <ul class="productSmall">
+  <ul class="product-list">
     <li>
       <h4 class="name"><a href="/statement">Statement</a></h4>
       <div class="image"><a href="/statement"><img alt="Artist Statement" src="/images/about/header_artist-statement.jpg" /></a></div>

@@ -3,7 +3,7 @@
     <h1>Process</h1>
   </div>
   <h3>In Progress</h3>
-  <ul class="productSmall">
+  <ul class="product-list">
     <li>
       <h4 class="name">Barabbas</h4>
       <div class="images ltbx">
@@ -61,14 +61,14 @@
   </ul>
   <hr />
   <h3>Wax Casting</h3>
-  <ul id="set_72157628629742049" class="productSmall photoset"></ul>
+  <ul id="set_72157628629742049" class="product-list photoset"></ul>
   <hr />
   <h3>Metal</h3>
-  <ul id="set_72157628655562265" class="productSmall photoset"></ul>
+  <ul id="set_72157628655562265" class="product-list photoset"></ul>
   <hr />
   <h3>Ceramic</h3>
-  <ul id="set_72157628655352513" class="productSmall photoset"></ul>
+  <ul id="set_72157628655352513" class="product-list photoset"></ul>
   <hr />
   <h3>Mixed Media</h3>
-  <ul id="set_72157628655361637" class="productSmall photoset"></ul>
+  <ul id="set_72157628655361637" class="product-list photoset"></ul>
 </div>

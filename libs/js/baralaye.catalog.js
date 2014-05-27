@@ -44,7 +44,7 @@
 
         /** @private */
         function setGlobalVariables() {
-            $listName = $('.productSmall .name a');
+            $listName = $('.product-list .name a');
             $detailType = $('.shop-product-large .specs .type').html();
             $detailPrice = $('.shop-product-large .specs .price');
             $detailEdition = $('.shop-product-large .specs .edition');

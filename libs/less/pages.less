@@ -6,470 +6,485 @@
 /** Page Body ----*/
 
 .page-body {
-  padding: 0;
-}
+  &.stacked {
+    text-align: center;
 
-.page-body .col {
-  float: left;
-  padding-right: 5%;
-}
+    section {
+      padding-bottom: 20px;
+      border-bottom: 2px solid @grey-medium;
+      margin-bottom: 20px;
 
-.page-body .col.side {
-  width: 23%;
-}
-
-.page-body .col.body {
-  width: 72%;
-}
-
-.page-body .row {
-  margin-bottom: 20px;
-  width: 100% !important;
-}
-
-.page-body .page-main {
-  margin: 0 auto 0 auto;
-}
-
-.page-body .last {
-  padding-right: 0 !important;
-  margin-bottom: 0 !important;
-  margin-right: 0 !important;
-  clear: right;
-}
-
-.page-body header,
-.page-body .header {
-  text-align: center;
-  width: 70%;
-  margin: 0 auto;
-  margin-bottom: 20px;
-
-  img {
-    max-width: 100%;
+      &:last-child {
+        border: 0;
+        margin: 0;
+        padding: 0;
+      }
+    }
   }
 
-  p {
-    font-size: 11px;
-    line-height: 20px;
-    margin: 0;
+  .col {
+    float: left;
+    padding-right: 5%;
   }
-}
 
-.page-body .h-title {
-  margin-bottom: 14px;
-  border-bottom: 2px solid @grey-dark;
-  letter-spacing: 2px;
-}
+  .col.side {
+    width: 23%;
+  }
 
-.page-body .h-title.z-m {
-  margin-bottom:0;
-}
+  .col.body {
+    width: 72%;
+  }
 
-.page-body .h-title a {
-  display:block;
-  display:inline-block;
-  text-decoration:none;
-}
+  .row {
+    margin-bottom: 20px;
+    width: 100% !important;
+  }
 
-.page-body a.h-title.active,
-.page-body a.h-title:hover,
-.page-body .h-title a:hover {
-  border-bottom: 2px solid @blue-dark;
-  margin-bottom:-2px;
-}
+  .page-main {
+    margin: 0 auto 0 auto;
+  }
 
-.page-body .h-title.sub {
-  margin-bottom: 7px;
-  border-bottom: 1px solid @grey-dark;
-}
+  .last {
+    padding-right: 0 !important;
+    margin-bottom: 0 !important;
+    margin-right: 0 !important;
+    clear: right;
+  }
 
-.page-body .h-title.sub a:hover {
-  border-bottom: 1px solid @blue-dark;
-  margin-bottom:-1px;
-}
-
-.page-body a.btn-sub,
-.page-body .btn-sub a {
-  display: inline-block;
-  color: #fff;
-  font-size: 11px;
-  letter-spacing: 3px;
-  padding: 4px 8px 2px 8px;
-  background: #ccc;
-  border-radius: 8px;
-  text-align: center;
-  text-decoration: none;
-  font-weight: bold;
-  white-space: nowrap;
-}
-
-.page-body a.btn-sub:hover,
-.page-body .btn-sub a:hover {
-  background:@blue-dark;
-}
-
-/** Home ----*/
-
-.page-body.home .portfolio li {
-  .make-sm-column(4);
-  background-size: 100%;
-  text-shadow: 0 0 3px #000;
-
-  a {
-    text-align: left;
-    display: block;
-    height: 200px;
-    width: 200px;
-    line-height: 300px;
+  header,
+  .header {
+    text-align: center;
+    width: 70%;
     margin: 0 auto;
-    border-radius: 50%;
-    background-size: 200px;
-    background-repeat: no-repeat;
-    overflow: hidden;
+    margin-bottom: 20px;
 
-    &.sculpture {
-      background-image: url('/images/art/portfolio/large/s-mm-0005_a.jpg');
+    img {
+      max-width: 100%;
     }
 
-    &.vessels {
-      background-image: url('/images/art/portfolio/large/v-sc-0004_a.jpg');
-    }
-
-    &.drawings {
-      background-image: url('/images/art/portfolio/large/dw-s-0009.jpg');
-    }
-
-    span {
-      color: #fff;
-      display: inline-block;
-      font-size: 25px;
-      height: 40px;
-      line-height: 38px;
-      padding: 0 5px 0 20px;
-      font-weight: 100;
-      letter-spacing: 4px;
-      border-radius: 0 20px 20px;
-      background: rgba(0,0,0,0.5);
-    }
-
-    &:hover span {
-      background-color: rgba(79,86,159,0.8);
+    p {
+      font-size: 11px;
+      line-height: 20px;
+      margin: 0;
     }
   }
-}
 
-/** Web ----*/
-
-.page-body.web li em {
-  font-size:10px;
-}
-
-.page-body ul.featured {
-  width: 100%;
-}
-
-.page-body ul.featured p {
-  font-size:100%;
-}
-
-/** Statement/Biography ----*/
-
-.page-body.statement p,
-.page-body.biography p {
-  text-indent: 30px;
-}
-
-.page-body.statement .head-shot,
-.page-body.biography .head-shot{
-  display: block;
-  margin: 0 auto 25px auto;
-}
-
-/** In Progress ----*/
-
-.page-body.in-progress .body {
-  height:450px;
-}
-
-/** Resume/CV ----*/
-
-.page-body.resume {
-  h2,
-  h3 {
-    text-transform: uppercase;
-    margin: 0 0 25px 0;
-    border-bottom: 1px solid #ccc;
-    font-weight: bold;
-  }
-
-  h2 {
-    position: relative;
-    letter-spacing: 3px;
-    font-size: 13px;
+  .h-title {
+    margin-bottom: 14px;
+    border-bottom: 2px solid @grey-dark;
+    letter-spacing: 2px;
 
     a {
-      text-decoration: none;
-      display: inline-block;
+      display:block;
+      display:inline-block;
+      text-decoration:none;
     }
 
-    .title {
-      position: absolute;
-      left: 36%;
-      letter-spacing: 2px;
+    &.z-m {
+      margin-bottom:0;
     }
 
-   .download {
-      float:right;
-      font-weight: normal;
-      text-transform: capitalize;
+    &.sub {
+      margin-bottom: 7px;
+      border-bottom: 1px solid @grey-dark;
+
+      a:hover {
+        border-bottom: 1px solid @blue-dark;
+        margin-bottom:-1px;
+      }
+    }
+
+    &.active,
+    &:hover,
+    a:hover {
+      border-bottom: 2px solid @blue-dark;
+      margin-bottom:-2px;
     }
   }
 
-  h3 {
-    letter-spacing: 2px;
-    padding-right: 750px;
-    line-height: 14px;
+  a.btn-sub,
+  .btn-sub a {
+    display: inline-block;
+    color: #fff;
+    font-size: 11px;
+    letter-spacing: 3px;
+    padding: 4px 8px 2px 8px;
+    background: #ccc;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    white-space: nowrap;
   }
 
-  h3 a:hover,
-  h2 .download a:hover,
-  h2 a.download:hover {
-      border-bottom: 1px solid #4F569F;
-      text-decoration: none;
+  a.btn-sub:hover,
+  .btn-sub a:hover {
+    background:@blue-dark;
   }
 
-  p {
-      margin-bottom: 20px;
+  /** Home ----*/
+
+  &.home .portfolio li {
+    .make-sm-column(4);
+    background-size: 100%;
+    text-shadow: 0 0 3px #000;
+
+    a {
+      text-align: left;
+      display: block;
+      height: 200px;
+      width: 200px;
+      line-height: 300px;
+      margin: 0 auto;
+      border-radius: 50%;
+      background-size: 200px;
+      background-repeat: no-repeat;
+      overflow: hidden;
+
+      &.sculpture {
+        background-image: url('/images/art/portfolio/large/s-mm-0005_a.jpg');
+      }
+
+      &.vessels {
+        background-image: url('/images/art/portfolio/large/v-sc-0004_a.jpg');
+      }
+
+      &.drawings {
+        background-image: url('/images/art/portfolio/large/dw-s-0009.jpg');
+      }
+
+      span {
+        color: #fff;
+        display: inline-block;
+        font-size: 25px;
+        height: 40px;
+        line-height: 38px;
+        padding: 0 5px 0 20px;
+        font-weight: 100;
+        letter-spacing: 4px;
+        border-radius: 0 20px 20px;
+        background: rgba(0,0,0,0.5);
+      }
+
+      &:hover span {
+        background-color: rgba(79,86,159,0.8);
+      }
+    }
   }
 
-  .section {
-    position: relative;
-    margin: 0 0 20px 36% !important;
+  /** Web ----*/
 
-    h4 {
+  &.web li em {
+    font-size:10px;
+  }
+
+  ul.featured {
+    width: 100%;
+  }
+
+  ul.featured p {
+    font-size:100%;
+  }
+
+  /** Statement/Biography ----*/
+
+  &.statement p,
+  &.biography p {
+    text-indent: 30px;
+  }
+
+  &.statement .head-shot,
+  &.biography .head-shot{
+    display: block;
+    margin: 0 auto 25px auto;
+  }
+
+  /** In Progress ----*/
+
+  &.in-progress .body {
+    height:450px;
+  }
+
+  /** Resume/CV ----*/
+
+  &.resume {
+    h2,
+    h3 {
       text-transform: uppercase;
-      margin-bottom: 10px;
-      text-decoration: underline;
+      margin: 0 0 25px 0;
+      border-bottom: 1px solid #ccc;
+      font-weight: bold;
     }
-  }
 
-  ul {
-    &.references {
-      display: none;
+    h2 {
+      position: relative;
+      letter-spacing: 3px;
+      font-size: 13px;
 
-      .reference {
-          display: block;
+      a {
+        text-decoration: none;
+        display: inline-block;
+      }
+
+      .title {
+        position: absolute;
+        left: 36%;
+        letter-spacing: 2px;
+      }
+
+     .download {
+        float:right;
+        font-weight: normal;
+        text-transform: capitalize;
       }
     }
 
-    &.list {
-      margin-left: 0;
-      margin: 0 0 20px 0;
-      padding: 0;
+    h3 {
+      letter-spacing: 2px;
+      padding-right: 750px;
+      line-height: 14px;
+    }
 
-      #references,
-      .reference,
-      .phone,
-      .street,
-      .type,
-      .zip {
+    h3 a:hover,
+    h2 .download a:hover,
+    h2 a.download:hover {
+        border-bottom: 1px solid #4F569F;
+        text-decoration: none;
+    }
+
+    p {
+        margin-bottom: 20px;
+    }
+
+    .section {
+      position: relative;
+      margin: 0 0 20px 36% !important;
+
+      h4 {
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        text-decoration: underline;
+      }
+    }
+
+    ul {
+      &.references {
         display: none;
+
+        .reference {
+            display: block;
+        }
       }
 
-      li {
-        position: relative;
-        margin: 0 0 15px 0;
+      &.list {
+        margin-left: 0;
+        margin: 0 0 20px 0;
         padding: 0;
 
-          &:last-child {
-            margin-bottom: 0;
+        #references,
+        .reference,
+        .phone,
+        .street,
+        .type,
+        .zip {
+          display: none;
+        }
+
+        li {
+          position: relative;
+          margin: 0 0 15px 0;
+          padding: 0;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+
+          &.square,
+          &.disc {
+            margin-left: 15px;
+
+          li {
+            margin-bottom: 5px;
           }
         }
 
-        &.square,
-        &.disc {
-          margin-left: 15px;
+        &.info,
+        .date,
+        .name,
+        .position {
+          font-weight: bold;
+        }
 
-        li {
-          margin-bottom: 5px;
+        &.info li {
+          margin-bottom: 3px;
+        }
+
+        .type,
+        .phone,
+        .address,
+        .reference {
+          font-size: 10px;
+          font-style: italic;
+        }
+
+        .date {
+          position: absolute;
+          right: 100%;
+          padding-right: 25px;
+          font-size: 10px;
+          font-style: italic;
+          white-space: nowrap;
         }
       }
+    }
 
-      &.info,
-      .date,
-      .name,
-      .position {
-        font-weight: bold;
-      }
-
-      &.info li {
-        margin-bottom: 3px;
-      }
-
-      .type,
-      .phone,
-      .address,
-      .reference {
-        font-size: 10px;
-        font-style: italic;
-      }
-
-      .date {
-        position: absolute;
-        right: 100%;
-        padding-right: 25px;
-        font-size: 10px;
-        font-style: italic;
-        white-space: nowrap;
-      }
+    .product-list.portfolio {
+        margin-bottom: 25px;
     }
   }
 
-  .productSmall.portfolio {
-      margin-bottom: 25px;
+  /** links ----*/
+
+  &.links ul.nav {
+    margin-bottom: 30px;
+    position: fixed;
+    width: 160px;
+    padding: 5px;
   }
-}
 
-/** links ----*/
+  &.links ul.nav li.row {
+    width: 150px !important;
+    padding: 5px;
+    position: relative;
+    z-index: 6;
+    margin-bottom: 0;
+  }
 
-.page-body.links ul.nav {
-  margin-bottom: 30px;
-  position: fixed;
-  width: 160px;
-  padding: 5px;
-}
+  &.links ul.nav h2 {
+    padding-bottom: 5px;
+    font-size: 120%;
+  }
 
-.page-body.links ul.nav li.row {
-  width: 150px !important;
-  padding: 5px;
-  position: relative;
-  z-index: 6;
-  margin-bottom: 0;
-}
+  &.links ul.nav h2 a {
+    letter-spacing: 2px;
+    display: block;
+    padding: 0 5px;
+    background: #f3f3f3;
+  }
 
-.page-body.links ul.nav h2 {
-  padding-bottom: 5px;
-  font-size: 120%;
-}
+  &.links ul.nav ul {
+    padding-bottom:0;
+  }
 
-.page-body.links ul.nav h2 a {
-  letter-spacing: 2px;
-  display: block;
-  padding: 0 5px;
-  background: #f3f3f3;
-}
+  &.links #suggest-a-link {
+    display: none;
+  }
 
-.page-body.links ul.nav ul {
-  padding-bottom:0;
-}
+  &.links .section {
+    padding: 0 0 15px 200px;
+  }
 
-.page-body.links #suggest-a-link {
-  display: none;
-}
+  &.links .page-main p {
+    margin-left: 20px;
+  }
 
-.page-body.links .section {
-  padding: 0 0 15px 200px;
-}
+  &.links .page-main ul {
+    padding-bottom: 15px;
+  }
 
-.page-body.links .page-main p {
-  margin-left: 20px;
-}
+  &.links .page-main h1 {
+    position: relative;
+    letter-spacing: 10px;
+  }
 
-.page-body.links .page-main ul {
-  padding-bottom: 15px;
-}
+  &.links .page-main strong {
+    font-size: 200%;
+    position: absolute;
+    left: 2px;
+  }
 
-.page-body.links .page-main h1 {
-  position: relative;
-  letter-spacing: 10px;
-}
+  &.links .page-main .title-desc {
+    position: relative;
+    font-size: 110%;
+    letter-spacing: 1px;
+    margin: 0;
+    padding-left: 20px;
+  }
 
-.page-body.links .page-main strong {
-  font-size: 200%;
-  position: absolute;
-  left: 2px;
-}
+  &.links .page-main h1 a.back {
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    letter-spacing: 1px;
+    font-weight: normal;
+    text-decoration: underline;
+    font-size: 11px;
+    margin: 0;
+  }
 
-.page-body.links .page-main .title-desc {
-  position: relative;
-  font-size: 110%;
-  letter-spacing: 1px;
-  margin: 0;
-  padding-left: 20px;
-}
+  &.links .page-main h3 {
+    letter-spacing: 2px;
+    background: #f3f3f3;
+    padding: 2px 5px;
+    margin-bottom: 5px;
+  }
 
-.page-body.links .page-main h1 a.back {
-  position: absolute;
-  right: 5px;
-  top: 10px;
-  letter-spacing: 1px;
-  font-weight: normal;
-  text-decoration: underline;
-  font-size: 11px;
-  margin: 0;
-}
+  &.links .page-main h4 {
+    padding: 0 5px;
+    border: 1px dashed #f9f9f9;
+    border-width: 0 0 1px 1px;
+    margin-bottom: 5px;
+  }
 
-.page-body.links .page-main h3 {
-  letter-spacing: 2px;
-  background: #f3f3f3;
-  padding: 2px 5px;
-  margin-bottom: 5px;
-}
+  /** About ----*/
 
-.page-body.links .page-main h4 {
-  padding: 0 5px;
-  border: 1px dashed #f9f9f9;
-  border-width: 0 0 1px 1px;
-  margin-bottom: 5px;
-}
+  &.about .product-list img {
+    width:150px;
+    height:150px;
+  }
 
-/** About ----*/
+  /** Samples ----*/
 
-.page-body.about .productSmall img {
-  width:150px;
-  height:150px;
-}
+  &.samples .page-main{
+    width:720px;
+  }
 
-/** Samples ----*/
+  &.samples .product-list {
+    float:left;
+    width:360px;
+    padding-bottom: 30px;
+  }
 
-.page-body.samples .page-main{
-  width:720px;
-}
+  &.samples .product-list h3 {
+    text-align:center;
+    margin:0 15px;
+  }
 
-.page-body.samples .productSmall {
-  float:left;
-  width:360px;
-  padding-bottom: 30px;
-}
+  &.samples .product-list .item {
+    padding-top:6px;
+  }
 
-.page-body.samples .productSmall h3 {
-  text-align:center;
-  margin:0 15px;
-}
+  /** Connect ----*/
 
-.page-body.samples .productSmall .productItem {
-  padding-top:6px;
-}
+  &.connect {
+    text-align: center;
 
-/** Connect ----*/
-
-.page-body .social-media {
-  text-align: center;
-  margin-bottom: 20px;
-
-  a {
-  width: 70px;
-  height: 70px;
-  margin: 0 15px;
-  display: inline-block;
-  font-size: 12px;
-  background-color: @grey-light;
-  border-radius: 35px;
-  -moz-border-radius: 35px;
-  -webkit-bmediumr-radius: 35px;
-  line-height: 70px;
-  text-decoration: none;
-  .block-shadow;
+    .social-media {
+      a {
+      width: 70px;
+      height: 70px;
+      margin: 10px 15px;
+      display: inline-block;
+      font-size: 12px;
+      background-color: @grey-light;
+      border-radius: 35px;
+      -moz-border-radius: 35px;
+      -webkit-bmediumr-radius: 35px;
+      line-height: 70px;
+      text-decoration: none;
+      .block-shadow;
+      }
+    }
   }
 }
