@@ -215,7 +215,7 @@
 
     .title {
       position: absolute;
-      left: 325px;
+      left: 36%;
       letter-spacing: 2px;
     }
 
@@ -244,83 +244,84 @@
   }
 
   .section {
-      position: relative;
-      margin: 0 0 20px 325px !important;
+    position: relative;
+    margin: 0 0 20px 36% !important;
 
     h4 {
       text-transform: uppercase;
       margin-bottom: 10px;
       text-decoration: underline;
     }
+  }
 
-    ul {
-      &.references {
+  ul {
+    &.references {
+      display: none;
+
+      .reference {
+          display: block;
+      }
+    }
+
+    &.list {
+      margin-left: 0;
+      margin: 0 0 20px 0;
+      padding: 0;
+
+      #references,
+      .reference,
+      .phone,
+      .street,
+      .type,
+      .zip {
         display: none;
+      }
 
-        .reference {
-            display: block;
+      li {
+        position: relative;
+        margin: 0 0 15px 0;
+        padding: 0;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+
+        &.square,
+        &.disc {
+          margin-left: 15px;
+
+        li {
+          margin-bottom: 5px;
         }
       }
 
-      &.list {
-        margin-left: 0;
-        margin: 0 0 20px 0;
-        padding: 0;
+      &.info,
+      .date,
+      .name,
+      .position {
+        font-weight: bold;
+      }
 
-        #references,
-        .reference,
-        .phone,
-        .street,
-        .type,
-        .zip {
-          display: none;
-        }
+      &.info li {
+        margin-bottom: 3px;
+      }
 
-        li {
-          position: relative;
-          margin: 0 0 15px 0;
-          padding: 0;
+      .type,
+      .phone,
+      .address,
+      .reference {
+        font-size: 10px;
+        font-style: italic;
+      }
 
-            &:last-child {
-              margin-bottom: 0;
-            }
-          }
-
-          &.square,
-          &.disc {
-            margin-left: 15px;
-
-          li {
-            margin-bottom: 5px;
-          }
-        }
-
-        &.info,
-        .date,
-        .name,
-        .position {
-          font-weight: bold;
-        }
-
-        &.info li {
-          margin-bottom: 3px;
-        }
-
-        .type,
-        .phone,
-        .address,
-        .reference {
-          font-size: 10px;
-          font-style: italic;
-        }
-
-        .date {
-          position: absolute;
-          right: 610px;
-          font-size: 10px;
-          font-style: italic;
-          white-space: nowrap;
-        }
+      .date {
+        position: absolute;
+        right: 100%;
+        padding-right: 25px;
+        font-size: 10px;
+        font-style: italic;
+        white-space: nowrap;
       }
     }
   }

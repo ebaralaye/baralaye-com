@@ -3,7 +3,7 @@
     <h1>Curriculum Vitae</h1>
   </div>
   <div class="page-main">
-    <h2><span class="name">EBITENYEFA BARALAYE</span><span class="title">Visual Artist</span><a class="download" href="/cv/ebitenyefa-baralaye_cv.pdf">Download</a></h2>
+    <h2><span class="name">Contact</span><span class="title"></span><a class="download" href="/cv/ebitenyefa-baralaye_cv.pdf">Download</a></h2>
     <ul class="section info list outside">
       <li class="contact">646.301.6311 - <a href="mailto:ebi@baralaye.com">ebi@baralaye.com</a></li>
       <li class="address">323 West 39th St Studio 914, New York, NY 10018</li>

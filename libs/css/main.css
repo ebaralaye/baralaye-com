@@ -7453,9 +7453,6 @@ ul.social-btns .btn-s.purchase {
   height: 450px;
 }
 /** Resume/CV ----*/
-.page-body.resume {
-  /**/
-}
 .page-body.resume h2,
 .page-body.resume h3 {
   text-transform: uppercase;
@@ -7468,19 +7465,19 @@ ul.social-btns .btn-s.purchase {
   letter-spacing: 3px;
   font-size: 13px;
 }
-.page-body.resume h2 .download {
-  float: right;
-  font-weight: normal;
-  text-transform: capitalize;
-}
 .page-body.resume h2 a {
   text-decoration: none;
   display: inline-block;
 }
 .page-body.resume h2 .title {
   position: absolute;
-  left: 325px;
+  left: 36%;
   letter-spacing: 2px;
+}
+.page-body.resume h2 .download {
+  float: right;
+  font-weight: normal;
+  text-transform: capitalize;
 }
 .page-body.resume h3 {
   letter-spacing: 2px;
@@ -7490,79 +7487,81 @@ ul.social-btns .btn-s.purchase {
 .page-body.resume h3 a:hover,
 .page-body.resume h2 .download a:hover,
 .page-body.resume h2 a.download:hover {
-  border-bottom: 1px solid #4f569f;
+  border-bottom: 1px solid #4F569F;
   text-decoration: none;
+}
+.page-body.resume p {
+  margin-bottom: 20px;
 }
 .page-body.resume .section {
   position: relative;
-  margin: 0 0 20px 325px !important;
+  margin: 0 0 20px 36% !important;
 }
 .page-body.resume .section h4 {
   text-transform: uppercase;
   margin-bottom: 10px;
   text-decoration: underline;
 }
-.page-body.resume .section #references,
-.page-body.resume .section.references {
+.page-body.resume ul.references {
   display: none;
 }
-.page-body.resume .section #references .reference,
-.page-body.resume .section.references .reference {
+.page-body.resume ul.references .reference {
   display: block;
 }
-.page-body.resume .section .reference,
-.page-body.resume .section .phone,
-.page-body.resume .section .street,
-.page-body.resume .section .zip {
-  display: none;
-}
-.page-body.resume .section.list {
+.page-body.resume ul.list {
   margin-left: 0;
   margin: 0 0 20px 0;
   padding: 0;
 }
-.page-body.resume .section.list li {
+.page-body.resume ul.list #references,
+.page-body.resume ul.list .reference,
+.page-body.resume ul.list .phone,
+.page-body.resume ul.list .street,
+.page-body.resume ul.list .type,
+.page-body.resume ul.list .zip {
+  display: none;
+}
+.page-body.resume ul.list li {
   position: relative;
   margin: 0 0 15px 0;
   padding: 0;
 }
-.page-body.resume .section.list li:last-child {
+.page-body.resume ul.list li:last-child {
   margin-bottom: 0;
 }
-.page-body.resume .section.list.square,
-.page-body.resume .section.list.disc {
+.page-body.resume ul.list.square,
+.page-body.resume ul.list.disc {
   margin-left: 15px;
 }
-.page-body.resume .section.list.square li,
-.page-body.resume .section.list.disc li {
+.page-body.resume ul.list.square li,
+.page-body.resume ul.list.disc li {
   margin-bottom: 5px;
 }
-.page-body.resume .section.list.info,
-.page-body.resume .section.list .date,
-.page-body.resume .section.list .name,
-.page-body.resume .section.list .position {
+.page-body.resume ul.list.info,
+.page-body.resume ul.list .date,
+.page-body.resume ul.list .name,
+.page-body.resume ul.list .position {
   font-weight: bold;
 }
-.page-body.resume .section.list.info li {
+.page-body.resume ul.list.info li {
   margin-bottom: 3px;
 }
-.page-body.resume .section.list .type,
-.page-body.resume .section.list .phone,
-.page-body.resume .section.list .address,
-.page-body.resume .section.list .reference {
+.page-body.resume ul.list .type,
+.page-body.resume ul.list .phone,
+.page-body.resume ul.list .address,
+.page-body.resume ul.list .reference {
   font-size: 10px;
   font-style: italic;
 }
-.page-body.resume .section.list .date {
+.page-body.resume ul.list .date {
   position: absolute;
-  right: 610px;
+  right: 100%;
+  padding-right: 25px;
   font-size: 10px;
+  font-style: italic;
   white-space: nowrap;
 }
-.page-body.resume p {
-  margin-bottom: 20px;
-}
-.page-body.resume .productsmall.portfolio {
+.page-body.resume .productSmall.portfolio {
   margin-bottom: 25px;
 }
 /** links ----*/
