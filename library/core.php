@@ -36,6 +36,9 @@ function route($path) {
     else if(file_exists("pages{$path}.php")){
         return "page";
     }
+    else if(file_exists("pages{$path}/index.php")){
+        return "index";
+    }
     else if(substr($path, 0,4) == '/art') {
         return "catalog";
     }
@@ -59,6 +62,13 @@ function action_home($path){
  */
 function action_page($path){
     return render("pages{$path}.php");
+}
+
+/**
+ * Index Action
+ */
+function action_index($path){
+    return render("pages{$path}/index.php");
 }
 
 /**
