@@ -7763,6 +7763,7 @@ ul.social-btns .btn-s.purchase {
   display: inline-block;
   position: relative;
   width: 180px;
+  height: 170px;
   margin: 15px 0;
 }
 @media (max-width: 320px) {
