@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost:8889
--- Generation Time: May 17, 2014 at 02:28 PM
+-- Generation Time: May 27, 2014 at 08:30 PM
 -- Server version: 5.5.34-log
 -- PHP Version: 5.3.14
 
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `dev_baralaye`
+-- Database: `baralaye_com`
 --
 
 -- --------------------------------------------------------
@@ -26,6 +26,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `catalogs`
 --
 
+DROP TABLE IF EXISTS `catalogs`;
 CREATE TABLE `catalogs` (
   `name` varchar(10) NOT NULL,
   `title` text NOT NULL,
@@ -41,10 +42,16 @@ CREATE TABLE `catalogs` (
 --
 
 INSERT INTO `catalogs` (`name`, `title`, `description`, `image`, `url`) VALUES
+('art', 'Portfolio', '', '', '/art'),
 ('ceramics', 'Sculpture / Ceramics', '', '', '/art/sculpture/ceramics'),
+('drawings', 'Drawings', '', '', '/art/drawings'),
 ('metal', 'Sculpture / Metal', '', '', '/art/sculpture/metal'),
 ('mixed-medi', 'Sculpture / Mixed-Media', '', '', '/art/sculpture/mixed-media'),
-('sculpture', 'Sculpture', 'Selections of my bronze, ceramic and mixed-media sculpture work. Sculpture has been the main direction of my artistic interests since I first started working in clay.', '', '/art/sculpture');
+('pottery', 'Vessels / Pottery', '', '', '/art/vessels/pottery'),
+('prints', 'Drawings / Prints', '', '', '/art/drawings/prints'),
+('sculpture', 'Sculpture', 'Selections of my bronze, ceramic and mixed-media sculpture work. Sculpture has been the main direction of my artistic interests since I first started working in clay.', '', '/art/sculpture'),
+('slipcast', 'Vessels / Slipcast', '', '', '/art/vessels/slipcast'),
+('vessels', 'Vessels', '', '', '/art/vessels');
 
 -- --------------------------------------------------------
 
@@ -52,6 +59,7 @@ INSERT INTO `catalogs` (`name`, `title`, `description`, `image`, `url`) VALUES
 -- Table structure for table `posts`
 --
 
+DROP TABLE IF EXISTS `posts`;
 CREATE TABLE `posts` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `url` varchar(100) NOT NULL DEFAULT '',

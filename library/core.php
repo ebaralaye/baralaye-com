@@ -11,6 +11,12 @@ function conf() {
             'password' => '8FpJwPTC',
         )
     );
+    if ($_SERVER['HTTP_HOSTS'] == "dev.baralaye.com") {
+      $conf['database']['dsn'] = 'mysql:dbname=dev_baralaye_com;host=127.0.0.1';
+    }
+    else if ($_SERVER['HTTP_HOSTS'] == "local.baralaye.com") {
+      $conf['database']['dsn'] = 'mysql:dbname=dev_baralaye_com;host=127.0.0.1';
+    }
     return $conf;
 }
 
