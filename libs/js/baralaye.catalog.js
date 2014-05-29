@@ -20,18 +20,13 @@
             $listName.each(function(){
                 var $this = $(this);
                 if($this.html() === 'Untitled') {
-                    $this.hide('slow');
+                    $this.css('visibility','hidden');
                 }
             });
         }
 
         /** @private */
         function itemDetailView() {
-            //// Hide product price (for items not for sale)
-            /*if($.inArray($detailType, ['print','drawing','vessel']) > 0) {
-                $detailPrice.children('a').html('inquire');
-            }
-            $detailPrice.show('slow');*/
             //// Hide product edition (for inapplicable items)
             if($detailEdition.children('span').html() !== '1') {
                 $detailEdition.show('slow');
