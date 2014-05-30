@@ -153,7 +153,7 @@ function action_news($path){
 
         if($path){
             // SQL statement for url slug (detail view)
-            $sql = 'SELECT * FROM posts WHERE status = 1 AND url = ?';
+            $sql = 'SELECT * FROM news WHERE status = 1 AND url = ?';
             $sth = $dbh -> prepare($sql);
             $sth -> execute(array($path));
             $post = $sth -> fetch();
@@ -164,7 +164,7 @@ function action_news($path){
         }
         else {
             // selecting all posts that are published
-            $sql = 'SELECT * FROM posts WHERE status = 1 ORDER BY published_date DESC';
+            $sql = 'SELECT * FROM news WHERE status = 1 ORDER BY published_date DESC';
             $rows = $dbh->query($sql);
 
             foreach ($rows as $row) {
