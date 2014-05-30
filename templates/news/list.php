@@ -10,7 +10,7 @@
           <h3 class="title h-title sub"><a href="/news/<?php echo $post['url'] ?>"><?php echo $post['title']; ?></a></h3>
           <div class="details"><?php echo $post['published_date']; ?></div>
           <div class="body">
-            <p><?php echo substr($post['content'], 0,100); ?>...<a href="/news/<?php echo $post['url'] ?>">+ read more</a></p>
+            <p><?php echo $post['content_blurb']; ?><a href="/news/<?php echo $post['url'] ?>" class="more">read more</a></p>
           </div>
         </li>
       <?php endforeach; ?>

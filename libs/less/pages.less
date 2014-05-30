@@ -6,6 +6,8 @@
 /** Page Body ----*/
 
 .page-body {
+  .clearfix;
+
   &.stacked {
     text-align: center;
 
@@ -20,35 +22,6 @@
         padding: 0;
       }
     }
-  }
-
-  .col {
-    float: left;
-    padding-right: 5%;
-  }
-
-  .col.side {
-    width: 23%;
-  }
-
-  .col.body {
-    width: 72%;
-  }
-
-  .row {
-    margin-bottom: 20px;
-    width: 100% !important;
-  }
-
-  .page-main {
-    margin: 0 auto 0 auto;
-  }
-
-  .last {
-    padding-right: 0 !important;
-    margin-bottom: 0 !important;
-    margin-right: 0 !important;
-    clear: right;
   }
 
   header,
@@ -75,9 +48,8 @@
     letter-spacing: 2px;
 
     a {
-      display:block;
-      display:inline-block;
-      text-decoration:none;
+      display: inline-block;
+      text-decoration: none;
     }
 
     &.z-m {
@@ -124,50 +96,56 @@
 
   /** Home ----*/
 
-  &.home .portfolio li {
-    .make-sm-column(4);
-    background-size: 100%;
-    text-shadow: 0 0 3px #000;
+  &.home {
+    .portfolio {
+      .clearfix;
 
-    a {
-      text-align: left;
-      display: block;
-      height: 200px;
-      width: 200px;
-      line-height: 300px;
-      margin: 0 auto;
-      border-radius: 50%;
-      background-size: 200px;
-      background-repeat: no-repeat;
-      overflow: hidden;
+      li {
+        .make-sm-column(4);
+        background-size: 100%;
+        text-shadow: 0 0 3px #000;
 
-      &.sculpture {
-        background-image: url('/images/art/portfolio/large/s-mm-0005_a.jpg');
-      }
+        a {
+          text-align: left;
+          display: block;
+          height: 200px;
+          width: 200px;
+          line-height: 300px;
+          margin: 0 auto;
+          border-radius: 50%;
+          background-size: 200px;
+          background-repeat: no-repeat;
+          overflow: hidden;
 
-      &.vessels {
-        background-image: url('/images/art/portfolio/large/v-sc-0004_a.jpg');
-      }
+          &.sculpture {
+            background-image: url('/images/art/portfolio/large/s-mm-0005_a.jpg');
+          }
 
-      &.drawings {
-        background-image: url('/images/art/portfolio/large/dw-s-0009.jpg');
-      }
+          &.vessels {
+            background-image: url('/images/art/portfolio/large/v-sc-0004_a.jpg');
+          }
 
-      span {
-        color: #fff;
-        display: inline-block;
-        font-size: 25px;
-        height: 40px;
-        line-height: 38px;
-        padding: 0 5px 0 20px;
-        font-weight: 100;
-        letter-spacing: 4px;
-        border-radius: 0 20px 20px;
-        background: rgba(0,0,0,0.5);
-      }
+          &.drawings {
+            background-image: url('/images/art/portfolio/large/dw-s-0009.jpg');
+          }
 
-      &:hover span {
-        background-color: rgba(79,86,159,0.8);
+          span {
+            color: #fff;
+            display: inline-block;
+            font-size: 25px;
+            height: 40px;
+            line-height: 38px;
+            padding: 0 5px 0 20px;
+            font-weight: 100;
+            letter-spacing: 4px;
+            border-radius: 0 20px 20px;
+            background: rgba(0,0,0,0.5);
+          }
+
+          &:hover span {
+            background-color: rgba(79,86,159,0.8);
+          }
+        }
       }
     }
   }
@@ -180,23 +158,25 @@
 
   ul.featured {
     width: 100%;
-  }
 
-  ul.featured p {
-    font-size:100%;
+    p {
+      font-size:100%;
+    }
   }
 
   /** Statement/Biography ----*/
 
-  &.statement p,
-  &.biography p {
-    text-indent: 30px;
-  }
+  &.statement,
+  &.biography {
 
-  &.statement .head-shot,
-  &.biography .head-shot{
-    display: block;
-    margin: 0 auto 25px auto;
+    p {
+      text-indent: 30px;
+    }
+
+    .head-shot{
+      display: block;
+      margin: 0 auto 25px auto;
+    }
   }
 
   /** In Progress ----*/
@@ -341,6 +321,45 @@
 
     .product-list.portfolio {
         margin-bottom: 25px;
+    }
+  }
+
+  /** News ---- */
+
+  &.news {
+    .row;
+
+    .main {
+      .make-sm-column(9);
+    }
+
+    .side {
+      .make-sm-column(3);
+    }
+
+    .post {
+      margin: 4px 0 34px 0;
+
+      .social-btns {
+        padding-bottom: 20px;
+        display: block !important;
+      }
+
+      .banner {
+        display: block;
+        margin-bottom: 20px;
+        box-shadow: 0 0 10px #DFDFDF;
+      }
+
+      .details {
+        margin: 0 0 5px;
+        font-size: 11px;
+        font-style: italic;
+      }
+
+      .title {
+        font-weight: normal;
+      }
     }
   }
 

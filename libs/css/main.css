@@ -5954,11 +5954,10 @@ td.visible-print {
     display: none !important;
   }
 }
-/*--------------------------
-Description: Reset Styles
-Website: Baralaye.com
-Author: Ebitenyefa Baralaye
-----------------------------*/
+/**
+ * Baralaye.com Reset Styles
+ * @author tech@baralaye.com
+ */
 html,
 body,
 form,
@@ -6049,238 +6048,8 @@ td {
 }
 /**
  * Baralaye.com Helper Styles
- * @author web@baralaye.com
+ * @author tech@baralaye.com
  */
-/** Clearing ----*/
-.field-list li:after,
-.field-list:after,
-.f-c:after,
-.page:after,
-.line:after,
-section:after,
-.page-body:after {
-  clear: both;
-  display: block;
-  visibility: hidden;
-  overflow: hidden;
-  height: 0 !important;
-  line-height: 0;
-  font-size: xx-large;
-  content: " x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x ";
-}
-/** Fraction Widths ----*/
-.s1of1 {
-  float: none !important;
-  clear: both;
-}
-.s1of2 {
-  width: 50%;
-}
-.s1of3 {
-  width: 33.33333%;
-}
-.s2of3 {
-  width: 66.66666%;
-}
-.s1of4 {
-  width: 25%;
-}
-.s3of4 {
-  width: 75%;
-}
-.s1of5 {
-  width: 20%;
-}
-.s2of5 {
-  width: 40%;
-}
-.s3of5 {
-  width: 60%;
-}
-.s4of5 {
-  width: 80%;
-}
-.s1of6 {
-  width: 16.66666%;
-}
-.s5of6 {
-  width: 83.33333%;
-}
-.s1of7 {
-  width: 14.28571%;
-}
-.s2of7 {
-  width: 28.57142%;
-}
-.s3of7 {
-  width: 42.85714%;
-}
-.s4of7 {
-  width: 57.14285%;
-}
-.s5of7 {
-  width: 71.42857%;
-}
-.s6of7 {
-  width: 85.71428%;
-}
-.s1of8 {
-  width: 12.5%;
-}
-.s3of8 {
-  width: 37.5%;
-}
-.s5of8 {
-  width: 62.5%;
-}
-.s7of8 {
-  width: 87.5%;
-}
-.s1of9 {
-  width: 11.111111%;
-}
-.s2of9 {
-  width: 22.222222%;
-}
-.s4of9 {
-  width: 44.444444%;
-}
-.s5of9 {
-  width: 55.555555%;
-}
-.s7of9 {
-  width: 77.777777%;
-}
-.s8of9 {
-  width: 88.888888%;
-}
-.s1of10 {
-  width: 10%;
-}
-.s3of10 {
-  width: 30%;
-}
-.s7of10 {
-  width: 70%;
-}
-.s9of10 {
-  width: 90%;
-}
-.s1of12 {
-  width: 8.333333%;
-}
-.s5of12 {
-  width: 41.666666%;
-}
-.s1of20 {
-  width: 5%;
-}
-.s9of20 {
-  width: 45%;
-}
-.s19of20 {
-  width: 95%;
-}
-/** Widths ----*/
-.s10 {
-  width: 10% !important;
-}
-.s20 {
-  width: 20% !important;
-}
-.s30 {
-  width: 30% !important;
-}
-.s40 {
-  width: 40% !important;
-}
-.s50 {
-  width: 50% !important;
-}
-.s60 {
-  width: 60% !important;
-}
-.s70 {
-  width: 70% !important;
-}
-.s80 {
-  width: 80% !important;
-}
-.s90 {
-  width: 90% !important;
-}
-.s100 {
-  width: 100% !important;
-}
-/** Field Widths ----*/
-.field-list .s1of1 {
-  width: 96%;
-  float: none !important;
-  clear: both;
-}
-.field-list .s1of2 {
-  width: 46%;
-}
-.field-list .s1of3 {
-  width: 29.33333%;
-}
-.field-list .s2of3 {
-  width: 62.66666%;
-}
-.field-list .s1of4 {
-  width: 21%;
-}
-.field-list .s3of4 {
-  width: 71%;
-}
-.field-list .s1of5 {
-  width: 16%;
-}
-.field-list .s2of5 {
-  width: 36%;
-}
-.field-list .s3of5 {
-  width: 56%;
-}
-.field-list .s4of5 {
-  width: 76%;
-}
-.field-list .s1of6 {
-  width: 12.66666%;
-}
-.field-list .s5of6 {
-  width: 79.33333%;
-}
-.field-list .s1of7 {
-  width: 10.28571%;
-}
-.field-list .s2of7 {
-  width: 24.57142%;
-}
-.field-list .s3of7 {
-  width: 38.85714%;
-}
-.field-list .s4of7 {
-  width: 53.14285%;
-}
-.field-list .s5of7 {
-  width: 67.42857%;
-}
-.field-list .s6of7 {
-  width: 81.71428%;
-}
-.field-list .s1of8 {
-  width: 8.5%;
-}
-.field-list .s3of8 {
-  width: 33.5%;
-}
-.field-list .s5of8 {
-  width: 58.5%;
-}
-.field-list .s7of8 {
-  width: 83.5%;
-}
 /** Lists ----*/
 ul,
 li {
@@ -7295,10 +7064,27 @@ ul.social-btns .btn-s.purchase {
   /** Statement/Biography ----*/
   /** In Progress ----*/
   /** Resume/CV ----*/
+  /** News ---- */
   /** links ----*/
   /** About ----*/
   /** Samples ----*/
   /** Connect ----*/
+}
+.page-body:before,
+.page-body:after {
+  content: " ";
+  display: table;
+}
+.page-body:after {
+  clear: both;
+}
+.page-body:before,
+.page-body:after {
+  content: " ";
+  display: table;
+}
+.page-body:after {
+  clear: both;
 }
 .page-body.stacked {
   text-align: center;
@@ -7312,29 +7098,6 @@ ul.social-btns .btn-s.purchase {
   border: 0;
   margin: 0;
   padding: 0;
-}
-.page-body .col {
-  float: left;
-  padding-right: 5%;
-}
-.page-body .col.side {
-  width: 23%;
-}
-.page-body .col.body {
-  width: 72%;
-}
-.page-body .row {
-  margin-bottom: 20px;
-  width: 100% !important;
-}
-.page-body .page-main {
-  margin: 0 auto 0 auto;
-}
-.page-body .last {
-  padding-right: 0 !important;
-  margin-bottom: 0 !important;
-  margin-right: 0 !important;
-  clear: right;
 }
 .page-body header,
 .page-body .header {
@@ -7359,7 +7122,6 @@ ul.social-btns .btn-s.purchase {
   letter-spacing: 2px;
 }
 .page-body .h-title a {
-  display: block;
   display: inline-block;
   text-decoration: none;
 }
@@ -7397,6 +7159,22 @@ ul.social-btns .btn-s.purchase {
 .page-body a.btn-sub:hover,
 .page-body .btn-sub a:hover {
   background: #4f569f;
+}
+.page-body.home .portfolio:before,
+.page-body.home .portfolio:after {
+  content: " ";
+  display: table;
+}
+.page-body.home .portfolio:after {
+  clear: both;
+}
+.page-body.home .portfolio:before,
+.page-body.home .portfolio:after {
+  content: " ";
+  display: table;
+}
+.page-body.home .portfolio:after {
+  clear: both;
 }
 .page-body.home .portfolio li {
   position: relative;
@@ -7579,6 +7357,70 @@ ul.social-btns .btn-s.purchase {
 }
 .page-body.resume .product-list.portfolio {
   margin-bottom: 25px;
+}
+.page-body.news {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.page-body.news:before,
+.page-body.news:after {
+  content: " ";
+  display: table;
+}
+.page-body.news:after {
+  clear: both;
+}
+.page-body.news:before,
+.page-body.news:after {
+  content: " ";
+  display: table;
+}
+.page-body.news:after {
+  clear: both;
+}
+.page-body.news .main {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .page-body.news .main {
+    float: left;
+    width: 75%;
+  }
+}
+.page-body.news .side {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .page-body.news .side {
+    float: left;
+    width: 25%;
+  }
+}
+.page-body.news .post {
+  margin: 4px 0 34px 0;
+}
+.page-body.news .post .social-btns {
+  padding-bottom: 20px;
+  display: block !important;
+}
+.page-body.news .post .banner {
+  display: block;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px #DFDFDF;
+}
+.page-body.news .post .details {
+  margin: 0 0 5px;
+  font-size: 11px;
+  font-style: italic;
+}
+.page-body.news .post .title {
+  font-weight: normal;
 }
 .page-body.links ul.nav {
   margin-bottom: 30px;
@@ -8043,7 +7885,7 @@ td.product-detail .images > h1 {
 }
 /**
  * Baralaye.com Plugin Styles
- * @author web@baralaye.com
+ * @author tech@baralaye.com
  */
 /** Feedburner ----*/
 .feed-wrap {
@@ -8172,74 +8014,5 @@ td.product-detail .images > h1 {
   font-size: 100%;
   line-height: 160%;
   margin-bottom: 10px;
-}
-/**
- * Baralaye.com Module Styles
- * @author tech@baralaye.com
- */
-/** News ---- */
-.page-body.news {
-  margin-left: -15px;
-  margin-right: -15px;
-}
-.page-body.news:before,
-.page-body.news:after {
-  content: " ";
-  display: table;
-}
-.page-body.news:after {
-  clear: both;
-}
-.page-body.news:before,
-.page-body.news:after {
-  content: " ";
-  display: table;
-}
-.page-body.news:after {
-  clear: both;
-}
-.page-body.news .main {
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-@media (min-width: 768px) {
-  .page-body.news .main {
-    float: left;
-    width: 75%;
-  }
-}
-.page-body.news .side {
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-@media (min-width: 768px) {
-  .page-body.news .side {
-    float: left;
-    width: 25%;
-  }
-}
-.page-body.news .post {
-  margin: 4px 0 34px 0;
-}
-.page-body.news .post .social-btns {
-  padding-bottom: 20px;
-  display: block !important;
-}
-.page-body.news .post .banner {
-  display: block;
-  margin-bottom: 20px;
-  box-shadow: 0 0 10px #DFDFDF;
-}
-.page-body.news .post .details {
-  margin: 0 0 5px;
-  font-size: 11px;
-  font-style: italic;
-}
-.page-body.news .post .title {
-  font-weight: normal;
 }
 /*# sourceMappingURL=main.css.map */

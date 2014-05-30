@@ -14,6 +14,14 @@
         <fb:like href="" send="false" layout="button_count" width="75" show_faces="false"></fb:like>
         </li>
       </ul>
+      <?php if ($image != null): ?>
+        <div class="image">
+          <img src="<?php echo $image; ?>" alt="<?php echo $image_alt; ?>">
+          <?php if ($image_desc != null): ?>
+            <small class="desc"><?php echo $image_desc ?></small>
+          <?php endif; ?>
+        </div>
+      <?php endif; ?>
       <div class="body"><?php echo $content; ?></div>
     </div>
     <div class="goBack btn-sub"><a href="/news">Go Back</a></div>
