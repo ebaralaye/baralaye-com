@@ -3,96 +3,7 @@
  * @author tech@baralaye.com
  */
 
-/** Page Body ----*/
-
 .page-body {
-  .clearfix;
-
-  &.stacked {
-    text-align: center;
-
-    section {
-      padding-bottom: 20px;
-      border-bottom: 2px solid @grey-medium;
-      margin-bottom: 20px;
-
-      &:last-child {
-        border: 0;
-        margin: 0;
-        padding: 0;
-      }
-    }
-  }
-
-  header,
-  .header {
-    text-align: center;
-    width: 70%;
-    margin: 0 auto;
-    margin-bottom: 20px;
-
-    img {
-      max-width: 100%;
-    }
-
-    p {
-      font-size: 11px;
-      line-height: 20px;
-      margin: 0;
-    }
-  }
-
-  .h-title {
-    margin-bottom: 14px;
-    border-bottom: 2px solid @grey-dark;
-    letter-spacing: 2px;
-
-    a {
-      display: inline-block;
-      text-decoration: none;
-    }
-
-    &.z-m {
-      margin-bottom:0;
-    }
-
-    &.sub {
-      margin-bottom: 7px;
-      border-bottom: 1px solid @grey-dark;
-
-      a:hover {
-        border-bottom: 1px solid @blue-dark;
-        margin-bottom:-1px;
-      }
-    }
-
-    &.active,
-    &:hover,
-    a:hover {
-      border-bottom: 2px solid @blue-dark;
-      margin-bottom:-2px;
-    }
-  }
-
-  a.btn-sub,
-  .btn-sub a {
-    display: inline-block;
-    color: #fff;
-    font-size: 11px;
-    letter-spacing: 3px;
-    padding: 4px 8px 2px 8px;
-    background: #ccc;
-    border-radius: 8px;
-    text-align: center;
-    text-decoration: none;
-    font-weight: bold;
-    white-space: nowrap;
-  }
-
-  a.btn-sub:hover,
-  .btn-sub a:hover {
-    background:@blue-dark;
-  }
 
   /** Home ----*/
 
@@ -329,6 +240,10 @@
   &.news {
     .row;
 
+    @media (max-width: @screen-xs-max) {
+      text-align: center;
+    }
+
     .main {
       .make-sm-column(9);
     }
@@ -338,27 +253,36 @@
     }
 
     .post {
-      margin: 4px 0 34px 0;
+      margin-bottom: 30px;
 
-      .social-btns {
-        padding-bottom: 20px;
-        display: block !important;
-      }
-
-      .banner {
-        display: block;
+      .head {
         margin-bottom: 20px;
-        box-shadow: 0 0 10px #DFDFDF;
       }
 
       .details {
-        margin: 0 0 5px;
-        font-size: 11px;
-        font-style: italic;
+        margin-bottom: 5px;
+
+        time {
+          font-size: 11px;
+          font-style: italic;
+          letter-spacing: 1px;
+        }
       }
 
-      .title {
-        font-weight: normal;
+      .image {
+        display: inline-block;
+        margin-bottom: 20px;
+
+        img {
+          max-width: 100%;
+          box-shadow: 0 0 10px #DFDFDF;
+        }
+
+        .desc {
+          display: block;
+          text-align: center;
+          margin-top: 10px;
+        }
       }
     }
   }
