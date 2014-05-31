@@ -7038,7 +7038,7 @@ ul.social-btns .btn-s.purchase {
   }
 }
 .tmp-wrap .tmp-top > .tmp-nav > ul.nav > li > ul > li > a {
-  font-weight: 500;
+  font-weight: 400;
 }
 @media (min-width: 768px) {
   .tmp-wrap .tmp-top > .tmp-nav > ul.nav > li > ul > li > a {
@@ -7096,7 +7096,7 @@ ul.social-btns .btn-s.purchase {
 .tmp-wrap .tmp-bottom > .tmp-nav > ul.nav > li > a {
   float: left;
   font-size: 13px;
-  font-weight: 500;
+  font-weight: 400;
   border-bottom: 2px solid #dfdfdf;
   background: none;
 }
