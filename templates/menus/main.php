@@ -32,7 +32,7 @@
     <ul>
       <li><a href="/blog">Blog</a></li>
       <li><a href="/news">News</a></li>
-      <li><a href="/connect">Connect</a></li>
+      <li><a href="/social">Social</a></li>
     </ul>
   </li>
 </ul>

@@ -19,15 +19,19 @@
       <li class="specs">
         <ul>
           <li class="medium">Medium: <?php echo $medium; ?></li>
-          <li class="dimensions">Dimensions (inches): <?php echo $dim_width," x ", $dim_height," x ",$dim_depth; ?></li>
+          <?php if ($dim_width != null): ?>
+            <li class="dimensions">Dimensions: <?php echo $dim_width," x ", $dim_height," x ",$dim_depth; ?></li>
+          <?php endif; ?>
           <li class="weight">Weight: <span><?php echo $weight; ?></span> lbs</li>
           <li class="year">Year: <?php echo $year; ?></li>
           <li class="edition">Edition: <span><?php echo $edition; ?></span></li>
-          <li class="price">Price: $<?php echo $price; ?></a></li>
+          <?php if ($price != null): ?>
+            <li class="price">Price: $<?php echo $price; ?></a></li>
+          <?php endif; ?>
           <li class="code">Code: <span><?php echo $code; ?></span></li>
         </ul>
       </li>
-      <li class="social">
+      <!--<li class="social">
         <ul class="social-btns">
           <li class="btn-s purchase"><a href="#purchase-inquiry" class="ltbx win">Buy</a></li>
           <li class="btn-s comment"><a href="#comment-form" class="ltbx win">Comment</a></li>
@@ -40,7 +44,7 @@
             <fb:like send="false" layout="button_count" width="75" show_faces="false"></fb:like>
           </li>
         </ul>
-      </li>
+      </li>-->
       <li class="description"><?php echo $description; ?></li>
     </ul>
   </div>

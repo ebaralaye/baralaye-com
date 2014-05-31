@@ -7746,6 +7746,11 @@ td.product-detail .details > h1 {
     display: none !important;
   }
 }
+@media (min-width: 768px) {
+  .product-detail .details > h1 {
+    margin-bottom: 10px;
+  }
+}
 .product-detail .details li {
   font-size: 10px;
   letter-spacing: 1px;
