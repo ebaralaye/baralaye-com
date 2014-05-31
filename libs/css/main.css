@@ -6896,7 +6896,7 @@ ul.social-btns .btn-s.purchase {
     bottom: -2px;
     display: inline-block;
     height: 42px;
-    padding: 14px 0 5px 0;
+    padding: 11px 0 9px 0;
   }
   .tmp-wrap .tmp-top .tmp-logo > a:hover {
     border-bottom: 2px solid #4f569f;
@@ -6979,7 +6979,7 @@ ul.social-btns .btn-s.purchase {
   font-size: 15px;
   font-weight: 300;
   height: 42px;
-  padding: 20px 15px 5px 20px;
+  padding: 15px 15px 10px 20px;
   border-bottom-width: 2px;
 }
 .tmp-wrap .tmp-top > .tmp-nav > ul.nav > li > a:hover,
