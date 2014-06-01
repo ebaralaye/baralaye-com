@@ -10,7 +10,7 @@ if (strpos($path, '?') !== FALSE) {
 
 $action = route($path);
 
-if (substr($path, strpos($path, '/')) == "/tech") {
+if (substr($path, strpos($path, '/')+1) == "tech" || $route == "tech") {
   $meta = render('templates/meta/tech.php');
   $title = "Ebi Baralaye";
   $menu = render('templates/menus/tech.php');
