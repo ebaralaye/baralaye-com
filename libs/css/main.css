@@ -6625,7 +6625,7 @@ h4 {
 }
 p {
   font-size: 12px;
-  line-height: 22px;
+  line-height: 180%;
   margin-bottom: 10px;
   letter-spacing: 1px;
 }
@@ -6791,9 +6791,10 @@ ul.social-btns .btn-s.purchase {
   margin: 0;
 }
 .page-body .h-title {
+  display: inline-block;
   margin-bottom: 14px;
   border-bottom: 2px solid #dfdfdf;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 }
 .page-body .h-title a {
   display: inline-block;
@@ -7407,7 +7408,7 @@ ul.social-btns .btn-s.purchase {
   margin-bottom: 20px;
 }
 .page-body.news .post .details {
-  margin-bottom: 5px;
+  margin-bottom: 2px;
 }
 .page-body.news .post .details time {
   font-size: 11px;
@@ -7426,6 +7427,14 @@ ul.social-btns .btn-s.purchase {
   display: block;
   text-align: center;
   margin-top: 10px;
+}
+.page-body.news .post-list.aside p,
+.page-body.news .post-list.aside h4,
+.page-body.news .post-list.aside time {
+  font-size: 10px;
+}
+.page-body.news .post-list.aside li {
+  margin-bottom: 15px;
 }
 .page-body.links ul.nav {
   margin-bottom: 30px;

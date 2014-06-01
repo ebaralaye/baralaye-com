@@ -151,18 +151,26 @@ function action_news($path){
     try {
         $dbh = new PDO($conf['dsn'], $conf['user'], $conf['password']);
 
-        if($path){
-            // SQL statement for url slug (detail view)
+        if($path){ // if there is a slug after the /news/ in the path (/news/whatever) - Detail view
+
+            // Selects the row with a mathcing path
             $sql = 'SELECT * FROM news WHERE status = 1 AND url = ?';
             $sth = $dbh -> prepare($sql);
             $sth -> execute(array($path));
             $post = $sth -> fetch();
 
+            // Selects the first five publised articles for the "Latest News" section
+            $sql = 'SELECT * FROM news WHERE status = 1 ORDER BY published_date DESC LIMIT 3';
+            $rows = $dbh->query($sql);
+            foreach ($rows as $row) {
+                $posts[] = $row;
+            }
+
             if ($post) {
-                return render("templates/news/detail.php", $post);
+                return render("templates/news/detail.php", array('post' => $post, 'posts' => $posts));
             }
         }
-        else {
+        else { //if there is no slug following the news path (/news)
             // selecting all posts that are published
             $sql = 'SELECT * FROM news WHERE status = 1 ORDER BY published_date DESC';
             $rows = $dbh->query($sql);
