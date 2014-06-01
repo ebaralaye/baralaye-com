@@ -40,6 +40,9 @@ function route($path) {
     if ($path == '/') {
         return "home";
     }
+    else if ($_SERVER['HTTP_HOST'] == "tech.baralaye.com") {
+        return "tech";
+    }
     else if(file_exists("pages{$path}.php")){
         return "page";
     }
