@@ -10,10 +10,19 @@ if (strpos($path, '?') !== FALSE) {
 
 $action = route($path);
 
+if (substr($path, strpos($path, '/')) == "/tech") {
+  $meta = render('templates/meta/tech.php');
+  $title = "Ebi Baralaye";
+  $menu = render('templates/menus/tech.php');
+}
+else {
+  $meta = render('templates/meta/main.php');
+  $title = "Ebitenyefa Baralaye";
+  $menu = render('templates/menus/main.php');
+}
+
 $content = call_user_func("action_".$action, $path);
 
-$mainMenu = render('templates/menus/main.php');
-
-$template = render('templates/main.php', array('content' => $content, 'mainMenu' => $mainMenu));
+$template = render('templates/main.php', array('meta' => $meta, 'title' => $title, 'menu' => $menu, 'content' => $content));
 
 echo $template;

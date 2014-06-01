@@ -1,15 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Ebitenyefa Baralaye</title>
+    <title><?php echo $title; ?></title>
 
-    <!-- Meta Data: -->
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="keywords" content=" sculpture, art, ceramics, vases, abstract, fine-artist, sculptor, artist" />
-    <meta name="description" content="Fine artist sculptor." />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="p:domain_verify" content="de0be4f5a7cf46b1fb6578af011e6998" />
-    <meta name="robots" content="index,follow" />
+    <!-- Meta Data -->
+    <?php echo $meta; ?>
 
     <!-- CSS: Plugins > Fancybox -->
     <link type="text/css" rel="stylesheet" media="all" href="/libs/vendor/fancybox/css/jquery.fancybox.css" />
@@ -69,10 +64,10 @@
       <div id="tmp-wrap" class="tmp-wrap">
         <div id="tmp-top" class="tmp-top">
           <div class="tmp-logo">
-            <a href="/">Ebitenyefa Baralaye</a>
+            <a href="/"><?php echo $title; ?></a>
           </div>
           <div class="tmp-nav">
-            <?php echo $mainMenu; ?>
+            <?php echo $menu; ?>
           </div>
           <hr />
         </div>
@@ -81,7 +76,7 @@
         </div>
         <div id="tmp-bottom" class="tmp-bottom">
           <div class="tmp-nav">
-            <?php echo $mainMenu; ?>
+            <?php echo $menu; ?>
           </div>
           <div id="google_translate_element" class="tmp-google-translate"></div>
         </div>
