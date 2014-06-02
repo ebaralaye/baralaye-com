@@ -44,15 +44,13 @@
     </div>
     <h3 id="clients">Clients</h3>
     <ul class="section experience list outside">
-      {module_webapps,14302,c,78537}
     </ul>
     <!--<h3>AFFILIATIONS</h3>
     <ul class="section affiliations list outside">
-      {module_webapps,14302,c,78544}
-    </ul>-->
+    </ul>
     <h3 id="references">References</h3>
     <ul class="section references list outside">
-    </ul>
+    </ul>-->
     <h3 id="portfolio">Portfolio</h3>
     <ul class="product-list portfolio web">
       <li>
