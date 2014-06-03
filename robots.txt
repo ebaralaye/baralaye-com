@@ -1,7 +1,0 @@
-User-agent: *
-Disallow: /tech/
-Disallow: /tech
-Disallow: /resume/
-Disallow: /resume
-Disallow: /artisan/
-Disallow: /artisan
