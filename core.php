@@ -24,6 +24,9 @@ function route($path) {
     else if(file_exists("pages{$path}.php")){
         return "page";
     }
+    else if(substr($path, 0,5) == '/tech' || $_SERVER['HTTP_HOST'] == "tech.baralaye.com") {
+        return "tech";
+    }
     else if(file_exists("pages{$path}/index.php")){
         return "index";
     }
@@ -113,6 +116,13 @@ function action_catalog($path){
  */
 function action_404(){
     return render('pages/error/404.php');
+}
+
+/**
+ * Tech Action
+ */
+function action_tech(){
+    return render('pages/tech/index.php');
 }
 
 /**
