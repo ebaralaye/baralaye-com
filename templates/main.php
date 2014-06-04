@@ -60,6 +60,7 @@
     <script type="text/javascript" src="//assets.pinterest.com/js/pinit.js"></script>
   </head>
   <body>
+    <?php include_once('analytics.php'); ?>
     <div id="tmp-window" class="tmp-window">
       <div id="tmp-wrap" class="tmp-wrap">
         <div id="tmp-top" class="tmp-top">

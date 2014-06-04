@@ -1,6 +1,6 @@
 <?php
 
-require_once '../core.php';
+require_once('../core.php');
 
 $path = $_SERVER["REQUEST_URI"];
 if (strpos($path, '?') !== FALSE) {
