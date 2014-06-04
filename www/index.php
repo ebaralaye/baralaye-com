@@ -9,6 +9,7 @@ if (strpos($path, '?') !== FALSE) {
 
 $action = route($path);
 
+// Swaps meta data, menu, and template title on /tech request
 if (substr($path, strpos($path, '/')+1) == "tech") {
   $meta = render('templates/meta/tech.php');
   $title = "Ebi Baralaye";
@@ -20,8 +21,16 @@ else {
   $menu = render('templates/menus/main.php');
 }
 
+// Populates analytics code only in production
+if ($_SERVER['HTTP_HOST'] == "baralaye.com") {
+  $analytics = render('analytics.php');
+}
+else {
+  $analytics = null;
+}
+
 $content = call_user_func("action_".$action, $path);
 
-$template = render('templates/main.php', array('meta' => $meta, 'title' => $title, 'menu' => $menu, 'content' => $content));
+$template = render('templates/main.php', array('meta' => $meta, 'title' => $title, 'menu' => $menu, 'content' => $content, 'analytics' => $analytics));
 
 echo $template;
