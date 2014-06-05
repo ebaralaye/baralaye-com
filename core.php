@@ -18,23 +18,23 @@ function render($template, $variables = array()) {
  * Route Method
  */
 function route($path) {
-    if ($path == '/') {
-        return "home";
-    }
-    else if(file_exists("pages{$path}.php")){
-        return "page";
-    }
-    else if(substr($path, 0,5) == '/tech' || $_SERVER['HTTP_HOST'] == "tech.baralaye.com") {
+    if(substr($path, 0,5) == '/tech' || $_SERVER['HTTP_HOST'] == "tech.baralaye.com") {
         return "tech";
-    }
-    else if(file_exists("pages{$path}/index.php")){
-        return "index";
     }
     else if(substr($path, 0,4) == '/art') {
         return "catalog";
     }
     else if(substr($path, 0,5) == '/news') {
         return "news";
+    }
+    else if(file_exists("pages{$path}.php")){
+        return "page";
+    }
+    else if(file_exists("pages{$path}/index.php")){
+        return "index";
+    }
+    else if ($path == '/') {
+        return "home";
     }
     else {
         return "404";

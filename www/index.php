@@ -9,8 +9,8 @@ if (strpos($path, '?') !== FALSE) {
 
 $action = route($path);
 
+if ($action == "tech") {
 // Swaps meta data, menu, and template title on /tech request
-if (substr($path, strpos($path, '/')+1) == "tech") {
   $meta = render('templates/meta/tech.php');
   $title = "Ebi Baralaye";
   $menu = render('templates/menus/tech.php');
