@@ -1,12 +1,13 @@
 <div class="page-body resume artisan">
   <div class="header">
     <h1>Resume</h1>
+    <h4>Download: <a href="/docs/ebitenyefa-baralaye_art.pdf">Pdf</a> / <a href="/docs/ebitenyefa-baralaye_art.docx">Doc</a></h4>
   </div>
   <div class="page-main">
-    <h2><span class="name">EBITENYEFA BARALAYE</span><span class="title">Artisan</span><span class="download"><a href="/artisan/ebitenyefa-baralaye_artisan.pdf">Pdf</a> / <a href="/artisan/ebitenyefa-baralaye_artisan.docx">Doc</a></span></h2>
+    <h3>Contact</h3>
     <ul class="section info list outside">
-      <li class="contact">646.301.6311 - <a href="mailto:ebi@baralaye.com">ebi@baralaye.com</a></li>
-      <li class="address">323 West 39th St Studio 914, New York, NY 10018</li>
+      <li class="contact">ebi&#64;baralaye&#46;com | 646&#46;301&#46;6311</a></li>
+      <li class="address">323 west 39th st studio 914, new york, ny 10018</li>
     </ul>
     <h3 id="education">EDUCATION</h3>
     <ul class="section education list outside">

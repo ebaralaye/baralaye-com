@@ -8,6 +8,7 @@
   /** Home ----*/
 
   &.home {
+
     .portfolio {
       .clearfix;
 
@@ -63,7 +64,7 @@
 
   /** Web ----*/
 
-  &.web li em {
+  &.tech li em {
     font-size:10px;
   }
 
@@ -93,22 +94,23 @@
   /** In Progress ----*/
 
   &.in-progress .body {
-    height:450px;
+    height: 450px;
   }
 
   /** Resume/CV ----*/
 
   &.resume {
+
     h2,
     h3 {
       text-transform: uppercase;
-      margin: 0 0 25px 0;
+      margin: 0 0 20px 0;
       border-bottom: 1px solid #ccc;
+      padding-bottom: 2px;
       font-weight: bold;
     }
 
     h2 {
-      position: relative;
       letter-spacing: 3px;
       font-size: 13px;
 
@@ -116,40 +118,29 @@
         text-decoration: none;
         display: inline-block;
       }
-
-      .title {
-        position: absolute;
-        left: 36%;
-        letter-spacing: 2px;
-      }
-
-     .download {
-        float:right;
-        font-weight: normal;
-        text-transform: capitalize;
-      }
     }
 
     h3 {
       letter-spacing: 2px;
-      padding-right: 750px;
       line-height: 14px;
     }
 
-    h3 a:hover,
-    h2 .download a:hover,
-    h2 a.download:hover {
-        border-bottom: 1px solid #4F569F;
-        text-decoration: none;
+    h3 a:hover {
+      border-bottom: 1px solid #4F569F;
+      text-decoration: none;
     }
 
     p {
-        margin-bottom: 20px;
+      margin-bottom: 20px;
     }
 
     .section {
-      position: relative;
-      margin: 0 0 20px 36% !important;
+      margin-bottom: 0 0 20px;
+
+      @media (min-width: @screen-sm-min) {
+        position: relative;
+        margin: 0 0 20px 36% !important;
+      }
 
       h4 {
         text-transform: uppercase;
@@ -169,7 +160,7 @@
 
       &.list {
         margin-left: 0;
-        margin: 0 0 20px 0;
+        margin: 0 0 25px 0;
         padding: 0;
 
         #references,
@@ -220,12 +211,16 @@
         }
 
         .date {
-          position: absolute;
-          right: 100%;
-          padding-right: 25px;
           font-size: 10px;
           font-style: italic;
+          padding-right: 10px;
           white-space: nowrap;
+
+          @media (min-width: @screen-sm-min) {
+            position: absolute;
+            right: 100%;
+            padding-right: 25px;
+          }
         }
       }
     }
@@ -238,10 +233,10 @@
   /** News ---- */
 
   &.news {
-    .row;
+    margin: 0;
 
-    @media (max-width: @screen-xs-max) {
-      text-align: center;
+    @media (min-width: @screen-sm-max) {
+      margin: 0 -15px;
     }
 
     .main {
@@ -250,6 +245,10 @@
 
     .side {
       .make-sm-column(3);
+
+      @media (min-width: @screen-sm-min) {
+        text-align: left;
+      }
     }
 
     .post {
@@ -280,7 +279,6 @@
 
         .desc {
           display: block;
-          text-align: center;
           margin-top: 10px;
         }
       }
@@ -410,7 +408,6 @@
   }
 
   &.samples .product-list h3 {
-    text-align:center;
     margin:0 15px;
   }
 
@@ -421,22 +418,21 @@
   /** Connect ----*/
 
   &.connect {
-    text-align: center;
 
     .social-media {
       a {
-      width: 70px;
-      height: 70px;
-      margin: 10px 15px;
-      display: inline-block;
-      font-size: 12px;
-      background-color: @grey-light;
-      border-radius: 35px;
-      -moz-border-radius: 35px;
-      -webkit-bmediumr-radius: 35px;
-      line-height: 70px;
-      text-decoration: none;
-      .block-shadow;
+        width: 70px;
+        height: 70px;
+        margin: 10px 15px;
+        display: inline-block;
+        font-size: 12px;
+        background-color: @grey-light;
+        border-radius: 35px;
+        -moz-border-radius: 35px;
+        -webkit-bmediumr-radius: 35px;
+        line-height: 70px;
+        text-decoration: none;
+        .block-shadow;
       }
     }
   }

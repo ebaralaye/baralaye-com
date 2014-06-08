@@ -24,7 +24,12 @@
   <li><a href="/statement">Story</a>
     <ul>
       <li><a href="/biography">Biography</a></li>
-      <li><a href="/cv">CV</a></li>
+      <li>
+        <a href="/cv">CV</a>
+        <ul>
+          <li><a href="/docs/ebitenyefa-baralaye_cv.pdf">Download</a></li>
+        </ul>
+      </li>
       <li><a href="/statement">Statement</a></li>
     </ul>
   </li>

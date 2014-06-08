@@ -13,7 +13,7 @@
   </section>
   <section id="contact" class="contact">
     <h1>Contact</h1>
-    <p><a href="mailto:ebi@baralaye.com">ebi@baralaye.com</a> | (646) 301-6311<br />
+    <p>ebi&#64;baralaye&#46;com | 646&#46;301&#46;6311<br />
     <a href="http://efanyc.org" target="_blank">The Elizabeth Foundation for the Arts</a><br />
     <a href="http://maps.google.com/maps?q=Ebitenyefa+Baralaye" class="gMap" title="The Elizabeth Foundation for the Arts">323 West 39th St, Studio 914, New York, NY 10018</a></p>
   </section>
