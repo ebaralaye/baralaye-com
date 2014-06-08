@@ -1,19 +1,13 @@
 <div class="page-body tech resume">
-  <div class="header">
-    <h1>Resume</h1>
-  </div>
+  <header>
+    <h1>Web Developer</h1>
+  </header>
   <div class="page-main">
-    <h2>
-      <span class="name">Status</span>
-      <span class="title"></span>
-      <span class="download"><a href="/tech/ebi-baralaye_tech.pdf">Pdf</a> / <a href="/tech/ebi-baralaye_tech.docx">Doc</a></span>
-    </h2>
+    <h3>Availability</h3>
     <div class="section">
-      <h4>Title</h4>
-      <p>Frontend Web Developer</p>
       <h4>Contact</h4>
-      <p><a href="mailto:tech@baralaye.com">tech@baralaye.com</a> | 323 West 39th St, New York, NY 10018</p>
-      <h4>Availability</h4>
+      <p>tech&#64;baralaye&#46;com | 323 West 39th St, New York, NY 10018</p>
+      <h4>Status</h4>
       <p>U.S. Citizen - Freelance, contract, part-time, on-site or remote</p>
     </div>
     <h3 id="education">Education</h3>

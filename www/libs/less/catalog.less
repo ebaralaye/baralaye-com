@@ -11,17 +11,16 @@
 /** Product List ----*/
 
 .product-list {
-  text-align: center;
+  .row;
   font-size: 0;
 
   @media (max-width: 320px) {
-    margin: 0 10px;
+    margin: 0 -5px;
   }
 
   .name {
     margin-bottom: 6px;
     height: 20px;
-    text-align:center;
 
     a {
       text-decoration: none;
@@ -60,7 +59,6 @@
     }
 
     .title {
-      text-align: center;
       margin-bottom: 0;
       font-size: 11px;
     }
@@ -93,7 +91,6 @@
       height: 150px;
       width: 150px;
       display: table-cell;
-      text-align: center;
       vertical-align: middle;
 
       @media (max-width: 320px) {
@@ -117,16 +114,20 @@
 /** Product Detail ----*/
 
 .product-detail {
-  .row;
+  .clearfix;
   padding-top: 20px;
 
-  @media (max-width: @screen-xs-max) {
-    text-align: center;
+  @media (min-width: @screen-sm-max) {
+    margin: 0 -15px;
   }
 
   .details {
     .make-sm-column(3);
     .make-sm-column-pull(9);
+
+      @media (min-width: @screen-sm-min) {
+        text-align: left;
+      }
 
     > h1 {
       .hidden-xs;
@@ -175,8 +176,11 @@
   .images {
     .make-sm-column(9);
     .make-sm-column-push(3);
-    text-align: center;
     margin-bottom: 20px;
+
+    @media (max-width: @screen-xs-max) {
+      margin: 0 -15px;
+    }
 
     > h1 {
       .visible-xs;
@@ -200,7 +204,6 @@
 
     .poplets {
       margin-top: 12px;
-      text-align: center;
 
       li {
         height: 100px;

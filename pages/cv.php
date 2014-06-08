@@ -1,12 +1,12 @@
 <div class="page-body resume cv">
-  <div class="header">
+  <header>
     <h1>Curriculum Vitae</h1>
-  </div>
+  </header>
   <div class="page-main">
-    <h2><span class="name">Contact</span><span class="title"></span><a class="download" href="/cv/ebitenyefa-baralaye_cv.pdf">Download</a></h2>
+    <h3>Contact</h3>
     <ul class="section info list outside">
-      <li class="contact">646.301.6311 - <a href="mailto:ebi@baralaye.com">ebi@baralaye.com</a></li>
-      <li class="address">323 West 39th St Studio 914, New York, NY 10018</li>
+      <li class="contact">ebi&#64;baralaye&#46;com | 646&#46;301&#46;6311</a></li>
+      <li class="address">323 west 39th st studio 914, new york, ny 10018</li>
     </ul>
     <h3>Education</h3>
     <ul class="section list outside">

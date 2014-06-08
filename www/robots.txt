@@ -1,8 +1,5 @@
 User-agent: *
-Disallow: /tech/
+Disallow: /resume
 Disallow: /tech
 Disallow: /http://tech.baralaye.com
-Disallow: /resume/
-Disallow: /resume
-Disallow: /artisan/
-Disallow: /artisan
+Disallow: /http://dev.baralaye.com

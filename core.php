@@ -122,7 +122,7 @@ function action_404(){
  * Tech Action
  */
 function action_tech(){
-    return render('pages/tech/index.php');
+    return render('pages/tech.php');
 }
 
 /**
