@@ -23,12 +23,12 @@
             <li class="dimensions">Dimensions: <?php echo $dim_width," x ", $dim_height," x ",$dim_depth; ?></li>
           <?php endif; ?>
           <li class="weight">Weight: <span><?php echo $weight; ?></span> lbs</li>
-          <li class="year">Year: <?php echo $year; ?></li>
+          <li class="year">Year: <?php $year = date("Y", strtotime($date)); echo $year?></li>
           <li class="edition">Edition: <span><?php echo $edition; ?></span></li>
           <?php if ($price != null): ?>
             <li class="price">Price: $<?php echo $price; ?></a></li>
           <?php endif; ?>
-          <li class="code">Code: <span><?php echo $code; ?></span></li>
+          <li class="code">Code: <span><?php echo $id; ?></span></li>
         </ul>
       </li>
       <!--<li class="social">

@@ -66,49 +66,58 @@ function action_index($path){
  * Catalog Action
  */
 function action_catalog($path){
-    $products = array();
-    $products_ref = fopen("database/products.csv", "r");
-    $properties = fgetcsv($products_ref);
-    $properties = array_slice($properties, 0, 15);
+  $products = array();
 
-    while (($row = fgetcsv($products_ref)) !== FALSE){
-        $row = array_slice($row, 0, 15);
-        $product = array_combine($properties, $row);
-        // Detail View //
-        if ($path == $product["url"]) {
-            return render("templates/catalog/detail.php", $product);
-            break;
+  // Open a database connection - pointer to my database
+  $conf = conf();
+  $conf = $conf['database'];
+
+  // Detail View //
+  try {
+    $dbh = new PDO($conf['dsn'], $conf['user'], $conf['password']);
+    // SQL - Select all rows from catalogs table that have a url that matches $path
+    $sql = 'SELECT * FROM portfolio_art WHERE  url = ?';
+    $sth = $dbh -> prepare($sql);
+    $sth -> execute(array($path));
+    $product = $sth -> fetch();
+  }
+  catch (PDOException $e) {
+  }
+  if($product) {
+    return render("templates/catalog/detail.php", $product);
+  }
+
+  // List View
+  else if (!($product)) {
+    try {
+      $dbh = new PDO($conf['dsn'], $conf['user'], $conf['password']);
+
+      // Select rows with the urls that are a zero indexed substring of the path, within the same category
+      $sql = 'SELECT * FROM portfolio_art WHERE  status = 1 ORDER BY date DESC';
+      $sth = $dbh -> prepare($sql);
+      $sth -> execute(array($path));
+      $rows = $dbh->query($sql);
+      foreach ($rows as $row) {
+        // check if row url is at the first index of the path (list veiw)
+        if(strpos($row["url"], $path) === 0) {
+          $products[] = $row;
         }
-        // Check if the path is the first part of the product url, a catalog path
-        else if(strpos($product["url"], $path) === 0) {
-            // Add product to products array for catalog view
-            $products[] = $product;
-        }
-    }
-    fclose($products_ref);
-
-    // Catalog View (more than one row of matching products)
-    if (count($products) > 0) {
-
-      // Open a database connection - pointer to my database
-      $conf = conf();
-      $conf = $conf['database'];
-
-      try {
-          $dbh = new PDO($conf['dsn'], $conf['user'], $conf['password']);
-          // SQL - Select all rows from catalogs table that have a url that matches $path
-          $sql = 'SELECT * FROM catalogs WHERE  url = ?';
-          $sth = $dbh -> prepare($sql);
-          $sth -> execute(array($path));
-          $catalog = $sth -> fetch();
-          return render("templates/catalog/list.php", array('products' => $products, 'catalog' => $catalog));
       }
-      catch (PDOException $e) {
-      }
+
+      // SQL - Select all rows from catalogs table that have a url that matches $path
+      $sql = 'SELECT * FROM catalogs WHERE  url = ?';
+      $sth = $dbh -> prepare($sql);
+      $sth -> execute(array($path));
+      $catalog = $sth -> fetch();
+
+      return render("templates/catalog/list.php", array('products' => $products, 'catalog' => $catalog));
     }
-    else {
-       return action_404();
+    catch (PDOException $e) {
     }
+  }
+  else {
+     return action_404();
+  }
 }
 
 /**
@@ -122,7 +131,29 @@ function action_404(){
  * Tech Action
  */
 function action_tech(){
-    return render('pages/tech.php');
+  $clients = array();
+  $affiliations = array();
+
+  // Open a database connection - pointer to my database
+  $conf = conf();
+  $conf = $conf['database'];
+
+  $dbh = new PDO($conf['dsn'], $conf['user'], $conf['password']);
+  // Select rows with the urls that are a zero indexed substring of the path, within the same category
+  $sql = 'SELECT * FROM resume WHERE  status = 1 ORDER BY period_from DESC';
+  $rows = $dbh->query($sql);
+  foreach ($rows as $row) {
+    $tags = explode(',', $row['tags']);
+    if (in_array('tech', $tags)) {
+      $clients[] = $row;
+    }
+    if (in_array('tech/affiliations', $tags)) {
+      $affiliations[] = $row;
+    }
+  }
+  $sql = 'SELECT * FROM portfolio_tech';
+  $items = $dbh->query($sql);
+  return render('pages/tech.php', array('clients' => $clients, 'affiliations' => $affiliations, 'items' => $items));
 }
 
 /**
