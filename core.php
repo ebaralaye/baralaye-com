@@ -151,7 +151,9 @@ function action_tech(){
       $affiliations[] = $row;
     }
   }
-  return render('pages/tech.php', array('clients' => $clients, 'affiliations' => $affiliations));
+  $sql = 'SELECT * FROM portfolio_tech';
+  $items = $dbh->query($sql);
+  return render('pages/tech.php', array('clients' => $clients, 'affiliations' => $affiliations, 'items' => $items));
 }
 
 /**
