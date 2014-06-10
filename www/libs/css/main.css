@@ -6833,6 +6833,30 @@ ul.social-btns .btn-s.purchase {
   text-decoration: none;
   border-color: #4f569f;
 }
+.page-body .social-media {
+  text-align: center;
+}
+.page-body .social-media a {
+  width: 70px;
+  height: 70px;
+  margin: 10px 15px;
+  display: inline-block;
+  font-size: 12px;
+  background-color: #f3f3f3;
+  border-radius: 35px;
+  -moz-border-radius: 35px;
+  -webkit-bmediumr-radius: 35px;
+  line-height: 70px;
+  text-decoration: none;
+  border: 1px solid transparent;
+  background-position: -1px -1px;
+  box-shadow: 1px 1px 5px #dfdfdf;
+  box-sizing: border-box;
+}
+.page-body .social-media a:hover {
+  border-color: #4f569f;
+  text-decoration: none;
+}
 /** Main Blocks ----*/
 .tmp-window {
   min-height: 100%;
@@ -7250,7 +7274,7 @@ ul.social-btns .btn-s.purchase {
   text-transform: uppercase;
   margin: 0 0 20px 0;
   border-bottom: 1px solid #ccc;
-  padding-bottom: 2px;
+  padding-bottom: 5px;
   font-weight: bold;
 }
 .page-body.resume h2 {
@@ -7272,6 +7296,9 @@ ul.social-btns .btn-s.purchase {
 .page-body.resume p {
   margin-bottom: 20px;
 }
+.page-body.resume section#references {
+  display: none;
+}
 .page-body.resume .section {
   margin-bottom: 0 0 20px;
 }
@@ -7286,18 +7313,11 @@ ul.social-btns .btn-s.purchase {
   margin-bottom: 10px;
   text-decoration: underline;
 }
-.page-body.resume ul.references {
-  display: none;
-}
-.page-body.resume ul.references .reference {
-  display: block;
-}
 .page-body.resume ul.list {
   margin-left: 0;
   margin: 0 0 25px 0;
   padding: 0;
 }
-.page-body.resume ul.list #references,
 .page-body.resume ul.list .reference,
 .page-body.resume ul.list .phone,
 .page-body.resume ul.list .street,
@@ -7518,27 +7538,6 @@ ul.social-btns .btn-s.purchase {
 .page-body.samples .product-list .item {
   padding-top: 6px;
 }
-.page-body.connect .social-media a {
-  width: 70px;
-  height: 70px;
-  margin: 10px 15px;
-  display: inline-block;
-  font-size: 12px;
-  background-color: #f3f3f3;
-  border-radius: 35px;
-  -moz-border-radius: 35px;
-  -webkit-bmediumr-radius: 35px;
-  line-height: 70px;
-  text-decoration: none;
-  border: 1px solid transparent;
-  background-position: -1px -1px;
-  box-shadow: 1px 1px 5px #dfdfdf;
-  box-sizing: border-box;
-}
-.page-body.connect .social-media a:hover {
-  border-color: #4f569f;
-  text-decoration: none;
-}
 /**
  * Baralaye.com Catalog Styles
  * @author tech@baralaye.com
@@ -7546,6 +7545,7 @@ ul.social-btns .btn-s.purchase {
 /** Catalog Template ----*/
 /** Product List ----*/
 .product-list {
+  text-align: center;
   margin-left: -15px;
   margin-right: -15px;
   font-size: 0;
@@ -7615,6 +7615,7 @@ ul.social-btns .btn-s.purchase {
 }
 .product-list > li,
 .product-list .item {
+  text-align: center;
   display: inline-block;
   position: relative;
   width: 180px;
