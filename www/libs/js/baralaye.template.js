@@ -56,31 +56,6 @@
             });
         }
 
-        /**
-         * Sets (copys over) Bottom Nav
-         * @private
-         */
-        function displayBottomNav() {
-            $('#tmp-bottom > .tmp-nav').html($('#tmp-top > .tmp-nav').html());
-        }
-
-        /**
-         * Sets background image graphic
-         * @private
-         */
-        function windowBackgroundRotator() {
-            var Rotator = [
-                'sketch0.gif',
-                'sketch1.gif',
-                'sketch2.gif',
-                'sketch3.gif',
-                'sketch4.gif'
-            ],
-            whichRotator = Math.floor(Math.random()*(Rotator.length)),
-            imgSrc = 'url(/images/bg/' + Rotator[whichRotator] + ')';
-            $('#tmp-bg-img').css('background-image', imgSrc);
-        }
-
         /** @private */
         function setEventHandlers() {
         }
@@ -89,11 +64,6 @@
             init: function() {
                 globalNav();
                 topNavDropdowns();
-                displayBottomNav();
-                /* don't show background image on resume pages */
-                if ($.inArray(locDoc1, ['arts','web','cv']) < 0) {
-                    windowBackgroundRotator();
-                }
                 setEventHandlers();
             }
         };
