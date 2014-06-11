@@ -83,67 +83,6 @@
         }
 
         /**
-         * Portal Accordion Slides
-         * @private
-         */
-        function setAccordianSLides() {
-            var slide_number;
-            function slideNumber(slides){
-                slide_number = Math.floor(Math.random() * slides);
-            }
-            var slides_sculpture = [
-                '/images/art/portfolio/large/S-MT_0005_f.jpg',
-                '/images/art/portfolio/large/S-MM_0003_a.jpg',
-                '/images/art/portfolio/large/S-CR_0017_a.jpg'
-            ];
-            slideNumber(slides_sculpture.length);
-            $('.home .accordion .sculpture img').attr('src',slides_sculpture[slide_number]);
-            var slides_vessels = [
-                '/images/art/portfolio/large/V-PT_0019_a.jpg',
-                '/images/art/portfolio/large/V-PT_0026_a.jpg',
-                '/images/art/portfolio/large/V-PT_0017_a.jpg'
-            ];
-            slideNumber(slides_vessels.length);
-            $('.home .accordion .vessels img').attr('src',slides_vessels[slide_number]);
-            var slides_drawings = [
-                '/images/art/portfolio/large/DW_0018.jpg',
-                '/images/art/portfolio/large/DW_0014.jpg',
-                '/images/art/portfolio/large/DW_0016.jpg'
-            ];
-            slideNumber(slides_drawings.length);
-            $('.home .accordion .drawings img').attr('src',slides_drawings[slide_number]);
-
-            //// Portal Accordion ////
-            $('.accordion').classicAccordion({
-                width: 675,
-                height: 200,
-                slideshow: false,
-                shadow: true,
-                alignType: 'centerCenter',
-                closedPanelSize: 60,
-                panelProperties: {
-                    0: {
-                        captionTop: 162,
-                        captionLeft: -1,
-                        captionWidth: 200,
-                        captionHeight: 38
-                    },
-                    1: {
-                        captionTop:162,
-                        captionLeft:-1,
-                        captionWidth:200,
-                        captionHeight:38
-                    },
-                    2:{captionTop:162, captionLeft:-1, captionWidth:200, captionHeight:38},
-                    3:{captionTop:162, captionLeft:-1, captionWidth:200, captionHeight:38},
-                    4:{captionTop:162, captionLeft:-1, captionWidth:200, captionHeight:38},
-                    5:{captionTop:162, captionLeft:-1, captionWidth:200, captionHeight:38}
-                }
-            });
-
-        }
-
-        /**
          * Flickr Photoset function
          * @private
          */
@@ -189,9 +128,6 @@
 
                 setBXSlider();
                 setFancyBox();
-                if (locDoc1 === '') {
-                    setAccordianSLides();
-                }
                 flickrPhotoSet();
 
             }

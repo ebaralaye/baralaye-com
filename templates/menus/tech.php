@@ -1,8 +1,8 @@
 <ul class="nav">
   <li><a href="/tech">Tech</a>
-    <ul>
+    <!--<ul>
       <li>
         <a href="/docs/ebi-baralaye_tech.pdf">Download</a>
-    </ul>
+    </ul>-->
   </li>
 </ul>

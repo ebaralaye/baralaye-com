@@ -21,8 +21,14 @@ function route($path) {
     if(substr($path, 0,5) == '/tech' || $_SERVER['HTTP_HOST'] == "tech.baralaye.com") {
         return "tech";
     }
+    else if(substr($path, 0,7) == '/resume') {
+        return "resume";
+    }
+    else if(substr($path, 0,12) == '/progress') {
+        return "progress";
+    }
     else if(substr($path, 0,4) == '/art') {
-        return "catalog";
+        return "portfolio";
     }
     else if(substr($path, 0,5) == '/news') {
         return "news";
@@ -63,9 +69,9 @@ function action_index($path){
 }
 
 /**
- * Catalog Action
+ * Portfolio Action
  */
-function action_catalog($path){
+function action_portfolio($path){
   $products = array();
 
   // Open a database connection - pointer to my database
@@ -105,7 +111,7 @@ function action_catalog($path){
       }
 
       // SQL - Select all rows from catalogs table that have a url that matches $path
-      $sql = 'SELECT * FROM catalogs WHERE  url = ?';
+      $sql = 'SELECT * FROM portfolio_catalogs WHERE  url = ?';
       $sth = $dbh -> prepare($sql);
       $sth -> execute(array($path));
       $catalog = $sth -> fetch();
@@ -125,6 +131,33 @@ function action_catalog($path){
  */
 function action_404(){
     return render('pages/error/404.php');
+}
+
+/**
+ * Resume Action
+ */
+function action_resume(){
+  $clients = array();
+  $affiliations = array();
+
+  // Open a database connection - pointer to my database
+  $conf = conf();
+  $conf = $conf['database'];
+
+  $dbh = new PDO($conf['dsn'], $conf['user'], $conf['password']);
+  // Select rows with the urls that are a zero indexed substring of the path, within the same category
+  $sql = 'SELECT * FROM resume WHERE  status = 1 ORDER BY period_from DESC';
+  $rows = $dbh->query($sql);
+  foreach ($rows as $row) {
+    $tags = explode(',', $row['tags']);
+    if (in_array('art', $tags)) {
+      $clients[] = $row;
+    }
+    if (in_array('art/affiliations', $tags)) {
+      $affiliations[] = $row;
+    }
+  }
+  return render('pages/resume.php', array('clients' => $clients, 'affiliations' => $affiliations));
 }
 
 /**
@@ -151,9 +184,23 @@ function action_tech(){
       $affiliations[] = $row;
     }
   }
-  $sql = 'SELECT * FROM portfolio_tech';
-  $items = $dbh->query($sql);
-  return render('pages/tech.php', array('clients' => $clients, 'affiliations' => $affiliations, 'items' => $items));
+  $sql = 'SELECT * FROM gallery_tech';
+  $gallery = $dbh->query($sql);
+  $gallery_dirs = array('small' => '/images/tech/portfolio/small/', 'large' => '/images/tech/portfolio/large/');
+  return render('pages/tech.php', array('clients' => $clients, 'affiliations' => $affiliations, 'gallery' => $gallery, 'gallery_dirs' => $gallery_dirs));
+}
+
+/**
+ * In Progress Action
+ */
+function action_progress(){
+  $conf = conf();
+  $conf = $conf['database'];
+  $dbh = new PDO($conf['dsn'], $conf['user'], $conf['password']);
+  $sql = 'SELECT * FROM gallery_progress';
+  $gallery = $dbh->query($sql);
+  $gallery_dirs = array('small' => '/images/art/progress/small/', 'large' => '/images/art/progress/large/');
+  return render('pages/progress.php', array('gallery' => $gallery, 'gallery_dirs' => $gallery_dirs));
 }
 
 /**

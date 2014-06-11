@@ -8,11 +8,7 @@
     Baralaye.Catalog = (function() {
 
         /** @private */
-        var $listName = null,
-            $detailType = null,
-            $detailPrice = null,
-            $detailEdition = null,
-            $detailWeight = null;
+        var $listName = null;
 
         /** @private */
         function itemListView() {
@@ -26,24 +22,8 @@
         }
 
         /** @private */
-        function itemDetailView() {
-            //// Hide product edition (for inapplicable items)
-            if($detailEdition.children('span').html() !== '1') {
-                $detailEdition.show('slow');
-            }
-            //// Hide product wieght (for inapplicable items)
-            if($detailWeight.children('span').html() !== '') {
-                $detailWeight.show();
-            }
-        }
-
-        /** @private */
         function setGlobalVariables() {
             $listName = $('.product-list .name a');
-            $detailType = $('.shop-product-large .specs .type').html();
-            $detailPrice = $('.shop-product-large .specs .price');
-            $detailEdition = $('.shop-product-large .specs .edition');
-            $detailWeight = $('.shop-product-large .specs li.weight');
         }
 
         /** @private */
@@ -55,7 +35,6 @@
                 setGlobalVariables();
                 setEventHandlers();
                 itemListView();
-                itemDetailView();
             }
         };
 
