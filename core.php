@@ -30,8 +30,8 @@ function render($template, $variables = array()) {
  */
 function route($path) {
   global $resume_type;
-  if(substr($path, 0,5) == '/tech' || $_server['http_host'] == "tech.baralaye.com") {
-    if(substr($path, 0,11) == '/tech/admin' || ($_server['http_host'] == "tech.baralaye.com" && substr($path, 0,6) == '/admin')) {
+  if(substr($path, 0,5) == '/tech' || $_SERVER['HTTP_HOST'] == "tech.baralaye.com") {
+    if(substr($path, 0,11) == '/tech/admin' || ($_SERVER['HTTP_HOST'] == "tech.baralaye.com" && substr($path, 0,6) == '/admin')) {
       $resume_type = 'tech-admin';
     }
     else {
