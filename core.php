@@ -66,6 +66,9 @@ function route($path) {
   else if ($path == '/') {
     return "home";
   }
+  else if ($path == '/social') {
+    return "social";
+  }
   else {
     return "404";
   }
@@ -232,6 +235,58 @@ function action_news($path){
     }
 
    return action_404();
+}
+
+/**
+ * Contact Action
+ */
+function action_social(){
+  $form_values = array();
+  $form_errors = array();
+  if (! empty($_POST)) {
+    $values = $_POST;
+
+    if (empty($values['email'])) {
+      $form_errors['email'] = "There's no email!";
+    }
+    else if (! preg_match('/^[a-z0-9.\-_]+@[a-z0-9.\-_]+\.[a-z]+$/i' ,$values['email'])) {
+      $form_errors['email'] = "Hey, that's not an email!";
+    }
+    if (empty($values['message'])) {
+      $form_errors['message'] = "There's no message!";
+    }
+
+    // If all validation passes
+    if (count($form_errors) == 0) {
+      $headers = "From: Ebi VPS <webserver@baralaye.com>\r\n"; 
+      //specify MIME version 1.0 
+      $headers .= "MIME-Version: 1.0\r\n"; 
+      //unique boundary 
+      $boundary = uniqid(); 
+      //tell e-mail client this e-mail contains//alternate versions 
+      $headers .= "Content-Type: multipart/alternative; boundary=$boundary\r\n"; 
+      $values['boundary'] = $boundary;
+      $message = render('templates/email/contact.php', $values);
+      $message = str_replace("\n", "\r\n", $message);
+      $to = "tech@baralaye.com";
+      $subject = "New Contact from Baralaye.com";
+      if (mail($to, $subject, $message, $headers)) {
+        header('Location: /social?success=1');
+        exit;
+      }
+      else {
+        $form_errors['submission'] = "We can't submit this!";
+      }
+    }
+    foreach($values as $i => $value){
+      $form_values[$i] = htmlentities($value, ENT_QUOTES);
+    }
+  }
+  return render('templates/social.php', array(
+                'form_values' => $form_values,
+                'form_errors' => $form_errors,
+                'form_success' => !empty($_GET['success']),
+               ));
 }
 
 /**

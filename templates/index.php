@@ -18,7 +18,7 @@
     <link type="text/css" rel="stylesheet" media="all" href="/libs/vendor/classic-accordion/css/jquery.classic-accordion.css" />
 
     <!-- CSS: Custom Styles -->
-    <link type="text/css" rel="stylesheet" media="all" href="/libs/css/main.css" />
+    <link type="text/css" rel="stylesheet" media="all" href="/libs/css/index.css" />
 
     <!-- JS: Plugins > Underscore -->
     <script type="text/javascript" src="/libs/vendor/underscore/underscore-min.js"></script>

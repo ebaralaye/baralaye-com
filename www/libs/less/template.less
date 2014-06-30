@@ -34,6 +34,7 @@
 
 body {
   font-family: helvetica, verdana, arial;
+  font-size: 10px;
   color: @grey-dark;
 }
 
@@ -97,9 +98,9 @@ p {
 /** Horizontal Rule ----*/
 
 .hr, hr {
+  .clearfix;
   border-bottom: 2px solid @grey-medium;
   margin: 0 15px;
-  clear: both;
 }
 
 /** UL & OL ----*/
@@ -335,6 +336,7 @@ ul.social-btns {
     .row;
     margin-top: 30px;
     margin-bottom: 40px;
+    border-bottom: 2px solid @grey-medium;
 
     @media (max-width: @screen-xs-max) {
       &.double-nav {
@@ -541,6 +543,7 @@ ul.social-btns {
 
     > .tmp-nav {
       > ul.nav {
+      .list-unstyled;
       position: relative;
       top: -19px;
       display: inline-block;
@@ -574,6 +577,7 @@ ul.social-btns {
           }
 
           > ul {
+            .list-unstyled;
             width: auto;
             padding-top: 27px;
 

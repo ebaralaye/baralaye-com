@@ -16,6 +16,38 @@
     <p>ebi&#64;baralaye&#46;com | 646&#46;301&#46;6311<br />
     <a href="http://efanyc.org" target="_blank">The Elizabeth Foundation for the Arts</a><br />
     <a href="http://maps.google.com/maps?q=Ebitenyefa+Baralaye" class="gMap" title="The Elizabeth Foundation for the Arts">323 West 39th St, Studio 914, New York, NY 10018</a></p>
+
+    <form action="/social" method="post" data-success="<?php var_export($form_success) ?>">
+        <ul class="field-list s70 clearfix">
+          <li class="col-xs-12 <?php if(! empty($form_errors['email'])){echo 'has-error';} ?>">
+            <label for="email" class="control-label">Email Address <span class="asterisk">*</span></label>
+            <input type="text" value="<?php echo $form_values['email'] ?>" name="email" class="required form-control" id="email">
+          </li>
+          <li class="col-xs-6">
+            <label for="first_name">First Name</label>
+            <input type="text" value="<?php echo $form_values['first_name'] ?>" name="first_name" id="first_name">
+          </li>
+          <li class="col-xs-6">
+            <label for="last_name">Last Name</label>
+            <input type="text" value="<?php echo $form_values['last_name'] ?>" name="last_name" id="last_name">
+          </li>
+          <li class="col-xs-12 <?php if(! empty($form_errors['message'])){echo 'has-error';} ?>">
+            <label for="message" class="control-label">Message <span class="asterisk">*</span></label>
+            <textarea name="message" id="message" rows="6" class="required form-control"><?php echo $form_values['message'] ?></textarea>
+          </li>
+          <li class="col-xs-12">
+            <ul class="response">
+              <?php foreach($form_errors as $error): ?>
+                <li class="bg-danger"><?= $error ?></li>
+              <?php endforeach; ?>
+            </ul>
+          </li>
+          <li class="col-xs-12">
+            <input type="submit" value="Submit" name="submit" class="btn submit">
+          </li>
+        </ul>
+    </form>
+
   </section>
   <section id="mailing-list" class="mailing-list">
     <h1>Mailing List</h1>

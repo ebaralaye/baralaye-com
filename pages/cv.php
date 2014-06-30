@@ -3,14 +3,10 @@
     <h1>Curriculum Vitae</h1>
   </header>
   <div class="page-main">
-    <h3>Contact</h3>
-    <ul class="section info list outside">
-      <li class="contact">ebi&#64;baralaye&#46;com | 646&#46;301&#46;6311</a></li>
-      <li class="address">323 west 39th st studio 914, new york, ny 10018</li>
-    </ul>
     <h3>Education</h3>
     <ul class="section list outside">
-      <li><strong><a href="http://www.risd.edu" target="_blank">Rhode Island School of Design</a></strong> - BFA *honors | <span class="date"><strong>2006</strong></span>Providence, RI</li>
+      <li><strong><a href="http://cranbrookart.edu" target="_blank">Cranbrook Academy of Art</a></strong> - MFA | <span class="date"><strong>(expected) 2015</strong></span>Bloomfield Hills, MI</li>
+      <li><strong><a href="http://risd.edu" target="_blank">Rhode Island School of Design</a></strong> - BFA *honors | <span class="date"><strong>2006</strong></span>Providence, RI</li>
     </ul>
     <h3>Exhibitions</h3>
     <ul class="section list outside">
