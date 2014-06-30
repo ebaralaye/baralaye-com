@@ -34,8 +34,6 @@
     <script type="text/javascript" src="/libs/vendor/fancybox/js/jquery.fancybox-media.js"></script>
     <!-- JS: Plugins > BX Slider -->
     <script type="text/javascript" src="/libs/vendor/bx-slider/js/jquery.bx-slider.min.js"></script>
-    <!-- JS: Plugins > Classic Accordian -->
-    <script type="text/javascript" src="/libs/vendor/classic-accordion/js/jquery.classic-accordion.min.js"></script>
     <!-- JS: Plugins > Google Map API -->
     <script type="text/javascript" src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAyhw8QDDthUf_-P5XBMKY2RRaLhBCYEQ2HxwDcACoBDSJCmxiJxT8pCzmBKczuPZyjKWzlTFd-Idi6A"></script>
     <!-- JS: Plugins > Bootstrap -->
