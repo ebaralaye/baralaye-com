@@ -6869,8 +6869,13 @@ fieldset[disabled] .page-body .social-media a {
 .page-body.resume p {
   margin-bottom: 20px;
 }
+.page-body.resume .reference,
 .page-body.resume section#references {
   display: none;
+}
+.page-body.resume .reference .reference,
+.page-body.resume section#references .reference {
+  display: block;
 }
 .page-body.resume .section {
   margin-bottom: 0 0 20px;
