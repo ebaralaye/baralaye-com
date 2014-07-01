@@ -34,6 +34,7 @@
 
 body {
   font-family: helvetica, verdana, arial;
+  font-size: 10px;
   color: @grey-dark;
 }
 
@@ -55,31 +56,31 @@ h1, h2, h3, h4 {
 h1 {
   font-size: 30px;
   font-weight: 200;
-  margin-bottom: 20px;
+  margin: 0 0 20px;
 }
 
 h2 {
   font-weight: 400;
   font-size: 16px;
-  margin-bottom: 20px;
+  margin: 0 0 20px;
 }
 
 h3 {
   font-weight: 400;
   font-size: 14px;
-  margin-bottom: 5px;
+  margin: 0 0 5px;
 }
 
 h4 {
   font-weight: 400;
   font-size: 12px;
-  margin-bottom: 3px;
+  margin: 0 0 3px;
 }
 
 p {
   font-size: 12px;
   line-height: 180%;
-  margin-bottom: 10px;
+  margin: 0 0 10px;
   letter-spacing: 1px;
 }
 
@@ -97,9 +98,9 @@ p {
 /** Horizontal Rule ----*/
 
 .hr, hr {
+  .clearfix;
   border-bottom: 2px solid @grey-medium;
   margin: 0 15px;
-  clear: both;
 }
 
 /** UL & OL ----*/
@@ -221,9 +222,7 @@ ul.social-btns {
   &.stacked {
 
     section {
-      padding-bottom: 20px;
-      border-bottom: 2px solid @grey-medium;
-      margin-bottom: 20px;
+      margin-bottom: 50px;
 
       &:last-child {
         border: 0;
@@ -298,18 +297,8 @@ ul.social-btns {
     text-align: center;
 
     a {
-      width: 70px;
-      height: 70px;
-      margin: 10px 15px;
-      display: inline-block;
-      font-size: 12px;
-      background-color: @grey-light;
-      border-radius: 35px;
-      -moz-border-radius: 35px;
-      -webkit-bmediumr-radius: 35px;
-      line-height: 70px;
-      text-decoration: none;
-      .block-shadow;
+      .btn;
+      margin: 5px;
     }
   }
 }
@@ -335,6 +324,7 @@ ul.social-btns {
     .row;
     margin-top: 30px;
     margin-bottom: 40px;
+    border-bottom: 2px solid @grey-medium;
 
     @media (max-width: @screen-xs-max) {
       &.double-nav {
@@ -541,6 +531,7 @@ ul.social-btns {
 
     > .tmp-nav {
       > ul.nav {
+      .list-unstyled;
       position: relative;
       top: -19px;
       display: inline-block;
@@ -574,6 +565,7 @@ ul.social-btns {
           }
 
           > ul {
+            .list-unstyled;
             width: auto;
             padding-top: 27px;
 

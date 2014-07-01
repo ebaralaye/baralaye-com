@@ -31,6 +31,6 @@ else {
 
 $content = call_user_func("action_".$action, $path);
 
-$template = render('templates/main.php', array('meta' => $meta, 'title' => $title, 'menu' => $menu, 'content' => $content, 'analytics' => $analytics));
+$template = render('templates/index.php', array('meta' => $meta, 'title' => $title, 'menu' => $menu, 'content' => $content, 'analytics' => $analytics));
 
 echo $template;

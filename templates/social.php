@@ -1,4 +1,4 @@
-<div class="page-body stacked connect">
+<div class="page-body social stacked">
   <section class="social-media">
     <h1>Social</h1>
     <a href="http://facebook.com/baralaye" target="_blank">Facebook</a>
@@ -13,35 +13,90 @@
   </section>
   <section id="contact" class="contact">
     <h1>Contact</h1>
-    <p>ebi&#64;baralaye&#46;com | 646&#46;301&#46;6311<br />
-    <a href="http://efanyc.org" target="_blank">The Elizabeth Foundation for the Arts</a><br />
-    <a href="http://maps.google.com/maps?q=Ebitenyefa+Baralaye" class="gMap" title="The Elizabeth Foundation for the Arts">323 West 39th St, Studio 914, New York, NY 10018</a></p>
+    <form id="contact-form" class="form-container form-row" action="/social" method="post" data-success="<?php var_export($form_success) ?>">
+      <div class="form-group">
+        <p>
+        ebi&#64;baralaye&#46;com | 646&#46;301&#46;6311<br />
+        <a href="http://efanyc.org" target="_blank">The Elizabeth Foundation for the Arts</a><br />
+        <a href="http://maps.google.com/maps?q=Ebitenyefa+Baralaye" class="gMap" title="The Elizabeth Foundation for the Arts">323 West 39th St, Studio 914, New York, NY 10018</a>
+        </p>
+        <br />
+      </div>
+      <div class="row">
+        <div class="form-group col-sm-5 col-xs-12 <?php if(! empty($form_errors['email'])){echo 'has-error';} ?>">
+          <label class="control-label" for="email">Email Address <span class="asterisk">*</span></label>
+          <input name="email" id="email" class="form-control required" type="text" value="<?php echo $form_values['email'] ?>" placeholder="Email Address *">
+        </div>
+        <div class="form-group col-sm-3 col-xs-6">
+          <label class="control-label" for="first_name">First Name</label>
+          <input name="first_name" id="first_name" class="form-control" type="text" value="<?php echo $form_values['first_name'] ?>" placeholder="First Name">
+        </div>
+        <div class="form-group col-sm-4 col-xs-6">
+          <label class="control-label" for="last_name">Last Name</label>
+          <input name="last_name" id="last_name" class="form-control" type="text" value="<?php echo $form_values['last_name'] ?>" placeholder="Last Name">
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group col-xs-12 <?php if(! empty($form_errors['message'])){echo 'has-error';} ?>">
+          <label class="control-label" for="message">Message <span class="asterisk">*</span></label>
+          <textarea name="message" id="message" class="form-control required" rows="6" placeholder="Message *"><?php echo $form_values['message'] ?></textarea>
+        </div>
+      </div>
+      <div class="form-captcha"><input type="text" name="captcha" id="captcha" tabindex="-1" value="" placeholder="captcha"></div>
+      <div class="form-responses">
+        <?php foreach($form_errors as $error): ?>
+          <div class="response error"><?= $error ?></div>
+        <?php endforeach; ?>
+      </div>
+      <div class="form-footer">
+        <input type="submit" value="Submit" name="submit" class="btn submit">
+      </div>
+    </form>
+    <div id="contact-form-success-modal" class="modal" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-xs">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h2>Message Submitted.</h2>
+          </div>
+          <div class="modal-body">
+            <p>Thank you. I will follow up with you shortly.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
   <section id="mailing-list" class="mailing-list">
     <h1>Mailing List</h1>
     <!-- Begin MailChimp Signup Form -->
     <div id="mc_embed_signup">
-      <form class="mailing-list" action="http://baralaye.us3.list-manage.com/subscribe/post?u=0497c3e7f0db060ff7eae50ba&amp;id=7522fe55b6" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-        <ul class="field-list s70 clearfix">
-          <li class="mc-field-group col-xs-12">
+      <form class="form-container form-row" action="http://baralaye.us3.list-manage.com/subscribe/post?u=0497c3e7f0db060ff7eae50ba&amp;id=7522fe55b6" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+        <div class="row">
+          <div class="form-group mc-field-group col-xs-12 col-sm-4">
             <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span></label>
-            <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
-          </li>
-          <li class="mc-field-group col-xs-6">
+            <input name="EMAIL" id="mce-EMAIL" class="form-control required" type="email" value="" placeholder="Email Address *">
+          </div>
+          <div class="form-group mc-field-group col-xs-6 col-sm-4">
             <label for="mce-FNAME">First Name </label>
-            <input type="text" value="" name="FNAME" class="" id="mce-FNAME">
-          </li>
-          <li class="mc-field-group col-xs-6">
+            <input name="FNAME"id="mce-FNAME" class="form-control" type="text" value="" placeholder="First Name">
+          </div>
+          <div class="form-group mc-field-group col-xs-6 col-sm-4">
             <label for="mce-LNAME">Last Name </label>
-            <input type="text" value="" name="LNAME" class="" id="mce-LNAME">
-          </li>
-          <li id="mce-responses" class="col-xs-12">
-            <div class="response" id="mce-error-response" style="display:none"></div>
-            <div class="response" id="mce-success-response" style="display:none"></div>
-          </li>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-          <div style="position: absolute; left: -5000px;"><input type="text" name="b_0497c3e7f0db060ff7eae50ba_7522fe55b6" tabindex="-1" value=""></div>
-          <li class="col-xs-12"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn submit"></li>
-        </ul>
+            <input name="LNAME" id="mce-LNAME" class="form-control" type="text" value="" placeholder="Last Name">
+          </div>
+        </div>
+        <div id="mce-responses" class="form-responses">
+          <div class="response error" id="mce-error-response" style="display:none"></div>
+          <div class="response error" id="mce-success-response" style="display:none"></div>
+        </div>
+        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+        <div class="form-captcha"><input type="text" name="b_0497c3e7f0db060ff7eae50ba_7522fe55b6" tabindex="-1" value=""></div>
+        <div class="form-footer">
+          <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn submit">
+        </div>
       </form>
     </div>
     <script type="text/javascript">

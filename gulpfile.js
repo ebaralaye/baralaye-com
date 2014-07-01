@@ -2,20 +2,20 @@
 var gulp = require('gulp');
 
 // Include Other Plugins
-//var less = require('gulp-less');
-var less =require('gulp-less-sourcemap');
-var path =require('path');
+var less = require('gulp-less-sourcemap');
+var path = require('path');
 
-//Compile Our LESS
+//Compile LESS
 gulp.task('less', function() {
-  return gulp.src('www/libs/less/main.less')
+  return gulp.src('www/libs/less/index.less')
   .pipe(less({
     generateSourceMap:true,
-    paths:[ path.join('www/libs/less','less','includes')]
+    paths:[ path.join('__dirname','less','includes')]
   }))
   .pipe(gulp.dest('www/libs/css'));
 });
 
+// Watch Task
 gulp.task('watch', function() {
   gulp.watch('www/libs/less/*.less', ['less']);
 });

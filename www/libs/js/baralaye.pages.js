@@ -17,6 +17,17 @@
             }
         }
 
+        /**
+         * Resume Reference display
+         * @private
+         */
+        function showSocialSuccessModal(){
+          console.log($('#contact-form').data('success'));
+            if ($('#contact-form').data('success') === true){
+                $('#contact-form-success-modal').modal();
+            }
+        }
+
         /** @private */
         function setEventHandlers() {
         }
@@ -24,6 +35,7 @@
         return {
             init: function() {
                 showResumeReferences();
+                showSocialSuccessModal();
                 setEventHandlers();
             }
         };
