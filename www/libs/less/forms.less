@@ -18,6 +18,18 @@ form {
 
     .form-group {
       margin-bottom: 20px;
+
+      input,
+      textarea {
+        background-color: @grey-light;
+        border-radius: 0;
+        border: 0;
+        box-shadow: none;
+      }
+
+      &.has-error .form-control {
+        background-color: #f2dede;
+      }
     }
 
     label {
@@ -26,11 +38,29 @@ form {
       margin-bottom: 5px;
     }
 
-    .responses {
+    .form-captcha {
+      position: absolute;
+      left: -9000px;
+    }
+
+    .form-responses {
+      position: relative;
+      bottom: 10px;
+
       .error {
         .text-danger;
         line-height: 175%;
+        vertical-align: top;
       }
+    }
+
+    .mce_inline_error { //Mailchimp validation error
+      padding: 10px 0 0 0 !important;
+      color: #a94442 !important;
+      font-weight: normal !important;
+      background: none !important;
+      margin: 0 !important;
+      line-height: 175%;
     }
   }
 }
@@ -40,24 +70,23 @@ form {
 .btn {
   .raleway;
   font-size: 12px !important;
+  letter-spacing: 1px;
   font-weight: 600;
   line-height: 24px !important;
   white-space: nowrap;
   text-align: center !important;
   text-decoration: none !important;
   text-transform: uppercase;
-  text-indent: 0;
   color: #4F569F !important;
   display: inline-block;
   width: auto !important;
   height: auto !important;
   padding: 4px 10px 4px;
-  background-color: #f4f4f4;
-  border: 1px solid #f4f4f4;
-  border-radius: 3px;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  box-shadow: 1px 1px 5px #dfdfdf;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
 
   &:hover,
   &.active {

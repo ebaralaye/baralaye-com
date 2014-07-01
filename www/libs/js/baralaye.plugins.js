@@ -96,7 +96,7 @@
                 var photosetID = $(this).attr('id').split('_')[1];
                 //the initial json request to flickr
                 //to get your latest public photos, use this request: http://api.flickr.com/services/rest/?&method=flickr.people.getPublicPhotos&api_key=' + apiKey + '&user_id=29096781@N02&per_page=15&page=2&format=json&jsoncallback=?
-                $.getJSON('http://api.flickr.com/services/rest/?&method=flickr.photosets.getPhotos&api_key=' + apiKey + '&photoset_id=' + photosetID + '&format=json&jsoncallback=?',function(data){
+                $.getJSON('https://api.flickr.com/services/rest/?&method=flickr.photosets.getPhotos&api_key=' + apiKey + '&photoset_id=' + photosetID + '&format=json&jsoncallback=?',function(data){
                     //loop through the results with the following function
                     $.each(data.photoset.photo, function(i,item){
                         //build the url of the photo in order to link to it
@@ -105,7 +105,7 @@
                         //turn the photo id into a variable
                        var photoID = item.id;
                        //use another ajax request to get the tags of the image
-                       $.getJSON('http://api.flickr.com/services/rest/?&method=flickr.photos.getInfo&api_key=' + apiKey + '&photo_id=' + photoID + '&format=json&jsoncallback=?',function(data){
+                       $.getJSON('https://api.flickr.com/services/rest/?&method=flickr.photos.getInfo&api_key=' + apiKey + '&photo_id=' + photoID + '&format=json&jsoncallback=?',function(data){
                            //create an imgCont string variable which will hold all the link location, title, author link, and author name into a text string
                            var imgCont = '<li><div class="image ltbx"><a href='+ photoURL_b +' title='+ data.photo.title._content +'><img src='+ photoURL_m +' alt='+ data.photo.title._content +' /></a></div>';
                            //add the description & html snippet to the end of the 'imgCont' variable

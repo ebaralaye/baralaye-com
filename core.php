@@ -257,14 +257,14 @@ function action_social(){
     }
 
     // If all validation passes
-    if (count($form_errors) == 0) {
-      $headers = "From: Ebi VPS <webserver@baralaye.com>\r\n"; 
+    if (count($form_errors) == 0 && $values['captcha'] == '') {
+      $headers = "From: Baralaye web Server <webserver@baralaye.com>\r\n"; 
       //specify MIME version 1.0 
       $headers .= "MIME-Version: 1.0\r\n"; 
       //unique boundary 
       $boundary = uniqid(); 
       //tell e-mail client this e-mail contains//alternate versions 
-      $headers .= "Content-Type: multipart/alternative; boundary=$boundary\r\n"; 
+      $headers .= "Content-Type: multipart/alternative; boundary=$boundary\r\n; charset=utf-8" . "\r\n";
       $values['boundary'] = $boundary;
       $message = render('templates/email/contact.php', $values);
       $message = str_replace("\n", "\r\n", $message);
