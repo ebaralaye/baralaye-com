@@ -68,7 +68,6 @@
           <div class="tmp-nav">
             <?php echo $menu; ?>
           </div>
-          <hr />
         </div>
         <div id="tmp-sub" class="tmp-sub">
           <?php echo $content; ?>
