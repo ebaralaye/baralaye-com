@@ -6515,6 +6515,8 @@ fieldset[disabled] .page-body .social-media a {
   }
 }
 .tmp-wrap .tmp-top > .tmp-nav > ul.nav {
+  padding-left: 0;
+  list-style: none;
   margin: 0 auto;
   position: relative;
   bottom: -2px;
@@ -6587,6 +6589,8 @@ fieldset[disabled] .page-body .social-media a {
   border-bottom-color: #4f569f;
 }
 .tmp-wrap .tmp-top > .tmp-nav > ul.nav > li ul {
+  padding-left: 0;
+  list-style: none;
   right: 0;
   width: 100%;
   display: none;
@@ -6666,7 +6670,7 @@ fieldset[disabled] .page-body .social-media a {
   font-weight: 300;
 }
 .tmp-wrap .tmp-sub {
-  margin: 60px 0 80px;
+  margin: 80px 0;
 }
 .tmp-wrap .tmp-bottom {
   border-top: 2px solid #dfdfdf;
@@ -6755,6 +6759,15 @@ fieldset[disabled] .page-body .social-media a {
   /** Samples ----*/
   /** Connect ----*/
 }
+.page-body.home .portfolio {
+  margin: 0;
+  padding: 0;
+}
+@media (min-width: 768px) {
+  .page-body.home .portfolio {
+    margin: 20px 0;
+  }
+}
 .page-body.home .portfolio:before,
 .page-body.home .portfolio:after {
   content: " ";
@@ -6785,14 +6798,24 @@ fieldset[disabled] .page-body .social-media a {
     width: 33.33333333%;
   }
 }
+@media (max-width: 767px) {
+  .page-body.home .portfolio li {
+    margin-bottom: 30px;
+  }
+  .page-body.home .portfolio li:last-child {
+    margin-bottom: 0;
+  }
+}
+.page-body.home .portfolio li h1 {
+  margin: 0;
+}
 .page-body.home .portfolio li a {
   text-align: left;
   display: block;
   height: 200px;
   width: 200px;
-  line-height: 300px;
+  line-height: 200px;
   margin: 0 auto;
-  border-radius: 50%;
   background-size: 200px;
   background-repeat: no-repeat;
   overflow: hidden;
@@ -6809,17 +6832,17 @@ fieldset[disabled] .page-body .social-media a {
 .page-body.home .portfolio li a span {
   color: #fff;
   display: inline-block;
+  width: 100%;
+  text-align: center;
   font-size: 25px;
   height: 40px;
   line-height: 38px;
-  padding: 0 5px 0 20px;
   font-weight: 100;
   letter-spacing: 4px;
-  border-radius: 0 20px 20px;
   background: rgba(0, 0, 0, 0.5);
 }
 .page-body.home .portfolio li a:hover span {
-  background-color: rgba(79, 86, 159, 0.8);
+  background-color: rgba(79, 86, 159, 0.7);
 }
 .page-body.tech li em {
   font-size: 10px;
