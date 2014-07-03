@@ -6471,6 +6471,7 @@ fieldset[disabled] .page-body .social-media a {
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
+  margin-bottom: 7px;
 }
 @media (min-width: 768px) {
   .tmp-wrap .tmp-top .tmp-logo {
@@ -6481,6 +6482,7 @@ fieldset[disabled] .page-body .social-media a {
 @media (min-width: 768px) {
   .tmp-wrap .tmp-top .tmp-logo {
     text-align: left;
+    margin-bottom: 0;
   }
 }
 .tmp-wrap .tmp-top .tmp-logo > a {
