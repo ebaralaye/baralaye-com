@@ -3,8 +3,8 @@
   <ul class="section experience list outside">
     <?php foreach ($clients as $client): ?>
     <?php 
-      $period_from = date("M-d-Y", strtotime($client['period_from']));
-      $period_to = date("M-d-Y", strtotime($client['period_to']));
+      $period_from = date("M-Y", strtotime($client['period_from']));
+      $period_to = date("M-Y", strtotime($client['period_to']));
     ?>
       <li>
         <a class="name" href="<?php echo $client['url']; ?>" target="_blank">
