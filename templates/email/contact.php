@@ -1,13 +1,11 @@
 j-<?= $boundary."\n" ?>
-Content-Type: text/plain; charset=ISO-8859-1
-Content-Transfer-Encoding: base64
+Content-Type: text/plain; charset=utf-8
 
 <?= $first_name ?> <?= $last_name ?> from <?= $email ?> has sent you a message:
-<?= chunk_split($message, 76, "\n") ?>
+<?= $message ?>
 
 --<?= $boundary."\n" ?>
-Content-Type: text/html; charset=ISO-8859-1
-Content-Transfer-Encoding: base64
+Content-Type: text/html; charset=utf-8
 
 <html>
   <head>
@@ -17,7 +15,7 @@ Content-Transfer-Encoding: base64
   <body>
     <table>
       <tr><td><b><?= $first_name ?> <?= $last_name ?></b> from <?= $email ?> has sent you a message:</td></tr>
-      <tr><td><?= chunk_split(nl2br(htmlentities($message)), 76, "\n") ?></td></tr>
+      <tr><td><?= nl2br(htmlentities($message, ENT_COMPAT | ENT_HTML401, "UTF-8")) ?></td></tr>
     </table>
   </body>
 </html>
