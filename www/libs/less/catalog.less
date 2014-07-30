@@ -21,7 +21,7 @@
     margin: 0 -5px;
   }
 
-  .name {
+  .title {
     margin-bottom: 6px;
     height: 20px;
 
@@ -31,8 +31,8 @@
     }
   }
 
-  .name,
-  .name a {
+  .title,
+  .title a {
     overflow: hidden;
     text-overflow: ellipsis;
     -o-text-overflow: ellipsis;
@@ -40,6 +40,11 @@
     white-space: nowrap;
     width: 150px;
     margin: 0 auto;
+
+    span.id {
+      opacity: .6;
+      text-transform: uppercase;
+    }
 
     @media (max-width: 320px) {
       width: 130px;

@@ -25,7 +25,7 @@
           <li class="weight">Weight: <span><?php echo $weight; ?></span> lbs</li>
           <li class="year">Year: <?php $year = date("Y", strtotime($date)); echo $year?></li>
           <li class="edition">Edition: <span><?php echo $edition; ?></span></li>
-          <?php if ($price != null): ?>
+          <?php if ($price != null && $stock != 0): ?>
             <li class="price">Price: $<?php echo $price; ?></a></li>
           <?php endif; ?>
           <li class="code">Code: <span><?php echo $id; ?></span></li>
