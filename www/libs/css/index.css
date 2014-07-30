@@ -7178,16 +7178,16 @@ fieldset[disabled] .page-body .social-media a {
     margin: 0 -5px;
   }
 }
-.product-list .name {
+.product-list .title {
   margin-bottom: 6px;
   height: 20px;
 }
-.product-list .name a {
+.product-list .title a {
   text-decoration: none;
   display: block;
 }
-.product-list .name,
-.product-list .name a {
+.product-list .title,
+.product-list .title a {
   overflow: hidden;
   text-overflow: ellipsis;
   -o-text-overflow: ellipsis;
@@ -7196,9 +7196,14 @@ fieldset[disabled] .page-body .social-media a {
   width: 150px;
   margin: 0 auto;
 }
+.product-list .title span.id,
+.product-list .title a span.id {
+  opacity: .6;
+  text-transform: uppercase;
+}
 @media (max-width: 320px) {
-  .product-list .name,
-  .product-list .name a {
+  .product-list .title,
+  .product-list .title a {
     width: 130px;
   }
 }
