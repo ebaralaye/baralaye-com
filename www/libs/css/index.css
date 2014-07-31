@@ -7390,10 +7390,6 @@ td.product-detail .details > h1 {
 .product-detail .details .specs {
   margin-bottom: 10px;
 }
-.product-detail .details .specs .edition,
-.product-detail .details .specs .weight {
-  display: none;
-}
 .product-detail .details .specs .code span {
   text-transform: uppercase;
 }

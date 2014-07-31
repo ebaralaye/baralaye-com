@@ -1,34 +1,51 @@
 <div class="product-detail">
   <div class="images">
-    <h1 class="name"><?php echo $name; ?></h1>
+    <h1 class="name"><?= $name; ?></h1>
     <div class="main">
-      <a href="/images/art/portfolio/big/<?php echo $image; ?>.jpg" class="cloud-zoom" id="zoom1" rel="position: 'inside'"><img src="/images/art/portfolio/large/<?php echo $image; ?>.jpg" alt="<?php echo $name; ?>" /></a>
+      <a href="/images/art/portfolio/big/<?= $image; ?>.jpg" class="cloud-zoom" id="zoom1" rel="position: 'inside'"><img src="/images/art/portfolio/large/<?= $image; ?>.jpg" alt="<?= $name; ?>" /></a>
     </div>
     <ul class="poplets">
       <?php $poplets = explode(',', $image_poplets); ?>
       <?php if (count($poplets) > 1): ?>
         <?php foreach($poplets as $poplet): ?>
-          <li><a href="/images/art/portfolio/big/<?php echo $poplet ?>.jpg" rel="useZoom: 'zoom1', smallImage: '/images/art/portfolio/large/<?php echo $poplet ?>.jpg'" class="cloud-zoom-gallery"><img src="/images/art/portfolio/small/<?php echo $poplet ?>.jpg" alt="<?php echo $poplet ?>" /></a></li>
+          <li><a href="/images/art/portfolio/big/<?= $poplet ?>.jpg" rel="useZoom: 'zoom1', smallImage: '/images/art/portfolio/large/<?= $poplet ?>.jpg'" class="cloud-zoom-gallery"><img src="/images/art/portfolio/small/<?= $poplet ?>.jpg" alt="<?= $poplet ?>" /></a></li>
         <?php endforeach; ?>
       <?php endif; ?>
     </ul>
   </div>
   <div class="details">
-    <h1 class="name"><?php echo $name; ?></h1>
+    <h1 class="name">
+      <?php if($name != null): ?>
+        <?= $name; ?>
+      <?php else: ?>
+        Untitled
+      <?php endif; ?>
+    </h1>
     <ul>
       <li class="specs">
         <ul>
-          <li class="medium">Medium: <?php echo $medium; ?></li>
+          <li class="medium">Medium: <?= $medium; ?></li>
           <?php if ($dim_width != null): ?>
-            <li class="dimensions">Dimensions: <?php echo $dim_width," x ", $dim_height," x ",$dim_depth; ?></li>
+            <li class="dimensions">Dimensions: <?= $dim_height," x ", $dim_width," x ",$dim_depth; ?></li>
           <?php endif; ?>
-          <li class="weight">Weight: <span><?php echo $weight; ?></span> lbs</li>
+          <?php if ($weight != null && $status != 2): ?>
+            <li class="weight">Weight: <span><?= $weight; ?></span> lbs</li>
+          <?php endif; ?>
           <li class="year">Year: <?php $year = date("Y", strtotime($date)); echo $year?></li>
-          <li class="edition">Edition: <span><?php echo $edition; ?></span></li>
-          <?php if ($price != null && $stock != 0): ?>
-            <li class="price">Price: $<?php echo $price; ?></a></li>
+          <?php if ($edition_index != null): ?>
+            <li class="edition">
+              Edition: <span><?= $edition_index; ?>/<?= $edition_cap; ?></span>
+              <?php if ($stock == 0) {echo "<strike>stock</strike>";} ?>
+            </li>
           <?php endif; ?>
-          <li class="code">Code: <span><?php echo $id; ?></span></li>
+          <li class="price">Price: 
+            <?php if ($price != null && $status != 2): ?>
+              $<?= $price; ?>
+            <?php else: ?>
+              NFS
+            <?php endif; ?>
+          </li>
+          <li class="code">Code: <span><?= $id; ?></span></li>
         </ul>
       </li>
       <!--<li class="social">
@@ -45,7 +62,9 @@
           </li>
         </ul>
       </li>-->
-      <li class="description"><?php echo $description; ?></li>
+      <?php if($description !=null): ?>
+        <li class="description"><?= $description; ?></li>
+      <?php endif; ?>
     </ul>
   </div>
 </div>
