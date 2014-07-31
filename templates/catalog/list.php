@@ -10,7 +10,7 @@
           <?php if ($product['name'] != null): ?>
             <span class="name"><?= $product['name']; ?></span>
           <?php else: ?>
-            <span class="name"><?= $product['id']; ?></span>
+            <span class="id"><?= $product['id']; ?></span>
           <?php endif; ?>
         </a></h4>
         <div class="image"><a href="<?= $product['url']; ?>"><img src="/images/art/portfolio/small/<?= $product['image']; ?>.jpg" alt="<?= $product['name']; ?>" /></a></div>
