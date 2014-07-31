@@ -120,7 +120,7 @@ function action_portfolio($path){
   else if (!($product)) {
     try {
       // Select rows with the urls that are a zero indexed substring of the path, within the same category
-      $sql = 'SELECT * FROM portfolio_art WHERE  status = 1 ORDER BY date DESC';
+      $sql = 'SELECT * FROM portfolio_art WHERE  status >= 1 ORDER BY date DESC';
       $sth = $dbh -> prepare($sql);
       $sth -> execute(array($path));
       $rows = $dbh -> query($sql);
@@ -158,7 +158,7 @@ function action_resume(){
   $sth -> execute(array($resume_type));
   $resume = $sth -> fetch();
   // Queries resume client list data
-  $sql = 'SELECT * FROM resume_clients WHERE  status = 1 ORDER BY period_from DESC';
+  $sql = 'SELECT * FROM resume_clients WHERE  status >= 1 ORDER BY period_from DESC';
   $rows = $dbh -> query($sql);
   foreach ($rows as $row) {
     // Condition to polulate type specific client list data
@@ -201,12 +201,12 @@ function action_news($path){
     try {
         if($path){ // if there is a slug after the /news/ in the path (/news/whatever) - Detail view
             // Selects the row with a mathcing path
-            $sql = 'SELECT * FROM news WHERE status = 1 AND url = ?';
+            $sql = 'SELECT * FROM news WHERE status >= 1 AND url = ?';
             $sth = $dbh -> prepare($sql);
             $sth -> execute(array($path));
             $post = $sth -> fetch();
             // Selects the first five publised articles for the "Latest News" section
-            $sql = 'SELECT * FROM news WHERE status = 1 ORDER BY published_date DESC LIMIT 3';
+            $sql = 'SELECT * FROM news WHERE status >= 1 ORDER BY published_date DESC LIMIT 3';
             $rows = $dbh -> query($sql);
 
             foreach ($rows as $row) {
@@ -220,7 +220,7 @@ function action_news($path){
 
         else { //if there is no slug following the news path (/news)
             // selecting all posts that are published
-            $sql = 'SELECT * FROM news WHERE status = 1 ORDER BY published_date DESC';
+            $sql = 'SELECT * FROM news WHERE status >= 1 ORDER BY published_date DESC';
             $rows = $dbh -> query($sql);
 
             foreach ($rows as $row) {
