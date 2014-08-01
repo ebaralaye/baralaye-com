@@ -1,7 +1,6 @@
 <ul class="product-list gallery">
   <?php foreach($gallery as $item): ?>
     <li>
-      <h4 class="name"><a href="http://<?php echo $item['url']; ?>" target="_blank"><?php echo $item['name']; ?></a></h4>
       <div class="images ltbx">
         <?php $slides = explode(',', $item['images']); ?>
         <?php foreach($slides as $slide): ?>
@@ -13,6 +12,7 @@
           </a>
         <?php endforeach; ?>
       </div>
+      <h4 class="title"><a href="http://<?php echo $item['url']; ?>" target="_blank"><?php echo $item['name']; ?></a></h4>
     </li>
   <?php endforeach; ?>
 </ul>
