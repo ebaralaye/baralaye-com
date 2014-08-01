@@ -7179,8 +7179,8 @@ fieldset[disabled] .page-body .social-media a {
   }
 }
 .product-list .title {
-  margin-bottom: 6px;
-  height: 20px;
+  line-height: 16px;
+  padding-top: 8px;
 }
 .product-list .title a {
   text-decoration: none;
@@ -7198,7 +7198,8 @@ fieldset[disabled] .page-body .social-media a {
 }
 .product-list .title span.id,
 .product-list .title a span.id {
-  opacity: .6;
+  opacity: .7;
+  font-size: 80%;
   text-transform: uppercase;
 }
 @media (max-width: 320px) {
