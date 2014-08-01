@@ -3,7 +3,7 @@
     <h1>News</h1>
   </header>
   <div class="main">
-    <ul class="post-list">
+    <ul class="post-list list-unstyled">
       <?php foreach ($posts as $post): ?>
         <li class="post">
           <h3 class="title h-title sub"><a href="/news/<?php echo $post['url'] ?>"><?php echo $post['title']; ?></a></h3>

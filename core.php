@@ -112,7 +112,18 @@ function action_portfolio($path){
   }
   catch (PDOException $e) {
   }
+
   if($product) {
+    // Set product title to id if name is null (untitled)
+    if($product['name'] == null) {
+      $product['title_type'] = "id";
+      $product['title'] = $product['id'];
+    }
+    else {
+      $product['title_type'] = "name";
+      $product['title'] = $product['name'];
+    }
+    // Render
     return render("templates/catalog/detail.php", $product);
   }
 

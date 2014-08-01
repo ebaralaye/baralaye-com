@@ -28,7 +28,7 @@
   </div>
   <div class="side">
     <h2 class="h-title"><a href="/news">Other News</a></h2>
-    <ul class="post-list aside">
+    <ul class="post-list list-unstyled aside">
       <?php foreach ($posts as $post): ?>
         <li class="post">
           <h4 class="title h-title sub"><a href="/news/<?php echo $post['url'] ?>"><?php echo $post['title']; ?></a></h4>
