@@ -26,11 +26,11 @@
       </div>
     </section>
 
-    <?php include 'templates/resume/clients.php'; ?>
+    <?php echo $clients; ?>
 
-    <?php include 'templates/resume/affiliations.php'; ?>
+    <?php echo $affiliations; ?>
 
-    <?php include 'templates/resume/references.php'; ?>
+    <?php echo $references; ?>
 
     <?php if($gallery): ?>
       <section id="portfolio">

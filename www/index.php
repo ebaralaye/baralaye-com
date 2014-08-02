@@ -1,6 +1,8 @@
 <?php
 
-require_once('../core.php');
+require_once('../settings.php');
+require_once('core.php');
+require_once('actions.php');
 
 $path = $_SERVER["REQUEST_URI"];
 if (strpos($path, '?') !== FALSE) {
@@ -9,28 +11,18 @@ if (strpos($path, '?') !== FALSE) {
 
 $action = route($path);
 
-// Swaps meta data, menu, and template title on /tech request
-if (substr($path, 0,5) == '/tech' || $_SERVER['HTTP_HOST'] == "tech.baralaye.com") {
-  $meta = render('templates/meta/tech.php');
-  $title = "Ebi Baralaye";
-  $menu = render('templates/menus/tech.php');
-}
-else {
-  $meta = render('templates/meta/main.php');
-  $title = "Ebitenyefa Baralaye";
-  $menu = render('templates/menus/main.php');
-}
+$response = array(
+	'content'   => '',
+	'meta'      => render('meta/main'),
+	'title'     => "Ebitenyefa Baralaye",
+	'menu'      => render('menus/main'),
+	'analytics' => $conf['analytics'] ? file_get_contents('pages/static/analytics.htm') : null,
+);
 
-// Populates analytics code only in production
-if ($_SERVER['HTTP_HOST'] == "baralaye.com") {
-  $analytics = render('analytics.php');
-}
-else {
-  $analytics = null;
-}
+// Calling a dynamically named function $function
+$function = 'action_' . $action;
+$response['content'] .= $function($path, $response);
 
-$content = call_user_func("action_".$action, $path);
-
-$template = render('templates/index.php', array('meta' => $meta, 'title' => $title, 'menu' => $menu, 'content' => $content, 'analytics' => $analytics));
+$template = render('index', $response);
 
 echo $template;
