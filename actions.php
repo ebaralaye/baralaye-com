@@ -94,6 +94,11 @@ function action_resume($path, &$response) {
   global $dbh;
 
   if(substr($path, 0,5) == '/tech' || $_SERVER['HTTP_HOST'] == "tech.baralaye.com") {
+
+    $response['meta'] = render('meta/tech');
+    $response['title'] = "Ebi Baralaye";
+    $response['menu'] = render('menus/tech');
+
     if(substr($path, 0,11) == '/tech/admin' || ($_SERVER['HTTP_HOST'] == "tech.baralaye.com" && substr($path, 0,6) == '/admin')) {
       $resume_type = 'tech-admin';
     }
@@ -118,34 +123,33 @@ function action_resume($path, &$response) {
   // Queries resume client list data
   $sql = 'SELECT * FROM resume_clients WHERE  status >= 1 ORDER BY period_from DESC';
   $rows = $dbh -> query($sql);
+  $affiliations = array();
   foreach ($rows as $row) {
     // Condition to polulate type specific client list data
     $tags = explode(',', $row['tags']);
     if (in_array($resume_type, $tags)) {
       $clients[] = $row;
     }
+
     // Condition to populate type specific affiliation data
     if (in_array($resume_type.'-affiliations', $tags)) {
       $affiliations[] = $row;
     }
   }
+
   // Queries resume gallery data (if it exists)
-  if ($resume['gallery_table']) {
+  if ($resume['gallery_table'] != null) {
     $sql = 'SELECT * FROM '.$resume['gallery_table'];
     $gallery = $dbh -> query($sql);
     $gallery_dirs = explode(',', $resume['gallery_dirs']);
   }
 
-  $response['meta'] = render('meta/tech');
-  $response['title'] = "Ebi Baralaye";
-  $response['menu'] = render('menus/tech');
-
   $data = array(
     'resume'       => $resume,
     'clients'      => render('resume/clients', array('clients' => $clients)),
-    'affiliations' => render('resume/affiliations', array('affiliations' => $affiliations)),
+    'affiliations' => (($affiliations) > 0) ? render('resume/affiliations', array('affiliations' => $affiliations)) : null,
     'references'   => render('resume/references', array('clients' => $clients)),
-    'gallery'      => render('gallery', array('gallery' => $gallery, 'gallery_dirs' => $gallery_dirs)),
+    'gallery'      => ($resume['gallery_table'] != null) ? render('gallery', array('gallery' => $gallery, 'gallery_dirs' => $gallery_dirs)) : null,
   );
 
   return render('resume/index', $data);
