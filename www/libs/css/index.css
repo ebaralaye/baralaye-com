@@ -6823,13 +6823,13 @@ fieldset[disabled] .page-body .social-media a {
   overflow: hidden;
 }
 .page-body.home .portfolio li a.sculpture {
-  background-image: url('/images/art/portfolio/large/s-mm-0005_a.jpg');
+  background-image: url('/images/art/portfolio/large/smm-0005_a.jpg');
 }
 .page-body.home .portfolio li a.vessels {
-  background-image: url('/images/art/portfolio/large/v-sc-0004_a.jpg');
+  background-image: url('/images/art/portfolio/large/vsc-0004_a.jpg');
 }
 .page-body.home .portfolio li a.drawings {
-  background-image: url('/images/art/portfolio/large/dw-s-0009.jpg');
+  background-image: url('/images/art/portfolio/large/dsk-0009.jpg');
 }
 .page-body.home .portfolio li a span {
   color: #fff;
@@ -7593,6 +7593,8 @@ td.product-detail .images > .title {
 }
 /** Tumblr ----*/
 .tumblr_posts {
+  padding-left: 0;
+  list-style: none;
   margin-left: -15px;
   margin-right: -15px;
   text-align: center;
