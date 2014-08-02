@@ -35,7 +35,7 @@
     <?php if($gallery): ?>
       <section id="portfolio">
         <h3>Portfolio</h3>
-        <?php include 'templates/gallery.php'; ?>
+        <?php echo $gallery; ?>
       </section>
     <?php endif; ?>
 

@@ -145,8 +145,7 @@ function action_resume($path, &$response) {
     'clients'      => render('resume/clients', array('clients' => $clients)),
     'affiliations' => render('resume/affiliations', array('affiliations' => $affiliations)),
     'references'   => render('resume/references', array('clients' => $clients)),
-    'gallery'      => $gallery,
-    'gallery_dirs' => $gallery_dirs,
+    'gallery'      => render('gallery', array('gallery' => $gallery, 'gallery_dirs' => $gallery_dirs)),
   );
 
   return render('resume/index', $data);
