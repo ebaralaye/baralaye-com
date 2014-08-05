@@ -66,7 +66,7 @@ function action_portfolio($path){
       $rows = $dbh -> query($sql);
       foreach ($rows as $row) {
         // check if row url is at the first index of the path (list veiw)
-        if(strpos($row["url"], $path) === 0) {
+        if(strpos($row["url"], $path) === 0 || $path === '/art') {
           $products[] = $row;
         }
       }
@@ -215,7 +215,7 @@ function action_news($path){
 /**
  * Contact Action
  */
-function action_social(){
+function action_contact(){
   $form_values = array();
   $form_errors = array();
   if (! empty($_POST)) {
@@ -246,7 +246,7 @@ function action_social(){
       $to = "tech@baralaye.com";
       $subject = "New Contact from Baralaye.com";
       if (mail($to, $subject, $message, $headers)) {
-        header('Location: /social?success=1');
+        header('Location: /contact?success=1');
         exit;
       }
       else {
@@ -257,7 +257,7 @@ function action_social(){
       $form_values[$i] = htmlentities($value, ENT_QUOTES);
     }
   }
-  return render('social', array(
+  return render('contact', array(
                 'form_values' => $form_values,
                 'form_errors' => $form_errors,
                 'form_success' => !empty($_GET['success']),
