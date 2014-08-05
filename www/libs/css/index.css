@@ -6564,6 +6564,9 @@ fieldset[disabled] .page-body .social-media a {
     float: left;
   }
 }
+.tmp-wrap .tmp-top > .tmp-nav > ul.nav > li.selected > a {
+  border-bottom-color: #4f569f;
+}
 .tmp-wrap .tmp-top > .tmp-nav > ul.nav > li a {
   display: block;
   float: left;
@@ -6706,6 +6709,7 @@ fieldset[disabled] .page-body .social-media a {
   border-bottom: 2px solid #dfdfdf;
   background: none;
 }
+.tmp-wrap .tmp-bottom > .tmp-nav > ul.nav > li.selected > a,
 .tmp-wrap .tmp-bottom > .tmp-nav > ul.nav > li > .active,
 .tmp-wrap .tmp-bottom > .tmp-nav > ul.nav > li > a:hover {
   text-decoration: none;

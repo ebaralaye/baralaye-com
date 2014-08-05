@@ -1,27 +1,27 @@
 <ul class="nav">
-  <li><a href="/art">Portfolio</a>
+  <li><a href="/art">Art</a>
     <ul>
-      <li><a href="/art/drawings">Drawings</a>
+      <li><a href="/drawings">Drawings</a>
         <ul>
-          <li><a href="/art/drawings/prints">Prints</a></li>
+          <li><a href="/drawings/prints">Prints</a></li>
         </ul>
       </li>
-      <li><a href="/art/vessels">Vessels</a>
+      <li><a href="/vessels">Vessels</a>
         <ul>
-          <li><a href="/art/vessels/slipcast">Slipcast</a></li>
-          <li><a href="/art/vessels/pottery">Pottery</a></li>
+          <li><a href="/vessels/slip-cast">Slip-Cast</a></li>
+          <li><a href="/vessels/pottery">Pottery</a></li>
         </ul>
       </li>
-      <li><a href="/art/sculpture">Sculpture</a>
+      <li><a href="/sculpture">Sculpture</a>
         <ul>
-          <li><a href="/art/sculpture/mixed-media">Mixed Media</a></li>
-          <li><a href="/art/sculpture/ceramics">Ceramics</a></li>
-          <li><a href="/art/sculpture/metal">Metal</a></li>
+          <li><a href="/sculpture/mixed-media">Mixed Media</a></li>
+          <li><a href="/sculpture/ceramics">Ceramics</a></li>
+          <li><a href="/sculpture/metal">Metal</a></li>
         </ul>
       </li>
     </ul>
   </li>
-  <li><a href="/statement">Story</a>
+  <li><a href="/statement">Info</a>
     <ul>
       <li><a href="/biography">Biography</a></li>
       <li>
@@ -33,11 +33,11 @@
       <li><a href="/statement">Statement</a></li>
     </ul>
   </li>
-  <li><a href="/social">Community</a>
+  <li><a href="/contact">Social</a>
     <ul>
       <li><a href="/blog">Blog</a></li>
       <li><a href="/news">News</a></li>
-      <li><a href="/social">Social</a></li>
+      <li><a href="/contact">Contact</a></li>
     </ul>
   </li>
 </ul>

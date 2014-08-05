@@ -398,6 +398,12 @@ ul.social-btns {
             float: left;
           }
 
+          &.selected {
+            > a {
+              border-bottom-color: @blue-dark;
+            }
+          }
+
           a {
             display: block;
             float: left;
@@ -561,6 +567,7 @@ ul.social-btns {
             background: none;
           }
 
+          &.selected > a,
           > .active,
           > a:hover {
             text-decoration: none;
