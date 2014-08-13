@@ -6196,6 +6196,7 @@ ul.social-btns {
   position: relative;
   z-index: 9999;
   height: 20px;
+  white-space: nowrap;
 }
 ul.social-btns:before,
 ul.social-btns:after {
