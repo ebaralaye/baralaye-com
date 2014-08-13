@@ -58,7 +58,8 @@
     <script type="text/javascript" src="//assets.pinterest.com/js/pinit.js"></script>
   </head>
   <body>
-    <?php echo $analytics; ?>
+    <?= $analytics; ?>
+    <?= $vendor; ?>
     <div id="tmp-window" class="tmp-window">
       <div id="tmp-wrap" class="tmp-wrap">
         <div id="tmp-top" class="tmp-top">
@@ -66,15 +67,15 @@
             <a href="/"><?php echo $title; ?></a>
           </div>
           <div class="tmp-nav">
-            <?php echo $menu; ?>
+            <?= $menu; ?>
           </div>
         </div>
         <div id="tmp-sub" class="tmp-sub">
-          <?php echo $content; ?>
+          <?= $content; ?>
         </div>
         <div id="tmp-bottom" class="tmp-bottom">
           <div class="tmp-nav">
-            <?php echo $menu; ?>
+            <?= $menu; ?>
           </div>
           <div id="google_translate_element" class="tmp-google-translate"></div>
         </div>

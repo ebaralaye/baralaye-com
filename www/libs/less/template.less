@@ -161,14 +161,16 @@ ul.items li {
 /** Social buttons ----*/
 
 ul.social-btns {
+  position: relative;
+  z-index: 9999;
   height: 20px;
   .clearfix;
 
-  li {
+  > li {
     display: inline-block;
     padding: 0 5px 0 0;
-    height: 25px;
-    line-height: 5px !important;
+    height: 20px;
+    line-height: 8px !important;
 
     &:last-child {
       padding-right: 0;
