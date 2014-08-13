@@ -54,7 +54,7 @@ function action_portfolio($path){
     $product['title_type'] = null;
     if ($product['title'] == null) {
       $product['title'] = $product['id'];
-      $product['title_type'] = 'id';
+      $product['title_type'] = 'untitled';
     }
     // Render
     return render("catalog/detail", $product);
@@ -90,7 +90,7 @@ function action_portfolio($path){
           $row['title_type'] = null;
           if ($row['title'] == null) {
             $row['title'] = $row['id'];
-            $row['title_type'] = 'id';
+            $row['title_type'] = 'untitled';
           }
 
           if (empty($result)){

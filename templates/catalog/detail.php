@@ -46,20 +46,20 @@
           <?php endif ?>
         </ul>
       </li>
-      <!--<li class="social">
+      <li class="social">
         <ul class="social-btns">
           <li class="btn-s purchase"><a href="#purchase-inquiry" class="ltbx win">Buy</a></li>
           <li class="btn-s comment"><a href="#comment-form" class="ltbx win">Comment</a></li>
-          <li class="pin"><a href="//www.pinterest.com/pin/create/button/?url=http://baralaye.com{tag_itemurl_nolink}&media=http://baralaye.com{tag_largeimage_path}&description=Ebitenyefa%20Baralaye%20-%20{tag_title}" data-pin-do="buttonPin" data-pin-config="none"><img src="//assets.pinterest.com/images/pidgets/pin_it_button.png" /></a></li>
+          <li class="pin"><a href="//www.pinterest.com/pin/create/button/?url=http://baralaye.com<?= $url ?>&media=http://baralaye.com/images/art/portfolio/large/<?= $image ?>.jpg&description=Ebitenyefa%20Baralaye,%20<?php if($title == $id){echo "&quot;Untitled&quot;";} else {echo "&quot;$title&quot;";}; echo " / ".$medium ?>" data-pin-do="buttonPin" data-pin-config="none"><img src="//assets.pinterest.com/images/pidgets/pin_it_button.png" /></a></li>
           <li class="tweet"><a href="http://twitter.com/share" class="twitter-share-button" data-count="none" data-via="baralaye">Tweet</a>
           <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
           </li>
-          <li class="like last">
+          <!--<li class="like last">
             <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
             <fb:like send="false" layout="button_count" width="75" show_faces="false"></fb:like>
-          </li>
+          </li>-->
         </ul>
-      </li>-->
+      </li>
       <?php if($description != null): ?>
         <li class="description"><?= $description; ?></li>
       <?php endif; ?>
