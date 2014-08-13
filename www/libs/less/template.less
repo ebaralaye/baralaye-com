@@ -164,6 +164,7 @@ ul.social-btns {
   position: relative;
   z-index: 9999;
   height: 20px;
+  white-space: nowrap;
   .clearfix;
 
   > li {
@@ -355,10 +356,12 @@ ul.social-btns {
           bottom: -2px;
           display: inline-block;
           height: 42px;
-          padding: 11px 0 9px 0;
+          line-height: 49px;
+          border-bottom: 2px solid transparent;
+          margin-bottom: -2px;
 
           &:hover {
-            border-bottom: 2px solid @blue-dark;
+            border-color: @blue-dark;
           }
         }
       }

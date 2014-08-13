@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><?php echo $title; ?></title>
+    <title><?= $title; ?></title>
 
     <!-- Meta Data -->
-    <?php echo $meta; ?>
+    <?= $meta; ?>
 
     <!-- CSS: Plugins > Fancybox -->
     <link type="text/css" rel="stylesheet" media="all" href="/libs/vendor/fancybox/css/jquery.fancybox.css" />
@@ -64,7 +64,7 @@
       <div id="tmp-wrap" class="tmp-wrap">
         <div id="tmp-top" class="tmp-top">
           <div class="tmp-logo">
-            <a href="/"><?php echo $title; ?></a>
+            <a href="/"><?= $logo; ?></a>
           </div>
           <div class="tmp-nav">
             <?= $menu; ?>

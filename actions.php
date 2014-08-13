@@ -11,7 +11,9 @@ function action_home($path){
  * Page Action
  */
 function action_page($path){
+    global $response;
     $file = preg_replace('/[^a-z]/', '', $path);
+    $response['title'] .= " - ".ucwords($file);
     return file_get_contents("pages/{$file}.htm");
 }
 
@@ -19,7 +21,9 @@ function action_page($path){
  * Index Action
  */
 function action_index($path){
+    global $response;
     $file = preg_replace('/[^a-z]/', '', $path);
+    $response['title'] .= " - ".ucwords($file);
     return file_get_contents("pages/{$file}/index.htm");
 }
 
@@ -28,6 +32,8 @@ function action_index($path){
  */
 function action_portfolio($path){
   global $dbh;
+  global $response;
+
   $pathArr = explode('/',$path);
 
   // Detail View //
@@ -56,6 +62,8 @@ function action_portfolio($path){
       $product['title'] = $product['id'];
       $product['title_type'] = 'untitled';
     }
+    $response['title'] .= " - "."&quot;".$product['title']."&quot;";
+    $response['meta_desc'] = $product['medium'];
     // Render
     return render("catalog/detail", $product);
   }
@@ -71,6 +79,8 @@ function action_portfolio($path){
 
     if ($catalog) {
       $products = array();
+      $response['title'] .= " - ".$catalog['title'];
+      $response['meta_desc'] = $catalog['description'];
 
       try {
         // Select rows with the urls that are a zero indexed substring of the path, within the same category
@@ -117,8 +127,9 @@ function action_resume($path, &$response) {
 
   if(substr($path, 0,5) == '/tech' || $_SERVER['HTTP_HOST'] == "tech.baralaye.com") {
 
-    $response['meta'] = render('meta/tech');
-    $response['title'] = "Ebi Baralaye";
+    $response['meta'] = 'meta/tech';
+    $response['title'] = 'Ebi Baralaye - Tech';
+    $response['logo'] = 'Ebi Baralaye';
     $response['menu'] = render('menus/tech');
 
     if(substr($path, 0,11) == '/tech/admin' || ($_SERVER['HTTP_HOST'] == "tech.baralaye.com" && substr($path, 0,6) == '/admin')) {
@@ -182,6 +193,8 @@ function action_resume($path, &$response) {
  */
 function action_progress(){
   global $dbh;
+  global $response;
+  $response['title'] .= ' - In Progress';
   $sql = 'SELECT * FROM gallery_progress';
   $gallery = $dbh -> query($sql);
   $gallery_dirs = array('/images/art/progress/small/', '/images/art/progress/large/');
@@ -193,6 +206,8 @@ function action_progress(){
  */
 function action_news($path){
   global $dbh;
+  global $response;
+  $response['title'] .= ' - News';
   $path = substr($path, 6); // Truncated path after "/news/" uri string
 
     try {
@@ -241,6 +256,9 @@ function action_news($path){
 function action_contact(){
   $form_values = array();
   $form_errors = array();
+  global $response;
+  $response['title'] .= ' - Contact';
+
   if (! empty($_POST)) {
     $values = $_POST;
 
@@ -291,5 +309,7 @@ function action_contact(){
  * 404 Action
  */
 function action_404(){
+    global $response;
+    $response['title'] = '404';
     return file_get_contents('pages/error.404.htm');
 }
