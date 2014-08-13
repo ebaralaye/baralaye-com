@@ -58,6 +58,9 @@
             <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
             <fb:like send="false" layout="button_count" width="75" show_faces="false"></fb:like>
           </li>-->
+          <li class="share">
+            <div class="fb-send" data-href="http://baralaye.com<?= $url ?>" data-colorscheme="light"></div>
+          </li>
         </ul>
       </li>
       <?php if($description != null): ?>

@@ -6193,6 +6193,8 @@ ul.items li {
 }
 /** Social buttons ----*/
 ul.social-btns {
+  position: relative;
+  z-index: 9999;
   height: 20px;
 }
 ul.social-btns:before,
@@ -6211,13 +6213,13 @@ ul.social-btns:after {
 ul.social-btns:after {
   clear: both;
 }
-ul.social-btns li {
+ul.social-btns > li {
   display: inline-block;
   padding: 0 5px 0 0;
-  height: 25px;
-  line-height: 5px !important;
+  height: 20px;
+  line-height: 8px !important;
 }
-ul.social-btns li:last-child {
+ul.social-btns > li:last-child {
   padding-right: 0;
 }
 ul.social-btns .btn-s a {
