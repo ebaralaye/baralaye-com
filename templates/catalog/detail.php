@@ -1,6 +1,6 @@
 <div class="product-detail">
   <div class="images">
-    <h1 class="title <?= $title_type; ?>"><?= $title; ?></h1>
+    <h1 class="title <?php if($title_type != null){ echo $title_type; }; ?>"><?= $title; ?></h1>
     <div class="main">
       <a href="/images/art/portfolio/big/<?= $image; ?>.jpg" class="cloud-zoom" id="zoom1" rel="position: 'inside'"><img src="/images/art/portfolio/large/<?= $image; ?>.jpg" alt="<?= $title; ?>" /></a>
     </div>
@@ -14,13 +14,13 @@
     </ul>
   </div>
   <div class="details">
-    <h1 class="title <?= $title_type ?>"><?= $title; ?></h1>
+    <h1 class="title <?php if($title_type != null){ echo $title_type; }; ?>"><?= $title; ?></h1>
     <ul>
       <li class="specs">
         <ul>
           <li class="medium">Medium: <?= $medium; ?></li>
           <?php if ($dim_width != null): ?>
-            <li class="dimensions">Dimensions: <?= $dim_height," x ", $dim_width," x ",$dim_depth,"&quot;"; ?></li>
+            <li class="dimensions">Dimensions: <?= $dim_height,"&quot; x ", $dim_width,"&quot; x ",$dim_depth,"&quot;"; ?></li>
           <?php endif; ?>
           <!--
           <?php if ($weight != null && $status != 2): ?>
@@ -41,7 +41,7 @@
               <?php if ($stock == 0) {echo "<strike>stock</strike>";} ?>
             </li>
           <?php endif; ?>
-          <?php if ($name != null): ?>
+          <?php if ($title != $id): ?>
             <li class="id">ID: <span><?= $id; ?></span></li>
           <?php endif ?>
         </ul>
