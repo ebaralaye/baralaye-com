@@ -28,6 +28,8 @@ function action_index($path){
  */
 function action_portfolio($path){
   global $dbh;
+  global $response;
+
   $pathArr = explode('/',$path);
 
   // Detail View //
@@ -56,6 +58,8 @@ function action_portfolio($path){
       $product['title'] = $product['id'];
       $product['title_type'] = 'untitled';
     }
+    $response['title'] = $response['title']." - "."&quot;".$product['title']."&quot;";
+    $response['meta_desc'] = $product['medium'];
     // Render
     return render("catalog/detail", $product);
   }
@@ -71,6 +75,8 @@ function action_portfolio($path){
 
     if ($catalog) {
       $products = array();
+      $response['title'] = $response['title']." - ".$catalog['title'];
+      $response['meta_desc'] = $catalog['description'];
 
       try {
         // Select rows with the urls that are a zero indexed substring of the path, within the same category
