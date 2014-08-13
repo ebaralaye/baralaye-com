@@ -41,7 +41,7 @@
               <?php if ($stock == 0) {echo "<strike>stock</strike>";} ?>
             </li>
           <?php endif; ?>
-          <?php if ($title != $id): ?>
+          <?php if (strtolower($title) != strtolower($id)): ?>
             <li class="id">ID: <span><?= $id; ?></span></li>
           <?php endif ?>
         </ul>
@@ -50,7 +50,7 @@
         <ul class="social-btns">
           <li class="btn-s purchase"><a href="#purchase-inquiry" class="ltbx win">Buy</a></li>
           <li class="btn-s comment"><a href="#comment-form" class="ltbx win">Comment</a></li>
-          <li class="pin"><a href="//www.pinterest.com/pin/create/button/?url=http://baralaye.com<?= $url ?>&media=http://baralaye.com/images/art/portfolio/large/<?= $image ?>.jpg&description=Ebitenyefa%20Baralaye,%20<?php if($title == $id){echo "&quot;Untitled&quot;";} else {echo "&quot;$title&quot;";}; echo " / ".$medium ?>" data-pin-do="buttonPin" data-pin-config="none"><img src="//assets.pinterest.com/images/pidgets/pin_it_button.png" /></a></li>
+          <li class="pin"><a href="//www.pinterest.com/pin/create/button/?url=http://baralaye.com<?= $url ?>&media=http://baralaye.com/images/art/portfolio/large/<?= $image ?>.jpg&description=Ebitenyefa%20Baralaye,%20<?php if(strtolower($title) == strtolower($id)){echo "&quot;Untitled&quot;";} else {echo "&quot;$title&quot;";}; echo " / ".$medium ?>" data-pin-do="buttonPin" data-pin-config="none"><img src="//assets.pinterest.com/images/pidgets/pin_it_button.png" /></a></li>
           <li class="tweet"><a href="http://twitter.com/share" class="twitter-share-button" data-count="none" data-via="baralaye">Tweet</a>
           <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
           </li>
