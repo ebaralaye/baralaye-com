@@ -22,6 +22,9 @@ function render($template, $variables = array()) {
  * Route Method
  */
 function route($path) {
+  $portfolio_catalogs = array('portfolio','art','design','ceramics','pottery','design','sculpture','vessels','drawings');
+  $path_arr = explode('/',$path);
+  $path_rootDir = $path_arr[1];
   if(substr($path, 0,5) == '/tech' || $_SERVER['HTTP_HOST'] == "tech.baralaye.com") {
     return "resume";
   }
@@ -34,12 +37,7 @@ function route($path) {
   else if(substr($path, 0,12) == '/progress') {
     return "progress";
   }
-  else if(substr($path, 0,10) == '/portfolio' ||
-          substr($path, 0,4) == '/art' ||
-          substr($path, 0,7) == '/design' ||
-          substr($path, 0,10) == '/sculpture' ||
-          substr($path, 0,8) == '/vessels' ||
-          substr($path, 0,9) == '/drawings') {
+  else if(in_array($path_rootDir, $portfolio_catalogs)) {
     return "portfolio";
   }
   else if(substr($path, 0,5) == '/news') {

@@ -28,27 +28,33 @@ function action_index($path){
  */
 function action_portfolio($path){
   global $dbh;
+  $pathArr = explode('/',$path);
 
   // Detail View //
+  $pathProductNode = $pathArr[count($pathArr)-1]; // Slice of path after the last '/'
+  $pathCatalogArr = array_slice($pathArr,1,count($pathArr)-2); // Slice of path before the last '/'
+
   try {
     // SQL - Select all rows from catalogs table that have a url that matches $path
-    $sql = 'SELECT * FROM portfolio_art WHERE  url = ?';
+    $sql = 'SELECT * FROM portfolio WHERE name = ?';
     $sth = $dbh -> prepare($sql);
-    $sth -> execute(array($path));
+    $sth -> execute(array($pathProductNode));
     $product = $sth -> fetch();
+    $product_tags = explode(',',$product['tags']);
+    // Manually adding base tags
+    $product_tags[] = "art";
+    $product_tags[] = "portfolio";
+    $catalog_diff = array_diff($pathCatalogArr,$product_tags);
   }
   catch (PDOException $e) {
   }
 
-  if ($product) {
-    // Set product title to id if name is null (untitled)
-    if($product['name'] == null) {
-      $product['title_type'] = "id";
+  if ($product && empty($catalog_diff)) {
+    // Set product title to system name if title is null (untitled)
+    $product['title_type'] = null;
+    if ($product['title'] == null) {
       $product['title'] = $product['id'];
-    }
-    else {
-      $product['title_type'] = "name";
-      $product['title'] = $product['name'];
+      $product['title_type'] = 'id';
     }
     // Render
     return render("catalog/detail", $product);
@@ -56,32 +62,48 @@ function action_portfolio($path){
 
   // List View
   else {
-    $products = array();
+    // SQL - Select all rows from catalogs table that have a url that matches $path
+    $sql = 'SELECT * FROM portfolio_catalogs WHERE  url = ?';
+    $sth = $dbh -> prepare($sql);
+    $sth -> execute(array($path));
+    $catalog = $sth -> fetch();
+    $catalog_tags = explode(',',$catalog['tags']);
 
-    try {
-      // Select rows with the urls that are a zero indexed substring of the path, within the same category
-      $sql = 'SELECT * FROM portfolio_art WHERE  status >= 1 ORDER BY date DESC';
-      $sth = $dbh -> prepare($sql);
-      $sth -> execute(array($path));
-      $rows = $dbh -> query($sql);
-      foreach ($rows as $row) {
-        // check if row url is at the first index of the path (list veiw)
-        if(strpos($row["url"], $path) === 0 || $path === '/art') {
-          $products[] = $row;
-        }
-      }
+    if ($catalog) {
+      $products = array();
 
-      if (count($products) > 0) {
-        // SQL - Select all rows from catalogs table that have a url that matches $path
-        $sql = 'SELECT * FROM portfolio_catalogs WHERE  url = ?';
+      try {
+        // Select rows with the urls that are a zero indexed substring of the path, within the same category
+        $sql = 'SELECT * FROM portfolio WHERE  status >= 1 ORDER BY date DESC';
         $sth = $dbh -> prepare($sql);
         $sth -> execute(array($path));
-        $catalog = $sth -> fetch();
+        $rows = $dbh -> query($sql);
 
-        return render("catalog/list", array('products' => $products, 'catalog' => $catalog));
+        foreach ($rows as $row) {
+          $product_tags = explode(',',$row['tags']);
+          // Manually adding base tags
+          $product_tags[] = "art";
+          $product_tags[] = "portfolio";
+          $result = array_diff($catalog_tags, $product_tags);
+
+          // Set product title to system name if title is null (untitled)
+          $row['title_type'] = null;
+          if ($row['title'] == null) {
+            $row['title'] = $row['id'];
+            $row['title_type'] = 'id';
+          }
+
+          if (empty($result)){
+            $products[] = $row;
+          }
+        }
+
+        if (count($products) > 0) {
+          return render("catalog/list", array('products' => $products, 'catalog' => $catalog));
+        }
       }
-    }
-    catch (PDOException $e) {
+      catch (PDOException $e) {
+      }
     }
   }
   return action_404();
@@ -174,36 +196,37 @@ function action_news($path){
   $path = substr($path, 6); // Truncated path after "/news/" uri string
 
     try {
-        if($path){ // if there is a slug after the /news/ in the path (/news/whatever) - Detail view
-            // Selects the row with a mathcing path
-            $sql = 'SELECT * FROM news WHERE status >= 1 AND url = ?';
-            $sth = $dbh -> prepare($sql);
-            $sth -> execute(array($path));
-            $post = $sth -> fetch();
-            // Selects the first five publised articles for the "Latest News" section
-            $sql = 'SELECT * FROM news WHERE status >= 1 ORDER BY published_date DESC LIMIT 3';
-            $rows = $dbh -> query($sql);
+      if($path){ // if there is a slug after the /news/ in the path (/news/whatever) - Detail view
 
-            foreach ($rows as $row) {
-                $posts[] = $row;
-            }
+        // Selects the row with a mathcing path
+        $sql = 'SELECT * FROM news WHERE status >= 1 AND url = ?';
+        $sth = $dbh -> prepare($sql);
+        $sth -> execute(array($path));
+        $post = $sth -> fetch();
+        // Selects the first five publised articles for the "Latest News" section
+        $sql = 'SELECT * FROM news WHERE status >= 1 ORDER BY published_date DESC LIMIT 3';
+        $rows = $dbh -> query($sql);
 
-            if ($post) {
-                return render("news/detail", array('post' => $post, 'posts' => $posts));
-            }
+        foreach ($rows as $row) {
+            $posts[] = $row;
         }
 
-        else { //if there is no slug following the news path (/news)
-            // selecting all posts that are published
-            $sql = 'SELECT * FROM news WHERE status >= 1 ORDER BY published_date DESC';
-            $rows = $dbh -> query($sql);
-
-            foreach ($rows as $row) {
-                $posts[] = $row;
-            }
-
-            return render("news/list", array('posts' => $posts));
+        if ($post) {
+            return render("news/detail", array('post' => $post, 'posts' => $posts));
         }
+      }
+
+      else { //if there is no slug following the news path (/news)
+        // selecting all posts that are published
+        $sql = 'SELECT * FROM news WHERE status >= 1 ORDER BY published_date DESC';
+        $rows = $dbh -> query($sql);
+
+        foreach ($rows as $row) {
+            $posts[] = $row;
+        }
+
+        return render("news/list", array('posts' => $posts));
+      }
     }
 
     catch (PDOException $e) {
