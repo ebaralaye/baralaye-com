@@ -59,7 +59,7 @@ function action_portfolio($path){
     // Set product title to system name if title is null (untitled)
     $product['title_type'] = null;
     if ($product['title'] == null) {
-      $product['title'] = $product['id'];
+      $product['title'] = mb_strtoupper($product['id']);
       $product['title_type'] = 'untitled';
     }
     $response['title'] .= " - "."&quot;".$product['title']."&quot;";
