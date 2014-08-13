@@ -8,7 +8,7 @@
       </li>
       <li><a href="/vessels">Vessels</a>
         <ul>
-          <li><a href="/vessels/slip-cast">Slip-Cast</a></li>
+          <li><a href="/vessels/design">Design</a></li>
           <li><a href="/vessels/pottery">Pottery</a></li>
         </ul>
       </li>
