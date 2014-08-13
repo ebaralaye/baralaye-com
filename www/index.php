@@ -13,9 +13,10 @@ $action = route($path);
 
 $response = array(
 	'content'   => '',
-  'meta_desc' => "Artist: Sculptor, Ceramicst & Designer",
-	'title'     => "Ebitenyefa Baralaye",
-	'logo'      => "Ebitenyefa Baralaye",
+  'meta'      => 'meta/main',
+  'meta_desc' => 'Artist: Sculptor, Ceramicst & Designer',
+	'title'     => 'Ebitenyefa Baralaye',
+	'logo'      => 'Ebitenyefa Baralaye',
 	'menu'      => render('menus/main'),
 	'analytics' => $conf['analytics'] ? file_get_contents('pages/static/analytics.htm') : null,
   'vendor'    => file_get_contents('pages/static/vendor.htm'),
@@ -25,7 +26,8 @@ $response = array(
 $function = 'action_' . $action;
 $response['content'] .= $function($path, $response);
 
-$response['meta'] = render('meta/main', array('meta_desc' => $response['meta_desc']));
+// Rendering meta data after meta_desc is updated by actions
+$response['meta'] = render($response['meta'], array('meta_desc' => $response['meta_desc']));
 
 $template = render('index', $response);
 

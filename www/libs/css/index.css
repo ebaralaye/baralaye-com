@@ -6500,10 +6500,12 @@ fieldset[disabled] .page-body .social-media a {
     bottom: -2px;
     display: inline-block;
     height: 42px;
-    padding: 11px 0 9px 0;
+    line-height: 49px;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -2px;
   }
   .tmp-wrap .tmp-top .tmp-logo > a:hover {
-    border-bottom: 2px solid #4f569f;
+    border-color: #4f569f;
   }
 }
 .tmp-wrap .tmp-top > .tmp-nav {
