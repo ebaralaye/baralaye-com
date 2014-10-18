@@ -17,8 +17,8 @@
       <div class="form-group">
         <p>
         ebi&#64;baralaye&#46;com | 646&#46;301&#46;6311<br />
-        <a href="http://efanyc.org" target="_blank">The Elizabeth Foundation for the Arts</a><br />
-        <a href="http://maps.google.com/maps?q=Ebitenyefa+Baralaye" class="gMap" title="The Elizabeth Foundation for the Arts">323 West 39th St, Studio 914, New York, NY 10018</a>
+        <a href="http://cranbrookart.edu" target="_blank">Cranbrook Academy of Art</a><br />
+        <a href="http://maps.google.com/maps?q=Cranbrook+Academy" class="gMap" title="Cranbrook Academy of Art">39221 Woodward Ave P.O. 801, Bloomfield Hills, MI 48303</a>
         </p>
         <br />
       </div>
@@ -317,9 +317,12 @@
     <h1>Artists &amp; Friends</h1>
     <ul class="list inline">
       <li>Justin Yuen</li>
+      <li><a target="_blank" href="http://ruhwald.net">Anders Ruhwald</a></li>
       <li><a target="_blank" href="http://dannielletegeder.com">Dannielle Tegeder</a></li>
+      <li><a target="_blank" href="http://www.davidandrewfrey.com">David Andrew Frey</a></li>
       <li><a target="_blank" href="http://www.morganohara.com">Morgan O'Hara</a></li>
       <li><a target="_blank" href="http://www.michaeleade.com">Michael Eade</a></li>
+      <li><a target="_blank" href="http://joemadrigal.com">Joseph Madrigal</a></li>
       <li><a target="_blank" href="http://www.hongseonjang.com">Hong Seon Jang</a></li>
       <li><a target="_blank" href="http://www.noahklersfeld.com">Noah Klersfeld</a></li>
       <li><a target="_blank" href="http://chrisandersonart.com">Chris Anderson</a></li>
@@ -371,18 +374,21 @@
   <section>
     <h1>Organizations &amp; Institutions</h1>
     <ul class="list inline">
-      <li><a target="_blank" href="http://www.nyfa.org" title="New York Foundation for the Arts">NYFA</a></li>
-      <li><a target="_blank" href="http://www.efanyc.org" title="The Elizabeth Foundation for the Arts">EFA</a></li>
-      <li><a target="_blank" href="http://www.internationalartsmovement.org" title="International Arts Movement">IAM</a></li>
-      <li><a target="_blank" href="http://www.sculpture.org" title="International Sculpture Center">ISC</a></li>
-      <li><a target="_blank" href="http://lmcc.net" title="Lower Manhattan Cultural Council">LMCC</a></li>
-      <li><a target="_blank" href="http://risd.edu" title="Rhode Island School of Design">RISD</a></li>
-      <li><a target="_blank" href="http://www.queenscouncilarts.org">Queens Council on the Arts</a></li>
+      <li><a target="_blank" href="http://www.nyfa.org" title="NYFA">New York Foundation for the Arts</a></li>
+      <li><a target="_blank" href="http://www.efanyc.org" title="EFA">Elizabeth Foundation for the Arts</a></li>
+      <li><a target="_blank" href="http://www.internationalartsmovement.org" title="IAM">International Arts Movement</a></li>
+      <li><a target="_blank" href="http://iccc.heartshome.org" title="ICCC">International Center for a Culture of Compassion</a></li>
+      <li><a target="_blank" href="http://www.sculpture.org" title="ISC">International Sculpture Center</a></li>
+      <li><a target="_blank" href="http://lmcc.net" title="LMCC">Lower Manhattan Cultural Council</a></li>
+      <li><a target="_blank" href="http://cranbrookart.edu" title="CAA">Cranbrook Academy of Art</a></li>
+      <li><a target="_blank" href="http://risd.edu" title="RISD">Rhode Island School of Design</a></li>
+      <li><a target="_blank" href="http://www.queenscouncilarts.org" title="QCA">Queens Council on the Arts</a></li>
+      <li><a target="_blank" href="http://artmgt.com">ArtMgt</a></li>
       <li><a target="_blank" href="http://www.socratessculpturepark.org">Socrates Sculpture Park</a></li>
       <li><a target="_blank" href="http://www.sculpture-center.org">Sculpture Center</a></li>
-      <li><a target="_blank" href="http://www.licartists.org">LIC Artists</a></li>
-      <li><a target="_blank" href="http://www.licarts.org">Long Island City Artists</a></li>
-      <li><a target="_blank" href="http://www.faithandwork.org">Faith &amp; Work</a></li>
+      <li><a target="_blank" href="http://www.licartists.org">Long Island City Artists</a></li>
+      <li><a target="_blank" href="http://www.licarts.org" title="LICCA">Long Island City Cultural Alliance</a></li>
+      <li><a target="_blank" href="http://www.faithandwork.org">Center for Faith &amp; Work</a></li>
       <li><a target="_blank" href="http://churchandart.org">Church &amp; Art Network</a></li>
       <li><a target="_blank" href="http://www.sparkandecho.org">Spark &amp; Echo</a></li>
       <li><a target="_blank" href="http://www.nationalsculpture.org">National Sculpture Society</a></li>
