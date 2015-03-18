@@ -123,7 +123,8 @@
   &.resume {
 
     h2,
-    h3 {
+    h3,
+    h4{
       text-transform: uppercase;
       margin: 0 0 20px 0;
       border-bottom: 1px solid #ccc;
@@ -149,6 +150,15 @@
     h3 a:hover {
       border-bottom: 1px solid #4F569F;
       text-decoration: none;
+    }
+
+    h4 {
+      margin-left: 36%;
+      display: inline-block;
+
+      @media (max-width: @screen-xs-max) {
+        margin-left: 0;
+      }
     }
 
     p {
@@ -219,6 +229,7 @@
 
         &.info,
         .date,
+        time,
         .name,
         .position {
           font-weight: bold;
@@ -236,7 +247,8 @@
           font-style: italic;
         }
 
-        .date {
+        .date,
+        time {
           font-size: 10px;
           font-style: italic;
           padding-right: 10px;
@@ -246,6 +258,15 @@
             position: absolute;
             right: 100%;
             padding-right: 25px;
+          }
+        }
+
+        &.exhibitions {
+          .date,
+          time {
+            .day-month {
+              display: none;
+            }
           }
         }
       }

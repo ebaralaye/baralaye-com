@@ -6877,7 +6877,8 @@ fieldset[disabled] .page-body .social-media a {
   height: 450px;
 }
 .page-body.resume h2,
-.page-body.resume h3 {
+.page-body.resume h3,
+.page-body.resume h4 {
   text-transform: uppercase;
   margin: 0 0 20px 0;
   border-bottom: 1px solid #ccc;
@@ -6899,6 +6900,15 @@ fieldset[disabled] .page-body .social-media a {
 .page-body.resume h3 a:hover {
   border-bottom: 1px solid #4F569F;
   text-decoration: none;
+}
+.page-body.resume h4 {
+  margin-left: 36%;
+  display: inline-block;
+}
+@media (max-width: 767px) {
+  .page-body.resume h4 {
+    margin-left: 0;
+  }
 }
 .page-body.resume p {
   margin-bottom: 20px;
@@ -6957,6 +6967,7 @@ fieldset[disabled] .page-body .social-media a {
 }
 .page-body.resume ul.list.info,
 .page-body.resume ul.list .date,
+.page-body.resume ul.list time,
 .page-body.resume ul.list .name,
 .page-body.resume ul.list .position {
   font-weight: bold;
@@ -6971,18 +6982,24 @@ fieldset[disabled] .page-body .social-media a {
   font-size: 10px;
   font-style: italic;
 }
-.page-body.resume ul.list .date {
+.page-body.resume ul.list .date,
+.page-body.resume ul.list time {
   font-size: 10px;
   font-style: italic;
   padding-right: 10px;
   white-space: nowrap;
 }
 @media (min-width: 768px) {
-  .page-body.resume ul.list .date {
+  .page-body.resume ul.list .date,
+  .page-body.resume ul.list time {
     position: absolute;
     right: 100%;
     padding-right: 25px;
   }
+}
+.page-body.resume ul.list.exhibitions .date .day-month,
+.page-body.resume ul.list.exhibitions time .day-month {
+  display: none;
 }
 .page-body.resume .product-list.gallery {
   margin-bottom: 25px;
