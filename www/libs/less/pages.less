@@ -122,158 +122,160 @@
 
   &.resume {
 
-    h2,
-    h3,
-    h4{
-      text-transform: uppercase;
-      margin: 0 0 20px 0;
-      border-bottom: 1px solid #ccc;
-      padding-bottom: 5px;
-      font-weight: bold;
-    }
+    section {
 
-    h2 {
-      letter-spacing: 3px;
-      font-size: 13px;
-
-      a {
-        text-decoration: none;
-        display: inline-block;
+      h2,
+      h3,
+      h4 {
+        text-transform: uppercase;
+        font-weight: bold;
+        padding-bottom: 5px;
+        border-bottom: 1px solid #ccc;
+        margin: 0 0 20px 0;
       }
-    }
 
-    h3 {
-      letter-spacing: 2px;
-      line-height: 14px;
-    }
+      h2 {
+        letter-spacing: 3px;
+        font-size: 13px;
 
-    h3 a:hover {
-      border-bottom: 1px solid #4F569F;
-      text-decoration: none;
-    }
-
-    h4 {
-      margin-left: 36%;
-      display: inline-block;
-
-      @media (max-width: @screen-xs-max) {
-        margin-left: 0;
+        a {
+          display: inline-block;
+          text-decoration: none;
+        }
       }
-    }
 
-    p {
-      margin-bottom: 20px;
-    }
+      h3 {
+        letter-spacing: 2px;
+        line-height: 14px;
 
-    .reference,
-    section#references {
-      display: none;
-
-      .reference {
-        display: block;
-      }
-    }
-
-    .section {
-      margin-bottom: 0 0 20px;
-
-      @media (min-width: @screen-sm-min) {
-        position: relative;
-        margin: 0 0 20px 36% !important;
+        a:hover {
+          text-decoration: none;
+          border-bottom: 1px solid #4F569F;
+        }
       }
 
       h4 {
-        text-transform: uppercase;
+        display: inline-block;
         margin-bottom: 10px;
-        text-decoration: underline;
+        margin-left: 36%;
+
+        @media (max-width: @screen-xs-max) {
+          margin-left: 0;
+        }
       }
-    }
 
-    ul {
+      p {
+        margin-bottom: 20px;
+      }
 
-      &.list {
+      .reference,
+      &#references {
+        display: none;
 
-        &.section {
-          list-style: none;
+        .reference {
+          display: block;
         }
+      }
 
-        margin-left: 0;
-        margin: 0 0 25px 0;
-        padding: 0;
+      .section {
+        margin-bottom: 0 0 20px;
 
-        .phone,
-        .street,
-        .type,
-        .zip {
-          display: none;
-        }
-
-        li {
+        @media (min-width: @screen-sm-min) {
           position: relative;
-          margin: 0 0 15px 0;
+          margin: 0 0 20px 36% !important;
+        }
+
+        > h4 {
+          margin-left: 0;
+        }
+      }
+
+      ul {
+
+        &.list {
+
+          &.section {
+            list-style: none;
+          }
+
+          margin-left: 0;
+          margin: 0 0 25px 0;
           padding: 0;
 
-            &:last-child {
-              margin-bottom: 0;
+          .phone,
+          .street,
+          .type,
+          .zip {
+            display: none;
+          }
+
+          li {
+            position: relative;
+            margin: 0 0 15px 0;
+            padding: 0;
+
+              &:last-child {
+                margin-bottom: 0;
+              }
+            }
+
+            &.square,
+            &.disc {
+              margin-left: 15px;
+
+            li {
+              margin-bottom: 5px;
             }
           }
 
-          &.square,
-          &.disc {
-            margin-left: 15px;
-
-          li {
-            margin-bottom: 5px;
+          &.info,
+          .date,
+          time,
+          .name,
+          .position {
+            font-weight: bold;
           }
-        }
 
-        &.info,
-        .date,
-        time,
-        .name,
-        .position {
-          font-weight: bold;
-        }
-
-        &.info li {
-          margin-bottom: 3px;
-        }
-
-        .type,
-        .phone,
-        .address,
-        .reference {
-          font-size: 10px;
-          font-style: italic;
-        }
-
-        .date,
-        time {
-          font-size: 10px;
-          font-style: italic;
-          padding-right: 10px;
-          white-space: nowrap;
-
-          @media (min-width: @screen-sm-min) {
-            position: absolute;
-            right: 100%;
-            padding-right: 25px;
+          &.info li {
+            margin-bottom: 3px;
           }
-        }
 
-        &.exhibitions {
+          .type,
+          .phone,
+          .address,
+          .reference {
+            font-size: 10px;
+            font-style: italic;
+          }
+
           .date,
           time {
-            .day-month {
-              display: none;
+            font-size: 10px;
+            font-style: italic;
+            padding-right: 10px;
+            white-space: nowrap;
+
+            @media (min-width: @screen-sm-min) {
+              position: absolute;
+              right: 100%;
+              padding-right: 25px;
+            }
+          }
+
+          &.exhibitions {
+            .date,
+            time {
+              .day-month {
+                display: none;
+              }
             }
           }
         }
       }
-    }
 
-    .product-list.gallery {
-        margin-bottom: 25px;
+      .product-list.gallery {
+          margin-bottom: 25px;
+      }
     }
   }
 

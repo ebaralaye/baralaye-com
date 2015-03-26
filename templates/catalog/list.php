@@ -7,7 +7,7 @@
     <?php foreach ($products as $product): ?>
       <li class="item">
         <div class="image"><a href="<?= $product['url']; ?>"><img src="/images/art/portfolio/small/<?= $product['image']; ?>.jpg" alt="<?= $product['title']; ?>" /></a></div>
-        <h4 class="title <?php if($product['title_type'] != null){ echo $product['title_type']; }; ?>"><a href="<?= $product['url']; ?>"><?= $product['title']; ?></a></h4>
+        <h5 class="title <?php if($product['title_type'] != null){ echo $product['title_type']; }; ?>"><a href="<?= $product['url']; ?>"><?= $product['title']; ?></a></h5>
       </li>
     <?php endforeach; ?>
   </ul>

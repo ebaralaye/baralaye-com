@@ -12,7 +12,7 @@
           </a>
         <?php endforeach; ?>
       </div>
-      <h4 class="title"><a href="http://<?php echo $item['url']; ?>" target="_blank"><?php echo $item['name']; ?></a></h4>
+      <h5 class="title"><a href="http://<?php echo $item['url']; ?>" target="_blank"><?php echo $item['name']; ?></a></h5>
     </li>
   <?php endforeach; ?>
 </ul>

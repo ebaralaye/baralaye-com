@@ -6073,7 +6073,8 @@ a:hover {
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5 {
   font-family: "raleway", sans-serif;
   text-transform: capitalize;
   letter-spacing: 1px;
@@ -6094,7 +6095,8 @@ h3 {
   font-size: 14px;
   margin: 0 0 5px;
 }
-h4 {
+h4,
+h5 {
   font-weight: 400;
   font-size: 12px;
   margin: 0 0 3px;
@@ -6876,132 +6878,131 @@ fieldset[disabled] .page-body .social-media a {
 .page-body.in-progress .body {
   height: 450px;
 }
-.page-body.resume h2,
-.page-body.resume h3,
-.page-body.resume h4 {
+.page-body.resume section h2,
+.page-body.resume section h3,
+.page-body.resume section h4 {
   text-transform: uppercase;
-  margin: 0 0 20px 0;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 5px;
   font-weight: bold;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #ccc;
+  margin: 0 0 20px 0;
 }
-.page-body.resume h2 {
+.page-body.resume section h2 {
   letter-spacing: 3px;
   font-size: 13px;
 }
-.page-body.resume h2 a {
-  text-decoration: none;
+.page-body.resume section h2 a {
   display: inline-block;
+  text-decoration: none;
 }
-.page-body.resume h3 {
+.page-body.resume section h3 {
   letter-spacing: 2px;
   line-height: 14px;
 }
-.page-body.resume h3 a:hover {
-  border-bottom: 1px solid #4F569F;
+.page-body.resume section h3 a:hover {
   text-decoration: none;
+  border-bottom: 1px solid #4F569F;
 }
-.page-body.resume h4 {
-  margin-left: 36%;
+.page-body.resume section h4 {
   display: inline-block;
+  margin-bottom: 10px;
+  margin-left: 36%;
 }
 @media (max-width: 767px) {
-  .page-body.resume h4 {
+  .page-body.resume section h4 {
     margin-left: 0;
   }
 }
-.page-body.resume p {
+.page-body.resume section p {
   margin-bottom: 20px;
 }
-.page-body.resume .reference,
+.page-body.resume section .reference,
 .page-body.resume section#references {
   display: none;
 }
-.page-body.resume .reference .reference,
+.page-body.resume section .reference .reference,
 .page-body.resume section#references .reference {
   display: block;
 }
-.page-body.resume .section {
+.page-body.resume section .section {
   margin-bottom: 0 0 20px;
 }
 @media (min-width: 768px) {
-  .page-body.resume .section {
+  .page-body.resume section .section {
     position: relative;
     margin: 0 0 20px 36% !important;
   }
 }
-.page-body.resume .section h4 {
-  text-transform: uppercase;
-  margin-bottom: 10px;
-  text-decoration: underline;
+.page-body.resume section .section > h4 {
+  margin-left: 0;
 }
-.page-body.resume ul.list {
+.page-body.resume section ul.list {
   margin-left: 0;
   margin: 0 0 25px 0;
   padding: 0;
 }
-.page-body.resume ul.list.section {
+.page-body.resume section ul.list.section {
   list-style: none;
 }
-.page-body.resume ul.list .phone,
-.page-body.resume ul.list .street,
-.page-body.resume ul.list .type,
-.page-body.resume ul.list .zip {
+.page-body.resume section ul.list .phone,
+.page-body.resume section ul.list .street,
+.page-body.resume section ul.list .type,
+.page-body.resume section ul.list .zip {
   display: none;
 }
-.page-body.resume ul.list li {
+.page-body.resume section ul.list li {
   position: relative;
   margin: 0 0 15px 0;
   padding: 0;
 }
-.page-body.resume ul.list li:last-child {
+.page-body.resume section ul.list li:last-child {
   margin-bottom: 0;
 }
-.page-body.resume ul.list.square,
-.page-body.resume ul.list.disc {
+.page-body.resume section ul.list.square,
+.page-body.resume section ul.list.disc {
   margin-left: 15px;
 }
-.page-body.resume ul.list.square li,
-.page-body.resume ul.list.disc li {
+.page-body.resume section ul.list.square li,
+.page-body.resume section ul.list.disc li {
   margin-bottom: 5px;
 }
-.page-body.resume ul.list.info,
-.page-body.resume ul.list .date,
-.page-body.resume ul.list time,
-.page-body.resume ul.list .name,
-.page-body.resume ul.list .position {
+.page-body.resume section ul.list.info,
+.page-body.resume section ul.list .date,
+.page-body.resume section ul.list time,
+.page-body.resume section ul.list .name,
+.page-body.resume section ul.list .position {
   font-weight: bold;
 }
-.page-body.resume ul.list.info li {
+.page-body.resume section ul.list.info li {
   margin-bottom: 3px;
 }
-.page-body.resume ul.list .type,
-.page-body.resume ul.list .phone,
-.page-body.resume ul.list .address,
-.page-body.resume ul.list .reference {
+.page-body.resume section ul.list .type,
+.page-body.resume section ul.list .phone,
+.page-body.resume section ul.list .address,
+.page-body.resume section ul.list .reference {
   font-size: 10px;
   font-style: italic;
 }
-.page-body.resume ul.list .date,
-.page-body.resume ul.list time {
+.page-body.resume section ul.list .date,
+.page-body.resume section ul.list time {
   font-size: 10px;
   font-style: italic;
   padding-right: 10px;
   white-space: nowrap;
 }
 @media (min-width: 768px) {
-  .page-body.resume ul.list .date,
-  .page-body.resume ul.list time {
+  .page-body.resume section ul.list .date,
+  .page-body.resume section ul.list time {
     position: absolute;
     right: 100%;
     padding-right: 25px;
   }
 }
-.page-body.resume ul.list.exhibitions .date .day-month,
-.page-body.resume ul.list.exhibitions time .day-month {
+.page-body.resume section ul.list.exhibitions .date .day-month,
+.page-body.resume section ul.list.exhibitions time .day-month {
   display: none;
 }
-.page-body.resume .product-list.gallery {
+.page-body.resume section .product-list.gallery {
   margin-bottom: 25px;
 }
 .page-body.news {
