@@ -6995,6 +6995,7 @@ fieldset[disabled] .page-body .social-media a {
   .page-body.resume section ul.list time {
     position: absolute;
     right: 100%;
+    top: 0;
     padding-right: 25px;
   }
 }
