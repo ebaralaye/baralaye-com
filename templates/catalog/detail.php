@@ -29,8 +29,10 @@
           -->
           <li class="year">Year: <?php $year = date("Y", strtotime($date)); echo $year?></li>
           <li class="price">Price: 
-            <?php if ($price != null && $status != 2): ?>
+            <?php if ($price != null && $status == 1): ?>
               $<?= $price; ?>
+            <?php elseif ($status == 3): ?>
+              <a href="/contact" target="_blank">Inquire</a>
             <?php else: ?>
               NFS
             <?php endif; ?>
