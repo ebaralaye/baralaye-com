@@ -13,7 +13,7 @@
   </section>
   <section id="contact" class="contact">
     <h1>Contact</h1>
-    <form id="contact-form" class="form-container form-row" action="/social" method="post" data-success="<?php var_export($form_success) ?>">
+    <form id="contact-form" class="form-container form-row" action="/contact" method="post" data-success="<?php var_export($form_success) ?>">
       <div class="form-group">
         <p>
         ebi&#64;baralaye&#46;com | 646&#46;301&#46;6311<br />
