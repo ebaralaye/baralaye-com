@@ -20,6 +20,9 @@
     <!-- CSS: Custom Styles -->
     <link type="text/css" rel="stylesheet" media="all" href="/libs/css/index.css" />
 
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico"/>
+
     <!-- JS: Plugins > Underscore -->
     <script type="text/javascript" src="/libs/vendor/underscore/underscore-min.js"></script>
     <!-- JS: Plugins > Backbone -->
