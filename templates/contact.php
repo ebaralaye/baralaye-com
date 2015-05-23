@@ -16,9 +16,10 @@
     <form id="contact-form" class="form-container form-row" action="/contact" method="post" data-success="<?php var_export($form_success) ?>">
       <div class="form-group">
         <p>
-        ebi&#64;baralaye&#46;com | 646&#46;301&#46;6311<br />
-        <a href="http://cranbrookart.edu" target="_blank">Cranbrook Academy of Art</a><br />
-        <a href="http://maps.google.com/maps?q=Cranbrook+Academy" class="gMap" title="Cranbrook Academy of Art">39221 Woodward Ave P.O. 801, Bloomfield Hills, MI 48303</a>
+        studio&#64;baralaye&#46;com / 646&#46;301&#46;6311<br />
+        Detroit / NYC
+        <!--<a href="http://cranbrookart.edu" target="_blank">Cranbrook Academy of Art</a><br />
+        <a href="http://maps.google.com/maps?q=Cranbrook+Academy" class="gMap" title="Cranbrook Academy of Art">39221 Woodward Ave, Bloomfield Hills, MI 48304</a>-->
         </p>
         <br />
       </div>
