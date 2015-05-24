@@ -109,14 +109,13 @@
       }
 
       img {
+        display: inline-block;
         max-width: 100%;
         max-height: 100%;
-        border-bottom: 1px solid transparent;
       }
 
       &:hover img {
-        border-color: @color-hili;
-        box-shadow: 0 5px 5px -5px @color-dark;
+        box-shadow: 0 0 0 1px @color-hili;
       }
     }
   }
@@ -235,14 +234,12 @@
       }
 
       img {
-        border-bottom: 1px solid transparent;
         vertical-align: middle !important;
         max-width: 85px;
         max-height: 85px;
 
         &:hover {
-          border-color: @color-hili;
-          box-shadow: 0 5px 5px -5px @color-dark;
+          box-shadow: 0 0 0 1px @color-hili;
           cursor: pointer;
         }
       }
