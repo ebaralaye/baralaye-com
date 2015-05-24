@@ -128,8 +128,8 @@ function action_resume($path, &$response) {
   if(substr($path, 0,5) == '/tech' || $_SERVER['HTTP_HOST'] == "tech.baralaye.com") {
 
     $response['meta'] = 'meta/tech';
-    $response['title'] = 'Ebi Baralaye - Tech';
-    $response['logo'] = 'Ebi Baralaye';
+    $response['title'] = 'Baralaye / Tech';
+    $response['logo'] = 'Baralaye Studio';
     $response['menu'] = render('menus/tech');
 
     if(substr($path, 0,11) == '/tech/admin' || ($_SERVER['HTTP_HOST'] == "tech.baralaye.com" && substr($path, 0,6) == '/admin')) {

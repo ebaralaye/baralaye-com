@@ -5,11 +5,10 @@
 
 /** Variables ----*/
 
-@grey-light: #f3f3f3;
-@grey-medium: #dfdfdf;
-@grey-heavy: #999999;
-@grey-dark: #575757;
-@blue-dark: #4F569F;
+@color-light: #f3f3f3;
+@color-medium: #dfdfdf;
+@color-dark: #606060;
+@color-hili: #000; /*#4f569f*/
 
 
 /** Mixins ----*/
@@ -21,11 +20,11 @@
 .block-shadow {
   border: 1px solid transparent;
   background-position: -1px -1px;
-  box-shadow: 1px 1px 5px @grey-medium;
+  box-shadow: 1px 1px 5px @color-medium;
   box-sizing: border-box;
 
   &:hover {
-    border-color: @blue-dark;
+    border-color: @color-hili;
     text-decoration: none;
   }
 }
@@ -35,15 +34,16 @@
 body {
   font-family: helvetica, verdana, arial;
   font-size: 10px;
-  color: @grey-dark;
+  color: @color-dark;
 }
 
 a {
-  color: @blue-dark;
+  color: @color-hili;
 }
 
 a:hover {
   text-decoration: underline;
+  color: @color-hili;
 }
 
 h1, h2, h3, h4, h5 {
@@ -85,7 +85,7 @@ p {
 }
 
 .em {
-  background-color: @grey-light;
+  background-color: @color-light;
   border-radius: 6px;
   padding: 2px 4px;
   white-space: nowrap;
@@ -99,7 +99,7 @@ p {
 
 .hr, hr {
   .clearfix;
-  border-bottom: 2px solid @grey-medium;
+  border-bottom: 2px solid @color-medium;
   margin: 0 15px;
 }
 
@@ -182,8 +182,8 @@ ul.social-btns {
     a {
       float:left;
       display:block;
-      border: 1px solid @grey-medium;
-      background: @grey-light;
+      border: 1px solid @color-medium;
+      background: @color-light;
       padding:4px 4px 4px 4px;
       border-radius:3px;
       height:10px;
@@ -193,7 +193,7 @@ ul.social-btns {
 
       &:hover {
         text-decoration:none;
-        border-color: @grey-dark;
+        border-color: @color-dark;
       }
     }
 
@@ -255,7 +255,7 @@ ul.social-btns {
   .h-title {
     display: inline-block;
     margin-bottom: 14px;
-    border-bottom: 2px solid @grey-medium;
+    border-bottom: 2px solid @color-medium;
     letter-spacing: 1px;
 
     a {
@@ -263,17 +263,17 @@ ul.social-btns {
       text-decoration: none;
 
       &:hover {
-        border-bottom: 2px solid @blue-dark;
+        border-bottom: 2px solid @color-hili;
         margin-bottom: -2px;
       }
     }
 
     &.sub {
-      border-bottom: 1px solid @grey-medium;
+      border-bottom: 1px solid @color-medium;
       margin-bottom: 7px;
 
       a:hover {
-        border-bottom: 1px solid @blue-dark;
+        border-bottom: 1px solid @color-hili;
         margin-bottom: -1px;
       }
     }
@@ -284,7 +284,7 @@ ul.social-btns {
     font-size: 11px;
     letter-spacing: 1px;
     padding: 2px 10px;
-    background: @grey-light;
+    background: @color-light;
     border-radius: 15px;
     text-decoration: none;
     white-space: nowrap;
@@ -292,7 +292,7 @@ ul.social-btns {
 
     &:hover {
       text-decoration: none;
-      border-color: @blue-dark;
+      border-color: @color-hili;
     }
   }
 
@@ -327,7 +327,7 @@ ul.social-btns {
     .row;
     margin-top: 30px;
     margin-bottom: 40px;
-    border-bottom: 2px solid @grey-medium;
+    border-bottom: 2px solid @color-medium;
 
     @media (max-width: @screen-xs-max) {
       &.double-nav {
@@ -361,7 +361,7 @@ ul.social-btns {
           margin-bottom: -2px;
 
           &:hover {
-            border-color: @blue-dark;
+            border-color: @color-hili;
           }
         }
       }
@@ -405,7 +405,7 @@ ul.social-btns {
 
           &.selected {
             > a {
-              border-bottom-color: @blue-dark;
+              border-bottom-color: @color-hili;
             }
           }
 
@@ -419,7 +419,7 @@ ul.social-btns {
             border-bottom-color: transparent;
 
             @media (min-width: @screen-sm-min) {
-              border-bottom-color: @grey-medium;
+              border-bottom-color: @color-medium;
             }
           }
 
@@ -433,7 +433,7 @@ ul.social-btns {
             &:hover,
             &.active {
               background: none;
-              border-bottom-color: @blue-dark;
+              border-bottom-color: @color-hili;
             }
           }
 
@@ -444,12 +444,12 @@ ul.social-btns {
             display: none;
             position: absolute;
             height: 40px;
-            background-color: @grey-light;
+            background-color: @color-light;
           }
 
           > ul {
             top: 42px;
-            border-bottom: 1px solid @grey-medium;
+            border-bottom: 1px solid @color-medium;
 
             @media (min-width: @screen-sm-min) {
               border: 0;
@@ -462,7 +462,7 @@ ul.social-btns {
 
               @media (min-width: @screen-sm-min) {
                 float: right;
-                background-color: @grey-light;
+                background-color: @color-light;
               }
 
               a {
@@ -474,7 +474,7 @@ ul.social-btns {
                 border-bottom-width: 1px;
 
                 @media (min-width: @screen-sm-min) {
-                  background-color: @grey-light;
+                  background-color: @color-light;
                 }
               }
             }
@@ -483,12 +483,12 @@ ul.social-btns {
               &.selected {
 
                 > a {
-                  border-bottom-color: @blue-dark;
+                  border-bottom-color: @color-hili;
                 }
 
                 @media (min-width: @screen-sm-min) {
                   > ul > li a {
-                    border-bottom-color: @grey-medium;
+                    border-bottom-color: @color-medium;
                   }
                 }
               }
@@ -496,12 +496,12 @@ ul.social-btns {
               > a {
                 font-weight: 400;
                 @media (min-width: @screen-sm-min) {
-                  border-bottom-color: @grey-light;
+                  border-bottom-color: @color-light;
                 }
 
                 &:hover,
                 &.active {
-                  border-bottom-color: @blue-dark;
+                  border-bottom-color: @color-hili;
                 }
               }
 
@@ -538,7 +538,7 @@ ul.social-btns {
   }
 
   .tmp-bottom {
-    border-top: 2px solid @grey-medium;
+    border-top: 2px solid @color-medium;
     margin-top: 40px;
     margin-bottom: 20px;
 
@@ -568,7 +568,7 @@ ul.social-btns {
             float: left;
             font-size: 13px;
             font-weight: 400;
-            border-bottom: 2px solid @grey-medium;
+            border-bottom: 2px solid @color-medium;
             background: none;
           }
 
@@ -576,7 +576,7 @@ ul.social-btns {
           > .active,
           > a:hover {
             text-decoration: none;
-            border-bottom: 2px solid @blue-dark;
+            border-bottom: 2px solid @color-hili;
             margin-bottom: -1px;
           }
 
