@@ -129,7 +129,7 @@ function action_resume($path, &$response) {
 
     $response['meta'] = 'meta/tech';
     $response['title'] = 'Baralaye / Tech';
-    $response['logo'] = 'Baralaye Studio';
+    $response['logo'] = 'Baralaye / Tech';
     $response['menu'] = render('menus/tech');
 
     if(substr($path, 0,11) == '/tech/admin' || ($_SERVER['HTTP_HOST'] == "tech.baralaye.com" && substr($path, 0,6) == '/admin')) {
