@@ -6781,7 +6781,7 @@ fieldset[disabled] .page-body .social-media a {
 }
 @media (max-width: 767px) {
   .page-body.home {
-    margin: -80px 0 -20px;
+    margin: -80px 0 -30px;
   }
 }
 .page-body.home .portfolio {
@@ -6836,8 +6836,8 @@ fieldset[disabled] .page-body .social-media a {
   text-align: left;
   display: block;
   height: 200px;
-  width: 100%;
   line-height: 200px;
+  width: 100%;
   margin: 0 auto;
   background-size: 200px;
   background-repeat: no-repeat;
@@ -6845,6 +6845,11 @@ fieldset[disabled] .page-body .social-media a {
   background-position-x: center;
   background-position-y: center;
   background-size: cover;
+}
+@media (max-width: 767px) {
+  .page-body.home .portfolio li a {
+    line-height: 355px;
+  }
 }
 .page-body.home .portfolio li a.sculpture {
   background-image: url('/images/art/portfolio/large/smm-0005_a.jpg');
