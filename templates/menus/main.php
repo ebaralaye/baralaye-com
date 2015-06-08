@@ -33,11 +33,11 @@
       <li><a href="/statement">Statement</a></li>
     </ul>
   </li>
-  <li><a href="/contact">Social</a>
+  <li><a href="/contact">Studio</a>
     <ul>
-      <li><a href="/blog">Blog</a></li>
-      <li><a href="/news">News</a></li>
       <li><a href="/contact">Contact</a></li>
+      <li><a href="/news">News</a></li>
+      <li><a href="/blog">Blog</a></li>
     </ul>
   </li>
 </ul>

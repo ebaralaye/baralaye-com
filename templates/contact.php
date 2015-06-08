@@ -289,13 +289,14 @@
     </script>
     <!--End mc_embed_signup-->
   </section>
-  <section id="studio">
-    <h1>Studio</h1>
-    <ul id="set_72157628626470369" class="product-list photoset"></ul>
-  </section>
   <section id="media">
     <h1>Media</h1>
     <ul id="set_72157628627505367" class="product-list photoset"></ul>
+  </section>
+<!--
+  <section id="studio">
+    <h1>Studio</h1>
+    <ul id="set_72157628626470369" class="product-list photoset"></ul>
   </section>
   <section id="video">
     <h1>Video</h1>
@@ -314,8 +315,9 @@
       </li>
     </ul>
   </section>
+-->
   <section id="artists">
-    <h1>Artists &amp; Friends</h1>
+    <h1>Artists</h1>
     <ul class="list inline">
       <li>Justin Yuen</li>
       <li><a target="_blank" href="http://ruhwald.net">Anders Ruhwald</a></li>
@@ -373,7 +375,7 @@
     </ul>
   </section>
   <section>
-    <h1>Organizations &amp; Institutions</h1>
+    <h1>Organizations</h1>
     <ul class="list inline">
       <li><a target="_blank" href="http://www.nyfa.org" title="NYFA">New York Foundation for the Arts</a></li>
       <li><a target="_blank" href="http://www.efanyc.org" title="EFA">Elizabeth Foundation for the Arts</a></li>
