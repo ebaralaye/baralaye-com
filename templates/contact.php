@@ -6,7 +6,7 @@
     <a href="http://baralaye.tumblr.com" target="_blank">Tumblr</a>
     <a href="http://instagram.com/baralaye" target="_blank">Instagram</a>
     <a href="http://pinterest.com/baralaye" target="_blank">Pinterest</a>
-    <a href="http://linkedin.com/in/baralaye" target="_blank">LinkedIn</a>
+    <!--<a href="http://linkedin.com/in/baralaye" target="_blank">LinkedIn</a>-->
     <!--<a href="https://plus.google.com/112097083655390633396/about" target="_blank">Google+</a>-->
     <!--<a href="http://www.flickr.com/photos/baralaye/" target="_blank">Flickr</a>-->
     <!--<a href="http://www.youtube.com/user/baralaye/videos?flow=grid&amp;view=1" target="_blank">YouTube</a>-->
