@@ -9,9 +9,16 @@
 
   &.home {
 
+    margin: 0;
+
+    @media (max-width: @screen-xs-max) {
+      margin: -80px 0 -20px;
+    }
+
     .portfolio {
       margin: 0;
       padding: 0;
+
 
       @media (min-width: @screen-sm-min) {
         margin: 20px 0;
@@ -23,9 +30,9 @@
         .make-sm-column(4);
         background-size: 100%;
         text-shadow: 0 0 3px #000;
+        padding: 0;
 
         @media (max-width: @screen-xs-max) {
-          margin-bottom: 30px;
 
           &:last-child {
             margin-bottom: 0;
@@ -40,12 +47,15 @@
           text-align: left;
           display: block;
           height: 200px;
-          width: 200px;
+          width: 100%;
           line-height: 200px;
           margin: 0 auto;
           background-size: 200px;
           background-repeat: no-repeat;
           overflow: hidden;
+          background-position-x: center;
+          background-position-y: center;
+          background-size: cover;
 
           &.sculpture {
             background-image: url('/images/art/portfolio/large/smm-0005_a.jpg');
