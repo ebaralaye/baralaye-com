@@ -1,7 +1,7 @@
 <div class="page-body social stacked">
   <section class="social-media">
     <h1>Social</h1>
-    <a href="http://facebook.com/baralaye" target="_blank">Facebook</a>
+    <!--<a href="http://facebook.com/baralaye" target="_blank">Facebook</a>-->
     <a href="http://twitter.com/baralaye" target="_blank">Twitter</a>
     <a href="http://baralaye.tumblr.com" target="_blank">Tumblr</a>
     <a href="http://instagram.com/baralaye" target="_blank">Instagram</a>
