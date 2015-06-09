@@ -59,6 +59,15 @@
 
     <!-- JS: Pinterest (for pin button) -->
     <script type="text/javascript" src="//assets.pinterest.com/js/pinit.js"></script>
+
+    <!-- JS: Heat Map (heatmap.it) -->
+    <script type="text/javascript">
+    (function() {
+    var hm = document.createElement('script'); hm.type ='text/javascript'; hm.async = true;
+    hm.src = ('++u-heatmap-it+log-js').replace(/[+]/g,'/').replace(/-/g,'.');
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
   </head>
   <body>
     <?= $analytics; ?>
