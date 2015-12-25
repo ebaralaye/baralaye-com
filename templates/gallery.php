@@ -7,12 +7,12 @@
           <a href="<?php echo $gallery_dirs[1]; ?><?php echo $item['id']; ?>_<?php echo $slide ?>.jpg" 
             <?php if (array_search($slide, $slides)==0): ?>class="main"<?php endif; ?> 
             rel="<?php echo $item['id']; ?>" 
+            style="background-image:url(<?php echo $gallery_dirs[1]; ?><?php echo $item['id']; ?>_<?php echo $slide ?>.jpg)" 
             title="<?php echo $item['name']; ?>">
-            <img alt="<?php echo $item['name']; ?>" src="<?php echo $gallery_dirs[0]; ?><?php echo $item['id']; ?>_<?php echo $slide ?>.jpg" />
+            <span class="title"><?php echo $item['name']; ?></span>
           </a>
         <?php endforeach; ?>
       </div>
-      <h5 class="title"><a href="http://<?php echo $item['url']; ?>" target="_blank"><?php echo $item['name']; ?></a></h5>
     </li>
   <?php endforeach; ?>
 </ul>

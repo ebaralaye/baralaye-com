@@ -107,9 +107,9 @@
                        //use another ajax request to get the tags of the image
                        $.getJSON('https://api.flickr.com/services/rest/?&method=flickr.photos.getInfo&api_key=' + apiKey + '&photo_id=' + photoID + '&format=json&jsoncallback=?',function(data){
                            //create an imgCont string variable which will hold all the link location, title, author link, and author name into a text string
-                           var imgCont = '<li><div class="image ltbx"><a href='+ photoURL_b +' title='+ data.photo.title._content +'><img src='+ photoURL_m +' alt='+ data.photo.title._content +' /></a></div>';
+                           var imgCont = "<li><div class=\'image ltbx\'><a href="+ photoURL_b +" title='"+ data.photo.title._content +"' style=\'background-image:url("+ photoURL_b +")\' /></a></div>";
                            //add the description & html snippet to the end of the 'imgCont' variable
-                           imgCont += '<div class="image-info"><h4 class="title">'+data.photo.title._content+'</h4><p class="desc">'+data.photo.description._content+'</p></div></li>';
+                           //imgCont += '<div class="image-info"><h4 class="title">'+data.photo.title._content+'</h4><p class="desc">'+data.photo.description._content+'</p></div></li>';
                            //append the 'imgCont' variable to the document
                            $(imgCont).appendTo( photoSetCont );
                            //Activate Lightbox

@@ -6,8 +6,9 @@
   <ul class="product-list">
     <?php foreach ($products as $product): ?>
       <li class="item">
-        <div class="image"><a href="<?= $product['url']; ?>"><img src="/images/art/portfolio/small/<?= $product['image']; ?>.jpg" alt="<?= $product['title']; ?>" /></a></div>
-        <h5 class="title <?php if($product['title_type'] != null){ echo $product['title_type']; }; ?>"><a href="<?= $product['url']; ?>"><?= $product['title']; ?></a></h5>
+        <a href="<?= $product['url']; ?>" style="background-image:url(/images/art/portfolio/large/<?= $product['image']; ?>.jpg)" title="<?= $product['title']; ?>" />
+          <span class="title <?php if($product['title_type'] != null){ echo $product['title_type']; }; ?>"><?= $product['title']; ?></span>
+        </a>
       </li>
     <?php endforeach; ?>
   </ul>
