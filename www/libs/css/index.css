@@ -7253,6 +7253,10 @@ fieldset[disabled] .page-body .social-media a {
 .product-list .item a:hover {
   cursor: pointer;
 }
+.product-list > li a:hover .title,
+.product-list .item a:hover .title {
+  background: #000;
+}
 .product-list > li a .title,
 .product-list .item a .title {
   font-family: "raleway", sans-serif;
@@ -7276,8 +7280,8 @@ fieldset[disabled] .page-body .social-media a {
 }
 .product-list > li a .title.untitled,
 .product-list .item a .title.untitled {
-  opacity: .7;
   font-size: 10px;
+  color: #ccc;
   text-transform: uppercase;
 }
 /** Product Detail ----*/
