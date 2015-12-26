@@ -7522,17 +7522,16 @@ td.product-detail .images > .title {
   list-style: none;
   margin-top: 12px;
 }
-.product-detail .images .poplets li {
-  height: 100px;
+.product-detail .images .poplets a {
   display: inline-block;
   margin: 6px;
 }
-.product-detail .images .poplets img {
+.product-detail .images .poplets a img {
   vertical-align: middle !important;
   max-width: 85px;
   max-height: 85px;
 }
-.product-detail .images .poplets img:hover {
+.product-detail .images .poplets a img:hover {
   box-shadow: 0 0 0 1px #000000;
   cursor: pointer;
 }
@@ -7540,6 +7539,38 @@ td.product-detail .images > .title {
  * Baralaye.com Plugin Styles
  * @author tech@baralaye.com
  */
+/* BX Slider */
+.bx-wrapper {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.bx-wrapper .bx-controls {
+  top: 50%;
+  position: absolute;
+  margin: 0 auto;
+  width: 100%;
+}
+.bx-wrapper .bx-controls .bx-prev,
+.bx-wrapper .bx-controls .bx-next {
+  font-family: "raleway", sans-serif;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  margin-top: -20px;
+  background: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  border-radius: 20px;
+  line-height: 40px;
+  font-size: 20px;
+  text-decoration: none;
+}
+.bx-wrapper .bx-controls .bx-prev {
+  left: 7%;
+}
+.bx-wrapper .bx-controls .bx-next {
+  right: 7%;
+}
 /** Feedburner ----*/
 .feed-wrap {
   font-size: 110%;

@@ -1,17 +1,19 @@
 <div class="product-detail">
   <div class="images">
     <h1 class="title <?php if($title_type != null){ echo $title_type; }; ?>"><?= $title; ?></h1>
-    <div class="main">
-      <a href="/images/art/portfolio/big/<?= $image; ?>.jpg" class="cloud-zoom" id="zoom1" rel="position: 'inside'"><img src="/images/art/portfolio/large/<?= $image; ?>.jpg" alt="<?= $title; ?>" /></a>
-    </div>
-    <ul class="poplets">
-      <?php $poplets = explode(',', $image_poplets); ?>
-      <?php if (count($poplets) > 1): ?>
-        <?php foreach($poplets as $poplet): ?>
-          <li><a href="/images/art/portfolio/big/<?= $poplet ?>.jpg" rel="useZoom: 'zoom1', smallImage: '/images/art/portfolio/large/<?= $poplet ?>.jpg'" class="cloud-zoom-gallery"><img src="/images/art/portfolio/small/<?= $poplet ?>.jpg" alt="<?= $poplet ?>" /></a></li>
-        <?php endforeach; ?>
-      <?php endif; ?>
+    <?php $poplets = explode(',', $image_poplets); ?>
+    <ul class="main bxslider">
+      <?php foreach($poplets as $poplet): ?>
+        <li><a href="/images/art/portfolio/big/<?= $poplet ?>.jpg"><img src="/images/art/portfolio/large/<?= $poplet ?>.jpg" alt="<?= $poplet ?>" /></a></li>
+      <?php endforeach; ?>
     </ul>
+    <?php if (count($poplets) > 1): ?>
+      <div id="bx-pager" class="poplets">
+        <?php foreach($poplets as $key => $poplet): ?>
+          <a data-slide-index="<?= $key ?>" href=""><img src="/images/art/portfolio/small/<?= $poplet ?>.jpg" alt="<?= $poplet ?>" /></a>
+        <?php endforeach; ?>
+      </div>
+    <?php endif; ?>
   </div>
   <div class="details">
     <h1 class="title <?php if($title_type != null){ echo $title_type; }; ?>"><?= $title; ?></h1>

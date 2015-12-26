@@ -3,6 +3,41 @@
  * @author tech@baralaye.com
  */
 
+/* BX Slider */
+.bx-wrapper {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+
+  .bx-controls {
+    top: 50%;
+    position: absolute;
+    margin: 0 auto;
+    width: 100%;
+
+    .bx-prev,
+    .bx-next {
+      .raleway;
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      margin-top: -20px;
+      background: rgba(0,0,0,0.3);
+      color: #fff;
+      border-radius: 20px;
+      line-height: 40px;
+      font-size: 20px;
+      text-decoration: none;
+    }
+    .bx-prev {
+      left: 7%;
+    }
+    .bx-next {
+      right: 7%;
+    }
+  }
+}
+
 /** Feedburner ----*/
 
 .feed-wrap {

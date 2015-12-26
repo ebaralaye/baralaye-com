@@ -12,16 +12,14 @@
          * @private
          */
         function setBXSlider() {
-            $('.bx-slider').bxSlider({
-                auto: true,
+            $('.bxslider').bxSlider({
+                pagerCustom: '#bx-pager',
                 pager: true,
                 speed: 1000,
                 pause: 8000,
                 randomStart: true,
                 nextText: ">",
                 prevText: "<",
-                mode: "fade",
-                infiniteLoop: true
             });
         }
 

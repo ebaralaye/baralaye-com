@@ -10,12 +10,6 @@
     <link type="text/css" rel="stylesheet" media="all" href="/libs/vendor/fancybox/css/jquery.fancybox.css" />
     <link type="text/css" rel="stylesheet" media="all" href="/libs/vendor/fancybox/css/jquery.fancybox-thumbs.css" />
     <link type="text/css" rel="stylesheet" media="all" href="/libs/vendor/fancybox/css/jquery.fancybox-buttons.css" />
-    <!-- CSS: Plugins > Could-Zoom -->
-    <link type="text/css" rel="stylesheet" media="all" href="/libs/vendor/cloud-zoom/css/jquery.cloud-zoom.css" />
-    <!-- CSS: Plugins > BX Slider -->
-    <link type="text/css" rel="stylesheet" media="all" href="/libs/vendor/bx-slider/css/jquery.bx-slider.css" />
-    <!-- CSS: Plugins > Classic Accordian -->
-    <link type="text/css" rel="stylesheet" media="all" href="/libs/vendor/classic-accordion/css/jquery.classic-accordion.css" />
 
     <!-- CSS: Custom Styles -->
     <link type="text/css" rel="stylesheet" media="all" href="/libs/css/index.css" />
@@ -50,9 +44,6 @@
     <script type="text/javascript" src="/libs/js/baralaye.pages.js"></script>
     <script type="text/javascript" src="/libs/js/baralaye.site.js"></script>
 
-    <!-- JS: Plugins > Cloud Zoom -->
-    <script type="text/javascript" src="/libs/vendor/cloud-zoom/js/jquery.cloud-zoom.1.0.2.min.js"></script>
-
     <!-- JS: Plugins Typekit -->
     <script type="text/javascript" src="http://use.typekit.com/pro5kts.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
@@ -61,13 +52,13 @@
     <script type="text/javascript" src="//assets.pinterest.com/js/pinit.js"></script>
 
     <!-- JS: Heat Map (heatmap.it) -->
-    <script type="text/javascript">
+    <!--<script type="text/javascript">
     (function() {
     var hm = document.createElement('script'); hm.type ='text/javascript'; hm.async = true;
     hm.src = ('++u-heatmap-it+log-js').replace(/[+]/g,'/').replace(/-/g,'.');
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(hm, s);
     })();
-    </script>
+    </script>-->
   </head>
   <body>
     <?= $analytics; ?>
