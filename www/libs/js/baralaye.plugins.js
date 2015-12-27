@@ -17,9 +17,9 @@
                 pager: true,
                 speed: 1000,
                 pause: 8000,
-                randomStart: true,
-                nextText: ">",
-                prevText: "<",
+                adaptiveHeight: true,
+                nextText: "",
+                prevText: "",
             });
         }
 

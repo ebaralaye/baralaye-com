@@ -7244,6 +7244,9 @@ fieldset[disabled] .page-body .social-media a {
 .product-list .item a {
   display: block;
   position: relative;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
   background-position: center;
   height: 100%;
@@ -7255,7 +7258,7 @@ fieldset[disabled] .page-body .social-media a {
 }
 .product-list > li a:hover .title,
 .product-list .item a:hover .title {
-  background: #000;
+  background: rgba(0, 0, 0, 0.8);
 }
 .product-list > li a .title,
 .product-list .item a .title {
@@ -7511,30 +7514,6 @@ td.product-detail .images > .title {
 .product-detail .images .main * {
   max-width: 100%;
 }
-.product-detail .images .main #wrap {
-  box-shadow: 0 0 10px #dfdfdf;
-}
-.product-detail .images .main #wrap:hover {
-  box-shadow: 0 0 10px #999999;
-}
-.product-detail .images .poplets {
-  padding-left: 0;
-  list-style: none;
-  margin-top: 12px;
-}
-.product-detail .images .poplets a {
-  display: inline-block;
-  margin: 6px;
-}
-.product-detail .images .poplets a img {
-  vertical-align: middle !important;
-  max-width: 85px;
-  max-height: 85px;
-}
-.product-detail .images .poplets a img:hover {
-  box-shadow: 0 0 0 1px #000000;
-  cursor: pointer;
-}
 /**
  * Baralaye.com Plugin Styles
  * @author tech@baralaye.com
@@ -7551,25 +7530,45 @@ td.product-detail .images > .title {
   margin: 0 auto;
   width: 100%;
 }
+.bx-wrapper .bx-controls .bx-prev {
+  left: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-right: 20px solid rgba(0, 0, 0, 0.2);
+}
+.bx-wrapper .bx-controls .bx-next {
+  right: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 20px solid rgba(0, 0, 0, 0.2);
+}
 .bx-wrapper .bx-controls .bx-prev,
 .bx-wrapper .bx-controls .bx-next {
   font-family: "raleway", sans-serif;
   position: absolute;
-  width: 40px;
-  height: 40px;
+  width: 0;
+  height: 0;
   margin-top: -20px;
-  background: rgba(0, 0, 0, 0.3);
-  color: #fff;
-  border-radius: 20px;
-  line-height: 40px;
-  font-size: 20px;
   text-decoration: none;
 }
-.bx-wrapper .bx-controls .bx-prev {
-  left: 7%;
+#bx-pager.poplets {
+  margin-top: 12px;
 }
-.bx-wrapper .bx-controls .bx-next {
-  right: 7%;
+#bx-pager.poplets a {
+  display: inline-block;
+  margin: 6px;
+}
+#bx-pager.poplets a.active img {
+  box-shadow: 0 0 0 1px #000000;
+}
+#bx-pager.poplets a img {
+  vertical-align: middle !important;
+  max-width: 85px;
+  max-height: 85px;
+}
+#bx-pager.poplets a img:hover {
+  box-shadow: 0 0 0 1px #000000;
+  cursor: pointer;
 }
 /** Feedburner ----*/
 .feed-wrap {

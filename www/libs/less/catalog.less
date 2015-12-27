@@ -35,6 +35,9 @@
     a {
       display: block;
       position: relative;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
       background-size: cover;
       background-position: center;
       height: 100%;
@@ -44,7 +47,7 @@
         cursor: pointer;
 
         .title {
-          background: #000;
+          background: rgba(0,0,0,0.8);
         }
       }
 
@@ -169,35 +172,6 @@
 
       * {
         max-width: 100%;
-      }
-
-      #wrap {
-        box-shadow: 0 0 10px #dfdfdf;
-
-        &:hover {
-          box-shadow: 0 0 10px #999999;
-        }
-      }
-    }
-
-    .poplets {
-      .list-unstyled;
-      margin-top: 12px;
-
-      a {
-        display: inline-block;
-        margin: 6px;
-
-        img {
-          vertical-align: middle !important;
-          max-width: 85px;
-          max-height: 85px;
-
-          &:hover {
-            box-shadow: 0 0 0 1px @color-hili;
-            cursor: pointer;
-          }
-        }
       }
     }
   }
