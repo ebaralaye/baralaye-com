@@ -7436,7 +7436,7 @@ td.product-detail .details > .title {
 }
 @media (max-width: 767px) {
   .product-detail .images {
-    margin: 0 -15px;
+    margin: 0 -15px 10px -15px;
   }
 }
 .product-detail .images > .title,
@@ -7508,11 +7508,9 @@ td.product-detail .images > .title {
 .product-detail .images > .title.id {
   text-transform: uppercase;
 }
-.product-detail .images .main {
-  display: inline-block;
-}
-.product-detail .images .main * {
-  max-width: 100%;
+.product-detail .images .images-wrapper {
+  margin: 0 auto;
+  max-width: 600px;
 }
 /**
  * Baralaye.com Plugin Styles
