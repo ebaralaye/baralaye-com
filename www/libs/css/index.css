@@ -7512,6 +7512,10 @@ td.product-detail .images > .title {
   margin: 0 auto;
   max-width: 600px;
 }
+.product-detail .images .images-wrapper img.main {
+  max-width: 100%;
+  /* for right responsive width on images without poplets */
+}
 /**
  * Baralaye.com Plugin Styles
  * @author tech@baralaye.com
@@ -7521,6 +7525,9 @@ td.product-detail .images > .title {
   position: relative;
   max-width: 600px;
   margin: 0 auto;
+}
+.bx-wrapper .bx-viewport img {
+  max-width: 100%;
 }
 .bx-wrapper .bx-controls {
   top: 50%;

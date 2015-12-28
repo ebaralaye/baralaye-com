@@ -15,7 +15,7 @@
           <?php endforeach; ?>
         </div>
       <?php else: ?>
-          <a href="/images/art/portfolio/big/<?= $image ?>.jpg"><img src="/images/art/portfolio/large/<?= $image ?>.jpg" alt="<?= $image ?>" /></a>
+          <a href="/images/art/portfolio/big/<?= $image ?>.jpg"><img class="main" src="/images/art/portfolio/large/<?= $image ?>.jpg" alt="<?= $image ?>" /></a>
       <?php endif; ?>
     </div>
   </div>
