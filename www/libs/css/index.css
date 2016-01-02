@@ -6852,10 +6852,10 @@ fieldset[disabled] .page-body .social-media a {
   }
 }
 .page-body.home .portfolio li a.sculpture {
-  background-image: url('/images/art/portfolio/large/smm-0005_a.jpg');
+  background-image: url('/images/art/portfolio/large/smm-0005-a.jpg');
 }
 .page-body.home .portfolio li a.vessels {
-  background-image: url('/images/art/portfolio/large/vsc-0004_a.jpg');
+  background-image: url('/images/art/portfolio/large/vsc-0004-a.jpg');
 }
 .page-body.home .portfolio li a.drawings {
   background-image: url('/images/art/portfolio/large/dsk-0009.jpg');
@@ -7313,71 +7313,8 @@ fieldset[disabled] .page-body .social-media a {
   }
 }
 .product-detail .details {
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-@media (min-width: 768px) {
-  .product-detail .details {
-    float: left;
-    width: 25%;
-  }
-}
-@media (min-width: 768px) {
-  .product-detail .details {
-    right: 75%;
-  }
-}
-@media (min-width: 768px) {
-  .product-detail .details {
-    text-align: left;
-  }
-}
-.product-detail .details > .title {
-  display: block !important;
-}
-table.product-detail .details > .title {
-  display: table;
-}
-tr.product-detail .details > .title {
-  display: table-row !important;
-}
-th.product-detail .details > .title,
-td.product-detail .details > .title {
-  display: table-cell !important;
-}
-@media (max-width: 767px) {
-  .product-detail .details > .title,
-  tr.product-detail .details > .title,
-  th.product-detail .details > .title,
-  td.product-detail .details > .title {
-    display: none !important;
-  }
-}
-@media (min-width: 768px) and (max-width: 991px) {
-  .product-detail .details > .title.hidden-sm,
-  tr.product-detail .details > .title.hidden-sm,
-  th.product-detail .details > .title.hidden-sm,
-  td.product-detail .details > .title.hidden-sm {
-    display: none !important;
-  }
-}
-@media (min-width: 992px) and (max-width: 1199px) {
-  .product-detail .details > .title.hidden-md,
-  tr.product-detail .details > .title.hidden-md,
-  th.product-detail .details > .title.hidden-md,
-  td.product-detail .details > .title.hidden-md {
-    display: none !important;
-  }
-}
-@media (min-width: 1200px) {
-  .product-detail .details > .title.hidden-lg,
-  tr.product-detail .details > .title.hidden-lg,
-  th.product-detail .details > .title.hidden-lg,
-  td.product-detail .details > .title.hidden-lg {
-    display: none !important;
-  }
+  max-width: 600px;
+  margin: 0 auto;
 }
 .product-detail .details > .title.untitled {
   text-transform: uppercase;
@@ -7409,100 +7346,23 @@ td.product-detail .details > .title {
 .product-detail .details .specs li {
   padding-top: 1px;
 }
+.product-detail .details .edition {
+  display: none;
+  /* hiding edition info for now */
+}
 .product-detail .details .social {
-  margin-bottom: 10px;
+  margin-top: 15px;
 }
 .product-detail .details .description .quote p,
 .product-detail .details .description .quote {
   font-style: italic;
 }
 .product-detail .images {
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
   margin-bottom: 20px;
-}
-@media (min-width: 768px) {
-  .product-detail .images {
-    float: left;
-    width: 75%;
-  }
-}
-@media (min-width: 768px) {
-  .product-detail .images {
-    left: 25%;
-  }
 }
 @media (max-width: 767px) {
   .product-detail .images {
     margin: 0 -15px 10px -15px;
-  }
-}
-.product-detail .images > .title,
-tr.product-detail .images > .title,
-th.product-detail .images > .title,
-td.product-detail .images > .title {
-  display: none !important;
-}
-@media (max-width: 767px) {
-  .product-detail .images > .title {
-    display: block !important;
-  }
-  table.product-detail .images > .title {
-    display: table;
-  }
-  tr.product-detail .images > .title {
-    display: table-row !important;
-  }
-  th.product-detail .images > .title,
-  td.product-detail .images > .title {
-    display: table-cell !important;
-  }
-}
-@media (min-width: 768px) and (max-width: 991px) {
-  .product-detail .images > .title.visible-sm {
-    display: block !important;
-  }
-  table.product-detail .images > .title.visible-sm {
-    display: table;
-  }
-  tr.product-detail .images > .title.visible-sm {
-    display: table-row !important;
-  }
-  th.product-detail .images > .title.visible-sm,
-  td.product-detail .images > .title.visible-sm {
-    display: table-cell !important;
-  }
-}
-@media (min-width: 992px) and (max-width: 1199px) {
-  .product-detail .images > .title.visible-md {
-    display: block !important;
-  }
-  table.product-detail .images > .title.visible-md {
-    display: table;
-  }
-  tr.product-detail .images > .title.visible-md {
-    display: table-row !important;
-  }
-  th.product-detail .images > .title.visible-md,
-  td.product-detail .images > .title.visible-md {
-    display: table-cell !important;
-  }
-}
-@media (min-width: 1200px) {
-  .product-detail .images > .title.visible-lg {
-    display: block !important;
-  }
-  table.product-detail .images > .title.visible-lg {
-    display: table;
-  }
-  tr.product-detail .images > .title.visible-lg {
-    display: table-row !important;
-  }
-  th.product-detail .images > .title.visible-lg,
-  td.product-detail .images > .title.visible-lg {
-    display: table-cell !important;
   }
 }
 .product-detail .images > .title.id {
@@ -7536,13 +7396,13 @@ td.product-detail .images > .title {
   width: 100%;
 }
 .bx-wrapper .bx-controls .bx-prev {
-  left: 0;
+  left: -35px;
   border-top: 20px solid transparent;
   border-bottom: 20px solid transparent;
   border-right: 20px solid rgba(0, 0, 0, 0.2);
 }
 .bx-wrapper .bx-controls .bx-next {
-  right: 0;
+  right: -35px;
   border-top: 20px solid transparent;
   border-bottom: 20px solid transparent;
   border-left: 20px solid rgba(0, 0, 0, 0.2);
@@ -7555,6 +7415,14 @@ td.product-detail .images > .title {
   height: 0;
   margin-top: -20px;
   text-decoration: none;
+}
+@media (max-width: 700px) {
+  .bx-wrapper .bx-controls .bx-prev {
+    left: 0;
+  }
+  .bx-wrapper .bx-controls .bx-next {
+    right: 0;
+  }
 }
 #bx-pager.poplets {
   margin-top: 12px;

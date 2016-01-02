@@ -1,17 +1,17 @@
 <div class="product-detail">
-  <div class="images">
+  <div class="images"> 
     <h1 class="title <?php if($title_type != null){ echo $title_type; }; ?>"><?= $title; ?></h1>
     <div class="images-wrapper">
       <?php $poplets = explode(',', $image_poplets); ?>
       <?php if (count($poplets) > 1): ?>
         <ul class="bxslider">
           <?php foreach($poplets as $poplet): ?>
-            <li><a href="/images/art/portfolio/big/<?= $poplet ?>.jpg"><img src="/images/art/portfolio/large/<?= $poplet ?>.jpg" alt="<?= $poplet ?>" /></a></li>
+            <li><a href="/images/art/portfolio/big/<?= $id.'-'.$poplet ?>.jpg"><img src="/images/art/portfolio/large/<?= $id.'-'.$poplet ?>.jpg" alt="<?= $id.$poplet ?>" /></a></li>
           <?php endforeach; ?>
         </ul>
         <div id="bx-pager" class="poplets">
           <?php foreach($poplets as $key => $poplet): ?>
-            <a data-slide-index="<?= $key ?>" href=""><img src="/images/art/portfolio/small/<?= $poplet ?>.jpg" alt="<?= $poplet ?>" /></a>
+            <a data-slide-index="<?= $key ?>" href=""><img src="/images/art/portfolio/small/<?= $id.'-'.$poplet ?>.jpg" alt="<?= $id.'-'.$poplet ?>" /></a>
           <?php endforeach; ?>
         </div>
       <?php else: ?>
@@ -20,21 +20,20 @@
     </div>
   </div>
   <div class="details">
-    <h1 class="title <?php if($title_type != null){ echo $title_type; }; ?>"><?= $title; ?></h1>
     <ul>
       <li class="specs">
         <ul>
-          <li class="medium">Medium: <?= $medium; ?></li>
+          <li class="medium"><?= $medium; ?></li>
           <?php if ($dim_width != null): ?>
-            <li class="dimensions">Dimensions: <?= $dim_height,"&quot; x ", $dim_width,"&quot; x ",$dim_depth,"&quot;"; ?></li>
+            <li class="dimensions"><?= $dim_height,"&quot; x ", $dim_width,"&quot; x ",$dim_depth,"&quot;"; ?></li>
           <?php endif; ?>
           <!--
           <?php if ($weight != null && $status != 2): ?>
             <li class="weight">Weight: <span><?= $weight; ?></span> lbs</li>
           <?php endif; ?>
           -->
-          <li class="year">Year: <?php $year = date("Y", strtotime($date)); echo $year?></li>
-          <li class="price">Price: 
+          <li class="year"><?php $year = date("Y", strtotime($date)); echo $year?></li>
+          <li class="price">
             <?php if ($price != null && $status == 1): ?>
               $<?= $price; ?>
             <?php elseif ($status == 3): ?>
@@ -45,15 +44,15 @@
           </li>
           <?php if ($edition_index != null): ?>
             <li class="edition">
-              Edition: <span><?= $edition_index; ?>/<?= $edition_cap; ?></span>
+              <span><?= $edition_index; ?>/<?= $edition_cap; ?></span>
               <?php if ($stock == 0) {echo "<strike>stock</strike>";} ?>
             </li>
           <?php endif; ?>
-          <?php if (strtolower($title) != strtolower($id)): ?>
-            <li class="id">ID: <span><?= $id; ?></span></li>
-          <?php endif ?>
         </ul>
       </li>
+      <?php if($description != null): ?>
+        <li class="description"><?= $description; ?></li>
+      <?php endif; ?>
       <li class="social">
         <ul class="social-btns">
           <li class="btn-s purchase"><a href="#purchase-inquiry" class="ltbx win">Buy</a></li>
@@ -71,9 +70,6 @@
           </li>
         </ul>
       </li>
-      <?php if($description != null): ?>
-        <li class="description"><?= $description; ?></li>
-      <?php endif; ?>
     </ul>
   </div>
 </div>

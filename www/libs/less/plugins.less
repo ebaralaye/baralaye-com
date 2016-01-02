@@ -20,13 +20,13 @@
     width: 100%;
 
     .bx-prev {
-      left: 0;
+      left: -35px;
       border-top: 20px solid transparent;
       border-bottom: 20px solid transparent;
       border-right: 20px solid rgba(0,0,0,0.2);
     }
     .bx-next {
-      right: 0;
+      right: -35px;
       border-top: 20px solid transparent;
       border-bottom: 20px solid transparent;
       border-left: 20px solid rgba(0,0,0,0.2);
@@ -40,6 +40,15 @@
       height: 0;
       margin-top: -20px;
       text-decoration: none;
+    }
+
+    @media (max-width: 700px) {
+      .bx-prev {
+        left: 0;
+      }
+      .bx-next {
+        right: 0;
+      }
     }
   }
 }
