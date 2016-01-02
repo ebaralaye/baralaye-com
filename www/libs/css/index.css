@@ -7307,11 +7307,6 @@ fieldset[disabled] .page-body .social-media a {
 .product-detail:after {
   clear: both;
 }
-@media (min-width: 991px) {
-  .product-detail {
-    margin: 0 -15px;
-  }
-}
 .product-detail .details {
   max-width: 600px;
   margin: 0 auto;
@@ -7359,11 +7354,6 @@ fieldset[disabled] .page-body .social-media a {
 }
 .product-detail .images {
   margin-bottom: 20px;
-}
-@media (max-width: 767px) {
-  .product-detail .images {
-    margin: 0 -15px 10px -15px;
-  }
 }
 .product-detail .images > .title.id {
   text-transform: uppercase;
