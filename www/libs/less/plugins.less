@@ -65,21 +65,15 @@
     display: inline-block;
     margin: 6px;
 
-    &.active {
-      img {
-        box-shadow: 0 0 0 1px @color-hili;
-      }
+    &.active, &:hover {
+      border-bottom: 1px solid @color-hili;
+      margin-bottom: 5px;
     }
 
     img {
       vertical-align: middle !important;
       max-width: 85px;
       max-height: 85px;
-
-      &:hover {
-        box-shadow: 0 0 0 1px @color-hili;
-        cursor: pointer;
-      }
     }
   }
 }
