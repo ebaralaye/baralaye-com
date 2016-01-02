@@ -37,13 +37,17 @@ body {
   color: @color-dark;
 }
 
-a {
+a, a:hover, a:active, a:focus {
   color: @color-hili;
+  outline: 0;
 }
 
 a:hover {
   text-decoration: underline;
-  color: @color-hili;
+}
+
+input::-moz-focus-inner { 
+  border: 0; 
 }
 
 h1, h2, h3, h4, h5 {

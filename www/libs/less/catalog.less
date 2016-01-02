@@ -160,6 +160,11 @@
 
       img.main {
         max-width: 100%; /* for right responsive width on images without poplets */
+
+        @media (min-width: 600px) {
+          max-width: 600px;
+          max-height: 600px;
+        }
       }
     }
   }

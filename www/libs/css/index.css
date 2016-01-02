@@ -6065,12 +6065,18 @@ body {
   font-size: 10px;
   color: #606060;
 }
-a {
+a,
+a:hover,
+a:active,
+a:focus {
   color: #000000;
+  outline: 0;
 }
 a:hover {
   text-decoration: underline;
-  color: #000000;
+}
+input::-moz-focus-inner {
+  border: 0;
 }
 h1,
 h2,
@@ -7366,6 +7372,12 @@ fieldset[disabled] .page-body .social-media a {
   max-width: 100%;
   /* for right responsive width on images without poplets */
 }
+@media (min-width: 600px) {
+  .product-detail .images .images-wrapper img.main {
+    max-width: 600px;
+    max-height: 600px;
+  }
+}
 /**
  * Baralaye.com Plugin Styles
  * @author tech@baralaye.com
@@ -7378,6 +7390,12 @@ fieldset[disabled] .page-body .social-media a {
 }
 .bx-wrapper .bx-viewport img {
   max-width: 100%;
+}
+@media (min-width: 600px) {
+  .bx-wrapper .bx-viewport img {
+    max-width: 600px;
+    max-height: 600px;
+  }
 }
 .bx-wrapper .bx-controls {
   top: 50%;

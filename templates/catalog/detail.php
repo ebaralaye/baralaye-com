@@ -6,7 +6,7 @@
       <?php if (count($poplets) > 1): ?>
         <ul class="bxslider">
           <?php foreach($poplets as $poplet): ?>
-            <li><a href="/images/art/portfolio/big/<?= $id.'-'.$poplet ?>.jpg"><img src="/images/art/portfolio/large/<?= $id.'-'.$poplet ?>.jpg" alt="<?= $id.$poplet ?>" /></a></li>
+            <li><a href="/images/art/portfolio/big/<?= $id.'-'.$poplet ?>.jpg"><img src="/images/art/portfolio/big/<?= $id.'-'.$poplet ?>.jpg" alt="<?= $id.$poplet ?>" /></a></li>
           <?php endforeach; ?>
         </ul>
         <div id="bx-pager" class="poplets">
@@ -15,7 +15,7 @@
           <?php endforeach; ?>
         </div>
       <?php else: ?>
-          <a href="/images/art/portfolio/big/<?= $image ?>.jpg"><img class="main" src="/images/art/portfolio/large/<?= $image ?>.jpg" alt="<?= $image ?>" /></a>
+          <a href="/images/art/portfolio/big/<?= $image ?>.jpg"><img class="main" src="/images/art/portfolio/big/<?= $image ?>.jpg" alt="<?= $image ?>" /></a>
       <?php endif; ?>
     </div>
   </div>
