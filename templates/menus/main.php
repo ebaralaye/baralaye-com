@@ -1,5 +1,5 @@
 <ul class="nav">
-  <li><a href="/art">Art</a>
+  <li><a href="/art">Work</a>
     <ul>
       <li><a href="/drawings">Drawings</a>
         <ul>
@@ -33,7 +33,7 @@
       <li><a href="/statement">Statement</a></li>
     </ul>
   </li>
-  <li><a href="/contact">Studio</a>
+  <li><a href="/contact">Social</a>
     <ul>
       <li><a href="/contact">Contact</a></li>
       <li><a href="/news">News</a></li>

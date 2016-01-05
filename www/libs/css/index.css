@@ -6783,39 +6783,34 @@ fieldset[disabled] .page-body .social-media a {
   /** Connect ----*/
 }
 .page-body.home {
-  margin: 0;
+  margin: -40px 0;
 }
 @media (max-width: 767px) {
   .page-body.home {
     margin: -80px 0 -30px;
   }
 }
-.page-body.home .portfolio {
-  margin: 0;
-  padding: 0;
+.page-body.home .bxslider {
+  padding-left: 0;
+  list-style: none;
 }
-@media (min-width: 768px) {
-  .page-body.home .portfolio {
-    margin: 20px 0;
-  }
-}
-.page-body.home .portfolio:before,
-.page-body.home .portfolio:after {
+.page-body.home .bxslider:before,
+.page-body.home .bxslider:after {
   content: " ";
   display: table;
 }
-.page-body.home .portfolio:after {
+.page-body.home .bxslider:after {
   clear: both;
 }
-.page-body.home .portfolio:before,
-.page-body.home .portfolio:after {
+.page-body.home .bxslider:before,
+.page-body.home .bxslider:after {
   content: " ";
   display: table;
 }
-.page-body.home .portfolio:after {
+.page-body.home .bxslider:after {
   clear: both;
 }
-.page-body.home .portfolio li {
+.page-body.home .bxslider li {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -6825,61 +6820,47 @@ fieldset[disabled] .page-body .social-media a {
   padding: 0;
 }
 @media (min-width: 768px) {
-  .page-body.home .portfolio li {
+  .page-body.home .bxslider li {
     float: left;
     width: 33.33333333%;
   }
 }
-@media (max-width: 767px) {
-  .page-body.home .portfolio li:last-child {
-    margin-bottom: 0;
-  }
-}
-.page-body.home .portfolio li h1 {
-  margin: 0;
-}
-.page-body.home .portfolio li a {
+.page-body.home .bxslider li a {
+  font-family: "raleway", sans-serif;
   text-align: left;
   display: block;
-  height: 200px;
-  line-height: 200px;
+  height: 300px;
+  line-height: 300px;
   width: 100%;
   margin: 0 auto;
-  background-size: 200px;
-  background-repeat: no-repeat;
   overflow: hidden;
+  background-repeat: no-repeat;
   background-position-x: center;
-  background-position-y: center;
+  background-position-y: 20%;
   background-size: cover;
 }
 @media (max-width: 767px) {
-  .page-body.home .portfolio li a {
-    line-height: 355px;
+  .page-body.home .bxslider li a {
+    line-height: 200px;
+    height: 200px;
   }
 }
-.page-body.home .portfolio li a.sculpture {
-  background-image: url('/images/art/portfolio/large/smm-0005-a.jpg');
-}
-.page-body.home .portfolio li a.vessels {
-  background-image: url('/images/art/portfolio/large/vsc-0004-a.jpg');
-}
-.page-body.home .portfolio li a.drawings {
-  background-image: url('/images/art/portfolio/large/dsk-0009.jpg');
-}
-.page-body.home .portfolio li a span {
+.page-body.home .bxslider li a span {
   color: #fff;
-  display: inline-block;
+  /*display: inline-block;*/
+  display: none;
   width: 100%;
   text-align: center;
   font-size: 25px;
   height: 40px;
   line-height: 38px;
+  vertical-align: bottom;
   font-weight: 100;
   letter-spacing: 4px;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.4);
 }
-.page-body.home .portfolio li a:hover span {
-  background-color: #000000;
+.page-body.home .bxslider li a:hover span {
+  background: rgba(0, 0, 0, 0.7);
 }
 .page-body.tech li em {
   font-size: 10px;

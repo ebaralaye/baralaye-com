@@ -4,7 +4,7 @@
     <div class="images-wrapper">
       <?php $poplets = explode(',', $image_poplets); ?>
       <?php if (count($poplets) > 1): ?>
-        <ul class="bxslider">
+        <ul class="bxslider catalog">
           <?php foreach($poplets as $poplet): ?>
             <li><a href="/images/art/portfolio/big/<?= $id.'-'.$poplet ?>.jpg"><img src="/images/art/portfolio/big/<?= $id.'-'.$poplet ?>.jpg" alt="<?= $id.$poplet ?>" /></a></li>
           <?php endforeach; ?>

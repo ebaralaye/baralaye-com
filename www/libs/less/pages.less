@@ -9,21 +9,16 @@
 
   &.home {
 
-    margin: 0;
+    margin: -40px 0;
 
     @media (max-width: @screen-xs-max) {
       margin: -80px 0 -30px;
     }
 
-    .portfolio {
-      margin: 0;
-      padding: 0;
-
-      @media (min-width: @screen-sm-min) {
-        margin: 20px 0;
-      }
-
+    .bxslider {
       .clearfix;
+      .list-unstyled;
+
 
       li {
         .make-sm-column(4);
@@ -31,62 +26,42 @@
         text-shadow: 0 0 3px #000;
         padding: 0;
 
-        @media (max-width: @screen-xs-max) {
-
-          &:last-child {
-            margin-bottom: 0;
-          }
-        }
-
-        h1 {
-          margin: 0;
-        }
-
         a {
+          .raleway;
           text-align: left;
           display: block;
-          height: 200px;
-          line-height: 200px;
+          height: 300px;
+          line-height: 300px;
           width: 100%;
           margin: 0 auto;
-          background-size: 200px;
-          background-repeat: no-repeat;
           overflow: hidden;
+          background-repeat: no-repeat;
           background-position-x: center;
-          background-position-y: center;
+          background-position-y: 20%;
           background-size: cover;
 
           @media (max-width: @screen-xs-max) {
-            line-height: 355px;
-          }
-
-          &.sculpture {
-            background-image: url('/images/art/portfolio/large/smm-0005-a.jpg');
-          }
-
-          &.vessels {
-            background-image: url('/images/art/portfolio/large/vsc-0004-a.jpg');
-          }
-
-          &.drawings {
-            background-image: url('/images/art/portfolio/large/dsk-0009.jpg');
+            line-height: 200px;
+            height: 200px;
           }
 
           span {
             color: #fff;
-            display: inline-block;
+            /*display: inline-block;*/
+            display: none;
             width: 100%;
             text-align: center;
             font-size: 25px;
             height: 40px;
             line-height: 38px;
+            vertical-align: bottom;
             font-weight: 100;
             letter-spacing: 4px;
-            background: rgba(0,0,0,0.5);
+            background: rgba(0,0,0,0.4);
           }
 
           &:hover span {
-            background-color: @color-hili;
+            background: rgba(0,0,0,0.7);
           }
         }
       }

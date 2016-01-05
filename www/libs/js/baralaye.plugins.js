@@ -12,7 +12,7 @@
          * @private
          */
         function setBXSlider() {
-            $('.bxslider').bxSlider({
+            $('.bxslider.catalog').bxSlider({
                 pagerCustom: '#bx-pager',
                 pager: true,
                 speed: 1000,
@@ -20,6 +20,16 @@
                 adaptiveHeight: true,
                 nextText: "",
                 prevText: "",
+            });
+
+            $('.bxslider.home').bxSlider({
+                mode: 'horizontal',
+                auto: true,
+                pause: 8000,
+                speed: 1000,
+                randomStart: true,
+                pager: false,
+                controls: false,
             });
         }
 
