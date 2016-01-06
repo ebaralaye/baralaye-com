@@ -37,11 +37,26 @@
 
             /*show bottom nav only when the bottom dive is visible*/
             $(window).scroll( function () {
-              if ($(window).scrollTop() > 100){
+              if ($(window).scrollTop() > 100 && $(window).width() <= 768){
                 $('.tmp-bottom').show();
               }
               else $('.tmp-bottom').hide();
             });
+        }
+
+        /**
+         * Sets Top Nav dropdowns
+         * @private
+         */
+        function setDynamicHeights() {
+          setHeight();
+          $(window).resize( function () {
+            setHeight();
+          });
+          function setHeight() {
+            $('.page-body.home .bx-viewport').height($(window).height());
+            $('.page-body.home .bxslider li').height($(window).height());
+          }
         }
 
         /**
@@ -70,6 +85,7 @@
 
         return {
             init: function() {
+                setDynamicHeights();
                 globalNav();
                 topNavDropdowns();
                 setEventHandlers();

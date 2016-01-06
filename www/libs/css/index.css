@@ -6452,34 +6452,21 @@ fieldset[disabled] .page-body .social-media a {
   text-align: center;
 }
 .tmp-wrap .tmp-top {
-  margin-left: -15px;
-  margin-right: -15px;
-  position: relative;
+  position: static;
+  width: 100%;
   z-index: 999;
-  margin-top: 30px;
   margin-bottom: 40px;
   border-bottom: 2px solid #dfdfdf;
+  background: rgba(255, 255, 255, 0.9);
   /** Top nav ----*/
 }
-.tmp-wrap .tmp-top:before,
-.tmp-wrap .tmp-top:after {
-  content: " ";
-  display: table;
+.tmp-wrap .tmp-top.double-nav {
+  margin-bottom: 100px;
 }
-.tmp-wrap .tmp-top:after {
-  clear: both;
-}
-.tmp-wrap .tmp-top:before,
-.tmp-wrap .tmp-top:after {
-  content: " ";
-  display: table;
-}
-.tmp-wrap .tmp-top:after {
-  clear: both;
-}
-@media (max-width: 767px) {
-  .tmp-wrap .tmp-top.double-nav {
-    margin-bottom: 100px;
+@media (min-width: 768px) {
+  .tmp-wrap .tmp-top {
+    position: fixed;
+    text-align: left;
   }
 }
 .tmp-wrap .tmp-top .tmp-logo {
@@ -6487,7 +6474,7 @@ fieldset[disabled] .page-body .social-media a {
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
-  margin-bottom: 7px;
+  padding: 0;
 }
 @media (min-width: 768px) {
   .tmp-wrap .tmp-top .tmp-logo {
@@ -6498,24 +6485,23 @@ fieldset[disabled] .page-body .social-media a {
 @media (min-width: 768px) {
   .tmp-wrap .tmp-top .tmp-logo {
     text-align: left;
-    margin-bottom: 0;
   }
 }
 .tmp-wrap .tmp-top .tmp-logo > a {
   font-family: "raleway", sans-serif;
+  height: 40px;
+  line-height: 40px;
   font-weight: 300;
   font-size: 20px;
   letter-spacing: 3px;
   text-decoration: none;
+  display: inline-block;
   padding: 0 15px;
 }
 @media (min-width: 768px) {
   .tmp-wrap .tmp-top .tmp-logo > a {
     position: relative;
     bottom: -2px;
-    display: inline-block;
-    height: 42px;
-    line-height: 49px;
     border-bottom: 2px solid transparent;
     margin-bottom: -2px;
   }
@@ -6528,6 +6514,7 @@ fieldset[disabled] .page-body .social-media a {
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
+  padding: 0;
 }
 @media (min-width: 768px) {
   .tmp-wrap .tmp-top > .tmp-nav {
@@ -6541,7 +6528,7 @@ fieldset[disabled] .page-body .social-media a {
   margin: 0 auto;
   position: relative;
   bottom: -2px;
-  height: 42px;
+  height: 40px;
 }
 .tmp-wrap .tmp-top > .tmp-nav > ul.nav:before,
 .tmp-wrap .tmp-top > .tmp-nav > ul.nav:after {
@@ -6603,8 +6590,9 @@ fieldset[disabled] .page-body .social-media a {
 .tmp-wrap .tmp-top > .tmp-nav > ul.nav > li > a {
   font-size: 15px;
   font-weight: 300;
-  height: 42px;
-  padding: 15px 15px 10px 15px;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 15px;
   border-bottom-width: 2px;
 }
 .tmp-wrap .tmp-top > .tmp-nav > ul.nav > li > a:hover,
@@ -6620,10 +6608,10 @@ fieldset[disabled] .page-body .social-media a {
   display: none;
   position: absolute;
   height: 40px;
-  background-color: #f3f3f3;
+  background-color: rgba(243, 243, 243, 0.7);
 }
 .tmp-wrap .tmp-top > .tmp-nav > ul.nav > li > ul {
-  top: 42px;
+  top: 40px;
   border-bottom: 1px solid #dfdfdf;
 }
 @media (min-width: 768px) {
@@ -6639,20 +6627,19 @@ fieldset[disabled] .page-body .social-media a {
 @media (min-width: 768px) {
   .tmp-wrap .tmp-top > .tmp-nav > ul.nav > li > ul li {
     float: right;
-    background-color: #f3f3f3;
   }
 }
 .tmp-wrap .tmp-top > .tmp-nav > ul.nav > li > ul li a {
   font-size: 11px;
   text-transform: uppercase;
-  line-height: 15px;
+  line-height: 40px;
   height: 40px;
-  padding: 12px;
+  padding: 0 15px;
   border-bottom-width: 1px;
 }
 @media (min-width: 768px) {
   .tmp-wrap .tmp-top > .tmp-nav > ul.nav > li > ul li a {
-    background-color: #f3f3f3;
+    background-color: rgba(243, 243, 243, 0.7);
   }
 }
 .tmp-wrap .tmp-top > .tmp-nav > ul.nav > li > ul > li.selected > a {
@@ -6694,11 +6681,16 @@ fieldset[disabled] .page-body .social-media a {
   font-weight: 300;
 }
 .tmp-wrap .tmp-sub {
-  margin: 80px 0;
+  margin-top: 60px;
+}
+@media (min-width: 768px) {
+  .tmp-wrap .tmp-sub {
+    margin: 120px 0 40px;
+  }
 }
 .tmp-wrap .tmp-bottom {
   border-top: 2px solid #dfdfdf;
-  margin-top: 40px;
+  margin-top: 60px;
   margin-bottom: 20px;
   display: none;
   /* hidden if not scrolled to */
@@ -6787,11 +6779,11 @@ fieldset[disabled] .page-body .social-media a {
   /** Connect ----*/
 }
 .page-body.home {
-  margin: -80px 0 40px;
+  margin: -60px 0 0;
 }
-@media (max-width: 767px) {
+@media (min-width: 768px) {
   .page-body.home {
-    margin: -80px 0 -30px;
+    margin: -120px 0 0;
   }
 }
 .page-body.home .bxslider {
@@ -6819,8 +6811,7 @@ fieldset[disabled] .page-body .social-media a {
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
-  background-size: 100%;
-  text-shadow: 0 0 3px #000;
+  width: 100%;
   padding: 0;
 }
 @media (min-width: 768px) {
@@ -6831,28 +6822,23 @@ fieldset[disabled] .page-body .social-media a {
 }
 .page-body.home .bxslider li a {
   font-family: "raleway", sans-serif;
-  text-align: right;
+  position: relative;
   display: block;
-  height: 500px;
-  line-height: 500px;
   width: 100%;
-  margin: 0 auto;
-  overflow: hidden;
+  height: 100%;
   background-repeat: no-repeat;
   background-position-x: center;
-  background-position-y: 20%;
+  background-position-y: 0;
   background-size: cover;
-}
-@media (max-width: 767px) {
-  .page-body.home .bxslider li a {
-    line-height: 300px;
-    height: 300px;
-  }
+  vertical-align: bottom;
 }
 .page-body.home .bxslider li a span {
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  text-shadow: 0 0 3px #000;
   display: none;
   color: #fff;
-  text-align: center;
   font-size: 10px;
   height: 20px;
   line-height: 20px;
