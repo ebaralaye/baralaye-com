@@ -213,7 +213,16 @@ ul.social-btns {
 
 .page-body {
   .clearfix;
-  margin: 0 40px;
+  margin: 0 15px;
+  max-width: 1200px;
+
+  @media (min-width: @screen-sm-min) {
+    margin: 0 40px;
+  }
+
+  @media (min-width: @screen-lg-min) {
+    margin: 0 auto;
+  }
 
   > .main,
   > .page-main {
@@ -222,10 +231,6 @@ ul.social-btns {
     @media (min-width: @screen-sm-min) {
       text-align: left;
     }
-  }
-
-  @media (max-width: @screen-sm-max) {
-    margin: 0 15px;
   }
 
   &.stacked {
@@ -323,6 +328,7 @@ ul.social-btns {
 }
 
 .tmp-wrap {
+  position: relative;
   overflow: hidden;
   text-align: center;
 
@@ -340,6 +346,7 @@ ul.social-btns {
 
     @media (min-width: @screen-sm-min) {
       position: fixed;
+      left: 0;
       text-align: left;
     }
 

@@ -3,12 +3,6 @@
  * @author tech@baralaye.com
  */
 
-/** Catalog Template ----*/
-
-.page-body.catalog {
-  margin: 0;
-}
-
 /** Product List ----*/
 
 .product-list {
@@ -25,12 +19,12 @@
   .item {
     position: relative;
     display: inline-block;
-    width: 225px;
-    height: 225px;
+    width: 50%;
+    height: 160px;
 
-    @media (max-width: 320px) { /* for handheld devices */
-      width: 160px;
-      height: 160px;
+    @media (min-width: @screen-sm-min) {
+      width: 225px;
+      height: 225px;
     }
 
     a {
@@ -80,6 +74,25 @@
       }
     }
   }
+
+  &.catalog li {
+    @media (min-width: @screen-sm-min) {
+      width: 33%;
+    }
+    @media (min-width: @screen-md-min) {
+      width: 25%;
+    }
+    @media (min-width: @screen-lg-min) {
+      width: 20%;
+    }
+  }
+}
+
+/** Catalog Template ----*/
+
+.page-body.catalog {
+  margin: 0;
+  max-width: none;
 }
 
 /** Product Detail ----*/

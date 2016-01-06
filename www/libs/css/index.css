@@ -6255,7 +6255,8 @@ ul.social-btns .btn-s.purchase {
 }
 /** Page Body ----*/
 .page-body {
-  margin: 0 40px;
+  margin: 0 15px;
+  max-width: 1200px;
 }
 .page-body:before,
 .page-body:after {
@@ -6272,6 +6273,16 @@ ul.social-btns .btn-s.purchase {
 }
 .page-body:after {
   clear: both;
+}
+@media (min-width: 768px) {
+  .page-body {
+    margin: 0 40px;
+  }
+}
+@media (min-width: 1200px) {
+  .page-body {
+    margin: 0 auto;
+  }
 }
 .page-body > .main:before,
 .page-body > .page-main:before,
@@ -6299,11 +6310,6 @@ ul.social-btns .btn-s.purchase {
   .page-body > .main,
   .page-body > .page-main {
     text-align: left;
-  }
-}
-@media (max-width: 991px) {
-  .page-body {
-    margin: 0 15px;
   }
 }
 .page-body.stacked section {
@@ -6448,6 +6454,7 @@ fieldset[disabled] .page-body .social-media a {
   height: 100%;
 }
 .tmp-wrap {
+  position: relative;
   overflow: hidden;
   text-align: center;
 }
@@ -6466,6 +6473,7 @@ fieldset[disabled] .page-body .social-media a {
 @media (min-width: 768px) {
   .tmp-wrap .tmp-top {
     position: fixed;
+    left: 0;
     text-align: left;
   }
 }
@@ -6780,6 +6788,7 @@ fieldset[disabled] .page-body .social-media a {
 }
 .page-body.home {
   margin: -60px 0 0;
+  max-width: none;
 }
 @media (min-width: 768px) {
   .page-body.home {
@@ -7169,10 +7178,6 @@ fieldset[disabled] .page-body .social-media a {
  * Baralaye.com Catalog Styles
  * @author tech@baralaye.com
  */
-/** Catalog Template ----*/
-.page-body.catalog {
-  margin: 0;
-}
 /** Product List ----*/
 .product-list {
   padding-left: 0;
@@ -7208,15 +7213,14 @@ fieldset[disabled] .page-body .social-media a {
 .product-list .item {
   position: relative;
   display: inline-block;
-  width: 225px;
-  height: 225px;
+  width: 50%;
+  height: 160px;
 }
-@media (max-width: 320px) {
+@media (min-width: 768px) {
   .product-list > li,
   .product-list .item {
-    /* for handheld devices */
-    width: 160px;
-    height: 160px;
+    width: 225px;
+    height: 225px;
   }
 }
 .product-list > li a,
@@ -7265,6 +7269,26 @@ fieldset[disabled] .page-body .social-media a {
   font-size: 10px;
   color: #ccc;
   text-transform: uppercase;
+}
+@media (min-width: 768px) {
+  .product-list.catalog li {
+    width: 33%;
+  }
+}
+@media (min-width: 992px) {
+  .product-list.catalog li {
+    width: 25%;
+  }
+}
+@media (min-width: 1200px) {
+  .product-list.catalog li {
+    width: 20%;
+  }
+}
+/** Catalog Template ----*/
+.page-body.catalog {
+  margin: 0;
+  max-width: none;
 }
 /** Product Detail ----*/
 .product-detail {

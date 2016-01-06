@@ -49,11 +49,16 @@
          * @private
          */
         function setDynamicHeights() {
-          setHeight();
+          setHomeSliderHeight();
+          setProductListHeight();
           $(window).resize( function () {
-            setHeight();
+            setHomeSliderHeight();
+            setProductListHeight();
           });
-          function setHeight() {
+          function setProductListHeight() {
+            $('.product-list.catalog li').height($('.product-list.catalog li').width());
+          }
+          function setHomeSliderHeight() {
             $('.page-body.home .bx-viewport').height($(window).height());
             $('.page-body.home .bxslider li').height($(window).height());
           }
