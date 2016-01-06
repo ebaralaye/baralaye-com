@@ -6468,7 +6468,7 @@ fieldset[disabled] .page-body .social-media a {
   /** Top nav ----*/
 }
 .tmp-wrap .tmp-top.double-nav {
-  margin-bottom: 100px;
+  margin-bottom: 80px;
 }
 @media (min-width: 768px) {
   .tmp-wrap .tmp-top {
