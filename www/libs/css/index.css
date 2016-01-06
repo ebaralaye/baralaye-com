@@ -6254,6 +6254,9 @@ ul.social-btns .btn-s.purchase {
   display: none;
 }
 /** Page Body ----*/
+.page-body {
+  margin: 0 40px;
+}
 .page-body:before,
 .page-body:after {
   content: " ";
@@ -6446,8 +6449,6 @@ fieldset[disabled] .page-body .social-media a {
 }
 .tmp-wrap {
   overflow: hidden;
-  max-width: 900px;
-  margin: 0 auto;
   text-align: center;
 }
 .tmp-wrap .tmp-top {
@@ -6506,6 +6507,7 @@ fieldset[disabled] .page-body .social-media a {
   font-size: 20px;
   letter-spacing: 3px;
   text-decoration: none;
+  padding: 0 15px;
 }
 @media (min-width: 768px) {
   .tmp-wrap .tmp-top .tmp-logo > a {
@@ -6602,7 +6604,7 @@ fieldset[disabled] .page-body .social-media a {
   font-size: 15px;
   font-weight: 300;
   height: 42px;
-  padding: 15px 15px 10px 20px;
+  padding: 15px 15px 10px 15px;
   border-bottom-width: 2px;
 }
 .tmp-wrap .tmp-top > .tmp-nav > ul.nav > li > a:hover,
@@ -6698,6 +6700,8 @@ fieldset[disabled] .page-body .social-media a {
   border-top: 2px solid #dfdfdf;
   margin-top: 40px;
   margin-bottom: 20px;
+  display: none;
+  /* hidden if not scrolled to */
   /** Bottom Nav ----*/
 }
 .tmp-wrap .tmp-bottom > .tmp-nav > ul.nav {
@@ -6783,7 +6787,7 @@ fieldset[disabled] .page-body .social-media a {
   /** Connect ----*/
 }
 .page-body.home {
-  margin: -40px 0;
+  margin: -80px 0 40px;
 }
 @media (max-width: 767px) {
   .page-body.home {
@@ -6827,10 +6831,10 @@ fieldset[disabled] .page-body .social-media a {
 }
 .page-body.home .bxslider li a {
   font-family: "raleway", sans-serif;
-  text-align: left;
+  text-align: right;
   display: block;
-  height: 300px;
-  line-height: 300px;
+  height: 500px;
+  line-height: 500px;
   width: 100%;
   margin: 0 auto;
   overflow: hidden;
@@ -6841,26 +6845,25 @@ fieldset[disabled] .page-body .social-media a {
 }
 @media (max-width: 767px) {
   .page-body.home .bxslider li a {
-    line-height: 200px;
-    height: 200px;
+    line-height: 300px;
+    height: 300px;
   }
 }
 .page-body.home .bxslider li a span {
-  color: #fff;
-  /*display: inline-block;*/
   display: none;
-  width: 100%;
+  color: #fff;
   text-align: center;
-  font-size: 25px;
-  height: 40px;
-  line-height: 38px;
+  font-size: 10px;
+  height: 20px;
+  line-height: 20px;
   vertical-align: bottom;
   font-weight: 100;
-  letter-spacing: 4px;
-  background: rgba(0, 0, 0, 0.4);
+  letter-spacing: 3px;
+  padding: 0 15px;
+  background: rgba(0, 0, 0, 0.2);
 }
 .page-body.home .bxslider li a:hover span {
-  background: rgba(0, 0, 0, 0.7);
+  display: inline-block;
 }
 .page-body.tech li em {
   font-size: 10px;
@@ -7181,6 +7184,9 @@ fieldset[disabled] .page-body .social-media a {
  * @author tech@baralaye.com
  */
 /** Catalog Template ----*/
+.page-body.catalog {
+  margin: 0;
+}
 /** Product List ----*/
 .product-list {
   padding-left: 0;

@@ -34,6 +34,14 @@
                     }
                 }
             });
+
+            /*show bottom nav only when the bottom dive is visible*/
+            $(window).scroll( function () {
+              if ($(window).scrollTop() > 100){
+                $('.tmp-bottom').show();
+              }
+              else $('.tmp-bottom').hide();
+            });
         }
 
         /**

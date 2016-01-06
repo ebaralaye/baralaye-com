@@ -9,7 +9,7 @@
 
   &.home {
 
-    margin: -40px 0;
+    margin: -80px 0 40px;
 
     @media (max-width: @screen-xs-max) {
       margin: -80px 0 -30px;
@@ -28,10 +28,10 @@
 
         a {
           .raleway;
-          text-align: left;
+          text-align: right;
           display: block;
-          height: 300px;
-          line-height: 300px;
+          height: 500px;
+          line-height: 500px;
           width: 100%;
           margin: 0 auto;
           overflow: hidden;
@@ -41,27 +41,26 @@
           background-size: cover;
 
           @media (max-width: @screen-xs-max) {
-            line-height: 200px;
-            height: 200px;
+            line-height: 300px;
+            height: 300px;
           }
 
           span {
-            color: #fff;
-            /*display: inline-block;*/
             display: none;
-            width: 100%;
+            color: #fff;
             text-align: center;
-            font-size: 25px;
-            height: 40px;
-            line-height: 38px;
+            font-size: 10px;
+            height: 20px;
+            line-height: 20px;
             vertical-align: bottom;
             font-weight: 100;
-            letter-spacing: 4px;
-            background: rgba(0,0,0,0.4);
+            letter-spacing: 3px;
+            padding: 0 15px;
+            background: rgba(0,0,0,0.2);
           }
 
           &:hover span {
-            background: rgba(0,0,0,0.7);
+            display: inline-block;
           }
         }
       }

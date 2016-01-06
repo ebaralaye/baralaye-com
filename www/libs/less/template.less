@@ -212,6 +212,7 @@ ul.social-btns {
 
 .page-body {
   .clearfix;
+  margin: 0 40px;
 
   > .main,
   > .page-main {
@@ -322,8 +323,6 @@ ul.social-btns {
 
 .tmp-wrap {
   overflow: hidden;
-  max-width: 900px;
-  margin: 0 auto;
 
   text-align: center;
 
@@ -356,8 +355,7 @@ ul.social-btns {
         font-size: 20px;
         letter-spacing: 3px;
         text-decoration: none;
-        //padding-left: 40px;
-        //background: -4px 5px url('/images/template/logo.png') no-repeat;
+        padding: 0 15px;
 
         @media (min-width: @screen-sm-min) {
           position: relative;
@@ -435,7 +433,7 @@ ul.social-btns {
             font-size: 15px;
             font-weight: 300;
             height: 42px;
-            padding: 15px 15px 10px 20px;
+            padding: 15px 15px 10px 15px;
             border-bottom-width: 2px;
 
             &:hover,
@@ -549,6 +547,7 @@ ul.social-btns {
     border-top: 2px solid @color-medium;
     margin-top: 40px;
     margin-bottom: 20px;
+    display: none; /* hidden if not scrolled to */
 
     /** Bottom Nav ----*/
 
