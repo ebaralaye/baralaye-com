@@ -8,40 +8,19 @@
     Baralaye.Plugins = (function() {
 
         /**
-         * Sets BX banner slider
-         * @private
-         */
-        function setBXSlider() {
-            $('.bxslider.catalog').bxSlider({
-                pagerCustom: '#bx-pager',
-                pager: true,
-                speed: 1000,
-                pause: 8000,
-                adaptiveHeight: true,
-                nextText: "",
-                prevText: "",
-            });
-
-            $('.bxslider.home').bxSlider({
-                mode: 'horizontal',
-                auto: true,
-                pause: 8000,
-                speed: 1000,
-                randomStart: true,
-                pager: false,
-                controls: false,
-            });
-        }
-
-        /**
          * Sets Fancy Box modal triggers
          * @private
          */
         function setFancyBox() {
-            $('.ltbx.image a').fancybox();
+            $('a.ltbx').fancybox({
+              padding: 0,
+              margin: 20,
+              closeClick: true,
+            });
             $('.ltbx.images > a').fancybox({
-                openEffect: 'none',
-                closeEffect: 'none',
+              padding: 0,
+              margin: 20,
+              closeClick: true,
                 helpers: {
                     thumbs: {
                         width: 100,
@@ -56,20 +35,13 @@
                     'autoDimensions':false
                 });
             });
-            $('a.ltbx').fancybox();
             $('a.ltbx.win').fancybox({
                 'width':400,
                 'height':410,
                 'autoDimensions':false,
                 'scrolling':'no'
             });
-            $('a.gMap').fancybox({
-                openEffect  : 'none',
-                closeEffect : 'none',
-                helpers : {
-                    media : {}
-                }
-            });
+            $('a.gMap').fancybox();
             $('a.ltbx.video').click(function(){
                 $.fancybox({
                     'padding'         : 0,
@@ -87,6 +59,34 @@
                     }
                 });
                 return false;
+            });
+        }
+
+        /**
+         * Sets BX banner slider
+         * @private
+         */
+        function setBXSlider() {
+            $('.bxslider.catalog').bxSlider({
+                pagerCustom: '#bx-pager',
+                preloadImages: 'all',
+                pager: true,
+                speed: 1000,
+                pause: 8000,
+                adaptiveHeight: true,
+                nextText: "",
+                prevText: "",
+            });
+
+            $('.bxslider.home').bxSlider({
+                mode: 'horizontal',
+                preloadImages: 'all',
+                auto: true,
+                pause: 8000,
+                speed: 1000,
+                randomStart: true,
+                pager: false,
+                controls: false,
             });
         }
 
@@ -115,13 +115,13 @@
                        //use another ajax request to get the tags of the image
                        $.getJSON('https://api.flickr.com/services/rest/?&method=flickr.photos.getInfo&api_key=' + apiKey + '&photo_id=' + photoID + '&format=json&jsoncallback=?',function(data){
                            //create an imgCont string variable which will hold all the link location, title, author link, and author name into a text string
-                           var imgCont = "<li class='item ltbx'><a href="+ photoURL_b +" title='"+ data.photo.title._content +"' style=\'background-image:url("+ photoURL_b +")\' /></a>";
+                           var imgCont = "<li class='item'><a class='ltbx' href="+ photoURL_b +" title='"+ data.photo.title._content +"' rel='gallery-1' style=\'background-image:url("+ photoURL_b +")\' /></a>";
                            //add the description & html snippet to the end of the 'imgCont' variable
                            //imgCont += '<div class="image-info"><h4 class="title">'+data.photo.title._content+'</h4><p class="desc">'+data.photo.description._content+'</p></div></li>';
                            //append the 'imgCont' variable to the document
                            $(imgCont).appendTo( photoSetCont );
                            //Activate Lightbox
-                           $('.product-list.photoset a').fancybox();
+                           setFancyBox();
                        });
                    });
                });
@@ -133,11 +133,9 @@
         return {
 
             init: function() {
-
                 setBXSlider();
                 setFancyBox();
                 flickrPhotoSet();
-
             }
 
         };

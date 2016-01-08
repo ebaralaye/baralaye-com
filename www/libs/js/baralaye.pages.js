@@ -18,22 +18,34 @@
         }
 
         /**
-         * Resume Reference display
+         * Shows contact form confirmation modal
          * @private
          */
         function showSocialSuccessModal(){
-          console.log($('#contact-form').data('success'));
             if ($('#contact-form').data('success') === true){
                 $('#contact-form-success-modal').modal();
             }
         }
 
+        /**
+         * Sets dynamic height for homepage image gallery
+         * @private
+         */
+        function setHomeSliderHeight() {
+          $('.page-body.home .bx-viewport').height($(window).height());
+          $('.page-body.home .bxslider li').height($(window).height());
+        }
+
         /** @private */
         function setEventHandlers() {
+          $(window).resize( function () {
+            setHomeSliderHeight();
+          });
         }
 
         return {
             init: function() {
+                setHomeSliderHeight();
                 showResumeReferences();
                 showSocialSuccessModal();
                 setEventHandlers();

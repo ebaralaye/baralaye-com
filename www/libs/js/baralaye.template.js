@@ -48,26 +48,6 @@
          * Sets Top Nav dropdowns
          * @private
          */
-        function setDynamicHeights() {
-          setHomeSliderHeight();
-          setProductListHeight();
-          $(window).resize( function () {
-            setHomeSliderHeight();
-            setProductListHeight();
-          });
-          function setProductListHeight() {
-            $('.product-list.catalog li').height($('.product-list.catalog li').width());
-          }
-          function setHomeSliderHeight() {
-            $('.page-body.home .bx-viewport').height($(window).height());
-            $('.page-body.home .bxslider li').height($(window).height());
-          }
-        }
-
-        /**
-         * Sets Top Nav dropdowns
-         * @private
-         */
         function topNavDropdowns() {
             $('#tmp-top > .tmp-nav > ul.nav > li').mouseenter(function(){
                 var $this = $(this);
@@ -90,7 +70,6 @@
 
         return {
             init: function() {
-                setDynamicHeights();
                 globalNav();
                 topNavDropdowns();
                 setEventHandlers();

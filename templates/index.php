@@ -22,7 +22,7 @@
     <!-- JS: Plugins > Backbone -->
     <script type="text/javascript" src="/libs/vendor/backbone/backbone-min.js"></script>
     <!-- JS: Plugins > jQuery -->
-    <script type="text/javascript" src="/libs/vendor/jquery/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="/libs/vendor/jquery/jquery-1.9.0.min.js"></script>
     <script type="text/javascript" src="/libs/vendor/jquery/jquery.easing-1.3.pack.js"></script>
     <!-- JS: Plugins > Fancybox -->
     <script type="text/javascript" src="/libs/vendor/fancybox/js/jquery.fancybox.js"></script>
@@ -50,15 +50,6 @@
 
     <!-- JS: Pinterest (for pin button) -->
     <script type="text/javascript" src="//assets.pinterest.com/js/pinit.js"></script>
-
-    <!-- JS: Heat Map (heatmap.it) -->
-    <!--<script type="text/javascript">
-    (function() {
-    var hm = document.createElement('script'); hm.type ='text/javascript'; hm.async = true;
-    hm.src = ('++u-heatmap-it+log-js').replace(/[+]/g,'/').replace(/-/g,'.');
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(hm, s);
-    })();
-    </script>-->
   </head>
   <body>
     <?= $analytics; ?>

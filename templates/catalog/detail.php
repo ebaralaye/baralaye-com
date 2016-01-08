@@ -1,12 +1,12 @@
 <div class="product-detail">
-  <div class="images"> 
+  <div class="images">
     <h1 class="title <?php if($title_type != null){ echo $title_type; }; ?>"><?= $title; ?></h1>
     <div class="images-wrapper">
       <?php $poplets = explode(',', $image_poplets); ?>
       <?php if (count($poplets) > 1): ?>
         <ul class="bxslider catalog">
           <?php foreach($poplets as $poplet): ?>
-            <li><a href="/images/art/portfolio/big/<?= $id.'-'.$poplet ?>.jpg"><img src="/images/art/portfolio/big/<?= $id.'-'.$poplet ?>.jpg" alt="<?= $id.$poplet ?>" /></a></li>
+            <li><a href="/images/art/portfolio/big/<?= $id.'-'.$poplet ?>.jpg" rel="gallery-1"><img src="/images/art/portfolio/big/<?= $id.'-'.$poplet ?>.jpg" alt="<?= $id.$poplet ?>" /></a></li>
           <?php endforeach; ?>
         </ul>
         <div id="bx-pager" class="poplets">
