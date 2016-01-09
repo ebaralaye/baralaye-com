@@ -63,41 +63,13 @@
         }
 
         /**
-         * Sets BX banner slider
-         * @private
-         */
-        function setBXSlider() {
-            $('.bxslider.catalog').bxSlider({
-                pagerCustom: '#bx-pager',
-                preloadImages: 'all',
-                pager: true,
-                speed: 1000,
-                pause: 8000,
-                adaptiveHeight: true,
-                nextText: "",
-                prevText: "",
-            });
-
-            $('.bxslider.home').bxSlider({
-                mode: 'horizontal',
-                preloadImages: 'all',
-                auto: true,
-                pause: 8000,
-                speed: 1000,
-                randomStart: true,
-                pager: false,
-                controls: false,
-            });
-        }
-
-        /**
          * Flickr Photoset function
          * @private
          */
         function flickrPhotoSet() {
 
-            $('.product-list.photoset').each(function(){
-                jQuery('<img />').attr('class', 'loader').attr('src', '/images/plugins/ajax-loader.gif').appendTo('.product-list.photoset');
+            $('.item-list.photoset').each(function(){
+                jQuery('<img />').attr('class', 'loader').attr('src', '/images/plugins/ajax-loader.gif').appendTo('.item-list.photoset');
                 //assign your api key equal to a variable
                 var photoSetCont = $(this);
                 var apiKey = '2dc0ff4d2daaa11adcdef83d127b8558';
@@ -133,7 +105,6 @@
         return {
 
             init: function() {
-                setBXSlider();
                 setFancyBox();
                 flickrPhotoSet();
             }

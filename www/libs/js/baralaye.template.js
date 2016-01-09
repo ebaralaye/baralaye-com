@@ -64,14 +64,37 @@
             });
         }
 
+        /**
+         * Provides top marign for vertical alignment
+         * @private
+         */
+        function getVAlignMargin($elem){
+          var top_buffer = 20;
+          var top_height = (($(window).height() - $elem.height())/2 - top_buffer);
+          if (top_height <= 0) top_height = 0;
+          return top_height;
+        }
+
+        /**
+         * Sets page-body vertical alignmnet
+         * @private
+         */
+        function setPageBodyVAlign(){
+          $('.page-body').not('.catalog-item, .home').css('margin-top', getVAlignMargin($('.page-body')) + 'px');
+        }
+
         /** @private */
         function setEventHandlers() {
+          $(window).resize( function (){
+            setPageBodyVAlign();
+          });
         }
 
         return {
             init: function() {
                 globalNav();
                 topNavDropdowns();
+                setPageBodyVAlign();
                 setEventHandlers();
             }
         };

@@ -3,13 +3,14 @@
  * @author tech@baralaye.com
  */
 
-/** Product List ----*/
+/** Item List ----*/
 
-.product-list {
+.item-list {
+  .clearfix;
   .list-unstyled;
-  .row;
   text-align: center;
   font-size: 0; /* to remove whitespace in between list items */
+  margin: 0;
 
   @media (max-width: 320px) {
     margin: 0 -15px;
@@ -74,8 +75,15 @@
       }
     }
   }
+}
 
-  &.catalog li {
+/** Catalog list ----*/
+
+.page-body.catalog {
+  margin: 0;
+  max-width: none;
+
+  .item-list.catalog li {
     @media (min-width: @screen-sm-min) {
       width: 33%;
     }
@@ -88,36 +96,136 @@
   }
 }
 
-/** Catalog Template ----*/
+/** Catalog Item ----*/
 
-.page-body.catalog {
-  margin: 0;
-  max-width: none;
-}
+.page-body.catalog-item {
+  padding: 0;
 
-/** Product Detail ----*/
+  .title {
+    .make-md-column(3);
 
-.product-detail {
-  .clearfix;
-  padding-top: 20px;
+    @media (min-width: @screen-md-min) {
+      padding-left: 0;
+    }
+  }
+
+  .image-slider {
+    .no-gutter;
+    margin: 0 auto 20px;
+    .make-md-column(6);
+    .make-md-column-pull(3);
+
+    @media (min-width: @screen-md-min) {
+      margin-bottom: 0;
+      .pull-right;
+    }
+
+    /* BX Slider */
+    .bx-wrapper {
+
+      .bx-viewport {
+
+        ul.bxslider.catalog {
+          .list-unstyled;
+
+          img {
+            max-width: 100%;
+            max-height: 600px;
+          }
+        }
+      }
+
+      .bx-controls {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+
+        .bx-controls-direction {
+          position: relative;
+          margin: 0 auto;
+
+          @btn-width: 40px;
+
+          .bx-prev {
+            left: 0;
+            border-top: @btn-width solid transparent;
+            border-bottom: @btn-width solid transparent;
+            border-left: @btn-width solid rgba(0,0,0,0.2);
+          }
+          .bx-next {
+            right: 0;
+            border-top: @btn-width solid transparent;
+            border-bottom: @btn-width solid transparent;
+            border-right: @btn-width solid rgba(0,0,0,0.2);
+          }
+
+          .bx-prev,
+          .bx-next {
+            position: absolute;
+            width: 0;
+            height: 0;
+            margin-top: -(@btn-width);
+          }
+        }
+      }
+    }
+  }
+
+  .image {
+    .no-gutter;
+    .make-md-column(6);
+    max-width: 100%; /* for right responsive width on images without poplets */
+    margin-bottom: 20px;
+
+    @media (min-width: @screen-md-min) {
+      margin: 0 25% 0 0; /* to make up for missing poplet column (no poplets) */
+      .pull-right;
+    }
+
+    img {
+      max-width: 100%;
+      max-height: 600px;
+    }
+  }
+
+  .image-poplets {
+    .make-md-column(3);
+    .make-md-column-push(6);
+    margin-bottom: 20px;
+
+    @media (min-width: @screen-md-min) {
+      padding-right: 0;
+      margin: 0;
+      .pull-right;
+    }
+
+    a {
+      display: inline-block;
+      margin: 6px;
+
+      &.active, &:hover {
+        border-bottom: 1px solid @color-hili;
+        margin-bottom: 5px;
+      }
+
+      img {
+        vertical-align: middle !important;
+        max-width: 85px;
+        max-height: 85px;
+      }
+    }
+  }
 
   .details {
-    max-width: 600px;
-    margin: 0 auto;
+    .make-md-column(3);
 
-    > .title {
-
-      &.untitled {
-        text-transform: uppercase;
-      }
-
-      @media (min-width: @screen-sm-min) {
-        margin-bottom: 10px;
-      }
+    @media (min-width: @screen-md-min) {
+      padding-right: 15px;
     }
 
     ul {
       .list-unstyled;
+      margin: 0;
 
       li {
         font-size: 10px;
@@ -127,69 +235,6 @@
         p {
           font-size: 10px;
           line-height: 16px;
-        }
-      }
-    }
-
-    .specs {
-      margin-bottom: 10px;
-
-      .id span {
-        text-transform: uppercase;
-      }
-
-      li {
-        padding-top: 1px;
-      }
-    }
-
-    .edition {
-      display: none; /* hiding edition info for now */
-    }
-
-    .social {
-      margin-top: 15px;
-    }
-
-    .description {
-      .quote p,
-      .quote {
-        font-style: italic;
-      }
-    }
-  }
-
-  .images {
-    margin-bottom: 20px;
-
-    > .title {
-      &.id {
-        text-transform: uppercase;
-      }
-    }
-
-    .images-wrapper {
-      margin: 0 auto;
-      max-width: 600px;
-
-      .bxslider.catalog {
-        max-height: 600px;
-
-        > li {
-          display: block;
-          overflow: hidden;
-          max-width: 600px;
-          max-height: 600px;
-          overflow: hidden;
-        }
-      }
-
-      img.main {
-        max-width: 100%; /* for right responsive width on images without poplets */
-
-        @media (min-width: 600px) {
-          max-width: 600px;
-          max-height: 600px;
         }
       }
     }

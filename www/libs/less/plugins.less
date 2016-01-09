@@ -3,78 +3,13 @@
  * @author tech@baralaye.com
  */
 
-/* BX Slider */
-.bx-wrapper {
-  position: relative;
-  max-width: 600px;
-  margin: 0 auto;
+/** Fancybox ----*/
 
-  .bx-viewport img {
-    max-width: 100%;
+.ltbx.images a {
+  display: none;
 
-    @media (min-width: 600px) {
-      max-width: 600px;
-      max-height: 600px;
-    }
-  }
-
-  .bx-controls {
-    top: 50%;
-    position: absolute;
-    margin: 0 auto;
-    width: 100%;
-
-    .bx-prev {
-      left: -35px;
-      border-top: 20px solid transparent;
-      border-bottom: 20px solid transparent;
-      border-right: 20px solid rgba(0,0,0,0.2);
-    }
-    .bx-next {
-      right: -35px;
-      border-top: 20px solid transparent;
-      border-bottom: 20px solid transparent;
-      border-left: 20px solid rgba(0,0,0,0.2);
-    }
-
-    .bx-prev,
-    .bx-next {
-      .raleway;
-      position: absolute;
-      width: 0;
-      height: 0;
-      margin-top: -20px;
-      text-decoration: none;
-    }
-
-    @media (max-width: 700px) {
-      .bx-prev {
-        left: 0;
-      }
-      .bx-next {
-        right: 0;
-      }
-    }
-  }
-}
-
-#bx-pager.poplets {
-  margin-top: 12px;
-
-  a {
-    display: inline-block;
-    margin: 6px;
-
-    &.active, &:hover {
-      border-bottom: 1px solid @color-hili;
-      margin-bottom: 5px;
-    }
-
-    img {
-      vertical-align: middle !important;
-      max-width: 85px;
-      max-height: 85px;
-    }
+  &.main {
+    display: block;
   }
 }
 
@@ -110,47 +45,6 @@
   margin: 0 0 10px 15px;
   list-style-type: disc;
   list-style-position: outside;
-}
-
-/** Fancybox ----*/
-
-.ltbx.images a {
-  display: none;
-}
-
-.ltbx.images a.main {
-  display: block;
-}
-
-/** Galleria ----*/
-
-.galleria,
-.galleria .tabs,
-.galleria .set {
-  position: relative;
-  height: 500px;
-  width: 675px;
-}
-
-.galleria .set {
-  position: absolute;
-}
-
-.galleria .tabs {
-  height: 20px;
-  text-align: center;
-}
-
-.galleria .tabs a {
-  padding: 6px 15px 4px;
-  margin: 0;
-  white-space: nowrap;
-  letter-spacing: 1px;
-  font-size: 120%;
-}
-
-.galleria .tabs a:hover {
-  text-decoration: none;
 }
 
 /** Tumblr ----*/

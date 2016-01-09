@@ -1,4 +1,4 @@
-<ul class="product-list gallery">
+<ul class="item-list gallery">
   <?php foreach($gallery as $item): ?>
     <li class="item images ltbx">
       <?php $slides = explode(',', $item['images']); ?>

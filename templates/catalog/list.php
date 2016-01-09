@@ -3,7 +3,7 @@
     <h1><?= $catalog['title']; ?></h1>
     <?php if ($catalog['description'] != null) {echo "<p>".$catalog['description']."</p>";} ?>
   </div>
-  <ul class="product-list catalog">
+  <ul class="item-list catalog">
     <?php foreach ($products as $product): ?>
       <li class="item">
         <a href="<?= $product['url']; ?>" style="background-image:url(/images/art/portfolio/large/<?= $product['image']; ?>.jpg)" />

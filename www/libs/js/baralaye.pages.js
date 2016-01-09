@@ -36,6 +36,23 @@
           $('.page-body.home .bxslider li').height($(window).height());
         }
 
+        /**
+         * Sets BX banner slider
+         * @private
+         */
+        function setBxSlider() {
+            $('.bxslider.home').bxSlider({
+                mode: 'fade',
+                preloadImages: 'all',
+                auto: true,
+                pause: 8000,
+                speed: 1000,
+                randomStart: true,
+                pager: false,
+                controls: false,
+            });
+        }
+
         /** @private */
         function setEventHandlers() {
           $(window).resize( function () {
@@ -45,6 +62,7 @@
 
         return {
             init: function() {
+                setBxSlider();
                 setHomeSliderHeight();
                 showResumeReferences();
                 showSocialSuccessModal();

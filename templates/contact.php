@@ -291,16 +291,16 @@
   </section>
   <section id="media">
     <h1>Media</h1>
-    <ul id="set_72157628627505367" class="product-list photoset"></ul>
+    <ul id="set_72157628627505367" class="item-list photoset"></ul>
   </section>
 <!--
   <section id="studio">
     <h1>Studio</h1>
-    <ul id="set_72157628626470369" class="product-list photoset"></ul>
+    <ul id="set_72157628626470369" class="item-list photoset"></ul>
   </section>
   <section id="video">
     <h1>Video</h1>
-    <ul class="product-list">
+    <ul class="item-list">
       <li>
       <h4 class="name">GICBiennale</h4>
       <div class="image"><a href="http://www.youtube.com/watch?v=NUAmSSlfIPI?fs=1&amp;autoplay=1" class="ltbx video" title="GICBiennale Interview"><img src="http://img.youtube.com/vi/NUAmSSlfIPI/0.jpg" alt="GICBiennale Interview" /></a></div>
