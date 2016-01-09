@@ -85,6 +85,9 @@
 
         /** @private */
         function setEventHandlers() {
+          $(window).load( function (){
+            setPageBodyVAlign();
+          });
           $(window).resize( function (){
             setPageBodyVAlign();
           });
