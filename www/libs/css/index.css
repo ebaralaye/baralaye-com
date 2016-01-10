@@ -6259,7 +6259,7 @@ ul.social-btns .btn-s.purchase {
 }
 /** Page Body ----*/
 .page-body {
-  margin: 0 15px;
+  margin: 0 15px 15px 15px;
   max-width: 1200px;
 }
 .page-body:before,
@@ -6280,7 +6280,7 @@ ul.social-btns .btn-s.purchase {
 }
 @media (min-width: 768px) {
   .page-body {
-    margin: 0 40px 40px;
+    margin: 0 40px 40px 40px;
   }
 }
 @media (min-width: 1200px) {
@@ -7265,7 +7265,7 @@ fieldset[disabled] .page-body .social-media a {
 /** Catalog Item ----*/
 .page-body.catalog-item {
   padding: 0;
-  margin: 0;
+  margin: 0 auto 40px;
 }
 .page-body.catalog-item .title {
   position: relative;
