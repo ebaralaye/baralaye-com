@@ -81,7 +81,7 @@
          * @private
          */
         var setElementVAlign = function($elem){
-          if ($(window).width() < 992) $('.v-align, .page-body').css('margin-top', 0);
+          if ($(window).width() < 992) $('.v-align, .page-body').not('.home').css('margin-top', 0);
           else if ($elem) {
             $('.v-align.image-slider').animate({'margin-top': getVAlignMargin($elem, -100) + 'px'}, 500);
           }
