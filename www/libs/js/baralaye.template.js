@@ -68,28 +68,33 @@
          * Provides top marign for vertical alignment
          * @private
          */
-        function getVAlignMargin($elem){
-          var top_buffer = 20;
-          var top_height = (($(window).height() - $elem.height())/2 - top_buffer);
-          if (top_height <= 0) top_height = 0;
-          return top_height;
+        function getVAlignMargin($elem, $buffer){
+          var $reference = $(window);
+          var top_margin = (($reference.height() - $elem.height())/2 + $buffer);
+          if ($elem.is('.page-body.catalog-item .title')) top_margin -= $('.details').height()/2;
+          if (top_margin <= 0) top_margin = 0;
+          return top_margin;
         }
 
         /**
          * Sets page-body vertical alignmnet
          * @private
          */
-        function setPageBodyVAlign(){
-          $('.page-body').not('.catalog-item, .home').css('margin-top', getVAlignMargin($('.page-body')) + 'px');
-        }
+        var setElementVAlign = function($elem){
+          if ($(window).width() < 992) $('.v-align, .page-body').css('margin-top', 0);
+          else if ($elem) {
+            $('.v-align.image-slider').animate({'margin-top': getVAlignMargin($elem, -100) + 'px'}, 500);
+          }
+          else {
+            $('.page-body').not('.home, .catalog-item').css('margin-top', getVAlignMargin($('.page-body'), 0) + 'px');
+            $('.v-align').each(function(){ $(this).css('margin-top', getVAlignMargin($(this), -100) + 'px'); });
+          }
+        };
 
         /** @private */
         function setEventHandlers() {
-          $(window).load( function (){
-            setPageBodyVAlign();
-          });
-          $(window).resize( function (){
-            setPageBodyVAlign();
+          $(window).on('load resize', function (){
+            setElementVAlign();
           });
         }
 
@@ -97,10 +102,13 @@
             init: function() {
                 globalNav();
                 topNavDropdowns();
-                setPageBodyVAlign();
                 setEventHandlers();
-            }
+                setElementVAlign();
+            },
+
+            VAlign: setElementVAlign
         };
+
 
     }());
 

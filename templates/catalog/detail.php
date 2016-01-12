@@ -1,4 +1,4 @@
-<div class="page-body catalog-item">
+<div class="page-body catalog-item v-align-parent">
   <h1 class="title v-align <?php if($title_type != null){ echo $title_type; }; ?>"><?= $title; ?></h1>
   <?php $poplets = explode(',', $image_poplets); ?>
   <?php if (count($poplets) > 1): ?>

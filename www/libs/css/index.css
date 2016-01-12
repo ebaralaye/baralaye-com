@@ -7321,8 +7321,9 @@ fieldset[disabled] .page-body .social-media a {
 }
 .page-body.catalog-item .image-slider .bx-wrapper .bx-controls {
   position: absolute;
-  top: 50%;
+  top: 0;
   width: 100%;
+  z-index: 60;
 }
 .page-body.catalog-item .image-slider .bx-wrapper .bx-controls .bx-controls-direction {
   position: relative;
@@ -7330,22 +7331,25 @@ fieldset[disabled] .page-body .social-media a {
 }
 .page-body.catalog-item .image-slider .bx-wrapper .bx-controls .bx-controls-direction .bx-prev {
   left: 0;
-  border-top: 40px solid transparent;
-  border-bottom: 40px solid transparent;
-  border-left: 40px solid rgba(0, 0, 0, 0.2);
+  /*
+              border-top: @btn-width solid transparent;
+              border-bottom: @btn-width solid transparent;
+              border-left: @btn-width solid rgba(0,0,0,0.2);
+            */
 }
 .page-body.catalog-item .image-slider .bx-wrapper .bx-controls .bx-controls-direction .bx-next {
   right: 0;
-  border-top: 40px solid transparent;
-  border-bottom: 40px solid transparent;
-  border-right: 40px solid rgba(0, 0, 0, 0.2);
+  /*
+              border-top: @btn-width solid transparent;
+              border-bottom: @btn-width solid transparent;
+              border-right: @btn-width solid rgba(0,0,0,0.2);
+            */
 }
 .page-body.catalog-item .image-slider .bx-wrapper .bx-controls .bx-controls-direction .bx-prev,
 .page-body.catalog-item .image-slider .bx-wrapper .bx-controls .bx-controls-direction .bx-next {
   position: absolute;
-  width: 0;
-  height: 0;
-  margin-top: -40px;
+  top: 0 ;
+  width: 20%;
 }
 .page-body.catalog-item .image {
   padding-right: 0 !important;

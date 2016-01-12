@@ -7,6 +7,8 @@
 
     Baralaye.Catalog = (function() {
 
+      var BxSlider;
+
         /**
          * Sets dynamic heights
          * @private
@@ -16,12 +18,12 @@
           }
 
         /**
-         * Sets Fancybox for catalog detail image if the viewport is bigger than mobile size 
+         * Sets Fancybox detail popup for catalog detail image if the viewport is bigger than mobile size 
          * @private
          */
         function setCatalogItemFancybox(){
           if ($(window).width() >= 640){
-            $('.bxslider.catalog > li > a').fancybox({
+            $('.bxslider.catalog > li > a, .catalog-item > .image > a').fancybox({
               padding: 0,
               margin: 20,
               closeClick: true,
@@ -29,34 +31,27 @@
           }
         }
 
-        function setImageSliderControls($elem){
-          console.log($elem.width());
-          $('.bx-controls-direction').animate({'width': $elem.width() + 'px'}, 500);
-        }
-
-        function setCatalogItemVAlign($elem){
-
-          function getTopMargin($elem){
-            var top_height = ((($(window).height() - 200) - $elem.height())/2);
-            if ($elem.hasClass('title')){
-              top_height = top_height - $('.details').height()/2;
-            }
-            if (top_height < 0) top_height = 0;
-            return top_height;
+        function setImageSliderControls($elem, $elemIndex){
+          var elem_width;
+          var elem_height;
+          if ($elemIndex !== null) {
+            elem_width = ($('.bxslider img').eq($elemIndex)).width();
+            elem_height = ($('.bxslider img').eq($elemIndex)).height();
           }
-
-          if ($(window).width() < 992) {
-            $('.page-body.catalog-item .v-align').css('margin-top', 'inherit');
-          }
-          else if ($elem) {
-            $('.page-body.catalog-item .image-slider').animate({'margin-top': getTopMargin($elem) + 'px'}, 500);
+          else if ($elem !== null) {
+            elem_width = $elem.find('img').eq(0).width();
+            elem_height = $elem.find('img').eq(0).height();
           }
           else {
-            $('.page-body.catalog-item .v-align').each(function(){
-              $(this).css('margin-top', getTopMargin($(this)) + 'px');
-            });
+            elem_width = $('.bxslider img').eq($('#bx-pager a.active').data('slide-index')).width();
+            elem_height = $('.bxslider img').eq($('#bx-pager a.active').data('slide-index')).height();
           }
-        };
+          if (elem_width > 0) {
+            $('.bx-controls-direction').css('width', elem_width + 'px');
+            $('.bx-controls-direction .bx-prev').css('height', elem_height + 'px');
+            $('.bx-controls-direction .bx-next').css('height', elem_height + 'px');
+          }
+        }
 
         /**
          * Sets BX banner slider
@@ -68,43 +63,44 @@
             pagerCustom: '#bx-pager',
             preloadImages: 'all',
             pager: true,
-            speed: 1000,
-            controls: false,
-            pause: 8000,
+            speed: 500,
+            controls: true,
             adaptiveHeight: true,
             adaptiveHeightSpeed: 500,
             nextText: "",
             prevText: "",
             onSliderLoad: function($elemIndex){
-              setCatalogItemVAlign();
-              //setImageSliderControls($('.bxslider > li > a').eq($elemIndex));
+              setImageSliderControls(null, $elemIndex);
+              Baralaye.Template.VAlign();
             },
             onSlideBefore: function($elem){
-              setCatalogItemVAlign($elem);
-              //setImageSliderControls($elem.children('a').eq(0));
+              Baralaye.Template.VAlign($elem);
             },
+            onSlideAfter: function($elem){
+              setImageSliderControls($elem, null);
+            }
           });
         }
 
         /** @private */
-        function setGlobalVariables() {
-        }
-
-        /** @private */
         function setEventHandlers() {
-          $(window).resize( function (){
-            setCatalogListItemHeight();
-            setCatalogItemVAlign();
+          $(window).on('resize', function (){
+            if ($('.bxslider.catalog').length === 1) {
+              setImageSliderControls(null, null);
+            }
+          });
+          $(window).on('load resize', function (){
+            if ($('.item-list.catalog').length === 1) {
+              setCatalogListItemHeight();
+            }
           });
         }
 
         return {
             init: function() {
-                setBxSlider();
-                setCatalogItemVAlign();
-                setCatalogItemFancybox();
                 setCatalogListItemHeight();
-                setGlobalVariables();
+                setBxSlider();
+                setCatalogItemFancybox();
                 setEventHandlers();
             }
         };

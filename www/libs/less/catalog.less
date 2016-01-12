@@ -138,34 +138,36 @@
 
       .bx-controls {
         position: absolute;
-        top: 50%;
+        top: 0;
         width: 100%;
+        z-index: 60;
 
         .bx-controls-direction {
           position: relative;
           margin: 0 auto;
 
-          @btn-width: 40px;
-
           .bx-prev {
             left: 0;
-            border-top: @btn-width solid transparent;
-            border-bottom: @btn-width solid transparent;
-            border-left: @btn-width solid rgba(0,0,0,0.2);
+            /*
+              border-top: @btn-width solid transparent;
+              border-bottom: @btn-width solid transparent;
+              border-left: @btn-width solid rgba(0,0,0,0.2);
+            */
           }
           .bx-next {
             right: 0;
-            border-top: @btn-width solid transparent;
-            border-bottom: @btn-width solid transparent;
-            border-right: @btn-width solid rgba(0,0,0,0.2);
+            /*
+              border-top: @btn-width solid transparent;
+              border-bottom: @btn-width solid transparent;
+              border-right: @btn-width solid rgba(0,0,0,0.2);
+            */
           }
 
           .bx-prev,
           .bx-next {
             position: absolute;
-            width: 0;
-            height: 0;
-            margin-top: -(@btn-width);
+            top: 0 ;
+            width: 20%;
           }
         }
       }
