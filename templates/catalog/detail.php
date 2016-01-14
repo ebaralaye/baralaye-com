@@ -37,9 +37,9 @@
             <?php if ($price != null && $status == 1): ?>
               $<?= $price; ?>
             <?php elseif ($status == 3): ?>
-              <a href="/contact" target="_blank">Inquire</a>
+              <a href="/contact" target="_blank">+inquire</a>
             <?php else: ?>
-              NFS
+              acquired
             <?php endif; ?>
           </li>
           <?php if ($edition_index != null): ?>

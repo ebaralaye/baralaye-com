@@ -7445,6 +7445,10 @@ fieldset[disabled] .page-body .social-media a {
   letter-spacing: 1px;
   line-height: 16px;
 }
+.page-body.catalog-item .details ul li.edition {
+  display: none;
+  /*hidden for now*/
+}
 .page-body.catalog-item .details ul li p {
   font-size: 10px;
   line-height: 16px;
