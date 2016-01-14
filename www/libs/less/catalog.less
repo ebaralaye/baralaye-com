@@ -239,6 +239,25 @@
           display: none; /*hidden for now*/
         }
 
+        &.price {
+
+          a.inquire::before {
+            content: '+';
+          }
+        }
+
+        &.description {
+          margin-top: 10px;
+
+          .quote p {
+            font-style: italic;
+
+            &::before, &::after {
+              content: '"';
+            }
+          }
+        }
+
         p {
           font-size: 10px;
           line-height: 16px;

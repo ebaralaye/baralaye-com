@@ -37,7 +37,7 @@
             <?php if ($price != null && $status == 1): ?>
               $<?= $price; ?>
             <?php elseif ($status == 3): ?>
-              <a href="/contact" target="_blank">+inquire</a>
+              <a href="/contact" target="_blank" class="inquire">inquire</a>
             <?php else: ?>
               acquired
             <?php endif; ?>

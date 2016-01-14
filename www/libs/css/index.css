@@ -7449,6 +7449,19 @@ fieldset[disabled] .page-body .social-media a {
   display: none;
   /*hidden for now*/
 }
+.page-body.catalog-item .details ul li.price a.inquire::before {
+  content: '+';
+}
+.page-body.catalog-item .details ul li.description {
+  margin-top: 10px;
+}
+.page-body.catalog-item .details ul li.description .quote p {
+  font-style: italic;
+}
+.page-body.catalog-item .details ul li.description .quote p::before,
+.page-body.catalog-item .details ul li.description .quote p::after {
+  content: '"';
+}
 .page-body.catalog-item .details ul li p {
   font-size: 10px;
   line-height: 16px;
