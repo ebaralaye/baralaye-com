@@ -70,7 +70,7 @@
          */
         function getVAlignMargin($elem, $buffer){
           var $reference = $(window);
-          var top_margin = (($reference.height() - $elem.height())/2 + $buffer);
+          var top_margin = ((($reference.height()) - $elem.height())/2) - $buffer;
           if ($elem.is('.page-body.catalog-item .title')) top_margin -= $('.details').height()/2;
           if (top_margin <= 0) top_margin = 0;
           return top_margin;
@@ -81,13 +81,15 @@
          * @private
          */
         var setElementVAlign = function($elem){
+          var vAlign_buffer = 80;
+          var pageBody_buffer = 0;
           if ($(window).width() < 992) $('.v-align, .page-body').not('.home').css('margin-top', 0);
           else if ($elem) {
-            $('.v-align.image-slider').animate({'margin-top': getVAlignMargin($elem, -100) + 'px'}, 500);
+            $('.v-align.image-slider').animate({'margin-top': getVAlignMargin($elem, vAlign_buffer) + 'px'}, 500);
           }
           else {
-            $('.page-body').not('.home, .catalog-item').css('margin-top', getVAlignMargin($('.page-body'), 0) + 'px');
-            $('.v-align').each(function(){ $(this).css('margin-top', getVAlignMargin($(this), -100) + 'px'); });
+            $('.page-body').not('.home, .catalog-item').css('margin-top', getVAlignMargin($('.page-body'), pageBody_buffer) + 'px');
+            $('.v-align').each(function(){ $(this).css('margin-top', getVAlignMargin($(this), vAlign_buffer) + 'px'); });
           }
         };
 

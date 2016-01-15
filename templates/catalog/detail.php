@@ -9,11 +9,11 @@
         <?php endforeach; ?>
       </ul>
     </div>
-    <div id="bx-pager" class="image-poplets v-align">
+    <ul id="bx-pager" class="image-poplets v-align">
       <?php foreach($poplets as $key => $poplet): ?>
-        <a data-slide-index="<?= $key ?>" href=""><img src="/images/art/portfolio/small/<?= $id.'-'.$poplet ?>.jpg" alt="<?= $id.'-'.$poplet ?>" /></a>
+        <li><a data-slide-index="<?= $key ?>" href=""><img src="/images/art/portfolio/small/<?= $id.'-'.$poplet ?>.jpg" alt="<?= $id.'-'.$poplet ?>" /></a></li>
       <?php endforeach; ?>
-    </div>
+    </ul>
   <?php else: ?>
     <div class="image v-align">
       <a href="/images/art/portfolio/big/<?= $image ?>.jpg"><img class="main" src="/images/art/portfolio/big/<?= $image ?>.jpg" alt="<?= $image ?>" /></a>
