@@ -249,12 +249,25 @@
         &.description {
           margin-top: 10px;
 
-          .quote p {
-            font-style: italic;
+          dfn {
+            display: block;
+            margin-bottom: 5px;
+            font-style: normal;
+          }
 
-            &::before, &::after {
-              content: '"';
+          cite {
+            margin-bottom: 5px;
+            display: block;
+
+            &::before {
+              content: '- ';
             }
+          }
+
+          q {
+            display: block;
+            margin-bottom: 5px;
+            font-style: italic;
           }
         }
 

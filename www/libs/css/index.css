@@ -7455,12 +7455,22 @@ fieldset[disabled] .page-body .social-media a {
 .page-body.catalog-item .details ul li.description {
   margin-top: 10px;
 }
-.page-body.catalog-item .details ul li.description .quote p {
-  font-style: italic;
+.page-body.catalog-item .details ul li.description dfn {
+  display: block;
+  margin-bottom: 5px;
+  font-style: normal;
 }
-.page-body.catalog-item .details ul li.description .quote p::before,
-.page-body.catalog-item .details ul li.description .quote p::after {
-  content: '"';
+.page-body.catalog-item .details ul li.description cite {
+  margin-bottom: 5px;
+  display: block;
+}
+.page-body.catalog-item .details ul li.description cite::before {
+  content: '- ';
+}
+.page-body.catalog-item .details ul li.description q {
+  display: block;
+  margin-bottom: 5px;
+  font-style: italic;
 }
 .page-body.catalog-item .details ul li p {
   font-size: 10px;
