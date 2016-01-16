@@ -253,12 +253,16 @@ ul.social-btns {
 
   header,
   .header {
-    width: 70%;
+    width: 80%;
     margin: 0 auto;
     margin-bottom: 30px;
 
     img {
       max-width: 100%;
+
+      @media (min-width: @screen-sm-min) {
+        width: 400px;
+      }
     }
 
     p {

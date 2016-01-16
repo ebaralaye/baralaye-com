@@ -6326,13 +6326,19 @@ ul.social-btns .btn-s.purchase {
 }
 .page-body header,
 .page-body .header {
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
   margin-bottom: 30px;
 }
 .page-body header img,
 .page-body .header img {
   max-width: 100%;
+}
+@media (min-width: 768px) {
+  .page-body header img,
+  .page-body .header img {
+    width: 400px;
+  }
 }
 .page-body header p,
 .page-body .header p {
