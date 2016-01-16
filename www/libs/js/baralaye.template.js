@@ -41,6 +41,9 @@
                 $('.tmp-bottom').show();
               }
               else $('.tmp-bottom').hide();
+
+              if ($(window).scrollTop() > 120) $('#tmp-top').addClass('scrolling');
+              else $('#tmp-top').removeClass('scrolling');
             });
         }
 

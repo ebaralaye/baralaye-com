@@ -6044,7 +6044,6 @@ form.form-container .mce_inline_error {
  * @author tech@baralaye.com
  */
 /** Variables ----*/
-/*#4f569f*/
 /** Mixins ----*/
 .raleway {
   font-family: "raleway", sans-serif;
@@ -6122,7 +6121,7 @@ p {
 .em {
   background-color: #f3f3f3;
   border-radius: 6px;
-  padding: 2px 4px;
+  padding: 1px 4px;
   white-space: nowrap;
 }
 .small,
@@ -6132,7 +6131,7 @@ small {
 /** Horizontal Rule ----*/
 .hr,
 hr {
-  border-bottom: 2px solid #dfdfdf;
+  border-bottom: 1px solid #dfdfdf;
   margin: 0 15px;
 }
 .hr:before,
@@ -6349,7 +6348,7 @@ ul.social-btns .btn-s.purchase {
 .page-body .h-title {
   display: inline-block;
   margin-bottom: 14px;
-  border-bottom: 2px solid #dfdfdf;
+  border-bottom: 1px solid #dfdfdf;
   letter-spacing: 1px;
 }
 .page-body .h-title a {
@@ -6357,8 +6356,8 @@ ul.social-btns .btn-s.purchase {
   text-decoration: none;
 }
 .page-body .h-title a:hover {
-  border-bottom: 2px solid #000000;
-  margin-bottom: -2px;
+  border-bottom: 1px solid #000000;
+  margin-bottom: -1px;
 }
 .page-body .h-title.sub {
   border-bottom: 1px solid #dfdfdf;
@@ -6372,7 +6371,7 @@ ul.social-btns .btn-s.purchase {
   display: inline-block;
   font-size: 11px;
   letter-spacing: 1px;
-  padding: 2px 10px;
+  padding: 1px 10px;
   background: #f3f3f3;
   border-radius: 15px;
   text-decoration: none;
@@ -6473,9 +6472,17 @@ fieldset[disabled] .page-body .social-media a {
   width: 100%;
   z-index: 999;
   margin: 20px 0 40px;
-  border-bottom: 2px solid #dfdfdf;
-  background: rgba(255, 255, 255, 0.9);
+  border-bottom: 1px solid #dfdfdf;
   /** Top nav ----*/
+}
+@media (min-width: 768px) {
+  .tmp-wrap .tmp-top {
+    border-color: transparent;
+  }
+  .tmp-wrap .tmp-top.scrolling {
+    background: rgba(255, 255, 255, 0.9);
+    border-color: #dfdfdf;
+  }
 }
 .tmp-wrap .tmp-top.double-nav {
   margin-bottom: 100px;
@@ -6525,9 +6532,9 @@ fieldset[disabled] .page-body .social-media a {
 @media (min-width: 768px) {
   .tmp-wrap .tmp-top .tmp-logo > a {
     position: relative;
-    bottom: -2px;
-    border-bottom: 2px solid transparent;
-    margin-bottom: -2px;
+    bottom: -1px;
+    border-bottom: 1px solid #dfdfdf;
+    margin-bottom: -1px;
   }
   .tmp-wrap .tmp-top .tmp-logo > a:hover {
     border-color: #000000;
@@ -6551,7 +6558,7 @@ fieldset[disabled] .page-body .social-media a {
   list-style: none;
   margin: 0 auto;
   position: relative;
-  bottom: -2px;
+  bottom: -1px;
   height: 40px;
 }
 .tmp-wrap .tmp-top > .tmp-nav > ul.nav:before,
@@ -6617,7 +6624,7 @@ fieldset[disabled] .page-body .social-media a {
   height: 40px;
   line-height: 40px;
   padding: 0 15px;
-  border-bottom-width: 2px;
+  border-bottom-width: 1px;
 }
 .tmp-wrap .tmp-top > .tmp-nav > ul.nav > li > a:hover,
 .tmp-wrap .tmp-top > .tmp-nav > ul.nav > li > a.active {
@@ -6632,7 +6639,7 @@ fieldset[disabled] .page-body .social-media a {
   display: none;
   position: absolute;
   height: 40px;
-  background-color: rgba(243, 243, 243, 0.7);
+  background-color: rgba(243, 243, 243, 0.9);
 }
 .tmp-wrap .tmp-top > .tmp-nav > ul.nav > li > ul {
   top: 40px;
@@ -6663,7 +6670,7 @@ fieldset[disabled] .page-body .social-media a {
 }
 @media (min-width: 768px) {
   .tmp-wrap .tmp-top > .tmp-nav > ul.nav > li > ul li a {
-    background-color: rgba(243, 243, 243, 0.7);
+    background-color: rgba(243, 243, 243, 0.9);
   }
 }
 .tmp-wrap .tmp-top > .tmp-nav > ul.nav > li > ul > li.selected > a {
@@ -6713,7 +6720,7 @@ fieldset[disabled] .page-body .social-media a {
   }
 }
 .tmp-wrap .tmp-bottom {
-  border-top: 2px solid #dfdfdf;
+  border-top: 1px solid #dfdfdf;
   margin-top: 60px;
   margin-bottom: 20px;
   display: none;
@@ -6743,14 +6750,14 @@ fieldset[disabled] .page-body .social-media a {
   float: left;
   font-size: 13px;
   font-weight: 400;
-  border-bottom: 2px solid #dfdfdf;
+  border-bottom: 1px solid #dfdfdf;
   background: none;
 }
 .tmp-wrap .tmp-bottom > .tmp-nav > ul.nav > li.selected > a,
 .tmp-wrap .tmp-bottom > .tmp-nav > ul.nav > li > .active,
 .tmp-wrap .tmp-bottom > .tmp-nav > ul.nav > li > a:hover {
   text-decoration: none;
-  border-bottom: 2px solid #000000;
+  border-bottom: 1px solid #000000;
   margin-bottom: -1px;
 }
 .tmp-wrap .tmp-bottom > .tmp-nav > ul.nav > li > ul {
