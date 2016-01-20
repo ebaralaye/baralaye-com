@@ -6977,6 +6977,7 @@ fieldset[disabled] .page-body .social-media a {
 .page-body.resume section ul.list .date,
 .page-body.resume section ul.list time,
 .page-body.resume section ul.list .name,
+.page-body.resume section ul.list a,
 .page-body.resume section ul.list .position {
   font-weight: bold;
 }
@@ -6990,15 +6991,28 @@ fieldset[disabled] .page-body .social-media a {
   font-size: 10px;
   font-style: italic;
 }
-.page-body.resume section ul.list .date,
+.page-body.resume section ul.list q,
+.page-body.resume section ul.list em {
+  font-style: italic;
+}
+.page-body.resume section ul.list q::before,
+.page-body.resume section ul.list em::before {
+  content: ", ";
+}
+.page-body.resume section ul.list q::after,
+.page-body.resume section ul.list em::after {
+  content: " - ";
+}
 .page-body.resume section ul.list time {
   font-size: 10px;
   font-style: italic;
   padding-right: 10px;
   white-space: nowrap;
 }
+.page-body.resume section ul.list time.d-m {
+  display: none;
+}
 @media (min-width: 768px) {
-  .page-body.resume section ul.list .date,
   .page-body.resume section ul.list time {
     position: absolute;
     right: 100%;

@@ -209,6 +209,7 @@
           .date,
           time,
           .name,
+          a,
           .position {
             font-weight: bold;
           }
@@ -225,12 +226,27 @@
             font-style: italic;
           }
 
-          .date,
+          q, em {
+            font-style: italic;
+
+            &::before {
+              content: ", ";
+            }
+
+            &::after {
+              content: " - ";
+            }
+          }
+
           time {
             font-size: 10px;
             font-style: italic;
             padding-right: 10px;
             white-space: nowrap;
+
+            &.d-m {
+              display: none;
+            }
 
             @media (min-width: @screen-sm-min) {
               position: absolute;
