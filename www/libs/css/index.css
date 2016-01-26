@@ -6991,17 +6991,23 @@ fieldset[disabled] .page-body .social-media a {
   font-size: 10px;
   font-style: italic;
 }
-.page-body.resume section ul.list q,
+.page-body.resume section ul.list q {
+  font-style: italic;
+}
+.page-body.resume section ul.list q::before {
+  content: ', "';
+}
+.page-body.resume section ul.list q::after {
+  content: '" - ';
+}
 .page-body.resume section ul.list em {
   font-style: italic;
 }
-.page-body.resume section ul.list q::before,
 .page-body.resume section ul.list em::before {
-  content: ", ";
+  content: ', ';
 }
-.page-body.resume section ul.list q::after,
 .page-body.resume section ul.list em::after {
-  content: " - ";
+  content: ' - ';
 }
 .page-body.resume section ul.list time {
   font-size: 10px;
@@ -7552,7 +7558,7 @@ fieldset[disabled] .page-body .social-media a {
   list-style-type: disc;
   list-style-position: outside;
 }
-/** Tumblr ----*/
+/** Tumblr / Blog ----*/
 .tumblr_posts {
   padding-left: 0;
   list-style: none;
@@ -7578,31 +7584,31 @@ fieldset[disabled] .page-body .social-media a {
   clear: both;
 }
 .tumblr_posts li {
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-bottom: 30px;
-  position: relative;
+  float: left;
+  width: 100%;
 }
 @media (min-width: 768px) {
   .tumblr_posts li {
-    float: left;
     width: 50%;
   }
 }
-.tumblr_posts li:last-child {
-  margin-bottom: 0px;
+@media (min-width: 992px) {
+  .tumblr_posts li {
+    width: 33%;
+  }
+}
+@media (min-width: 1200px) {
+  .tumblr_posts li {
+    width: 25%;
+  }
 }
 .tumblr_posts li img {
-  max-width: 100%;
+  min-width: 100%;
 }
 .tumblr_posts li .tumblr_caption {
   color: #fff;
   position: absolute;
   bottom: 0;
-  left: 50%;
-  margin-left: -40%;
-  width: 80%;
   padding: 10px 15px 0 15px;
   background: rgba(0, 0, 0, 0.5);
 }

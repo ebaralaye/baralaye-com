@@ -226,15 +226,25 @@
             font-style: italic;
           }
 
-          q, em {
+          q {
             font-style: italic;
 
             &::before {
-              content: ", ";
+              content: ', "';
             }
-
             &::after {
-              content: " - ";
+              content: '" - ';
+            }
+          }
+
+          em {
+            font-style: italic;
+
+            &::before {
+              content: ', ';
+            }
+            &::after {
+              content: ' - ';
             }
           }
 

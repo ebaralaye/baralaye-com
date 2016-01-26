@@ -47,7 +47,7 @@
   list-style-position: outside;
 }
 
-/** Tumblr ----*/
+/** Tumblr / Blog ----*/
 
 .tumblr_posts {
   .list-unstyled;
@@ -56,25 +56,27 @@
   margin: 0 auto;
 
   li {
-    .make-sm-column(6);
-    margin-bottom: 30px;
-    position: relative;
+    float: left;
+    width: 100%;
 
-    &:last-child {
-      margin-bottom: 0px;
+    @media (min-width: @screen-sm-min) {
+      width: 50%;
+    }
+    @media (min-width: @screen-md-min) {
+      width: 33%;
+    }
+    @media (min-width: @screen-lg-min) {
+      width: 25%;
     }
 
     img {
-      max-width: 100%;
+      min-width: 100%;
     }
 
     .tumblr_caption {
       color: #fff;
       position: absolute;
       bottom: 0;
-      left: 50%;
-      margin-left: -40%;
-      width: 80%;
       padding: 10px 15px 0 15px;
       background: rgba(0,0,0,0.5);
     }
