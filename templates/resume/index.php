@@ -5,13 +5,6 @@
   </header>
   <div class="page-main">
 
-    <section id="availability">
-      <h3>Availability</h3>
-      <div class="section">
-        <?php echo $resume['availability']; ?>
-      </div>
-    </section>
-
     <section id="education">
       <h3>Education</h3>
       <ul class="section list outside">
