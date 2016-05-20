@@ -46,6 +46,12 @@ function action_portfolio($path){
     $sth = $dbh -> prepare($sql);
     $sth -> execute(array($pathProductNode));
     $product = $sth -> fetch();
+    if (empty($product)) { // enables the use ids as identifiers in urls routes instead of names
+      $sql = 'SELECT * FROM portfolio WHERE id = ?';
+      $sth = $dbh -> prepare($sql);
+      $sth -> execute(array($pathProductNode));
+      $product = $sth -> fetch();
+    }
     $product_tags = explode(',',$product['tags']);
     // Manually adding base tags
     $product_tags[] = "art";

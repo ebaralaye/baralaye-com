@@ -6,11 +6,13 @@
   <ul class="item-list catalog">
     <?php foreach ($products as $product): ?>
       <li class="item">
-        <?php if ($product['image']): ?>
-          <a href="<?= $product['url']; ?>" style="background-image:url(/images/art/portfolio/large/<?= $product['id']; ?>-<?= $product['image']; ?>.jpg)" />
-        <?php else: ?>
-          <a href="<?= $product['url']; ?>" style="background-image:url(/images/art/portfolio/large/<?= $product['id']; ?>.jpg)" />
-        <?php endif ?>
+        <?php
+          // Set the product image based on the presence of poplets
+          $product_image = ($product['image']) ? ($product['id']."-".$product['image']) : $product['id'];
+          // Set the product url based on availability of a product name (defaults to id)
+          $product_url = ($product['name']) ? ($product['url']."/".$product['name']) : ($product['url']."/".$product['id']);
+        ?>
+        <a href="<?= $product_url; ?>" style="background-image:url(/images/art/portfolio/large/<?= $product_image; ?>.jpg)" />
           <span class="title <?php if($product['title_type'] != null){ echo $product['title_type']; }; ?>"><?= $product['title']; ?></span>
         </a>
       </li>

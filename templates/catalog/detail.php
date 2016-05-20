@@ -16,7 +16,7 @@
     </ul>
   <?php else: ?>
     <div class="image v-align">
-      <a href="/images/art/portfolio/big/<?= $image ?>.jpg"><img class="main" src="/images/art/portfolio/big/<?= $image ?>.jpg" alt="<?= $image ?>" /></a>
+      <a href="/images/art/portfolio/big/<?= $id ?>.jpg"><img class="main" src="/images/art/portfolio/big/<?= $id ?>.jpg" alt="<?= $id ?>" /></a>
     </div>
   <?php endif; ?>
   <div class="details">
