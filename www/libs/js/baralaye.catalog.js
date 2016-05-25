@@ -94,6 +94,9 @@
               setCatalogListItemHeight();
             }
           });
+          $('.image-poplets.v-align').on('resize', function (){
+            Baralaye.Template.VAlign();
+          });
         }
 
         return {
