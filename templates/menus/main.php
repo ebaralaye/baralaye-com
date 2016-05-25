@@ -1,22 +1,19 @@
 <ul class="nav">
-  <li><a href="/art">Work</a>
+  <li><a href="/work">Work</a>
     <ul>
-      <li><a href="/drawings">Drawings</a>
+      <li><a href="/archive">Archive</a>
         <ul>
-          <li><a href="/drawings/prints">Prints</a></li>
+          <li><a href="/archive/drawings">Drawings</a></li>
+          <li><a href="/archive/pottery">Pottery</a></li>
+          <li><a href="/archive/sculpture/ceramics">Ceramics</a></li>
+          <li><a href="/archive/sculpture/metal">Metal</a></li>
         </ul>
       </li>
-      <li><a href="/vessels">Vessels</a>
-        <ul>
-          <li><a href="/vessels/design">Design</a></li>
-          <li><a href="/vessels/pottery">Pottery</a></li>
-        </ul>
-      </li>
+      <li><a href="/pottery">Pottery</a></li>
       <li><a href="/sculpture">Sculpture</a>
         <ul>
           <li><a href="/sculpture/mixed-media">Mixed Media</a></li>
           <li><a href="/sculpture/ceramics">Ceramics</a></li>
-          <li><a href="/sculpture/metal">Metal</a></li>
         </ul>
       </li>
     </ul>
@@ -33,11 +30,5 @@
       <li><a href="/statement">Statement</a></li>
     </ul>
   </li>
-  <li><a href="/contact">Contact</a>
-    <!--<ul>
-      <li><a href="/contact">Contact</a></li>
-      <li><a href="/news">News</a></li>
-      <li><a href="/blog">Blog</a></li>
-    </ul>-->
-  </li>
+  <li><a href="/contact">Contact</a></li>
 </ul>

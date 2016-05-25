@@ -28,18 +28,16 @@
             <li class="dimensions"><?= $dim_height,"&quot; x ", $dim_width,"&quot; x ",$dim_depth,"&quot;"; ?></li>
           <?php endif; ?>
           <!--
-          <?php if ($weight != null && $status != 2): ?>
+          <?php if ($weight != null && $status > 3): ?>
             <li class="weight">Weight: <span><?= $weight; ?></span> lbs</li>
           <?php endif; ?>
           -->
           <li class="year"><?php $year = date("Y", strtotime($date)); echo $year?></li>
           <li class="price">
-            <?php if ($price != null && $status == 1): ?>
+            <?php if ($status == 1): ?>
               $<?= $price; ?>
-            <?php elseif ($status == 3): ?>
+            <?php elseif ($status == 2): ?>
               <a href="/contact" target="_blank" class="inquire">inquire</a>
-            <?php else: ?>
-              acquired
             <?php endif; ?>
           </li>
           <?php if ($edition_index != null): ?>

@@ -56,6 +56,7 @@ function action_portfolio($path){
     // Manually adding base tags
     $product_tags[] = "art";
     $product_tags[] = "portfolio";
+    $product_tags[] = "work";
     $catalog_diff = array_diff($pathCatalogArr,$product_tags);
   }
   catch (PDOException $e) {
@@ -82,6 +83,7 @@ function action_portfolio($path){
     $sth -> execute(array($path));
     $catalog = $sth -> fetch();
     $catalog_tags = explode(',',$catalog['tags']);
+    $conditional_tag = null;
 
     if ($catalog) {
       $products = array();
@@ -89,8 +91,17 @@ function action_portfolio($path){
       $response['meta_desc'] = $catalog['description'];
 
       try {
+
         // Select rows with the urls that are a zero indexed substring of the path, within the same category
-        $sql = 'SELECT * FROM portfolio WHERE  status >= 1 ORDER BY date DESC';
+        if (substr($path, 1,7) == 'archive'){
+          $sql = 'SELECT * FROM portfolio WHERE  status >= 1 AND archive = 1 ORDER BY date DESC';
+          $conditional_tag = "archive";
+          error_log("archive",0);
+        }
+        else {
+          $sql = 'SELECT * FROM portfolio WHERE  status >= 1 AND archive = 0 ORDER BY date DESC';
+          error_log("not archive",0);
+        }
         $sth = $dbh -> prepare($sql);
         $sth -> execute(array($path));
         $rows = $dbh -> query($sql);
@@ -99,10 +110,11 @@ function action_portfolio($path){
           $product_tags = explode(',',$row['tags']);
           // Manually adding base tags
           $product_tags[] = "art";
+          $product_tags[] = "work";
+          $product_tags[] = $conditional_tag;
           $product_tags[] = "portfolio";
           $result = array_diff($catalog_tags, $product_tags);
 
-          // Set product title to system name if title is null (untitled)
           $row['title_type'] = null;
           if ($row['title'] == null) {
             $row['title'] = $row['id'];
