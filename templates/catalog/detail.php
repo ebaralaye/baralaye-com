@@ -1,4 +1,4 @@
-<div class="page-body catalog-item v-align-parent">
+<div class="page-body catalog-item">
   <h1 class="title v-align <?php if($title_type != null){ echo $title_type; }; ?>"><?= $title; ?></h1>
   <?php $poplets = explode(',', $image_poplets); ?>
   <?php if (count($poplets) > 1): ?>
@@ -27,11 +27,6 @@
           <?php if ($dim_width != null): ?>
             <li class="dimensions"><?= $dim_height,"&quot; x ", $dim_width,"&quot; x ",$dim_depth,"&quot;"; ?></li>
           <?php endif; ?>
-          <!--
-          <?php if ($weight != null && $status > 3): ?>
-            <li class="weight">Weight: <span><?= $weight; ?></span> lbs</li>
-          <?php endif; ?>
-          -->
           <li class="year"><?php $year = date("Y", strtotime($date)); echo $year?></li>
           <li class="price">
             <?php if ($status == 1): ?>
