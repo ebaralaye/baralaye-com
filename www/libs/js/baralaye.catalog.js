@@ -87,6 +87,7 @@
           $(window).on('resize', function (){
             if ($('.bxslider.catalog').length === 1) {
               setImageSliderControls(null, null);
+              console.log("resizing...");
             }
           });
           $(window).on('load resize', function (){
@@ -94,8 +95,9 @@
               setCatalogListItemHeight();
             }
           });
-          $('.image-poplets.v-align').on('resize', function (){
+          $('#bx-pager').on('resize', function (){
             Baralaye.Template.VAlign();
+            //console.log("aligning...");
           });
         }
 
