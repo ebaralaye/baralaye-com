@@ -19,6 +19,7 @@
     <div class="image v-align">
       <a href="/images/art/portfolio/big/<?= $id ?>.jpg"><img class="main" src="/images/art/portfolio/big/<?= $id ?>.jpg" alt="<?= $id ?>" /></a>
     </div>
+    <script type="text/javascript">Baralaye.Template.VAlign();</script>
   <?php endif; ?>
   <div class="details">
     <ul>
