@@ -5,8 +5,7 @@
         <ul>
           <li><a href="/archive/drawings">Drawings</a></li>
           <li><a href="/archive/pottery">Pottery</a></li>
-          <li><a href="/archive/sculpture/ceramics">Ceramics</a></li>
-          <li><a href="/archive/sculpture/metal">Metal</a></li>
+          <li><a href="/archive/sculpture">Sculpture</a></li>
         </ul>
       </li>
       <li><a href="/pottery">Pottery</a></li>

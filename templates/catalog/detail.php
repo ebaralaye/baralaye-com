@@ -12,6 +12,8 @@
     <ul id="bx-pager" class="image-poplets v-align">
       <?php foreach($poplets as $key => $poplet): ?>
         <li><a data-slide-index="<?= $key ?>" href=""><img src="/images/art/portfolio/small/<?= $id.'-'.$poplet ?>.jpg" alt="<?= $id.'-'.$poplet ?>" /></a></li>
+        <!-- // Run vertical align as each poplet loads -->
+        <script type="text/javascript">Baralaye.Template.VAlign();</script>
       <?php endforeach; ?>
     </ul>
   <?php else: ?>

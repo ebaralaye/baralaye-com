@@ -87,17 +87,12 @@
           $(window).on('resize', function (){
             if ($('.bxslider.catalog').length === 1) {
               setImageSliderControls(null, null);
-              console.log("resizing...");
             }
           });
           $(window).on('load resize', function (){
             if ($('.item-list.catalog').length === 1) {
               setCatalogListItemHeight();
             }
-          });
-          $('#bx-pager').on('resize', function (){
-            Baralaye.Template.VAlign();
-            //console.log("aligning...");
           });
         }
 
