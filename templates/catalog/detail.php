@@ -6,7 +6,6 @@
       <ul class="bxslider catalog">
         <?php foreach($poplets as $poplet): ?>
           <li><a href="/images/art/portfolio/big/<?= $id.'-'.$poplet ?>.jpg" rel="gallery-1"><img src="/images/art/portfolio/big/<?= $id.'-'.$poplet ?>.jpg" alt="<?= $id.$poplet ?>" /></a></li>
-          <script type="text/javascript">Baralaye.Template.VAlign();</script>
         <?php endforeach; ?>
       </ul>
     </div>
@@ -14,13 +13,11 @@
       <?php foreach($poplets as $key => $poplet): ?>
         <li><a data-slide-index="<?= $key ?>" href=""><img src="/images/art/portfolio/small/<?= $id.'-'.$poplet ?>.jpg" alt="<?= $id.'-'.$poplet ?>" /></a></li>
         <!-- // Run vertical align as each poplet loads -->
-        <script type="text/javascript">Baralaye.Template.VAlign();</script>
       <?php endforeach; ?>
     </ul>
   <?php else: ?>
     <div class="image v-align">
       <a href="/images/art/portfolio/big/<?= $id ?>.jpg"><img class="main" src="/images/art/portfolio/big/<?= $id ?>.jpg" alt="<?= $id ?>" /></a>
-      <script type="text/javascript">Baralaye.Template.VAlign();</script>
     </div>
   <?php endif; ?>
   <div class="details">

@@ -61,7 +61,7 @@
           $('.bxslider.catalog').bxSlider({
             mode: 'fade',
             pagerCustom: '#bx-pager',
-            preloadImages: 'all',
+            preloadImages: 'visible',
             pager: true,
             speed: 500,
             controls: true,
@@ -90,6 +90,7 @@
             }
           });
           $(window).on('load resize', function (){
+            Baralaye.Template.VAlign();
             if ($('.item-list.catalog').length === 1) {
               setCatalogListItemHeight();
             }
