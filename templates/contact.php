@@ -1,15 +1,21 @@
 <div class="page-body social stacked">
+  <section class="social-media">
+    <h1>Social</h1>
+    <a href="http://facebook.com/baralaye" target="_blank">Facebook</a>
+    <a href="http://twitter.com/baralaye" target="_blank">Twitter</a>
+    <a href="http://instagram.com/baralaye" target="_blank">Instagram</a>
+    <!--<a href="http://linkedin.com/in/baralaye" target="_blank">LinkedIn</a>-->
+    <!--<a href="http://pinterest.com/baralaye" target="_blank">Pinterest</a>-->
+    <!--<a href="http://baralaye.tumblr.com" target="_blank">Tumblr</a>-->
+    <!--<a href="https://plus.google.com/112097083655390633396/about" target="_blank">Google+</a>-->
+    <!--<a href="http://www.flickr.com/photos/baralaye/" target="_blank">Flickr</a>-->
+    <!--<a href="http://www.youtube.com/user/baralaye/videos?flow=grid&amp;view=1" target="_blank">YouTube</a>-->
+  </section>
   <section id="contact" class="contact">
     <h1>Contact</h1>
     <form id="contact-form" class="form-container form-row" action="/contact" method="post" data-success="<?php var_export($form_success) ?>">
       <div class="form-group">
-        <p>
-        studio&#64;baralaye&#46;com / 646&#46;301&#46;6311<br />
-        Detroit / NYC
-        <!--<a href="http://cranbrookart.edu" target="_blank">Cranbrook Academy of Art</a><br />
-        <a href="http://maps.google.com/maps?q=Cranbrook+Academy" class="gMap" title="Cranbrook Academy of Art">39221 Woodward Ave, Bloomfield Hills, MI 48304</a>-->
-        </p>
-        <br />
+        <p>studio&#64;baralaye&#46;com / 646&#46;301&#46;6311</p>
       </div>
       <div class="row">
         <div class="form-group col-sm-5 col-xs-12 <?php if(! empty($form_errors['email'])){echo 'has-error';} ?>">
@@ -276,18 +282,6 @@
     }
     </script>
     <!--End mc_embed_signup-->
-  </section>
-  <section class="social-media">
-    <h1>Social</h1>
-    <a href="http://facebook.com/baralaye" target="_blank">Facebook</a>
-    <a href="http://twitter.com/baralaye" target="_blank">Twitter</a>
-    <a href="http://baralaye.tumblr.com" target="_blank">Tumblr</a>
-    <a href="http://instagram.com/baralaye" target="_blank">Instagram</a>
-    <a href="http://pinterest.com/baralaye" target="_blank">Pinterest</a>
-    <!--<a href="http://linkedin.com/in/baralaye" target="_blank">LinkedIn</a>-->
-    <!--<a href="https://plus.google.com/112097083655390633396/about" target="_blank">Google+</a>-->
-    <!--<a href="http://www.flickr.com/photos/baralaye/" target="_blank">Flickr</a>-->
-    <!--<a href="http://www.youtube.com/user/baralaye/videos?flow=grid&amp;view=1" target="_blank">YouTube</a>-->
   </section>
   <section id="media">
     <h1>Media</h1>
