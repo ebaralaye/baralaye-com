@@ -15,7 +15,7 @@
     <h1>Contact</h1>
     <form id="contact-form" class="form-container form-row" action="/contact" method="post" data-success="<?php var_export($form_success) ?>">
       <div class="form-group">
-        <p>studio&#64;baralaye&#46;com / 646&#46;301&#46;6311</p>
+        <p>info&#64;baralaye&#46;com / 646&#46;301&#46;6311</p>
       </div>
       <div class="row">
         <div class="form-group col-sm-5 col-xs-12 <?php if(! empty($form_errors['email'])){echo 'has-error';} ?>">
