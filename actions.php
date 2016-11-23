@@ -138,6 +138,54 @@ function action_portfolio($path){
 }
 
 /**
+ * Resume CV
+ */
+function action_cv($path, &$response) {
+  // Queries resume client list data
+  $sql = 'SELECT * FROM cv WHERE status >= 1 ORDER BY period_from DESC';
+  $rows = $dbh -> query($sql);
+
+  $tag_groups = array(
+    'education',
+    'exhibitions' => array('solo','group'),
+    'solo',
+    'group',
+    'awards',
+    'residencies',
+    'lectures',
+    'teaching',
+    'assistantships',
+    'curation',
+    'representation'
+  );
+
+  function tag_list_agg($tag){
+    foreach ($tag_groups as $tag_group) {
+      foreach ($rows as $row) {
+        $tags = explode(',', $row['tags']);
+        if ($tag_group.key == $tags[0]) {
+          if (inarray($tags[1], $tag_group)) {
+            $cv_data[$tag_group.key][$tags[1]] = $row;
+          }
+          $cv_data[$tag_group.key] = $row;
+        }
+      }
+    return $cv_data;
+    }
+  }
+
+  $data = array(
+    'resume'       => $resume,
+    'clients'      => render('resume/clients', array('clients' => $clients)),
+    'affiliations' => (($affiliations) > 0) ? render('resume/affiliations', array('affiliations' => $affiliations)) : null,
+    'references'   => render('resume/references', array('clients' => $clients)),
+    'gallery'      => ($resume['gallery_table'] != null) ? render('gallery', array('gallery' => $gallery, 'gallery_dirs' => $gallery_dirs)) : null,
+  );
+
+  return render('resume/index', $data);
+}
+
+/**
  * Resume Action
  */
 function action_resume($path, &$response) {
@@ -302,7 +350,7 @@ function action_contact(){
       $values['boundary'] = $boundary;
       $message = render('email/contact', $values);
       $message = str_replace("\n", "\r\n", $message);
-      $to = "tech@baralaye.com";
+      $to = "info@baralaye.com";
       $subject = "New Contact from Baralaye.com";
       if (mail($to, $subject, $message, $headers)) {
         header('Location: /contact?success=1');
