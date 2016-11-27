@@ -37,7 +37,9 @@
           <textarea name="message" id="message" class="form-control required" rows="6" placeholder="Message *"><?php echo $form_values['message'] ?></textarea>
         </div>
       </div>
-      <div class="form-captcha"><input type="text" name="captcha" id="captcha" tabindex="-1" value="" placeholder="captcha"></div>
+      <div class="form-captcha">
+        <input type="text" name="captcha" id="captcha" tabindex="-1" value="" placeholder="address">
+      </div>
       <div class="form-responses">
         <?php foreach($form_errors as $error): ?>
           <div class="response error"><?= $error ?></div>
