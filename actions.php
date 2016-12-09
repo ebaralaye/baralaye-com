@@ -18,6 +18,21 @@ function action_page($path){
 }
 
 /**
+ * Pages Action. Content supplied via database pages table.
+ */
+function action_pages($path){
+  global $response;
+  global $dbh;
+  $page_title = preg_replace('/[^a-z]/', '', $path);
+  $response['title'] .= " - ".ucwords($page_title);
+  $sql = "SELECT * FROM pages WHERE name = '$page_title'";
+  $sth = $dbh -> prepare($sql);
+  $sth -> execute();
+  $page = $sth -> fetch();
+  return render('pages', $page);
+}
+
+/**
  * Index Action
  */
 function action_index($path){
