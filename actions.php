@@ -18,14 +18,14 @@ function action_page($path){
 }
 
 /**
- * Pages Action. Content supplied via database pages table.
+ * pages action. content supplied via database pages table.
  */
 function action_pages($path){
   global $response;
   global $dbh;
   $page_title = preg_replace('/[^a-z]/', '', $path);
   $response['title'] .= " - ".ucwords($page_title);
-  $sql = "SELECT * FROM pages WHERE name = '$page_title'";
+  $sql = "select * from pages where name = '$page_title'";
   $sth = $dbh -> prepare($sql);
   $sth -> execute();
   $page = $sth -> fetch();
@@ -153,51 +153,21 @@ function action_portfolio($path){
 }
 
 /**
- * Resume CV
+ * CV
  */
-function action_cv($path, &$response) {
-  // Queries resume client list data
-  $sql = 'SELECT * FROM cv WHERE status >= 1 ORDER BY period_from DESC';
-  $rows = $dbh -> query($sql);
-
-  $tag_groups = array(
-    'education',
+function action_cv() {
+  $tags = array(
+    'education' => array(),
     'exhibitions' => array('solo','group'),
-    'solo',
-    'group',
-    'awards',
-    'residencies',
-    'lectures',
-    'teaching',
-    'assistantships',
-    'curation',
-    'representation'
+    'awards' => array(),
+    'residencies' => array(),
+    'lectures' => array(),
+    'teaching' => array(),
+    'assistantships' => array(),
+    'curation' => array(),
+    'representation' => array()
   );
-
-  function tag_list_agg($tag){
-    foreach ($tag_groups as $tag_group) {
-      foreach ($rows as $row) {
-        $tags = explode(',', $row['tags']);
-        if ($tag_group.key == $tags[0]) {
-          if (inarray($tags[1], $tag_group)) {
-            $cv_data[$tag_group.key][$tags[1]] = $row;
-          }
-          $cv_data[$tag_group.key] = $row;
-        }
-      }
-    return $cv_data;
-    }
-  }
-
-  $data = array(
-    'resume'       => $resume,
-    'clients'      => render('resume/clients', array('clients' => $clients)),
-    'affiliations' => (($affiliations) > 0) ? render('resume/affiliations', array('affiliations' => $affiliations)) : null,
-    'references'   => render('resume/references', array('clients' => $clients)),
-    'gallery'      => ($resume['gallery_table'] != null) ? render('gallery', array('gallery' => $gallery, 'gallery_dirs' => $gallery_dirs)) : null,
-  );
-
-  return render('resume/index', $data);
+  return render('cv/index', array('tags' => $tags));
 }
 
 /**

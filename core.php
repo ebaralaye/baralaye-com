@@ -46,6 +46,9 @@ function route($path) {
   else if ($path == '/contact') {
     return "contact";
   }
+  else if ($path == '/cv') {
+    return "cv";
+  }
   else if($path_rootDir == 'statement' || $path_rootDir == 'biography') {
     return "pages";
   }
