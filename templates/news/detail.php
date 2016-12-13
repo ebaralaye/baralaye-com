@@ -25,6 +25,7 @@
       <?php endif; ?>
       <div class="body"><?php echo $post['content']; ?></div>
     </div>
+    <?php include 'templates/includes/mailing-list.php' ?>
   </div>
   <div class="side">
     <h2 class="h-title"><a href="/news">Other News</a></h2>

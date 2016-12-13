@@ -260,10 +260,19 @@ function action_news($path){
   global $response;
   $response['title'] .= ' - News';
   $path = substr($path, 6); // Truncated path after "/news/" uri string
+  $list_num = 7;
 
     try {
-      if($path){ // if there is a slug after the /news/ in the path (/news/whatever) - Detail view
+      if($path == "archive"){ // news/archive page logic
+        $sql = 'select * from news where status >= 1 order by published_date desc LIMIT '.$list_num.', 1000';
+        $rows = $dbh -> query($sql);
 
+        foreach ($rows as $row) {
+            $posts[] = $row;
+        }
+        return render("news/list", array('posts' => $posts, 'type' => 'archive'));
+      }
+      else if($path){ // if there is a slug after the /news/ in the path (/news/whatever) - Detail view
         // Selects the row with a mathcing path
         $sql = 'SELECT * FROM news WHERE status >= 1 AND url = ?';
         $sth = $dbh -> prepare($sql);
@@ -272,26 +281,20 @@ function action_news($path){
         // Selects the first five publised articles for the "Latest News" section
         $sql = 'SELECT * FROM news WHERE status >= 1 ORDER BY published_date DESC LIMIT 3';
         $rows = $dbh -> query($sql);
-
         foreach ($rows as $row) {
             $posts[] = $row;
         }
-
         if ($post) {
             return render("news/detail", array('post' => $post, 'posts' => $posts));
         }
       }
-
-      else { //if there is no slug following the news path (/news)
-        // selecting all posts that are published
-        $sql = 'SELECT * FROM news WHERE status >= 1 ORDER BY published_date DESC';
+      else { //if there is no slug following the news path. News index page logic.
+        $sql = 'select * from news where status >= 1 order by published_date desc limit '.$list_num;
         $rows = $dbh -> query($sql);
-
         foreach ($rows as $row) {
             $posts[] = $row;
         }
-
-        return render("news/list", array('posts' => $posts));
+        return render("news/list", array('posts' => $posts, 'type' => 'index'));
       }
     }
 

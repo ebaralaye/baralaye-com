@@ -17,16 +17,24 @@
       </li>
     </ul>
   </li>
-  <li><a href="/statement">Info</a>
+  <li><a href="/about">Info</a>
     <ul>
-      <li><a href="/biography">Biography</a></li>
-      <li>
-        <a href="/cv">CV</a>
+      <li><a href="/news">News</a>
         <ul>
-          <li><a href="/docs/ebitenyefa-baralaye_cv.pdf">Download</a></li>
+          <li><a href="/news/archive">Archive</a></li>
         </ul>
       </li>
-      <li><a href="/statement">Statement</a></li>
+      <li><a href="/cv">CV</a>
+        <ul>
+          <li><a href="/docs/ebitenyefa-baralaye_cv.pdf">download</a></li>
+        </ul>
+      </li>
+      <li><a href="/about">About</a>
+        <ul>
+          <li><a href="/biography">Biography</a></li>
+          <li><a href="/statement">Statement</a></li>
+        </ul>
+      </li>
     </ul>
   </li>
   <li><a href="/contact">Contact</a></li>

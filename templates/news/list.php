@@ -1,6 +1,10 @@
 <div class="page-body news">
   <header>
-    <h1>News</h1>
+    <?php if ($type == "index"): ?>
+      <h1>News</h1>
+    <?php else: ?>
+      <h1>News - Archive</h1>
+    <?php endif ?>
   </header>
   <div class="main">
     <ul class="post-list list-unstyled">
@@ -14,6 +18,14 @@
         </li>
       <?php endforeach; ?>
     </ul>
+    <div class="container text-center">
+      <?php if ($type == "index"): ?>
+        <div class="row"><a href="/news/archive" class="btn submit">...More -> Archive</a></div>
+        <br />
+        <br />
+      <?php endif ?>
+      <div class="row"><?php include 'templates/includes/mailing-list.php' ?></div>
+    </div>
   </div>
   <div class="side">
     <a class="twitter-timeline" href="https://twitter.com/baralaye" data-widget-id="391761770735353857" height="700">Tweets by @baralaye</a>

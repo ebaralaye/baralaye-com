@@ -7032,14 +7032,6 @@ fieldset[disabled] .page-body .social-media a {
 .page-body.resume section .item-list.gallery {
   margin-bottom: 25px;
 }
-.page-body.news {
-  margin: 0;
-}
-@media (min-width: 991px) {
-  .page-body.news {
-    margin: 0 -15px;
-  }
-}
 .page-body.news .main {
   position: relative;
   min-height: 1px;
@@ -7049,7 +7041,7 @@ fieldset[disabled] .page-body .social-media a {
 @media (min-width: 768px) {
   .page-body.news .main {
     float: left;
-    width: 75%;
+    width: 66.66666667%;
   }
 }
 .page-body.news .side {
@@ -7061,7 +7053,7 @@ fieldset[disabled] .page-body .social-media a {
 @media (min-width: 768px) {
   .page-body.news .side {
     float: left;
-    width: 25%;
+    width: 33.33333333%;
   }
 }
 @media (min-width: 768px) {
