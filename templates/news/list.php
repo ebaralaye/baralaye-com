@@ -17,18 +17,15 @@
           </div>
         </li>
       <?php endforeach; ?>
+    <?php if ($type == "index"): ?>
+      <li><a href="/news/archive" class="btn archive">...More -> Archive</a></li>
+    <?php endif ?>
     </ul>
-    <div class="container text-center">
-      <?php if ($type == "index"): ?>
-        <div class="row"><a href="/news/archive" class="btn submit">...More -> Archive</a></div>
-        <br />
-        <br />
-      <?php endif ?>
-      <div class="row"><?php include 'templates/includes/mailing-list.php' ?></div>
-    </div>
   </div>
   <div class="side">
-    <a class="twitter-timeline" href="https://twitter.com/baralaye" data-widget-id="391761770735353857" height="700">Tweets by @baralaye</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    <?php include 'templates/includes/twitter-module.php' ?>
+  </div>
+  <div class="col-sm-8">
+    <?php include 'templates/includes/mailing-list.php' ?>
   </div>
 </div>

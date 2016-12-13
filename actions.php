@@ -305,6 +305,13 @@ function action_news($path){
 }
 
 /**
+ * Contact Social
+ */
+function action_social(){
+  return render('social');
+}
+
+/**
  * Contact Action
  */
 function action_contact(){

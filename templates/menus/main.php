@@ -17,25 +17,26 @@
       </li>
     </ul>
   </li>
-  <li><a href="/about">Info</a>
+  <li><a href="/biography">About</a>
     <ul>
-      <li><a href="/news">News</a>
-        <ul>
-          <li><a href="/news/archive">Archive</a></li>
-        </ul>
-      </li>
       <li><a href="/cv">CV</a>
         <ul>
           <li><a href="/docs/ebitenyefa-baralaye_cv.pdf">download</a></li>
         </ul>
       </li>
-      <li><a href="/about">About</a>
-        <ul>
-          <li><a href="/biography">Biography</a></li>
-          <li><a href="/statement">Statement</a></li>
-        </ul>
-      </li>
+      <li><a href="/biography">Biography</a></li>
+      <li><a href="/statement">Statement</a></li>
     </ul>
   </li>
-  <li><a href="/contact">Contact</a></li>
+  <li><a href="/contact">Info</a>
+    <ul>
+      <li><a href="/social">Social</a></li>
+      <li><a href="/news">News</a>
+        <ul>
+          <li><a href="/news/archive">Archive</a></li>
+        </ul>
+      </li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+  </li>
 </ul>

@@ -46,6 +46,9 @@ function route($path) {
   else if ($path == '/contact') {
     return "contact";
   }
+  else if ($path == '/social') {
+    return "social";
+  }
   else if ($path == '/cv') {
     return "cv";
   }

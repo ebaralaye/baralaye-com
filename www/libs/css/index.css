@@ -5957,11 +5957,10 @@ td.visible-print {
 }
 /**
  * Baralaye.com Form Styles
- * @author tech@baralaye.com
+ * @author info@baralaye.com
  */
 @media (min-width: 768px) {
   form.form-row {
-    width: 70%;
     margin: 0 auto;
   }
 }
@@ -6800,6 +6799,7 @@ fieldset[disabled] .page-body .social-media a {
 .page-body {
   /** Home ----*/
   /** Web ----*/
+  /** Web ----*/
   /** Statement/Biography ----*/
   /** In Progress ----*/
   /** Resume/CV ----*/
@@ -6863,6 +6863,11 @@ fieldset[disabled] .page-body .social-media a {
 }
 .page-body.home ul.bxslider li a:hover span {
   display: inline-block;
+}
+@media (min-width: 768px) {
+  .page-body.info form.form-container.form-row {
+    width: 70%;
+  }
 }
 .page-body.tech li em {
   font-size: 10px;

@@ -7,13 +7,6 @@
       <div class="head">
         <h2 class="title h-title"><?php echo $post['title']; ?></h2>
         <div class="details"><time><?php $newDate = date("M-d-Y", strtotime($post['published_date'])); echo $newDate; ?></time></div>
-        <!--<ul class="social-btns">
-          <li class="tweet"><a href="http://twitter.com/share" class="twitter-share-button" data-count="none" data-via="baralaye">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></li>
-          <li class="like last">
-          <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
-          <fb:like href="" send="false" layout="button_count" width="75" show_faces="false"></fb:like>
-          </li>
-        </ul>-->
       </div>
       <?php if ($post['image'] != null): ?>
         <div class="image">
@@ -25,7 +18,7 @@
       <?php endif; ?>
       <div class="body"><?php echo $post['content']; ?></div>
     </div>
-    <?php include 'templates/includes/mailing-list.php' ?>
+    <div><a href="/news" class="btn back">Back to news list...</a></div>
   </div>
   <div class="side">
     <h2 class="h-title"><a href="/news">Other News</a></h2>
@@ -40,5 +33,8 @@
         </li>
       <?php endforeach; ?>
     </ul>
+  </div>
+  <div class="col-sm-8">
+    <?php include 'templates/includes/mailing-list.php' ?>
   </div>
 </div>
