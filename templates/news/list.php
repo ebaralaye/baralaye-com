@@ -20,12 +20,7 @@
     <?php if ($type == "index"): ?>
       <li><a href="/news/archive" class="btn archive">...More -> Archive</a></li>
     <?php endif ?>
+      <li><?php include 'templates/includes/mailing-list.php' ?></li>
     </ul>
-  </div>
-  <div class="side">
-    <?php include 'templates/includes/twitter-module.php' ?>
-  </div>
-  <div class="col-sm-8">
-    <?php include 'templates/includes/mailing-list.php' ?>
   </div>
 </div>

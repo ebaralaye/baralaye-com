@@ -1,4 +1,4 @@
-<section id="mailing-list" class="mailing-list">
+<section id="mailing-list" class="mailing-list text-center clearfix">
   <div id="mc_embed_signup">
     <form class="form-container form-row" action="http://baralaye.us3.list-manage.com/subscribe/post?u=0497c3e7f0db060ff7eae50ba&amp;id=7522fe55b6" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
       <h1>Mailing List</h1>

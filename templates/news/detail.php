@@ -19,8 +19,9 @@
       <div class="body"><?php echo $post['content']; ?></div>
     </div>
     <div><a href="/news" class="btn back">Back to news list...</a></div>
+    <?php include 'templates/includes/mailing-list.php' ?>
   </div>
-  <div class="side">
+  <!--<div class="side">
     <h2 class="h-title"><a href="/news">Other News</a></h2>
     <ul class="post-list list-unstyled aside">
       <?php foreach ($posts as $post): ?>
@@ -33,8 +34,5 @@
         </li>
       <?php endforeach; ?>
     </ul>
-  </div>
-  <div class="col-sm-8">
-    <?php include 'templates/includes/mailing-list.php' ?>
-  </div>
+  </div> -->
 </div>

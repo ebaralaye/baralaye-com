@@ -60,11 +60,12 @@
     }
   }
 
-  /** Web ----*/
+  /** Info ----*/
 
   &.info form.form-container.form-row {
     @media (min-width: @screen-sm-min) {
-      width: 70%;
+      .make-sm-column(8);
+      .make-sm-column-offset(2);
     }
   }
 
@@ -299,6 +300,7 @@
 
     .main {
       .make-sm-column(8);
+      .make-sm-column-offset(2);
     }
 
     .side {
@@ -327,11 +329,10 @@
       }
 
       .image {
-        display: inline-block;
         margin-bottom: 20px;
 
         img {
-          max-width: 100%;
+          width: 100%;
           box-shadow: 0 0 10px #DFDFDF;
         }
 

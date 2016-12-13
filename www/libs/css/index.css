@@ -6798,7 +6798,7 @@ fieldset[disabled] .page-body .social-media a {
  */
 .page-body {
   /** Home ----*/
-  /** Web ----*/
+  /** Info ----*/
   /** Web ----*/
   /** Statement/Biography ----*/
   /** In Progress ----*/
@@ -6866,7 +6866,21 @@ fieldset[disabled] .page-body .social-media a {
 }
 @media (min-width: 768px) {
   .page-body.info form.form-container.form-row {
-    width: 70%;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media (min-width: 768px) and (min-width: 768px) {
+  .page-body.info form.form-container.form-row {
+    float: left;
+    width: 66.66666667%;
+  }
+}
+@media (min-width: 768px) and (min-width: 768px) {
+  .page-body.info form.form-container.form-row {
+    margin-left: 16.66666667%;
   }
 }
 .page-body.tech li em {
@@ -7049,6 +7063,11 @@ fieldset[disabled] .page-body .social-media a {
     width: 66.66666667%;
   }
 }
+@media (min-width: 768px) {
+  .page-body.news .main {
+    margin-left: 16.66666667%;
+  }
+}
 .page-body.news .side {
   position: relative;
   min-height: 1px;
@@ -7081,11 +7100,10 @@ fieldset[disabled] .page-body .social-media a {
   letter-spacing: 1px;
 }
 .page-body.news .post .image {
-  display: inline-block;
   margin-bottom: 20px;
 }
 .page-body.news .post .image img {
-  max-width: 100%;
+  width: 100%;
   box-shadow: 0 0 10px #DFDFDF;
 }
 .page-body.news .post .image .desc {
