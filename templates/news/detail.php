@@ -1,9 +1,9 @@
-<div class="page-body news">
+<div class="page-body news detail">
   <header>
     <h1><a href="/news">News</a></h1>
   </header>
-  <div class="main">
-    <div class="post detail">
+  <main>
+    <article class="post detail">
       <div class="head">
         <h2 class="title h-title"><?php echo $post['title']; ?></h2>
         <div class="details"><time><?php $newDate = date("M-d-Y", strtotime($post['published_date'])); echo $newDate; ?></time></div>
@@ -16,23 +16,11 @@
           <?php endif; ?>
         </div>
       <?php endif; ?>
-      <div class="body"><?php echo $post['content']; ?></div>
-    </div>
-    <div><a href="/news" class="btn back">Back to news list...</a></div>
+      <div class="body row"><?php echo $post['content']; ?></div>
+    </article>
+    <section class="sub">
+      <a href="/news" class="btn back">Back to news list...</a>
+    </section>
     <?php include 'templates/includes/mailing-list.php' ?>
-  </div>
-  <!--<div class="side">
-    <h2 class="h-title"><a href="/news">Other News</a></h2>
-    <ul class="post-list list-unstyled aside">
-      <?php foreach ($posts as $post): ?>
-        <li class="post">
-          <h4 class="title h-title sub"><a href="/news/<?php echo $post['url'] ?>"><?php echo $post['title']; ?></a></h4>
-          <div class="details"><time><?php $newDate = date("M-d-Y", strtotime($post['published_date'])); echo $newDate; ?></time></div>
-          <div class="body">
-            <p><?php echo $post['content_blurb']; ?> <a href="/news/<?php echo $post['url'] ?>" class="more">+</a></p>
-          </div>
-        </li>
-      <?php endforeach; ?>
-    </ul>
-  </div> -->
+  </main>
 </div>

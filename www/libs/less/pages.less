@@ -295,27 +295,24 @@
 
   &.news {
 
-    @media (min-width: @screen-sm-max) {
-    }
-
-    .main {
-      .make-sm-column(8);
-      .make-sm-column-offset(2);
-    }
-
-    .side {
-      .make-sm-column(4);
-
-      @media (min-width: @screen-sm-min) {
-        text-align: left;
-      }
-    }
-
     .post {
-      margin-bottom: 30px;
+      margin-bottom: 20px;
 
       .head {
         margin-bottom: 20px;
+      }
+
+      &.detail {
+        .body {
+          .row
+        }
+
+        .text-block {
+          text-align: left;
+          margin-bottom: 5px;
+          .make-sm-column(6);
+        }
+
       }
 
       .details {
@@ -342,6 +339,11 @@
         }
       }
     }
+
+    .sub {
+      margin-bottom: 10px;
+    }
+
 
     .post-list.aside {
       p, h4, time {

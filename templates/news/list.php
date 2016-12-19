@@ -1,4 +1,4 @@
-<div class="page-body news">
+<div class="page-body news list">
   <header>
     <?php if ($type == "index"): ?>
       <h1>News</h1>
@@ -6,7 +6,7 @@
       <h1>News - Archive</h1>
     <?php endif ?>
   </header>
-  <div class="main">
+  <main>
     <ul class="post-list list-unstyled">
       <?php foreach ($posts as $post): ?>
         <li class="post">
@@ -17,10 +17,14 @@
           </div>
         </li>
       <?php endforeach; ?>
-    <?php if ($type == "index"): ?>
-      <li><a href="/news/archive" class="btn archive">...More -> Archive</a></li>
-    <?php endif ?>
-      <li><?php include 'templates/includes/mailing-list.php' ?></li>
     </ul>
-  </div>
+      <section class="sub">
+        <?php if ($type == "index"): ?>
+          <a href="/news/archive" class="btn archive">...More -> Archive</a>
+        <?php else: ?>
+          <a href="/news" class="btn back">Back to news list...</a>
+      </section>
+    <?php endif ?>
+      <?php include 'templates/includes/mailing-list.php' ?>
+  </main>
 </div>
