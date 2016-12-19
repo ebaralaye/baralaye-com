@@ -5,7 +5,7 @@
       <h2><img src=<?= $image_src ?> alt=<? $image_alt ?> /></h2>
     <?php endif ?>
   </header>
-  <div class="page-main">
+  <main>
     <?= $content_long ?>
-  </div>
+  </main>
 </div>
