@@ -7100,27 +7100,29 @@ fieldset[disabled] .page-body .social-media a {
 .page-body.news .post .head {
   margin-bottom: 20px;
 }
-.page-body.news .post.detail .body {
+.page-body.news .post.detail ul.blocks {
+  padding-left: 0;
+  list-style: none;
   margin-left: -15px;
   margin-right: -15px;
 }
-.page-body.news .post.detail .body:before,
-.page-body.news .post.detail .body:after {
+.page-body.news .post.detail ul.blocks:before,
+.page-body.news .post.detail ul.blocks:after {
   content: " ";
   display: table;
 }
-.page-body.news .post.detail .body:after {
+.page-body.news .post.detail ul.blocks:after {
   clear: both;
 }
-.page-body.news .post.detail .body:before,
-.page-body.news .post.detail .body:after {
+.page-body.news .post.detail ul.blocks:before,
+.page-body.news .post.detail ul.blocks:after {
   content: " ";
   display: table;
 }
-.page-body.news .post.detail .body:after {
+.page-body.news .post.detail ul.blocks:after {
   clear: both;
 }
-.page-body.news .post.detail .text-block {
+.page-body.news .post.detail ul.blocks li {
   text-align: left;
   margin-bottom: 5px;
   position: relative;
@@ -7129,7 +7131,7 @@ fieldset[disabled] .page-body .social-media a {
   padding-right: 15px;
 }
 @media (min-width: 768px) {
-  .page-body.news .post.detail .text-block {
+  .page-body.news .post.detail ul.blocks li {
     float: left;
     width: 50%;
   }

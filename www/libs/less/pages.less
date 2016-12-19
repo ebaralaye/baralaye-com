@@ -303,16 +303,16 @@
       }
 
       &.detail {
-        .body {
-          .row
-        }
+        ul.blocks {
+          .list-unstyled;
+          .row;
 
-        .text-block {
-          text-align: left;
-          margin-bottom: 5px;
-          .make-sm-column(6);
+          li {
+            text-align: left;
+            margin-bottom: 5px;
+            .make-sm-column(6);
+          }
         }
-
       }
 
       .details {

@@ -16,7 +16,7 @@
           <?php endif; ?>
         </div>
       <?php endif; ?>
-      <div class="body row"><?php echo $post['content']; ?></div>
+      <div class="body"><?php echo $post['content']; ?></div>
     </article>
     <section class="sub">
       <a href="/news" class="btn back">Back to news list...</a>
