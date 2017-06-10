@@ -5975,6 +5975,8 @@ form.form-container .form-group input,
 form.form-container .form-group textarea {
   background-color: #f3f3f3;
   border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
   border: 1px solid #dfdfdf;
   box-shadow: none;
 }
