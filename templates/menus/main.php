@@ -28,15 +28,15 @@
       <li><a href="/statement">Statement</a></li>
     </ul>
   </li>
-  <li><a href="/contact">Info</a>
+  <li><a href="/contact">Contact</a>
     <ul>
       <li><a href="/social">Social</a></li>
+      <li><a href="http://baralaye.tumblr.com">blog</a></li>
       <li><a href="/news">News</a>
         <ul>
           <li><a href="/news/archive">Archive</a></li>
         </ul>
       </li>
-      <li><a href="/contact">Contact</a></li>
     </ul>
   </li>
 </ul>

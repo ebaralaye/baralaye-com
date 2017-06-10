@@ -25,6 +25,5 @@
           <a href="/news" class="btn back">Back to news list...</a>
       </section>
     <?php endif ?>
-      <?php include 'templates/includes/mailing-list.php' ?>
   </main>
 </div>

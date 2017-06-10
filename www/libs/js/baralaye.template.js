@@ -37,13 +37,18 @@
 
             /*show bottom nav only when the bottom dive is visible*/
             $(window).scroll( function () {
-              if ($(window).scrollTop() > 100 && $(window).width() <= 768){
-                $('.tmp-bottom').show();
+              var xs_max = 767;
+              if ($(window).scrollTop() > 100 && $(window).width() <= xs_max){
+                $('.tmp-bottom .tmp-nav').show();
               }
-              else $('.tmp-bottom').hide();
+              else $('.tmp-bottom .tmp-nav').hide();
 
               if ($(window).scrollTop() > 120) $('#tmp-top').addClass('scrolling');
               else $('#tmp-top').removeClass('scrolling');
+
+              var scrollBottom = $(window).scrollTop() + $(window).height();
+              if (scrollBottom >= $('body').height() - 60) $('#tmp-bottom').addClass('bottom-line');
+              else $('#tmp-bottom').removeClass('bottom-line');
             });
         }
 

@@ -1,17 +1,8 @@
 <div class="page-body info social stacked">
   <section class="social-media">
     <h1>Social</h1>
-    <a href="http://facebook.com/baralaye" target="_blank">Facebook</a>
-    <a href="http://twitter.com/baralaye" target="_blank">Twitter</a>
-    <a href="http://instagram.com/baralaye" target="_blank">Instagram</a>
-    <!--<a href="http://linkedin.com/in/baralaye" target="_blank">LinkedIn</a>-->
-    <!--<a href="http://pinterest.com/baralaye" target="_blank">Pinterest</a>-->
-    <!--<a href="http://baralaye.tumblr.com" target="_blank">Tumblr</a>-->
-    <!--<a href="https://plus.google.com/112097083655390633396/about" target="_blank">Google+</a>-->
-    <!--<a href="http://www.flickr.com/photos/baralaye/" target="_blank">Flickr</a>-->
-    <!--<a href="http://www.youtube.com/user/baralaye/videos?flow=grid&amp;view=1" target="_blank">YouTube</a>-->
+    <?php include 'templates/includes/social-icons.php' ?>
   </section>
-  <?php include 'templates/includes/mailing-list.php' ?>
   <section id="media">
     <h1>Media</h1>
     <ul id="set_72157628627505367" class="item-list photoset"></ul>

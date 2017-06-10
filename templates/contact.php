@@ -1,9 +1,9 @@
 <div class="page-body info contact stacked">
   <section id="contact" class="contact">
     <h1>Contact</h1>
+        <h2><strong>INFO&#64;BARALAYE&#46;COM</strong></h2>
     <form id="contact-form" class="form-container form-row" action="/contact" method="post" data-success="<?php var_export($form_success) ?>">
       <div class="form-group">
-        <p>info&#64;baralaye&#46;com / 646&#46;301&#46;6311</p>
       </div>
       <div class="row">
         <div class="form-group col-sm-5 col-xs-12 <?php if(! empty($form_errors['email'])){echo 'has-error';} ?>">
@@ -54,5 +54,4 @@
       </div>
     </div>
   </section>
-  <?php include 'templates/includes/mailing-list.php' ?>
 </div>

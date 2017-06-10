@@ -88,6 +88,8 @@
           <div class="tmp-nav">
             <?= $menu; ?>
           </div>
+          <?php include 'templates/includes/social-icons.php' ?>
+          <?php include 'templates/includes/mailing-list.php' ?>
           <div id="google_translate_element" class="tmp-google-translate"></div>
         </div>
       </div>
