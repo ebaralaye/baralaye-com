@@ -5974,9 +5974,22 @@ form.form-container .form-group {
 form.form-container .form-group input,
 form.form-container .form-group textarea {
   background-color: #f3f3f3;
-  border-radius: 0;
-  border: 0;
+  border-radius: 15px;
+  border: 1px solid #dfdfdf;
   box-shadow: none;
+}
+form.form-container .form-group input input::placeholder,
+form.form-container .form-group textarea input::placeholder,
+form.form-container .form-group input input::-webkit-input-placeholder,
+form.form-container .form-group textarea input::-webkit-input-placeholder,
+form.form-container .form-group input input::-moz-placeholder,
+form.form-container .form-group textarea input::-moz-placeholder,
+form.form-container .form-group input input:-ms-input-placeholder,
+form.form-container .form-group textarea input:-ms-input-placeholder,
+form.form-container .form-group input input:-moz-placeholder,
+form.form-container .form-group textarea input:-moz-placeholder {
+  /* Firefox 18- */
+  color: red !important;
 }
 form.form-container .form-group.has-error .form-control {
   background-color: #f2dede;
@@ -6941,6 +6954,9 @@ fieldset[disabled] .tmp-wrap .tmp-bottom .social-icons a {
 .tmp-wrap .tmp-bottom .social-icons a.linkedin {
   background-image: url('/images/template/social/linkedin.svg');
 }
+.tmp-wrap .tmp-bottom .social-icons a.email {
+  background-image: url('/images/template/social/email.svg');
+}
 @media (min-width: 768px) {
   .tmp-wrap .tmp-bottom .social-icons {
     padding-right: 0;
@@ -6948,6 +6964,21 @@ fieldset[disabled] .tmp-wrap .tmp-bottom .social-icons a {
   }
   .tmp-wrap .tmp-bottom .social-icons .inner {
     float: right;
+  }
+}
+.tmp-wrap .copyright {
+  margin: 15px 0 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 32px;
+  line-height: 32px;
+}
+@media (min-width: 768px) {
+  .tmp-wrap .copyright {
+    float: left;
+    width: 33.33333333%;
   }
 }
 .tmp-wrap .mailing-list {

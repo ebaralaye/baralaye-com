@@ -1,7 +1,8 @@
 <div class="page-body info contact stacked">
   <section id="contact" class="contact">
     <h1>Contact</h1>
-        <h2><strong>INFO&#64;BARALAYE&#46;COM</strong></h2>
+      <h2><a class="btn" href="mailto:info@baralaye.com">INFO&#64;BARALAYE&#46;COM</a></h2>
+      <p>Commissions, saying hello and other inquiries.</p>
     <form id="contact-form" class="form-container form-row" action="/contact" method="post" data-success="<?php var_export($form_success) ?>">
       <div class="form-group">
       </div>

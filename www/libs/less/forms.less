@@ -21,9 +21,17 @@ form {
       input,
       textarea {
         background-color: @color-light;
-        border-radius: 0;
-        border: 0;
+        border-radius: 15px;
+        border: @border-a-width solid @color-medium;
         box-shadow: none;
+
+        input::placeholder, /* Chrome/Opera/Safari */
+        input::-webkit-input-placeholder, /* Chrome/Opera/Safari */
+        input::-moz-placeholder, /* Firefox 19+ */
+        input:-ms-input-placeholder, /* IE 10+ */
+        input:-moz-placeholder { /* Firefox 18- */
+          color: red !important;
+        }
       }
 
       &.has-error .form-control {
