@@ -50,10 +50,12 @@ function action_portfolio($path){
   global $response;
 
   $pathArr = explode('/',$path);
+  error_log('path array - '.$pathArr);
 
   // Detail View //
   $pathProductNode = $pathArr[count($pathArr)-1]; // Slice of path after the last '/'
   $pathCatalogArr = array_slice($pathArr,1,count($pathArr)-2); // Slice of path before the last '/'
+  error_log($pathProductNode." / ".$pathCatalogArr);
 
   try {
     // SQL - Select all rows from catalogs table that have a url that matches $path
@@ -99,22 +101,24 @@ function action_portfolio($path){
     $catalog = $sth -> fetch();
     $catalog_tags = explode(',',$catalog['tags']);
     $conditional_tag = null;
+    error_log("catalog tags - ".$catalog['tags']);
 
     if ($catalog) {
       $products = array();
       $response['title'] .= " - ".$catalog['title'];
       $response['meta_desc'] = $catalog['description'];
+      error_log("valid catalog - ".$catalog['title']);
 
       try {
 
         // Select rows with the urls that are a zero indexed substring of the path, within the same category
         if (substr($path, 1,7) == 'archive'){
-          $sql = 'SELECT * FROM portfolio WHERE  status >= 1 AND archive = 1 ORDER BY date DESC';
+          $sql = 'SELECT * FROM portfolio WHERE status IS NOT NULL AND archive IS NOT NULL ORDER BY date DESC';
           $conditional_tag = "archive";
           error_log("archive",0);
         }
         else {
-          $sql = 'SELECT * FROM portfolio WHERE  status >= 1 AND archive = 0 ORDER BY date DESC';
+          $sql = 'SELECT * FROM portfolio WHERE  status IS NOT NULL AND archive IS NULL ORDER BY date DESC';
           error_log("not archive",0);
         }
         $sth = $dbh -> prepare($sql);
@@ -147,6 +151,9 @@ function action_portfolio($path){
       }
       catch (PDOException $e) {
       }
+    }
+    else {
+      error_log("invalid catalog url");
     }
   }
   return action_404();
@@ -205,7 +212,7 @@ function action_resume($path, &$response) {
   $sth -> execute(array($resume_type));
   $resume = $sth -> fetch();
   // Queries resume client list data
-  $sql = 'SELECT * FROM resume_clients WHERE  status >= 1 ORDER BY period_from DESC';
+  $sql = 'SELECT * FROM resume_clients WHERE status IS NOT NULL ORDER BY period_from DESC';
   $rows = $dbh -> query($sql);
   $affiliations = array();
   foreach ($rows as $row) {
@@ -264,7 +271,7 @@ function action_news($path){
 
     try {
       if($path == "archive"){ // news/archive page logic
-        $sql = 'select * from news where status >= 1 order by published_date desc LIMIT '.$list_num.', 1000';
+        $sql = 'SELECT * FROM news WHERE status IS NOT NULL ORDER BY published_date DESC LIMIT '.$list_num.', 1000';
         $rows = $dbh -> query($sql);
 
         foreach ($rows as $row) {
@@ -274,12 +281,12 @@ function action_news($path){
       }
       else if($path){ // if there is a slug after the /news/ in the path (/news/whatever) - Detail view
         // Selects the row with a mathcing path
-        $sql = 'SELECT * FROM news WHERE status >= 1 AND url = ?';
+        $sql = 'SELECT * FROM news WHERE status IS NOT NULL AND url = ?';
         $sth = $dbh -> prepare($sql);
         $sth -> execute(array($path));
         $post = $sth -> fetch();
         // Selects the first five publised articles for the "Latest News" section
-        $sql = 'SELECT * FROM news WHERE status >= 1 ORDER BY published_date DESC LIMIT 3';
+        $sql = 'SELECT * FROM news WHERE status IS NOT NULL ORDER BY published_date DESC LIMIT 3';
         $rows = $dbh -> query($sql);
         foreach ($rows as $row) {
             $posts[] = $row;
@@ -289,7 +296,7 @@ function action_news($path){
         }
       }
       else { //if there is no slug following the news path. News index page logic.
-        $sql = 'select * from news where status >= 1 order by published_date desc limit '.$list_num;
+        $sql = 'SELECT * FROM news WHERE status IS NOT NULL ORDER BY published_date DESC LIMIT '.$list_num;
         $rows = $dbh -> query($sql);
         foreach ($rows as $row) {
             $posts[] = $row;

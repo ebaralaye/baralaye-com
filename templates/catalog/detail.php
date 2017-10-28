@@ -27,7 +27,7 @@
         <ul>
           <li class="medium"><?= $medium; ?></li>
           <?php if ($dim_width != null): ?>
-            <li class="dimensions"><?= $dim_height,"&quot; x ", $dim_width,"&quot; x ",$dim_depth,"&quot;"; ?></li>
+            <li class="dimensions"><?= $dim_height," x ", $dim_width," x ",$dim_depth; ?></li>
           <?php endif; ?>
           <li class="year"><?php $year = date("Y", strtotime($date)); echo $year?></li>
           <li class="price">
@@ -40,7 +40,7 @@
           <?php if ($edition_index != null): ?>
             <li class="edition">
               <span><?= $edition_index; ?>/<?= $edition_cap; ?></span>
-              <?php if ($stock == 0) {echo "<strike>stock</strike>";} ?>
+              <?php if ($stock != NULL) {echo "<strike>stock</strike>";} ?>
             </li>
           <?php endif; ?>
         </ul>

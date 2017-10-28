@@ -9,6 +9,7 @@
         </ul>
       </li>
       <li><a href="/pottery">Pottery</a></li>
+      <li><a href="/textiles">Textiles</a></li>
       <li><a href="/sculpture">Sculpture</a>
         <ul>
           <li><a href="/sculpture/mixed-media">Mixed Media</a></li>

@@ -22,7 +22,7 @@ function render($template, $variables = array()) {
  * Route Method
  */
 function route($path) {
-  $portfolio_catalogs = array('portfolio','work','art','archive','design','ceramics','pottery','design','sculpture','vessels','drawings');
+  $portfolio_catalogs = array('portfolio','work','textiles','art','archive','design','ceramics','pottery','design','sculpture','vessels','drawings');
   $path_arr = explode('/',$path);
   $path_rootDir = $path_arr[1];
   if(substr($path, 0,5) == '/tech' || $_SERVER['HTTP_HOST'] == "tech.baralaye.com") {
