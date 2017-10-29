@@ -1,7 +1,7 @@
 <ul class="nav">
   <li><a href="/work">Work</a>
     <ul>
-      <li><a href="/archive">Archive</a>
+      <li class="archive"><a href="/archive">Archive</a>
         <ul>
           <li><a href="/archive/drawings">Drawings</a></li>
           <li><a href="/archive/pottery">Pottery</a></li>

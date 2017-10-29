@@ -6626,6 +6626,11 @@ fieldset[disabled] .page-body .social-media a {
     float: right;
   }
 }
+@media (max-width: 767px) {
+  .tmp-wrap .tmp-top > .tmp-nav > ul.nav li.archive {
+    display: none !important;
+  }
+}
 .tmp-wrap .tmp-top > .tmp-nav > ul.nav li {
   position: static;
 }

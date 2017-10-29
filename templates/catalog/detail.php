@@ -22,6 +22,7 @@
     <script type="text/javascript">Baralaye.Template.VAlign();</script>
   <?php endif; ?>
   <div class="details">
+  <!-- status: 1 - for sale, show price, 2 - for sale, hidden price (inquire), 3 not for sale -->
     <ul>
       <li class="specs">
         <ul>
@@ -35,6 +36,8 @@
               $<?= $price; ?>
             <?php elseif ($status == 2): ?>
               <a href="/contact" target="_blank" class="inquire">inquire</a>
+            <?php elseif ($status == 3): ?>
+              NFS
             <?php endif; ?>
           </li>
           <?php if ($edition_index != null): ?>
