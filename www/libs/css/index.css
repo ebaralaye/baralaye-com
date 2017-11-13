@@ -7325,10 +7325,11 @@ fieldset[disabled] .tmp-wrap .tmp-bottom .social-icons a {
   letter-spacing: 1px;
 }
 .page-body.news .post .image {
+  text-align: center;
   margin-bottom: 20px;
 }
 .page-body.news .post .image img {
-  width: 100%;
+  max-width: 100%;
   box-shadow: 0 0 10px #DFDFDF;
 }
 .page-body.news .post .image .desc {
