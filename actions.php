@@ -271,7 +271,7 @@ function action_news($path){
 
     try {
       if($path == "archive"){ // news/archive page logic
-        $sql = 'SELECT * FROM news WHERE status IS NOT NULL ORDER BY published_date DESC LIMIT '.$list_num.', 1000';
+        $sql = 'SELECT * FROM news WHERE status>0 ORDER BY published_date DESC LIMIT '.$list_num.', 1000';
         $rows = $dbh -> query($sql);
 
         foreach ($rows as $row) {
@@ -281,12 +281,12 @@ function action_news($path){
       }
       else if($path){ // if there is a slug after the /news/ in the path (/news/whatever) - Detail view
         // Selects the row with a mathcing path
-        $sql = 'SELECT * FROM news WHERE status IS NOT NULL AND url = ?';
+        $sql = 'SELECT * FROM news WHERE status>0 AND url = ?';
         $sth = $dbh -> prepare($sql);
         $sth -> execute(array($path));
         $post = $sth -> fetch();
         // Selects the first five publised articles for the "Latest News" section
-        $sql = 'SELECT * FROM news WHERE status IS NOT NULL ORDER BY published_date DESC LIMIT 3';
+        $sql = 'SELECT * FROM news WHERE status>0 ORDER BY published_date DESC LIMIT 3';
         $rows = $dbh -> query($sql);
         foreach ($rows as $row) {
             $posts[] = $row;
@@ -296,7 +296,7 @@ function action_news($path){
         }
       }
       else { //if there is no slug following the news path. News index page logic.
-        $sql = 'SELECT * FROM news WHERE status IS NOT NULL ORDER BY published_date DESC LIMIT '.$list_num;
+        $sql = 'SELECT * FROM news WHERE status>0 ORDER BY published_date DESC LIMIT '.$list_num;
         $rows = $dbh -> query($sql);
         foreach ($rows as $row) {
             $posts[] = $row;
