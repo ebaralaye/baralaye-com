@@ -166,13 +166,14 @@ function action_cv() {
   $tags = array(
     'education' => array(),
     'exhibitions' => array('solo','group'),
+    'press' => array(),
     'awards' => array(),
     'residencies' => array(),
     'lectures' => array(),
     'teaching' => array(),
     'assistantships' => array(),
     'curation' => array(),
-    'representation' => array()
+    'representation' => array(),
   );
   return render('cv/index', array('tags' => $tags));
 }
