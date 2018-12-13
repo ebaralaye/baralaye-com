@@ -549,15 +549,12 @@ ul.social-btns {
                   background: none;
                 }
 
-                > li {
+                > li > a {
 
-                  > a {
-                    font-weight: 300;
+                  font-weight: 300;
 
-                    &.active, &:hover {
-                      border-bottom-color: @color-link;
-                      text-decoration: underline;
-                    }
+                  &.active, &:hover {
+                    text-decoration: underline;
                   }
                 }
               }
@@ -618,7 +615,7 @@ ul.social-btns {
             float: left;
             font-size: 13px;
             font-weight: 400;
-            border-bottom: @border-a-width solid @color-medium;
+            border-bottom: @border-a-width solid;
             background: none;
           }
 
@@ -626,7 +623,7 @@ ul.social-btns {
           > .active,
           > a:hover {
             text-decoration: none;
-            border-bottom: @border-a-width solid @color-link;
+            border-bottom: @border-a-width solid;
             margin-bottom: -1px;
           }
 

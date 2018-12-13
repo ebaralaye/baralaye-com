@@ -6674,7 +6674,6 @@ ul.social-btns .btn-s.purchase {
 }
 .tmp-wrap .tmp-top > .tmp-nav > ul.nav > li > ul > li > ul > li > a.active,
 .tmp-wrap .tmp-top > .tmp-nav > ul.nav > li > ul > li > ul > li > a:hover {
-  border-bottom-color: #1b2cb7;
   text-decoration: underline;
 }
 .tmp-wrap .tmp-sub {
@@ -6728,14 +6727,14 @@ ul.social-btns .btn-s.purchase {
   float: left;
   font-size: 13px;
   font-weight: 400;
-  border-bottom: 1px solid #606060;
+  border-bottom: 1px solid;
   background: none;
 }
 .tmp-wrap .tmp-bottom > .tmp-nav > ul.nav > li.selected > a,
 .tmp-wrap .tmp-bottom > .tmp-nav > ul.nav > li > .active,
 .tmp-wrap .tmp-bottom > .tmp-nav > ul.nav > li > a:hover {
   text-decoration: none;
-  border-bottom: 1px solid #1b2cb7;
+  border-bottom: 1px solid;
   margin-bottom: -1px;
 }
 .tmp-wrap .tmp-bottom > .tmp-nav > ul.nav > li > ul {
