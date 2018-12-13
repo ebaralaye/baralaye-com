@@ -20,7 +20,6 @@
   </li>
   <li><a href="/biography">About</a>
     <ul>
-      <li><a href="/news">News</a>
       <li><a href="/cv">CV</a>
         <ul>
           <li><a href="/docs/ebitenyefa-baralaye_cv.pdf">download</a></li>
@@ -33,6 +32,7 @@
   <li><a href="/contact">Contact</a>
     <ul>
       <li><a href="/social">Social</a></li>
+      <li><a href="/news">News</a>
         <ul>
           <li><a href="/news/archive">Archive</a></li>
         </ul>
