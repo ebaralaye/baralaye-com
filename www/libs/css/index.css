@@ -6028,7 +6028,7 @@ form.form-container .mce_inline_error {
   width: auto;
   height: auto;
   padding: 4px 10px 4px;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.9);
   border: 1px solid;
   border-radius: 15px;
   -moz-border-radius: 15px;
@@ -6462,7 +6462,7 @@ ul.social-btns .btn-s.purchase {
     border-color: transparent;
   }
   .tmp-wrap .tmp-top.scrolling {
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.9);
     border-color: #606060;
   }
 }
@@ -6510,6 +6510,7 @@ ul.social-btns .btn-s.purchase {
   text-decoration: none;
   display: inline-block;
   padding: 0 15px;
+  background: rgba(255, 255, 255, 0.9);
 }
 @media (min-width: 768px) {
   .tmp-wrap .tmp-top .tmp-logo > a {
@@ -6595,6 +6596,7 @@ ul.social-btns .btn-s.purchase {
   white-space: nowrap;
   text-decoration: none;
   border-bottom-style: solid;
+  background-color: rgba(255, 255, 255, 0.9);
 }
 .tmp-wrap .tmp-top > .tmp-nav > ul.nav > li > a {
   font-size: 15px;
@@ -6604,10 +6606,6 @@ ul.social-btns .btn-s.purchase {
   padding: 0 15px;
   border-bottom-width: 1px;
 }
-.tmp-wrap .tmp-top > .tmp-nav > ul.nav > li > a:hover,
-.tmp-wrap .tmp-top > .tmp-nav > ul.nav > li > a.active {
-  background: none;
-}
 .tmp-wrap .tmp-top > .tmp-nav > ul.nav > li ul {
   padding-left: 0;
   list-style: none;
@@ -6616,7 +6614,6 @@ ul.social-btns .btn-s.purchase {
   display: none;
   position: absolute;
   height: 40px;
-  background-color: rgba(255, 255, 255, 0.8);
 }
 .tmp-wrap .tmp-top > .tmp-nav > ul.nav > li > ul {
   top: 40px;
@@ -6647,7 +6644,7 @@ ul.social-btns .btn-s.purchase {
 }
 @media (min-width: 768px) {
   .tmp-wrap .tmp-top > .tmp-nav > ul.nav > li > ul li a {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.9);
   }
 }
 .tmp-wrap .tmp-top > .tmp-nav > ul.nav > li > ul > li > a:not(.active) {
@@ -7340,7 +7337,7 @@ ul.social-btns .btn-s.purchase {
 }
 .item-list > li a:hover .title,
 .item-list .item a:hover .title {
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.9);
 }
 .item-list > li a .title,
 .item-list .item a .title {
@@ -7357,7 +7354,7 @@ ul.social-btns .btn-s.purchase {
   white-space: nowrap;
   font-size: 13px;
   line-height: 16px;
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.6);
   padding: 5px;
 }
 .item-list > li a .title.untitled,

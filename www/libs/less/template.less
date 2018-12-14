@@ -12,9 +12,9 @@
 @color-active: green;
 @color-hover: red;
 
-@color-alpha-light: rgba(255,2255,255,0.2);
-@color-alpha-medium: rgba(255,255,255,0.4);
-@color-alpha-heavy: rgba(255,255,255,0.8);
+@color-alpha-light: rgba(255,2255,255,0.3);
+@color-alpha-medium: rgba(255,255,255,0.6);
+@color-alpha-heavy: rgba(255,255,255,0.9);
 
 @border-a-width: 1px;
 
@@ -406,6 +406,7 @@ ul.social-btns {
         text-decoration: none;
         display: inline-block;
         padding: 0 15px;
+        background: @color-alpha-heavy;
 
         @media (min-width: @screen-sm-min) {
           position: relative;
@@ -470,6 +471,7 @@ ul.social-btns {
             white-space: nowrap;
             text-decoration: none;
             border-bottom-style: solid;
+            background-color: @color-alpha-heavy;
           }
 
           > a {
@@ -479,11 +481,6 @@ ul.social-btns {
             line-height: 40px;
             padding: 0 15px;
             border-bottom-width: @border-a-width;
-
-            &:hover,
-            &.active {
-              background: none;
-            }
           }
 
           ul {
@@ -493,7 +490,6 @@ ul.social-btns {
             display: none;
             position: absolute;
             height: 40px;
-            background-color: @color-alpha-heavy;
           }
 
           > ul {
