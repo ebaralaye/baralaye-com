@@ -12,8 +12,9 @@
 @color-active: green;
 @color-hover: red;
 
-@color-light-alpha: rgba(243,243,243,0.9);
-@color-alpha-white: rgba(255,255,255,0.9);
+@color-alpha-light: rgba(255,2255,255,0.2);
+@color-alpha-medium: rgba(255,255,255,0.4);
+@color-alpha-heavy: rgba(255,255,255,0.8);
 
 @border-a-width: 1px;
 
@@ -367,7 +368,7 @@ ul.social-btns {
         border-color: transparent;
 
         &.scrolling {
-          background: @color-alpha-white;
+          background: @color-alpha-heavy;
           border-color: @color-medium;
         }
       }
@@ -448,6 +449,10 @@ ul.social-btns {
 
           &.selected > ul {
             display: block;
+
+            li.selected a {
+              border-color: @color-active;
+            }
           }
         }
 
@@ -488,7 +493,7 @@ ul.social-btns {
             display: none;
             position: absolute;
             height: 40px;
-            background-color: @color-light-alpha;
+            background-color: @color-alpha-heavy;
           }
 
           > ul {
@@ -517,7 +522,7 @@ ul.social-btns {
                 border-bottom-width: 1px;
 
                 @media (min-width: @screen-sm-min) {
-                  background-color: @color-light-alpha;
+                  background-color: @color-alpha-heavy;
                 }
               }
             }
@@ -525,12 +530,8 @@ ul.social-btns {
             > li {
 
               > a {
-
                 &:not(.active) {
                   font-weight: 400;
-                  @media (min-width: @screen-sm-min) {
-                    border-bottom-color: @color-light;
-                  }
                 }
 
                 &:hover {

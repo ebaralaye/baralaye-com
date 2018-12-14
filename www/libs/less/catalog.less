@@ -38,25 +38,23 @@
       background-position: center;
       height: 100%;
       width: 100%;
+      border-bottom: 1px solid;
 
       &:hover {
         cursor: pointer;
 
         .title {
-          background: rgba(0,0,0,0.8);
+          background: @color-alpha-heavy;
         }
       }
 
       .title {
-        .raleway;
         position: absolute;
         bottom: 0;
         left: 0;
         text-align: center;
-        text-shadow: 0 0 3px #000;
         display: inline-block;
         width: 100%;
-        color: #fff;
         overflow: hidden;
         text-overflow: ellipsis;
         -o-text-overflow: ellipsis;
@@ -64,7 +62,7 @@
         white-space: nowrap;
         font-size: 13px;
         line-height: 16px;
-        background: rgba(0,0,0,0.5);
+        background: @color-alpha-medium;
         padding: 5px;
 
         &.untitled {
