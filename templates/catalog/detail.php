@@ -5,7 +5,7 @@
     <div class="image-slider v-align">
       <ul class="bxslider catalog">
         <?php foreach($poplets as $poplet): ?>
-          <li><a href="/images/art/portfolio/big/<?= $id.'-'.$poplet ?>.jpg" rel="gallery-1"><img src="/images/art/portfolio/big/<?= $id.'-'.$poplet ?>.jpg" alt="<?= $id.$poplet ?>" /></a></li>
+          <li><a href="/images/art/portfolio/large/<?= $id.'-'.$poplet ?>.jpg" rel="gallery-1"><img src="/images/art/portfolio/large/<?= $id.'-'.$poplet ?>.jpg" alt="<?= $id.$poplet ?>" /></a></li>
         <?php endforeach; ?>
       </ul>
     </div>
@@ -17,7 +17,7 @@
     </ul>
   <?php else: ?>
     <div class="image v-align">
-      <a href="/images/art/portfolio/big/<?= $id ?>.jpg"><img class="main" src="/images/art/portfolio/big/<?= $id ?>.jpg" alt="<?= $id ?>" /></a>
+      <a href="/images/art/portfolio/large/<?= $id ?>.jpg"><img class="main" src="/images/art/portfolio/large/<?= $id ?>.jpg" alt="<?= $id ?>" /></a>
     </div>
     <script type="text/javascript">Baralaye.Template.VAlign();</script>
   <?php endif; ?>
