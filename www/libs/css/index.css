@@ -7163,10 +7163,9 @@ ul.social-btns .btn-s.purchase {
     width: 50%;
   }
 }
-.page-body.news .post .details {
+.page-body.news .post .details,
+.page-body.news .post .more {
   margin-bottom: 2px;
-}
-.page-body.news .post .details time {
   font-size: 11px;
   font-style: italic;
   letter-spacing: 1px;

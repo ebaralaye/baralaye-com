@@ -11,9 +11,12 @@
       <?php foreach ($posts as $post): ?>
         <li class="post">
           <h3 class="title h-title sub"><a href="/news/<?php echo $post['url'] ?>"><?php echo $post['title']; ?></a></h3>
-          <div class="details"><time><?php $newDate = date("M-d-Y", strtotime($post['published_date'])); echo $newDate; ?></time></div>
+          <div class="details">
+            Posted: <?php $newDate = date("M-d-Y", strtotime($post['published_date'])); echo $newDate; ?>
+            | City: <?php echo $post['city'] ?>
+          </div>
           <div class="body">
-            <p><?php echo $post['content_blurb']; ?> <a href="/news/<?php echo $post['url'] ?>" class="more">+</a></p>
+            <p><?php echo $post['content_blurb']; ?> <a href="/news/<?php echo $post['url'] ?>" class="more">more +</a></p>
           </div>
         </li>
       <?php endforeach; ?>
