@@ -6,7 +6,10 @@
     <article class="post detail">
       <div class="head">
         <h2 class="title h-title"><?php echo $post['title']; ?></h2>
-        <div class="details"><time><?php $newDate = date("M-d-Y", strtotime($post['published_date'])); echo $newDate; ?></time></div>
+        <div class="details">
+          Posted: <?php $newDate = date("M-d-Y", strtotime($post['published_date'])); echo $newDate; ?>
+          | City: <?php echo $post['city'] ?>
+        </div>
       </div>
       <?php if ($post['image'] != null): ?>
         <div class="image">
