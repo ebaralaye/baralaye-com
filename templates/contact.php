@@ -1,10 +1,18 @@
 <div class="page-body info contact stacked">
   <section id="contact" class="contact">
     <h1>Contact</h1>
-      <h2><a class="btn" href="mailto:info@baralaye.com">INFO&#64;BARALAYE&#46;COM</a></h2>
+    <div class="col-sm-6">
+      <h2>Studio:</h2>
+      <h3><a class="btn" href="mailto:info@baralaye.com">INFO&#64;BARALAYE&#46;COM</a></h3>
       <p>Commissions, saying hello and other inquiries.</p>
-    <!--<form id="contact-form" class="form-container form-row" action="/contact" method="post" data-success="<?php var_export($form_success) ?>">
-      <div class="form-group">
+    </div>
+    <div class="col-sm-6">
+      <h2>Representation:</h2>
+      <h3><a class="btn" href="mailto:info@davidkleingallery.com">INFO&#64;DAVIDKLEINGALLERY&#46;COM</a></h3>
+      <h3>313.818.3416</h3>
+      <p>Detroit - <a href="http://davidkleingallery.com" target="_blank">David Klein Gallery</a></p>
+    </div>
+<!--<form id="contact-form" class="form-container form-row" action="/contact" method="post" data-success="<?php var_export($form_success) ?>"> <div class="form-group">
       </div>
       <div class="row">
         <div class="form-group col-sm-5 col-xs-12 <?php if(! empty($form_errors['email'])){echo 'has-error';} ?>">
