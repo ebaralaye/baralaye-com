@@ -171,6 +171,7 @@ function action_cv() {
     'residencies' => array(),
     'lectures' => array(),
     'teaching' => array(),
+    'workshops' => array(),
     'assistantships' => array(),
     'curation' => array(),
     'representation' => array(),
