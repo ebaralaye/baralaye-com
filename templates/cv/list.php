@@ -13,8 +13,8 @@ echo "<ul class='section list outside ".$tag_key."'>";
       if ($item['title_url']) echo "<a href=".$item['title_url'].">".$item['title']."</a>";
       else echo $item['title'];
       if ($item['title_sub']) {
-        if($item['title_sub_url']) echo ", <a href=".$item['title_sub_url'].">".$item['title_sub']."</a>";
-        else echo ", ".$item['title_sub'];
+        if($item['title_sub_url']) echo " - <a href=".$item['title_sub_url'].">".$item['title_sub']."</a>";
+        else echo " - ".$item['title_sub'];
       }
       if ($item['title_desc']) echo ', '.$item['title_desc'];
       if ($item['city']) echo ' - '.$item['city'];
