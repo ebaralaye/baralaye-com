@@ -7,9 +7,7 @@
     <?= $meta; ?>
 
     <!-- CSS: Plugins > Fancybox -->
-    <link type="text/css" rel="stylesheet" media="all" href="/libs/vendor/fancybox/css/jquery.fancybox.css" />
-    <link type="text/css" rel="stylesheet" media="all" href="/libs/vendor/fancybox/css/jquery.fancybox-thumbs.css" />
-    <link type="text/css" rel="stylesheet" media="all" href="/libs/vendor/fancybox/css/jquery.fancybox-buttons.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
 
     <!-- CSS: Custom Styles -->
     <link type="text/css" rel="stylesheet" media="all" href="/libs/css/index.css" />
@@ -36,20 +34,19 @@
 
     <!-- JS: Plugins > Underscore -->
     <script type="text/javascript" src="/libs/vendor/underscore/underscore-min.js"></script>
+
     <!-- JS: Plugins > Backbone -->
     <script type="text/javascript" src="/libs/vendor/backbone/backbone-min.js"></script>
+
     <!-- JS: Plugins > jQuery -->
-    <script type="text/javascript" src="/libs/vendor/jquery/jquery-1.9.0.min.js"></script>
-    <script type="text/javascript" src="/libs/vendor/jquery/jquery.easing-1.3.pack.js"></script>
-    <!-- JS: Plugins > Fancybox -->
-    <script type="text/javascript" src="/libs/vendor/fancybox/js/jquery.fancybox.js"></script>
-    <script type="text/javascript" src="/libs/vendor/fancybox/js/jquery.fancybox-thumbs.js"></script>
-    <script type="text/javascript" src="/libs/vendor/fancybox/js/jquery.fancybox-buttons.js"></script>
-    <script type="text/javascript" src="/libs/vendor/fancybox/js/jquery.fancybox-media.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+
     <!-- JS: Plugins > BX Slider -->
-    <script type="text/javascript" src="/libs/vendor/bx-slider/js/jquery.bx-slider.min.js"></script>
-    <!-- JS: Plugins > Google Map API -->
-    <script type="text/javascript" src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAyhw8QDDthUf_-P5XBMKY2RRaLhBCYEQ2HxwDcACoBDSJCmxiJxT8pCzmBKczuPZyjKWzlTFd-Idi6A"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+    <!-- JS: Plugins > Fancybox -->
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
     <!-- JS: Plugins > Bootstrap -->
     <script type="text/javascript" src="/libs/vendor/bootstrap/js/bootstrap.min.js"></script>
 

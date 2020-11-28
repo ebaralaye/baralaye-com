@@ -18,7 +18,7 @@
           }
 
         /**
-         * Sets Fancybox detail popup for catalog detail image if the viewport is bigger than mobile size 
+         * Sets Fancybox detail popup for catalog detail image if the viewport is bigger than mobile size
          * @private
          */
         function setCatalogItemFancybox(){

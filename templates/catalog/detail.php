@@ -5,7 +5,7 @@
     <div class="image-slider v-align">
       <ul class="bxslider catalog">
         <?php foreach($poplets as $poplet): ?>
-          <li><a href="/images/art/portfolio/large/<?= $id.'-'.$poplet ?>.jpg" rel="gallery-1"><img src="/images/art/portfolio/large/<?= $id.'-'.$poplet ?>.jpg" alt="<?= $id.$poplet ?>" /></a></li>
+          <li><a href="/images/art/portfolio/large/<?= $id.'-'.$poplet ?>.jpg" data-fancybox="gallery-1"><img src="/images/art/portfolio/large/<?= $id.'-'.$poplet ?>.jpg" alt="<?= $id.$poplet ?>" /></a></li>
         <?php endforeach; ?>
       </ul>
     </div>
