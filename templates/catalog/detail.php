@@ -51,6 +51,9 @@
       <?php if($description != null): ?>
         <li class="description"><?= $description; ?></li>
       <?php endif; ?>
+      <?php if($media_cred != null): ?>
+        <li class="media_cred"><?= $media_cred; ?></li>
+      <?php endif; ?>
     </ul>
   </div>
 </div>

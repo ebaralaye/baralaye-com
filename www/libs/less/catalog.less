@@ -5,30 +5,32 @@
 
 /** Item List ----*/
 
-.item-list {
+ul.item-list {
   .clearfix;
   .list-unstyled;
   text-align: center;
-  font-size: 0; /* to remove whitespace in between list items */
   margin: 0;
+  font-size: 0; /* to remove whitespace in between list items */
 
   @media (max-width: 320px) {
     margin: 0 -15px;
   }
 
-  > li,
-  .item {
+  > li.item {
     position: relative;
     display: inline-block;
     width: 50%;
     height: 160px;
+    overflow: hidden;
 
     @media (min-width: @screen-sm-min) {
       width: 225px;
       height: 225px;
     }
 
-    a {
+    > a {
+      font-size: 12px;
+      border-bottom: 1px solid;
       display: block;
       position: relative;
       -webkit-background-size: cover;
@@ -38,38 +40,65 @@
       background-position: center;
       height: 100%;
       width: 100%;
-      border-bottom: 1px solid;
+    }
+  }
 
-      &:hover {
-        cursor: pointer;
+  &.catalog {
+
+    > li.item {
+      > a {
+
+        &:hover {
+          cursor: pointer;
+
+          .title {
+            background: @color-alpha-heavy;
+          }
+        }
 
         .title {
-          background: @color-alpha-heavy;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          text-align: center;
+          display: inline-block;
+          width: 100%;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          -o-text-overflow: ellipsis;
+          -webkit-text-overflow: ellipsis;
+          white-space: nowrap;
+          font-size: 13px;
+          line-height: 16px;
+          background: @color-alpha-medium;
+          padding: 5px;
+
+          &.untitled {
+            font-size: 10px;
+            color: #ccc;
+            text-transform: uppercase;
+          }
         }
       }
+    }
+  }
 
-      .title {
+  &.videos {
+    > li.item {
+
+      > iframe {
+        width: 100%;
+      }
+
+      > p,a {
+        .p();
         position: absolute;
+        width: 100%;
+        height: 30%;
+        text-overflow: ellipsis;
         bottom: 0;
         left: 0;
-        text-align: center;
-        display: inline-block;
-        width: 100%;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        -o-text-overflow: ellipsis;
-        -webkit-text-overflow: ellipsis;
-        white-space: nowrap;
-        font-size: 13px;
-        line-height: 16px;
-        background: @color-alpha-medium;
-        padding: 5px;
-
-        &.untitled {
-          font-size: 10px;
-          color: #ccc;
-          text-transform: uppercase;
-        }
+        margin-bottom: 0;
       }
     }
   }
@@ -247,6 +276,10 @@
           a.inquire::before {
             content: '+';
           }
+        }
+
+        &.media_cred {
+          margin-top: 10px;
         }
 
         &.description {

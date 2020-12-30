@@ -1,12 +1,42 @@
-<div class="page-body info social stacked">
+<div class="page-body info social">
   <section class="social-media">
     <h1>Social</h1>
     <?php include 'templates/includes/social-icons.php' ?>
   </section>
-  <section id="media">
-    <h1>Media</h1>
+  <section id="photos">
+    <h1><a href="https://www.flickr.com/photos/baralaye" target="_blank">Photos</a></h1>
     <ul id="set_72157628627505367" class="item-list photoset"></ul>
   </section>
+  <section id="videos">
+    <h1><a href="https://www.youtube.com/channel/UCSSMOL7YiDCuW9TTpoPvZ_Q" target="_blank">Videos</a></h1>
+    <ul class="item-list videos">
+      <li class="item">
+        <iframe src="https://www.youtube.com/embed/TarMydyehOY" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        <a href="https://www.youtube.com/embed/TarMydyehOY" data-fancybox>College for Creative Studies: "Watch Me Work: Ebitenyefa Baralaye, Section Head, Ceramics"</a>
+      </li>
+      <!--<li class="item">
+        <iframe src="https://player.vimeo.com/video/203329831" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        <a href="https://player.vimeo.com/video/203329831" data-fancybox>SFAI Official: Faculty Feature: Ebitenyefa Baralaye</a>
+      </li>-->
+      <!--<li class="item">
+        <iframe src="https://player.vimeo.com/video/208710048" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        <a href="https://player.vimeo.com/video/208710048" data-fancybox>Ebitenyefa Baralaye: Stakes in Psychologically Generative Form - Graduate Lecture Series</a>
+      </li>-->
+      <li class="item">
+        <iframe src="https://www.youtube.com/embed/7slFxFxKYHw" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        <a href="https://www.youtube.com/embed/7slFxFxKYHw" data-fancybox>UM Stamps: Form&Seek Design Collective: Never Normal</a>
+      </li>
+      <li class="item">
+        <iframe src="https://www.youtube.com/embed/J5_huE0Bm8o" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        <a href="https://www.youtube.com/embed/J5_huE0Bm8o" data-fancybox>Cranbrook deSalle: "Ebitenyefa Baralaye Lecture 10-09-2020"</a>
+      </li>
+      <li class="item">
+        <iframe src="https://www.youtube.com/embed/tQLQOzDpbfk" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        <a href="https://www.youtube.com/embed/tQLQOzDpbfk" data-fancybox>Cranbrook deSalle: "On Mentorship: Cranbrook Academy of Art Craft Symposium 2-2-2019"</a>
+      </li>
+    </ul>
+  </section>
+</section>
 <!--
   <section id="studio">
     <h1>Studio</h1>
@@ -30,8 +60,23 @@
     </ul>
   </section>
 -->
-  <section id="artists">
-    <h1>Artists</h1>
+  <section id="instagram">
+    <h1><a href="http://instagram.com/baralaye" target="_blank">Instagram</h1>
+    <!-- Place <div> tag where you want the feed to appear -->
+    <div id="curator-feed-default-feed-layout"><a href="https://curator.io" target="_blank" class="crt-logo crt-tag">Powered by Curator.io</a></div>
+    <!-- The Javascript can be moved to the end of the html page before the </body> tag -->
+    <script type="text/javascript">
+    /* curator-feed-default-feed-layout */
+    (function(){
+    var i, e, d = document, s = "script";i = d.createElement("script");i.async = 1;
+    i.src = "https://cdn.curator.io/published/45824918-4e05-46d7-ace7-b3cc26caa6f5.js";
+    e = d.getElementsByTagName(s)[0];e.parentNode.insertBefore(i, e);
+    })();
+    </script>
+  </section>
+  <section id="links">
+    <h1>Links</h1>
+    <h2>Artists</h2>
     <ul class="list inline">
       <li>Justin Yuen</li>
       <li><a target="_blank" href="http://ruhwald.net">Anders Ruhwald</a></li>
@@ -87,9 +132,7 @@
       <li><a target="_blank" href="http://www.janiceahn.com">Janice Ahn</a></li>
       <li><a target="_blank" href="http://www.nathanhuang.com">Nathan Huang</a></li>
     </ul>
-  </section>
-  <section>
-    <h1>Organizations</h1>
+    <h2>Organizations</h2>
     <ul class="list inline">
       <li><a target="_blank" href="http://www.nyfa.org" title="NYFA">New York Foundation for the Arts</a></li>
       <li><a target="_blank" href="http://www.efanyc.org" title="EFA">Elizabeth Foundation for the Arts</a></li>

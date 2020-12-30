@@ -6124,7 +6124,8 @@ h5 {
   font-size: 12px;
   margin: 0 0 3px;
 }
-p {
+p,
+.p {
   font-size: 12px;
   line-height: 180%;
   margin: 0 0 10px;
@@ -6334,8 +6335,8 @@ ul.social-btns .btn-s.purchase {
     text-align: left;
   }
 }
-.page-body.stacked section {
-  margin-bottom: 50px;
+.page-body section {
+  margin-bottom: 25px;
 }
 .page-body.stacked section:last-child {
   border: 0;
@@ -7278,51 +7279,51 @@ ul.social-btns .btn-s.purchase {
  * @author tech@baralaye.com
  */
 /** Item List ----*/
-.item-list {
+ul.item-list {
   padding-left: 0;
   list-style: none;
   text-align: center;
+  margin: 0;
   font-size: 0;
   /* to remove whitespace in between list items */
-  margin: 0;
 }
-.item-list:before,
-.item-list:after {
+ul.item-list:before,
+ul.item-list:after {
   content: " ";
   display: table;
 }
-.item-list:after {
+ul.item-list:after {
   clear: both;
 }
-.item-list:before,
-.item-list:after {
+ul.item-list:before,
+ul.item-list:after {
   content: " ";
   display: table;
 }
-.item-list:after {
+ul.item-list:after {
   clear: both;
 }
 @media (max-width: 320px) {
-  .item-list {
+  ul.item-list {
     margin: 0 -15px;
   }
 }
-.item-list > li,
-.item-list .item {
+ul.item-list > li.item {
   position: relative;
   display: inline-block;
   width: 50%;
   height: 160px;
+  overflow: hidden;
 }
 @media (min-width: 768px) {
-  .item-list > li,
-  .item-list .item {
+  ul.item-list > li.item {
     width: 225px;
     height: 225px;
   }
 }
-.item-list > li a,
-.item-list .item a {
+ul.item-list > li.item > a {
+  font-size: 12px;
+  border-bottom: 1px solid;
   display: block;
   position: relative;
   -webkit-background-size: cover;
@@ -7332,18 +7333,14 @@ ul.social-btns .btn-s.purchase {
   background-position: center;
   height: 100%;
   width: 100%;
-  border-bottom: 1px solid;
 }
-.item-list > li a:hover,
-.item-list .item a:hover {
+ul.item-list.catalog > li.item > a:hover {
   cursor: pointer;
 }
-.item-list > li a:hover .title,
-.item-list .item a:hover .title {
+ul.item-list.catalog > li.item > a:hover .title {
   background: rgba(255, 255, 255, 0.9);
 }
-.item-list > li a .title,
-.item-list .item a .title {
+ul.item-list.catalog > li.item > a .title {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -7360,11 +7357,27 @@ ul.social-btns .btn-s.purchase {
   background: rgba(255, 255, 255, 0.6);
   padding: 5px;
 }
-.item-list > li a .title.untitled,
-.item-list .item a .title.untitled {
+ul.item-list.catalog > li.item > a .title.untitled {
   font-size: 10px;
   color: #ccc;
   text-transform: uppercase;
+}
+ul.item-list.videos > li.item > iframe {
+  width: 100%;
+}
+ul.item-list.videos > li.item > p,
+ul.item-list.videos > li.item a {
+  font-size: 12px;
+  line-height: 180%;
+  margin: 0 0 10px;
+  letter-spacing: 1px;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  text-overflow: ellipsis;
+  bottom: 0;
+  left: 0;
+  margin-bottom: 0;
 }
 /** Catalog list ----*/
 .page-body.catalog {
@@ -7581,6 +7594,9 @@ ul.social-btns .btn-s.purchase {
 }
 .page-body.catalog-item .details ul li.price a.inquire::before {
   content: '+';
+}
+.page-body.catalog-item .details ul li.media_cred {
+  margin-top: 10px;
 }
 .page-body.catalog-item .details ul li.description {
   margin-top: 10px;

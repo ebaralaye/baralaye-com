@@ -22,11 +22,12 @@
     <ul>
       <li><a href="/cv">CV</a>
         <ul>
-          <li><a href="/docs/ebitenyefa-baralaye_cv.pdf">download</a></li>
+          <li><a href="https://docs.google.com/document/d/1ffnoYqm9TS0K16jjF7zWWXOUpPJi72x6Sgeolbd_8qY/edit?usp=sharing">Doc</a></li>
         </ul>
       </li>
       <li><a href="/biography">Biography</a></li>
       <li><a href="/statement">Statement</a></li>
+      <li><a href="/process">Process</a></li>
     </ul>
   </li>
   <li><a href="/contact">Contact</a>
