@@ -6,6 +6,13 @@
     <?php endif ?>
   </header>
   <main>
-    <?= $content_long ?>
+    <section>
+      <?= $content_long ?>
+    </section>
+    <?php if ($photoset_id): ?>
+      <section>
+        <ul id="set_<?= $photoset_id ?>" class="item-list photoset"></ul>
+      </section>
+    <?php endif ?>
   </main>
 </div>
