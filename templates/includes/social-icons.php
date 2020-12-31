@@ -9,6 +9,6 @@
     <a class="btn facebook" href="http://facebook.com/baralaye" target="_blank">Facebook</a>
     <a class="btn youtube" href="https://www.youtube.com/channel/UCSSMOL7YiDCuW9TTpoPvZ_Q" target="_blank">YouTube</a>
     <a class="btn twitter" href="http://twitter.com/baralaye" target="_blank">Twitter</a>
-    <a class="btn flikr" href="http://www.flickr.com/photos/baralaye/" target="_blank">Flickr</a>
+    <a class="btn flickr" href="http://www.flickr.com/photos/baralaye/" target="_blank">Flickr</a>
   </div>
 </div>

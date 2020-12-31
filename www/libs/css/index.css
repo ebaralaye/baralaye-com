@@ -6760,7 +6760,7 @@ ul.social-btns .btn-s.purchase {
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
-  margin: 20px auto 30px;
+  margin: 20px auto;
 }
 @media (min-width: 768px) {
   .tmp-wrap .tmp-bottom .social-icons {
@@ -6778,7 +6778,7 @@ ul.social-btns .btn-s.purchase {
   border: 1px solid;
   width: 30px;
   height: 30px;
-  margin: 0 10px;
+  margin: 0 10px 10px;
   background-size: 30px 30px;
   background-repeat: no-repeat;
   background-position: center;
@@ -6796,6 +6796,15 @@ ul.social-btns .btn-s.purchase {
 }
 .tmp-wrap .tmp-bottom .social-icons a.linkedin {
   background-image: url('/images/template/social/linkedin.svg');
+}
+.tmp-wrap .tmp-bottom .social-icons a.facebook {
+  background-image: url('/images/template/social/facebook.svg');
+}
+.tmp-wrap .tmp-bottom .social-icons a.youtube {
+  background-image: url('/images/template/social/youtube.svg');
+}
+.tmp-wrap .tmp-bottom .social-icons a.flickr {
+  background-image: url('/images/template/social/flickr.svg');
 }
 .tmp-wrap .tmp-bottom .social-icons a.email {
   background-image: url('/images/template/social/email.svg');
