@@ -74,32 +74,42 @@
                 var photoSetCont = $(this);
                 var apiKey = '2dc0ff4d2daaa11adcdef83d127b8558';
                 var photosetID = $(this).attr('id').split('_')[1];
-                //the initial json request to flickr
                 //to get your latest public photos, use this request: http://api.flickr.com/services/rest/?&method=flickr.people.getPublicPhotos&api_key=' + apiKey + '&user_id=29096781@N02&per_page=15&page=2&format=json&jsoncallback=?
                 $.getJSON('https://api.flickr.com/services/rest/?&method=flickr.photosets.getPhotos&api_key=' + apiKey + '&photoset_id=' + photosetID + '&format=json&jsoncallback=?',function(data){
                     //loop through the results with the following function
                     $.each(data.photoset.photo, function(i,item){
-                        //build the url of the photo in order to link to it
-                        var photoURL_m = 'http://farm' + item.farm + '.static.flickr.com/' + item.server + '/' + item.id + '_' + item.secret + '_m.jpg';
-                        var photoURL_b = 'http://farm' + item.farm + '.static.flickr.com/' + item.server + '/' + item.id + '_' + item.secret + '_z.jpg';
-                        //turn the photo id into a variable
+
+                       //build the url of the photo in order to link to it
+                       var photoURL_m = 'http://farm' + item.farm + '.static.flickr.com/' + item.server + '/' + item.id + '_' + item.secret + '_m.jpg';
+                       var photoURL_b = 'http://farm' + item.farm + '.static.flickr.com/' + item.server + '/' + item.id + '_' + item.secret + '_z.jpg';
+                       //turn the photo id into a variable
                        var photoID = item.id;
-                       //use another ajax request to get the tags of the image
-                       $.getJSON('https://api.flickr.com/services/rest/?&method=flickr.photos.getInfo&api_key=' + apiKey + '&photo_id=' + photoID + '&format=json&jsoncallback=?',function(data){
-                           //create an imgCont string variable which will hold all the link location, title, author link, and author name into a text string
-                           var imgCont = "<li class='item'><a class='ltbx' href="+ photoURL_b +" title='"+ data.photo.title._content +"' rel='gallery-1' style=\'background-image:url("+ photoURL_b +")\' /></a>";
-                           //add the description & html snippet to the end of the 'imgCont' variable
-                           //imgCont += '<div class="image-info"><h4 class="title">'+data.photo.title._content+'</h4><p class="desc">'+data.photo.description._content+'</p></div></li>';
-                           //append the 'imgCont' variable to the document
-                           $(imgCont).appendTo( photoSetCont );
-                           //Activate Lightbox
-                           setFancyBox();
+                       var photoDesc;
+
+                       //create an imgCont string variable which will hold all the link location, title, author link, and author name into a text string
+                       var imgCont = "<li class='item'><a class='ltbx' id='"+item.id+"' href="+ photoURL_b +"' rel='gallery-1' style=\'background-image:url("+ photoURL_b +")\' /></a>";
+
+                       //append the 'imgCont' variable to the document
+                       $(imgCont).appendTo( photoSetCont );
+
+                       //use another ajax request to set the description in the data-caption attribute of the image
+                       $.getJSON('https://api.flickr.com/services/rest/?&method=flickr.photos.getInfo&api_key=' + apiKey + '&photo_id=' + item.id + '&format=json&jsoncallback=?',function(data){
+                         if (item.title !== undefined){
+                           $('#'+item.id).data('caption', "<strong>"+ item.title +"</strong>");
+                         }
+
+                         photoDesc = data.photo.description._content;
+                         if (photoDesc !== undefined){
+                           $('#'+item.id).data('caption', $('#'+item.id).data('caption').concat("<br/> "+ photoDesc));
+                         }
+
+                         //Activate Lightbox
+                         setFancyBox();
                        });
                    });
                });
                jQuery('.loader').remove();
            });
-
         }
 
         return {
