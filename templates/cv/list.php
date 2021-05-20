@@ -2,7 +2,7 @@
 
 global $response;
 global $dbh;
-$sql = 'SELECT * FROM cv WHERE status >= 1 ORDER BY period_year DESC';
+$sql = 'SELECT * FROM cv WHERE status >= 1 ORDER BY period_from DESC';
 $items = $dbh -> query($sql);
 
 echo "<ul class='section list outside ".$tag_key."'>";
