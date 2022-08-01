@@ -5,19 +5,19 @@
     <div class="image-slider v-align">
       <ul class="bxslider catalog">
         <?php foreach($poplets as $poplet): ?>
-          <li><a href="/images/art/portfolio/large/<?= $id.'-'.$poplet ?>.jpg" data-fancybox="gallery-1"><img src="/images/art/portfolio/large/<?= $id.'-'.$poplet ?>.jpg" alt="<?= $id.$poplet ?>" /></a></li>
+          <li><a href="/images/art/portfolio/large/<?= $id.'-'.$poplet ?>.jpg" data-fancybox="gallery-1"><img src="/images/art/portfolio/<?= $id ?>/large/<?= $id.'-'.$poplet ?>.jpg" alt="<?= $id.$poplet ?>" /></a></li>
         <?php endforeach; ?>
       </ul>
     </div>
     <ul id="bx-pager" class="image-poplets v-align">
       <?php foreach($poplets as $key => $poplet): ?>
-        <li><a data-slide-index="<?= $key ?>" href=""><img src="/images/art/portfolio/small/<?= $id.'-'.$poplet ?>.jpg" alt="<?= $id.'-'.$poplet ?>" /></a></li>
+        <li><a data-slide-index="<?= $key ?>" href=""><img src="/images/art/portfolio/<?= $id ?>/small/<?= $id.'-'.$poplet ?>.jpg" alt="<?= $id.'-'.$poplet ?>" /></a></li>
         <!-- // Run vertical align as each poplet loads -->
       <?php endforeach; ?>
     </ul>
   <?php else: ?>
     <div class="image v-align">
-      <a href="/images/art/portfolio/large/<?= $id ?>.jpg"><img class="main" src="/images/art/portfolio/large/<?= $id ?>.jpg" alt="<?= $id ?>" /></a>
+      <a href="/images/art/portfolio/large/<?= $id ?>.jpg"><img class="main" src="/images/art/portfolio/<?= $id ?>/large/<?= $id ?>.jpg" alt="<?= $id ?>" /></a>
     </div>
     <script type="text/javascript">Baralaye.Template.VAlign();</script>
   <?php endif; ?>

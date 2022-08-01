@@ -12,7 +12,7 @@
           // Set the product url based on availability of a product name (defaults to id)
           $product_url = ($product['name']) ? ($product['url']."/".$product['name']) : ($product['url']."/".$product['id']);
         ?>
-        <a href="<?= $product_url; ?>" style="background-image:url(/images/art/portfolio/medium/<?= $product_image; ?>.jpg)" />
+        <a href="<?= $product_url; ?>" style="background-image:url(/images/art/portfolio/<?= $product['id']; ?>/medium/<?= $product_image; ?>.jpg)" />
           <span class="title <?php if($product['title_type'] != null){ echo $product['title_type']; }; ?>"><?= $product['title']; ?></span>
         </a>
       </li>
