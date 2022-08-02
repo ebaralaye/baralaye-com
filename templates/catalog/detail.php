@@ -33,9 +33,10 @@
           <li class="year"><?php $year = date("Y", strtotime($date)); echo $year?></li>
           <li class="price">
             <?php if ($status == 1): ?>
-              $<?= $price; ?>
+              <!-- $<?= $price; ?> -->
+              <a href="/contact" target="_blank" class="inquire">Available</a>
             <?php elseif ($status == 2): ?>
-              <a href="/contact" target="_blank" class="inquire">inquire</a>
+              Acquired
             <?php elseif ($status == 3): ?>
               NFS
             <?php endif; ?>

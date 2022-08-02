@@ -117,8 +117,13 @@ function action_portfolio($path){
           $conditional_tag = "archive";
           error_log("archive",0);
         }
+        else if (substr($path, 1,9) == 'available'){
+          $sql = 'SELECT * FROM portfolio WHERE status = 1 ORDER BY date DESC';
+          $conditional_tag = "available";
+          error_log("available",0);
+        }
         else {
-          $sql = 'SELECT * FROM portfolio WHERE  status IS NOT NULL AND archive IS NULL ORDER BY date DESC';
+          $sql = 'SELECT * FROM portfolio WHERE status IS NOT NULL AND archive IS NULL ORDER BY date DESC';
           error_log("not archive",0);
         }
         $sth = $dbh -> prepare($sql);

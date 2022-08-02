@@ -1,15 +1,16 @@
 <ul class="nav">
   <li><a href="/work">Work</a>
     <ul>
+      <li class="archive"><a href="/available">Available</a>
       <li class="archive"><a href="/archive">Archive</a>
-        <ul>
+        <!--<ul>
           <li><a href="/archive/drawings">Drawings</a></li>
           <li><a href="/archive/pottery">Pottery</a></li>
           <li><a href="/archive/sculpture">Sculpture</a></li>
-        </ul>
+        </ul>-->
       </li>
       <li><a href="/pottery">Pottery</a></li>
-      <li><a href="/textiles">Textiles</a></li>
+      <!-- <li><a href="/textiles">Textiles</a></li> -->
       <li><a href="/sculpture">Sculpture</a>
         <ul>
           <li><a href="/sculpture/mixed-media">Mixed Media</a></li>
