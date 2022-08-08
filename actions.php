@@ -45,9 +45,12 @@ function action_index($path){
 /**
  * Portfolio Action
  */
-function action_portfolio($path){
+function action_catalog($path){
   global $dbh;
   global $response;
+
+  $catalog ="portfolio"; //defaults to portfolio
+  if (substr($path, 1,11) == 'exhibitions') $catalog = "exhibitions";
 
   $pathArr = explode('/',$path);
   error_log('path array - '.$pathArr);
@@ -59,12 +62,12 @@ function action_portfolio($path){
 
   try {
     // SQL - Select all rows from catalogs table that have a url that matches $path
-    $sql = 'SELECT * FROM portfolio WHERE name = ?';
+    $sql = 'SELECT * FROM '.$catalog.' WHERE name = ?';
     $sth = $dbh -> prepare($sql);
     $sth -> execute(array($pathProductNode));
     $product = $sth -> fetch();
     if (empty($product)) { // enables the use ids as identifiers in urls routes instead of names
-      $sql = 'SELECT * FROM portfolio WHERE id = ?';
+      $sql = 'SELECT * FROM '.$catalog.' WHERE id = ?';
       $sth = $dbh -> prepare($sql);
       $sth -> execute(array($pathProductNode));
       $product = $sth -> fetch();
@@ -74,6 +77,7 @@ function action_portfolio($path){
     $product_tags[] = "art";
     $product_tags[] = "portfolio";
     $product_tags[] = "work";
+    $product_tags[] = "exhibitions";
     $catalog_diff = array_diff($pathCatalogArr,$product_tags);
   }
   catch (PDOException $e) {
@@ -82,6 +86,7 @@ function action_portfolio($path){
   if ($product && empty($catalog_diff)) {
     // Set product title to system name if title is null (untitled)
     $product['title_type'] = null;
+    $product['catalog'] = $catalog;
     if ($product['title'] == null) {
       $product['title'] = mb_strtoupper($product['id']);
       $product['title_type'] = 'untitled';
@@ -121,6 +126,11 @@ function action_portfolio($path){
           $sql = 'SELECT * FROM portfolio WHERE status = 1 ORDER BY date DESC';
           $conditional_tag = "available";
           error_log("available",0);
+        }
+        else if (substr($path, 1,11) == 'exhibitions'){
+          $sql = 'SELECT * FROM exhibitions WHERE status = 1 ORDER BY period_from DESC';
+          $conditional_tag = "exhibitions";
+          error_log("exhibitions",0);
         }
         else {
           $sql = 'SELECT * FROM portfolio WHERE status IS NOT NULL AND archive IS NULL ORDER BY date DESC';

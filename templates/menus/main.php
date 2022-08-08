@@ -1,7 +1,8 @@
 <ul class="nav">
   <li><a href="/work">Work</a>
     <ul>
-      <li class="archive"><a href="/available">Available</a>
+      <li class="exhibitions"><a href="/exhibitions">Exhibitions</a>
+      <li class="available"><a href="/available">Available</a>
       <li class="archive"><a href="/archive">Archive</a>
         <!--<ul>
           <li><a href="/archive/drawings">Drawings</a></li>
