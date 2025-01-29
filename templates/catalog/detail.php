@@ -40,6 +40,7 @@
             <?php endif; ?>
           <!-- // Portfolio -->
           <?php else: ?>
+            <li class="code">#<?= $id; ?></li>
             <li class="medium"><?= $medium; ?></li>
             <?php if ($dim_width != null): ?>
               <li class="dimensions"><?= $dim_height," x ", $dim_width," x ",$dim_depth; ?></li>
