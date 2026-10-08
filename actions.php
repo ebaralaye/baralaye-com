@@ -181,8 +181,10 @@ function action_cv() {
   $tags = array(
     'education' => array(),
     'exhibitions' => array('solo','group'),
+    'collections' => array(),
     'press' => array(),
     'awards' => array(),
+    'grants' => array(),
     'residencies' => array(),
     'lectures' => array(),
     'teaching' => array(),

@@ -2,7 +2,7 @@
 
 global $response;
 global $dbh;
-$sql = 'SELECT * FROM cv WHERE status >= 1 ORDER BY period_from DESC';
+$sql = 'SELECT * FROM cv WHERE status >= 1 ORDER BY period_year DESC, period_from DESC, id ASC';
 $items = $dbh -> query($sql);
 
 echo "<ul class='section list outside ".$tag_key."'>";
@@ -19,6 +19,7 @@ echo "<ul class='section list outside ".$tag_key."'>";
       if ($item['title_desc']) echo ', '.$item['title_desc'];
       if ($item['city']) echo ' - '.$item['city'];
       if ($item['state']) echo ', '.$item['state'];
+      if ($item['country'] && $item['country'] !== 'USA') echo ', '.$item['country'];
       if ($item['period_year']) echo '<time>'.$item['period_year'].'</time>';
      echo "</li>";
     }
