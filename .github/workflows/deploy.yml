@@ -1,0 +1,51 @@
+name: Deploy website to droplet
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: droplet-${{ github.ref_name }}
+  cancel-in-progress: false
+jobs:
+  deploy:
+    if: github.ref_name == 'dev' || github.ref_name == 'master'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Package tracked website files
+        run: |
+          mkdir "$RUNNER_TEMP/site"
+          git archive HEAD | tar -x -C "$RUNNER_TEMP/site"
+      - name: Configure SSH
+        env:
+          DEPLOY_KEY: ${{ secrets.DROPLET_DEPLOY_KEY }}
+          KNOWN_HOSTS: ${{ secrets.DROPLET_KNOWN_HOSTS }}
+        run: |
+          umask 077
+          mkdir -p ~/.ssh
+          printf '%s\n' "$DEPLOY_KEY" > ~/.ssh/deploy_key
+          printf '%s\n' "$KNOWN_HOSTS" > ~/.ssh/known_hosts
+          test -s ~/.ssh/deploy_key
+          test -s ~/.ssh/known_hosts
+      - name: Deploy website files
+        env:
+          BRANCH: ${{ github.ref_name }}
+        run: |
+          case "$BRANCH" in
+            dev) destination=/var/www/dev.baralaye.com; url=http://dev.baralaye.com/cv ;;
+            master) destination=/var/www/baralaye.com; url=https://baralaye.com/cv ;;
+            *) exit 1 ;;
+          esac
+          rsync -rltz --itemize-changes \
+            --exclude=settings.php --exclude=database/ \
+            --exclude=.github/ --exclude=node_modules/ --exclude=.DS_Store \
+            -e 'ssh -i ~/.ssh/deploy_key -o IdentitiesOnly=yes -o BatchMode=yes -o StrictHostKeyChecking=yes' \
+            "$RUNNER_TEMP/site/" "deploy_user@107.170.131.77:$destination/"
+          curl --fail --silent --show-error --retry 3 "$url" -o "$RUNNER_TEMP/deployed-cv.html"
+          grep -q 'Curriculum Vitae' "$RUNNER_TEMP/deployed-cv.html"
+      - name: Remove temporary SSH key
+        if: always()
+        run: rm -f ~/.ssh/deploy_key
