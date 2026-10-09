@@ -10,15 +10,17 @@ jobs:
   deploy:
     if: github.ref_name == 'dev' || github.ref_name == 'master'
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 30
     steps:
-      - uses: actions/checkout@v4
-        with:
-          persist-credentials: false
-      - name: Package tracked website files
+      - name: Download committed website files
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           mkdir "$RUNNER_TEMP/site"
-          git archive HEAD | tar -x -C "$RUNNER_TEMP/site"
+          curl --fail --location --silent --show-error \
+            -H "Authorization: Bearer $GH_TOKEN" \
+            "https://api.github.com/repos/$GITHUB_REPOSITORY/tarball/$GITHUB_SHA" \
+            | tar -xz --strip-components=1 -C "$RUNNER_TEMP/site"
       - name: Configure SSH
         env:
           DEPLOY_KEY: ${{ secrets.DROPLET_DEPLOY_KEY }}
