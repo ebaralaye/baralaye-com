@@ -4,7 +4,13 @@
 $conf = conf();
 
 //Global Variables
-$dbh = new PDO($conf['database']['dsn'], $conf['database']['user'], $conf['database']['password']);
+// Keep MySQL results in the same UTF-8 encoding as the website.
+$dsn = $conf['database']['dsn'];
+if (strpos($dsn, 'mysql:') === 0) {
+    $dsn = preg_replace('/;charset=[^;]*/i', '', $dsn);
+    $dsn = rtrim($dsn, ';') . ';charset=utf8mb4';
+}
+$dbh = new PDO($dsn, $conf['database']['user'], $conf['database']['password']);
 
 /**
  * Render Method
