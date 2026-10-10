@@ -1,5 +1,7 @@
 name: Deploy website to droplet
 on:
+  push:
+    branches: [dev, master]
   workflow_dispatch:
 permissions:
   contents: read
@@ -41,7 +43,7 @@ jobs:
             master) destination=/var/www/baralaye.com; url=https://baralaye.com/cv ;;
             *) exit 1 ;;
           esac
-          rsync -rltz --itemize-changes \
+          rsync -rltzc --itemize-changes \
             --exclude=settings.php --exclude=database/ \
             --exclude=.github/ --exclude=node_modules/ --exclude=.DS_Store \
             -e 'ssh -i ~/.ssh/deploy_key -o IdentitiesOnly=yes -o BatchMode=yes -o StrictHostKeyChecking=yes' \
