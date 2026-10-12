@@ -32,6 +32,7 @@ function action_pages($path){
   if (!$page) {
     return action_404();
   }
+  $response['meta_desc'] = seo_description(!empty($page['content_short']) ? $page['content_short'] : $page['content_long']);
   return render('pages', $page);
 }
 
@@ -98,7 +99,11 @@ function action_catalog($path){
       $product['title_type'] = 'untitled';
     }
     $response['title'] .= " - "."&quot;".$product['title']."&quot;";
-    $response['meta_desc'] = $product['medium'];
+    $response['canonical_path'] = seo_work_path($product);
+    $response['meta_desc'] = !empty($product['description']) ? seo_description($product['description']) : seo_work_alt($product);
+    if (!empty($product['image'])) {
+      $response['og_image'] = '/images/art/' . $catalog . '/' . $product['id'] . '/large/' . $product['id'] . '-' . $product['image'] . '.jpg';
+    }
     // Render
     return render("catalog/detail", $product);
   }
@@ -116,7 +121,7 @@ function action_catalog($path){
       $catalog_tags = explode(',', (isset($catalog['tags']) ? $catalog['tags'] : ''));
       $products = array();
       $response['title'] .= " - ".$catalog['title'];
-      $response['meta_desc'] = $catalog['description'];
+      $response['meta_desc'] = !empty($catalog['description']) ? seo_description($catalog['description']) : 'Explore ' . seo_text($catalog['title']) . ' by Ebitenyefa Baralaye, with artwork images and details.';
 
       try {
 
@@ -317,6 +322,9 @@ function action_news($path){
             $posts[] = $row;
         }
         if ($post) {
+            $response['title'] = seo_text($post['title']) . ' | Ebitenyefa Baralaye';
+            $response['meta_desc'] = seo_description(!empty($post['content_blurb']) ? $post['content_blurb'] : $post['content']);
+            if (!empty($post['image']) && strpos($post['image'], '/') === 0 && strpos($post['image'], '//') !== 0) $response['og_image'] = $post['image'];
             return render("news/detail", array('post' => $post, 'posts' => $posts));
         }
       }
@@ -403,6 +411,8 @@ function action_contact(){
  */
 function action_404(){
     global $response;
+    header('HTTP/1.1 404 Not Found');
+    $response['noindex'] = true;
     $response['title'] = '404';
     return file_get_contents('pages/error.404.htm');
 }

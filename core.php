@@ -1,5 +1,7 @@
 <?php
 
+require_once __DIR__ . '/seo.php';
+
 // Open a database connection - pointer to my database
 $conf = conf();
 
