@@ -2,3 +2,7 @@ settings.php
 database/
 *.swp
 *.swo
+
+# Install dependencies with npm ci; keep generated CSS tracked.
+node_modules/
+npm-debug.log*

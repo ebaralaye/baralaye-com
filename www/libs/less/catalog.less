@@ -6,8 +6,8 @@
 /** Item List ----*/
 
 ul.item-list {
-  .clearfix;
-  .list-unstyled;
+  .clearfix();
+  .list-unstyled();
   text-align: center;
   margin: 0;
   font-size: 0; /* to remove whitespace in between list items */
@@ -138,14 +138,14 @@ ul.item-list {
   }
 
   .image-slider {
-    .no-gutter;
+    .no-gutter();
     margin: 0 auto 20px;
     .make-md-column(6);
     .make-md-column-pull(3);
 
     @media (min-width: @screen-md-min) {
       margin-bottom: 0;
-      .pull-right;
+      .pull-right();
     }
 
     /* BX Slider */
@@ -154,7 +154,7 @@ ul.item-list {
       .bx-viewport {
 
         ul.bxslider.catalog {
-          .list-unstyled;
+          .list-unstyled();
 
           img {
             max-width: 100%;
@@ -202,14 +202,14 @@ ul.item-list {
   }
 
   .image {
-    .no-gutter;
+    .no-gutter();
     .make-md-column(6);
     max-width: 100%; /* for right responsive width on images without poplets */
     margin-bottom: 20px;
 
     @media (min-width: @screen-md-min) {
       margin: 0 25% 0 0; /* to make up for missing poplet column (no poplets) */
-      .pull-right;
+      .pull-right();
     }
 
     img {
@@ -219,7 +219,7 @@ ul.item-list {
   }
 
   ul.image-poplets {
-    .list-unstyled;
+    .list-unstyled();
     .make-md-column(3);
     .make-md-column-push(6);
     margin-bottom: 20px;
@@ -227,7 +227,7 @@ ul.item-list {
     @media (min-width: @screen-md-min) {
       padding-right: 0;
       margin: 0;
-      .pull-right;
+      .pull-right();
     }
 
     li {
@@ -259,7 +259,7 @@ ul.item-list {
     }
 
     ul {
-      .list-unstyled;
+      .list-unstyled();
       margin: 0;
 
       li {

@@ -74,7 +74,7 @@ input::-moz-focus-inner {
 }
 
 h1, h2, h3, h4, h5 {
-  .raleway;
+  .raleway();
   text-transform: capitalize;
   letter-spacing: 1px;
   line-height: 140%;
@@ -125,7 +125,7 @@ p,.p {
 /** Horizontal Rule ----*/
 
 .hr, hr {
-  .clearfix;
+  .clearfix();
   border-bottom: @border-a-width solid @color-medium;
   margin: 0 15px;
 }
@@ -192,7 +192,7 @@ ul.social-btns {
   z-index: 9999;
   height: 20px;
   white-space: nowrap;
-  .clearfix;
+  .clearfix();
 
   > li {
     display: inline-block;
@@ -235,7 +235,7 @@ ul.social-btns {
 
 .page-body {
   margin: 0 15px 15px 15px;
-  .clearfix;
+  .clearfix();
   max-width: 1200px;
 
   @media (min-width: @screen-sm-min) {
@@ -249,7 +249,7 @@ ul.social-btns {
   > .main,
   > main,
   > .page-main {
-    .clearfix;
+    .clearfix();
 
     @media (min-width: @screen-sm-min) {
       text-align: left;
@@ -295,7 +295,7 @@ ul.social-btns {
 
   main {
     text-align: left;
-    .row;
+    .row();
     .make-sm-column(8);
     .make-sm-column-offset(2);
   }
@@ -400,7 +400,7 @@ ul.social-btns {
       }
 
       > a {
-        .raleway;
+        .raleway();
         height: 40px;
         line-height: 40px;
         font-weight: 300;
@@ -428,12 +428,12 @@ ul.social-btns {
       padding: 0;
 
       > ul.nav {
-        .list-unstyled;
+        .list-unstyled();
         margin: 0 auto;
         position: relative;
         bottom: -@border-a-width;
         height: 40px;
-        .clearfix;
+        .clearfix();
 
         @media (min-width: @screen-sm-min) {
           float: right;
@@ -488,7 +488,7 @@ ul.social-btns {
           }
 
           ul {
-            .list-unstyled;
+            .list-unstyled();
             right: 0;
             width: 100%;
             display: none;
@@ -569,6 +569,10 @@ ul.social-btns {
   .tmp-sub {
     margin-top: 60px;
 
+    @media (max-width: @screen-xs-max) {
+      margin-top: 100px;
+    }
+
     @media (min-width: @screen-sm-min){
       margin: 120px 0;
     }
@@ -594,7 +598,7 @@ ul.social-btns {
       margin-bottom: -20px;
 
       > ul.nav {
-      .list-unstyled;
+      .list-unstyled();
       position: relative;
       top: -19px;
       display: inline-block;
@@ -629,7 +633,7 @@ ul.social-btns {
           }
 
           > ul {
-            .list-unstyled;
+            .list-unstyled();
             width: auto;
             padding-top: 27px;
 
