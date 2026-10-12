@@ -10,6 +10,7 @@
           <li><a href="/archive/sculpture">Sculpture</a></li>
         </ul>-->
       </li>
+      <li><a href="/design">Design</a></li>
       <li><a href="/pottery">Pottery</a></li>
       <!-- <li><a href="/textiles">Textiles</a></li> -->
       <li><a href="/sculpture">Sculpture</a>
