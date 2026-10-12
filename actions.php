@@ -53,12 +53,15 @@ function action_catalog($path){
   if (substr($path, 1,11) == 'exhibitions') $catalog = "exhibitions";
 
   $pathArr = explode('/',$path);
-  error_log('path array - '.$pathArr);
+  error_log('path array - '.json_encode($pathArr));
 
   // Detail View //
   $pathProductNode = $pathArr[count($pathArr)-1]; // Slice of path after the last '/'
   $pathCatalogArr = array_slice($pathArr,1,count($pathArr)-2); // Slice of path before the last '/'
-  error_log($pathProductNode." / ".$pathCatalogArr);
+  error_log($pathProductNode." / ".json_encode($pathCatalogArr));
+
+  $product = false;
+  $catalog_diff = array();
 
   try {
     // SQL - Select all rows from catalogs table that have a url that matches $path
@@ -72,13 +75,15 @@ function action_catalog($path){
       $sth -> execute(array($pathProductNode));
       $product = $sth -> fetch();
     }
-    $product_tags = explode(',',$product['tags']);
-    // Manually adding base tags
-    $product_tags[] = "art";
-    $product_tags[] = "portfolio";
-    $product_tags[] = "work";
-    $product_tags[] = "exhibitions";
-    $catalog_diff = array_diff($pathCatalogArr,$product_tags);
+    if ($product) {
+      $product_tags = explode(',', (isset($product['tags']) ? $product['tags'] : ''));
+      // Manually adding base tags
+      $product_tags[] = "art";
+      $product_tags[] = "portfolio";
+      $product_tags[] = "work";
+      $product_tags[] = "exhibitions";
+      $catalog_diff = array_diff($pathCatalogArr,$product_tags);
+    }
   }
   catch (PDOException $e) {
   }
@@ -104,11 +109,11 @@ function action_catalog($path){
     $sth = $dbh -> prepare($sql);
     $sth -> execute(array($path));
     $catalog = $sth -> fetch();
-    $catalog_tags = explode(',',$catalog['tags']);
     $conditional_tag = null;
-    error_log("catalog tags - ".$catalog['tags']);
 
     if ($catalog) {
+      $catalog_tags = explode(',', (isset($catalog['tags']) ? $catalog['tags'] : ''));
+      error_log("catalog tags - ".((isset($catalog['tags']) ? $catalog['tags'] : '')));
       $products = array();
       $response['title'] .= " - ".$catalog['title'];
       $response['meta_desc'] = $catalog['description'];
@@ -136,12 +141,10 @@ function action_catalog($path){
           $sql = 'SELECT * FROM portfolio WHERE status IS NOT NULL AND archive IS NULL ORDER BY date DESC';
           error_log("not archive",0);
         }
-        $sth = $dbh -> prepare($sql);
-        $sth -> execute(array($path));
         $rows = $dbh -> query($sql);
 
         foreach ($rows as $row) {
-          $product_tags = explode(',',$row['tags']);
+          $product_tags = explode(',', (isset($row['tags']) ? $row['tags'] : ''));
           // Manually adding base tags
           $product_tags[] = "art";
           $product_tags[] = "work";
