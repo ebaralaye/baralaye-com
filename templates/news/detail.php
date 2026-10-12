@@ -14,7 +14,7 @@
       <?php if ($post['image'] != null): ?>
         <div class="image">
           <img src="<?php echo $post['image']; ?>" alt="<?php echo $post['image_alt']; ?>">
-          <?php if ($image_desc != null): ?>
+          <?php if (!empty($post['image_desc'])): ?>
             <small class="desc"><?php echo $post['image_desc']; ?></small>
           <?php endif; ?>
         </div>

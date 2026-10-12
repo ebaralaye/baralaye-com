@@ -25,10 +25,13 @@ function action_pages($path){
   global $dbh;
   $page_title = preg_replace('/[^a-z]/', '', $path);
   $response['title'] .= " - ".ucwords($page_title);
-  $sql = "select * from pages where name = '$page_title'";
+  $sql = 'SELECT * FROM pages WHERE name = ?';
   $sth = $dbh -> prepare($sql);
-  $sth -> execute();
+  $sth -> execute(array($page_title));
   $page = $sth -> fetch();
+  if (!$page) {
+    return action_404();
+  }
   return render('pages', $page);
 }
 
@@ -53,12 +56,10 @@ function action_catalog($path){
   if (substr($path, 1,11) == 'exhibitions') $catalog = "exhibitions";
 
   $pathArr = explode('/',$path);
-  error_log('path array - '.json_encode($pathArr));
 
   // Detail View //
   $pathProductNode = $pathArr[count($pathArr)-1]; // Slice of path after the last '/'
   $pathCatalogArr = array_slice($pathArr,1,count($pathArr)-2); // Slice of path before the last '/'
-  error_log($pathProductNode." / ".json_encode($pathCatalogArr));
 
   $product = false;
   $catalog_diff = array();
@@ -113,11 +114,9 @@ function action_catalog($path){
 
     if ($catalog) {
       $catalog_tags = explode(',', (isset($catalog['tags']) ? $catalog['tags'] : ''));
-      error_log("catalog tags - ".((isset($catalog['tags']) ? $catalog['tags'] : '')));
       $products = array();
       $response['title'] .= " - ".$catalog['title'];
       $response['meta_desc'] = $catalog['description'];
-      error_log("valid catalog - ".$catalog['title']);
 
       try {
 
@@ -125,21 +124,17 @@ function action_catalog($path){
         if (substr($path, 1,7) == 'archive'){
           $sql = 'SELECT * FROM portfolio WHERE status IS NOT NULL AND archive IS NOT NULL ORDER BY date DESC';
           $conditional_tag = "archive";
-          error_log("archive",0);
         }
         else if (substr($path, 1,9) == 'available'){
           $sql = 'SELECT * FROM portfolio WHERE status = 1 ORDER BY date DESC';
           $conditional_tag = "available";
-          error_log("available",0);
         }
         else if (substr($path, 1,11) == 'exhibitions'){
           $sql = 'SELECT * FROM exhibitions WHERE status = 1 ORDER BY period_from DESC';
           $conditional_tag = "exhibitions";
-          error_log("exhibitions",0);
         }
         else {
           $sql = 'SELECT * FROM portfolio WHERE status IS NOT NULL AND archive IS NULL ORDER BY date DESC';
-          error_log("not archive",0);
         }
         $rows = $dbh -> query($sql);
 
@@ -181,6 +176,9 @@ function action_catalog($path){
  * CV
  */
 function action_cv() {
+  global $dbh;
+  $sql = 'SELECT * FROM cv WHERE status >= 1 ORDER BY period_year DESC, period_from DESC, id ASC';
+  $cv_items = $dbh->query($sql)->fetchAll(PDO::FETCH_ASSOC);
   $tags = array(
     'education' => array(),
     'exhibitions' => array('solo','group'),
@@ -196,7 +194,7 @@ function action_cv() {
     'curation' => array(),
     'representation' => array(),
   );
-  return render('cv/index', array('tags' => $tags));
+  return render('cv/index', array('tags' => $tags, 'cv_items' => $cv_items));
 }
 
 /**
@@ -236,6 +234,7 @@ function action_resume($path, &$response) {
   // Queries resume client list data
   $sql = 'SELECT * FROM resume_clients WHERE status IS NOT NULL ORDER BY period_from DESC';
   $rows = $dbh -> query($sql);
+  $clients = array();
   $affiliations = array();
   foreach ($rows as $row) {
     // Condition to polulate type specific client list data
@@ -260,7 +259,7 @@ function action_resume($path, &$response) {
   $data = array(
     'resume'       => $resume,
     'clients'      => render('resume/clients', array('clients' => $clients)),
-    'affiliations' => (($affiliations) > 0) ? render('resume/affiliations', array('affiliations' => $affiliations)) : null,
+    'affiliations' => (count($affiliations) > 0) ? render('resume/affiliations', array('affiliations' => $affiliations)) : null,
     'references'   => render('resume/references', array('clients' => $clients)),
     'gallery'      => ($resume['gallery_table'] != null) ? render('gallery', array('gallery' => $gallery, 'gallery_dirs' => $gallery_dirs)) : null,
   );
@@ -290,6 +289,7 @@ function action_news($path){
   $response['title'] .= ' - News';
   $path = substr($path, 6); // Truncated path after "/news/" uri string
   $list_num = 7;
+  $posts = array();
 
     try {
       if($path == "archive"){ // news/archive page logic
@@ -307,6 +307,9 @@ function action_news($path){
         $sth = $dbh -> prepare($sql);
         $sth -> execute(array($path));
         $post = $sth -> fetch();
+        if (!$post) {
+          return action_404();
+        }
         // Selects the first five publised articles for the "Latest News" section
         $sql = 'SELECT * FROM news WHERE status>0 ORDER BY published_date DESC LIMIT 3';
         $rows = $dbh -> query($sql);

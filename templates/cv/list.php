@@ -1,9 +1,7 @@
 <?php
 
 global $response;
-global $dbh;
-$sql = 'SELECT * FROM cv WHERE status >= 1 ORDER BY period_year DESC, period_from DESC, id ASC';
-$items = $dbh -> query($sql);
+$items = $cv_items;
 
 echo "<ul class='section list outside ".$tag_key."'>";
   foreach ($items as $item) {
