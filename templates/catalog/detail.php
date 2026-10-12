@@ -1,23 +1,23 @@
 <div class="page-body catalog-item">
   <h1 class="title v-align <?php if($title_type != null){ echo $title_type; }; ?>"><?= $title; ?></h1>
-  <?php $poplets = explode(',', $image_poplets); ?>
+  <?php $poplets = explode(',', isset($image_poplets) ? $image_poplets : ''); ?>
   <?php if (count($poplets) > 1): ?>
     <div class="image-slider v-align">
       <ul class="bxslider catalog">
         <?php foreach($poplets as $poplet): ?>
-          <li><a href="/images/art/<?= $catalog ?>/large/<?= $id.'-'.$poplet ?>.jpg" data-fancybox="gallery-1"><img src="/images/art/<?= $catalog ?>/<?= $id ?>/large/<?= $id.'-'.$poplet ?>.jpg" alt="<?= $id.$poplet ?>" /></a></li>
+          <li><a href="/images/art/<?= $catalog ?>/<?= $id ?>/large/<?= $id.'-'.$poplet ?>.jpg" data-fancybox="gallery-1"><img src="/images/art/<?= $catalog ?>/<?= $id ?>/large/<?= $id.'-'.$poplet ?>.jpg" alt="<?= seo_escape(seo_work_alt(array('title' => $title, 'id' => $id, 'medium' => isset($medium) ? $medium : null), $poplet)); ?>" /></a></li>
         <?php endforeach; ?>
       </ul>
     </div>
     <ul id="bx-pager" class="image-poplets v-align">
       <?php foreach($poplets as $key => $poplet): ?>
-        <li><a data-slide-index="<?= $key ?>" href=""><img src="/images/art/<?= $catalog ?>/<?= $id ?>/small/<?= $id.'-'.$poplet ?>.jpg" alt="<?= $id.'-'.$poplet ?>" /></a></li>
+        <li><a data-slide-index="<?= $key ?>" href=""><img src="/images/art/<?= $catalog ?>/<?= $id ?>/small/<?= $id.'-'.$poplet ?>.jpg" alt="<?= seo_escape(seo_work_alt(array('title' => $title, 'id' => $id), $key + 1)); ?>" /></a></li>
         <!-- // Run vertical align as each poplet loads -->
       <?php endforeach; ?>
     </ul>
   <?php else: ?>
     <div class="image v-align">
-      <a href="/images/art/<?= $catalog ?>/large/<?= $id ?>.jpg"><img class="main" src="/images/art/<?= $catalog ?>/<?= $id ?>/large/<?= $id ?>.jpg" alt="<?= $id ?>" /></a>
+      <a href="/images/art/<?= $catalog ?>/<?= $id ?>/large/<?= $id . (!empty($image) ? '-' . $image : '') ?>.jpg"><img class="main" src="/images/art/<?= $catalog ?>/<?= $id ?>/large/<?= $id . (!empty($image) ? '-' . $image : '') ?>.jpg" alt="<?= seo_escape(seo_work_alt(array('title' => $title, 'id' => $id, 'medium' => isset($medium) ? $medium : null))); ?>" /></a>
     </div>
     <script type="text/javascript">Baralaye.Template.VAlign();</script>
   <?php endif; ?>

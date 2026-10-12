@@ -366,3 +366,39 @@ Less 4 version. `package-lock.json` records the dependency versions; use `npm ci
 on other computers for repeatable installs.
 
 Installed `node_modules/` are ignored by Git. Gulp is no longer used.
+
+## Search visibility and SEO
+
+Production uses `https://baralaye.com` as its preferred origin. Apache redirects
+production HTTP and `www` requests to that origin. Local and development hosts
+are not redirected; they send `noindex,follow` through PHP and, when Apache's
+headers module is enabled, for static files too. These directives prevent search
+indexing; they do not provide authentication or privacy controls.
+
+Public pages have canonical links. Work URLs use their stored category path and
+name (or ID when no name exists); alternate ID routes point to the same canonical
+URL. Tracking query parameters are omitted. Missing pages and missing database
+records return HTTP 404 and `noindex`.
+
+`/sitemap.xml` is generated from the current content database, using production
+URLs, published work and news records, populated catalogs, and content pages.
+Its image entries include existing large artwork files. It deliberately omits
+invented update dates. The sitemap also receives `noindex` outside production.
+`robots.txt` allows artwork crawling and advertises the production sitemap.
+
+Catalog thumbnails use HTML images with descriptive alt text, matching the
+previous cover-cropped layout. The first four thumbnails load eagerly; subsequent
+thumbnails load lazily. Detail images use artwork titles and materials where
+available. Update database titles, descriptions, image information, and categories
+accurately; metadata and sitemap entries use that content automatically.
+
+After deployment, verify the production property in Google Search Console,
+submit `https://baralaye.com/sitemap.xml`, and use URL Inspection on representative
+work and category pages. Monitor indexing, search queries, image-search traffic,
+and clicks before judging results. Search Console account setup is separate from
+this repository and is not performed by deployment.
+
+Useful editorial follow-ups: original project descriptions, concise category
+introductions, current exhibition/news entries, and links between works and their
+exhibition pages. Keep collaborator and institution links accurate. Do not invent
+project histories, reviews, or keyword-heavy text merely for search engines.

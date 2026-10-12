@@ -9,12 +9,22 @@ if (strpos($path, '?') !== FALSE) {
   $path = substr($path, 0, strpos($path, '?'));
 }
 
+if ($path === '/sitemap.xml') {
+  require __DIR__ . '/sitemap.php';
+  exit;
+}
+
 $action = route($path);
+$noindex = !seo_is_live() || $action === 'resume';
+if ($noindex) header('X-Robots-Tag: noindex, follow');
 
 $response = array(
 	'content'   => '',
   'meta'      => 'meta/main',
-  'meta_desc' => 'The Art and Design Studio of Ebitenyefa Baralaye',
+  'meta_desc' => 'Explore sculpture, ceramics, and design by Ebitenyefa Baralaye, with selected works, exhibitions, and studio news.',
+  'canonical_path' => $path,
+  'noindex' => $noindex,
+  'og_image' => null,
 	'title'     => 'Ebitenyefa Baralaye',
 	'logo'      => 'Ebitenyefa Baralaye',
 	'menu'      => render('menus/main'),
@@ -27,7 +37,8 @@ $function = 'action_' . $action;
 $response['content'] .= $function($path, $response);
 
 // Rendering meta data after meta_desc is updated by actions
-$response['meta'] = render($response['meta'], array('meta_desc' => $response['meta_desc']));
+if (!empty($response['noindex'])) header('X-Robots-Tag: noindex, follow');
+$response['meta'] = render($response['meta'], $response);
 
 $template = render('index', $response);
 

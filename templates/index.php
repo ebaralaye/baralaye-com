@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title><?= $title; ?></title>
+    <title><?= seo_escape(seo_text($title)); ?></title>
 
     <!-- Meta Data -->
     <?= $meta; ?>
