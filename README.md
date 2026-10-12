@@ -100,8 +100,9 @@ they do not use MAMP PRO's Start/Stop buttons.
 | Preview configuration | `/Applications/MAMP/conf/baralaye-local/httpd-preview.conf` (port `8888`) |
 | Node | Node 24 LTS; exact version in `.nvmrc` |
 
-The original checkout is at
-`~/Library/Mobile Documents/com~apple~CloudDocs/Tech/Web/baralaye-com`.
+The current checkout is at
+`/Applications/MAMP/htdocs/baralaye-com`; its document root is
+`/Applications/MAMP/htdocs/baralaye-com/www`.
 Another Mac may use a different checkout path and username. The database,
 `settings.php`, hosts entry, and Apache configuration are separate from Git.
 Cloning this repository alone does not recreate them.
