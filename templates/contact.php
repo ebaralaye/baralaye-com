@@ -13,6 +13,9 @@
       <h3><a href="tel:+12484333700">248.433.3700</a></h3>
       <p><a href="https://www.dkgallery.com/contact/" target="_blank" rel="noopener noreferrer">David Klein Gallery</a></p>
       <p>678 Livernois St<br>Ferndale, MI 48220</p>
+      <h3 style="margin-top: 20px;"><a class="btn" href="mailto:info@emmascullygallery.com">INFO&#64;EMMASCULLYGALLERY&#46;COM</a></h3>
+      <p><a href="https://www.emmascullygallery.com/contact/" target="_blank" rel="noopener noreferrer">Emma Scully Gallery</a></p>
+      <p>16 East 79th Street, Suite 21<br>New York, NY</p>
     </div>
 <!--<form id="contact-form" class="form-container form-row" action="/contact" method="post" data-success="<?php var_export($form_success) ?>"> <div class="form-group">
       </div>
