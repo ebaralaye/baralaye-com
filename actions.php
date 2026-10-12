@@ -76,7 +76,7 @@ function action_catalog($path){
       $product = $sth -> fetch();
     }
     if ($product) {
-      $product_tags = explode(',', $product['tags'] ?? '');
+      $product_tags = explode(',', (isset($product['tags']) ? $product['tags'] : ''));
       // Manually adding base tags
       $product_tags[] = "art";
       $product_tags[] = "portfolio";
@@ -112,8 +112,8 @@ function action_catalog($path){
     $conditional_tag = null;
 
     if ($catalog) {
-      $catalog_tags = explode(',', $catalog['tags'] ?? '');
-      error_log("catalog tags - ".($catalog['tags'] ?? ''));
+      $catalog_tags = explode(',', (isset($catalog['tags']) ? $catalog['tags'] : ''));
+      error_log("catalog tags - ".((isset($catalog['tags']) ? $catalog['tags'] : '')));
       $products = array();
       $response['title'] .= " - ".$catalog['title'];
       $response['meta_desc'] = $catalog['description'];
@@ -144,7 +144,7 @@ function action_catalog($path){
         $rows = $dbh -> query($sql);
 
         foreach ($rows as $row) {
-          $product_tags = explode(',', $row['tags'] ?? '');
+          $product_tags = explode(',', (isset($row['tags']) ? $row['tags'] : ''));
           // Manually adding base tags
           $product_tags[] = "art";
           $product_tags[] = "work";
