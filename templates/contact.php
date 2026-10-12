@@ -4,13 +4,15 @@
     <div class="col-sm-6">
       <h2>Studio:</h2>
       <h3><a class="btn" href="mailto:info@baralaye.com">INFO&#64;BARALAYE&#46;COM</a></h3>
+      <p>Detroit, MI</p>
       <p>Commissions, saying hello and other inquiries.</p>
     </div>
     <div class="col-sm-6">
       <h2>Representation:</h2>
-      <h3><a class="btn" href="mailto:info@davidkleingallery.com">INFO&#64;DAVIDKLEINGALLERY&#46;COM</a></h3>
-      <h3>313.818.3416</h3>
-      <p>Detroit - <a href="http://davidkleingallery.com" target="_blank">David Klein Gallery</a></p>
+      <h3><a class="btn" href="mailto:info@dkgallery.com">INFO&#64;DKGALLERY&#46;COM</a></h3>
+      <h3><a href="tel:+12484333700">248.433.3700</a></h3>
+      <p><a href="https://www.dkgallery.com/contact/" target="_blank" rel="noopener noreferrer">David Klein Gallery</a></p>
+      <p>678 Livernois St<br>Ferndale, MI 48220</p>
     </div>
 <!--<form id="contact-form" class="form-container form-row" action="/contact" method="post" data-success="<?php var_export($form_success) ?>"> <div class="form-group">
       </div>
